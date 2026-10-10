@@ -59,6 +59,13 @@ Holding et divisions partagent design system, Noyau WebGL, motion, logos et shel
 - Docker : `ARG PUBLIC_SITE` / `ARG PUBLIC_DEPLOY_ENV`, une application Coolify par site, même dépôt et même branche.
 - _Alternative écartée_ : un monorepo à 4 apps (plus de duplication de configuration, et 4 fois les mises à jour de dépendances pour un gain nul en v0.x).
 
+### ADR-009 : Plugins GSAP DrawSVG et MorphSVG
+
+Fournis par le paquet `gsap` déjà présent (gratuits depuis la 3.13) : **aucune dépendance ajoutée**. Ils sont enregistrés dans `src/lib/motion/gsap.ts`.
+
+- **DrawSVG** : révélation « tracé à la plume » des emblèmes et arabesque d'encre du singe.
+- **MorphSVG** : preloader des divisions, où la roue CARDOR devient un disque qui se morphe en silhouette de la division. Les silhouettes, chacune en un seul tracé dans le viewBox de l'emblème, sont générées par `scripts/build-silhouettes.py` vers `src/lib/data/silhouettes.json`. On morphe toujours une forme simple vers une forme simple (recommandation du Motion Agent).
+
 ## 3. Arborescence
 
 ```
@@ -130,8 +137,12 @@ docker build -t cardor-web .
 
 - **Build** : Dockerfile, port 3000, même dépôt et même branche pour les 4 apps ; `PUBLIC_SITE` et `PUBLIC_DEPLOY_ENV=production` sont des variables de build ; `ORIGIN` = domaine de production.
 - **Healthcheck** : `GET /healthz` sur **127.0.0.1**:3000. Ne pas mettre `localhost` : sous Alpine, il se résout en `::1` alors que Node écoute en IPv4.
-- **DNS** (Cloudflare, zone `cardormedia.com`) : A `@`, `www`, `interactive`, `sound`, `creative` → 152.53.176.13, en **DNS only** ; CAA `issue letsencrypt.org`. Script : `scripts/cloudflare-dns.sh` (idempotent ; `PROXIED=true` pour passer en orange une fois les certificats émis).
+- **DNS** (Cloudflare, zone `cardormedia.com`) : A `@`, `www`, `interactive`, `sound`, `creative` → 152.53.176.13, proxifiés (cf. ci-dessous) ; CAA `issue letsencrypt.org`. Création initiale : `scripts/cloudflare-dns.sh`.
 - **Bascule domaines / env** : `scripts/coolify-production.sh`.
+- **Edge Cloudflare** (`scripts/cloudflare-edge.sh`, idempotent) :
+  - enregistrements **proxifiés** (nuage orange), SSL **Full (strict)**, TLS ≥ 1.2 ;
+  - « Always Use HTTPS » **désactivé exprès** : Traefik redirige déjà HTTP → HTTPS tout en servant les challenges ACME HTTP-01 sur le port 80, ce qui garde les renouvellements Let's Encrypt d'origine fonctionnels ;
+  - redirections 301 à la périphérie, chemin et query conservés, chemin ACME exclu : `www.` → apex, `play.` → `interactive.`, `audio.` → `sound.`, `art.` → `creative.`.
 - **Redéployer** (pas de déploiement automatique au push : dépôt public sans GitHub App) :
 
 ```bash

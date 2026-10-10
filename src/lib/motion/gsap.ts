@@ -3,6 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
 import { CustomEase } from 'gsap/CustomEase';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
+import { MorphSVGPlugin } from 'gsap/MorphSVGPlugin';
 import { easeCurves } from './tokens.ts';
 
 let registered = false;
@@ -10,7 +11,7 @@ let registered = false;
 /** Single registration point for GSAP plugins and the CARDOR easing curves. */
 function register() {
 	if (registered || typeof window === 'undefined') return;
-	gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase, DrawSVGPlugin);
+	gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase, DrawSVGPlugin, MorphSVGPlugin);
 	for (const [name, path] of Object.entries(easeCurves)) CustomEase.create(name, path);
 	gsap.defaults({ ease: 'cardor.out', duration: 0.8 });
 	// Shared timelines target elements that only exist on some sites (ADR-008).
@@ -21,4 +22,4 @@ function register() {
 
 register();
 
-export { gsap, ScrollTrigger, SplitText, CustomEase, DrawSVGPlugin };
+export { gsap, ScrollTrigger, SplitText, CustomEase, DrawSVGPlugin, MorphSVGPlugin };

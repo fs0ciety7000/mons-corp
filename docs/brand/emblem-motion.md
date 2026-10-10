@@ -60,4 +60,14 @@ Monochrome (`currentColor`) au repos, **remplissage aux couleurs de la marque au
 
 Couleurs « marque » : Car d'Or en **Or #D4A84B**, Beffroi en **Ultraviolet #7B5CFF** (au lieu du blanc os hérité des versions monochromes).
 
-**MorphSVG** : retenu pour une prochaine itération (morphing roue → silhouette de la division dans le preloader et le rideau), avec des silhouettes simplifiées en un seul tracé.
+## Preloader des divisions (MorphSVG)
+
+| t (s)       | Étape                                                                                                   |
+| ----------- | ------------------------------------------------------------------------------------------------------- |
+| 0 → 0,88    | La roue CARDOR tourne avec le compteur (comme sur la holding), dans la couleur signal du site           |
+| 0,88        | La roue s'efface, un disque plein prend sa place                                                        |
+| 0,98 → 1,88 | Le disque **se morphe en silhouette** de la division (`morphSVG`, `type: 'rotational'`, `cardor.inOut`) |
+| 1,73 → 2,18 | L'emblème détaillé apparaît par-dessus, la silhouette s'efface                                          |
+| ensuite     | Sortie du preloader et rideau (inchangés)                                                               |
+
+Le récit : chaque studio sort de la roue du Car d'Or, comme chaque division naît du noyau de la maison.
