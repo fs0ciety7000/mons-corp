@@ -1,14 +1,31 @@
-# Prompts Midjourney v7 : prêts à coller (avec URL de référence)
+# Prompts Midjourney v7 : avec URL de référence
 
-> Généré par `scripts/build-midjourney-prompts.py`. Chaque prompt commence par la ou les **URL de référence** (image prompt), suivies du texte et des paramètres. Copie le bloc entier dans `/imagine` ou dans la barre de prompt de midjourney.com.
+> Généré par `scripts/build-midjourney-prompts.py`. Chaque prompt commence par la ou les URL de référence (Image Prompt). Version sans URL : [`midjourney-prompts-texte.md`](midjourney-prompts-texte.md).
 
-## Mode d'emploi
+## Si Midjourney répond « Skipped --iw because the required reference is missing »
 
-- **`--iw`** (0,35 à 0,45) règle l'influence de la photo : assez pour la silhouette, pas assez pour importer le réalisme. Monte à 0,8 pour coller davantage au motif, descends à 0,2 pour plus de liberté.
-- Les URL sont utilisées en **image prompt**, pas en `--sref` : un style photo contaminerait le rendu flat.
-- Deux URL = deux références combinées (Car d'Or : deux photos ; Dragon : l'affiche Doudou 2026 + la photo du Lumeçon).
-- Si Midjourney refuse une URL (Wikimedia limite parfois les requêtes), télécharge l'image, glisse-la dans la barre de prompt et remplace l'URL par celle que Midjourney génère.
-- Versions **avec texte** : Midjourney v7 rend correctement les mots courts entre guillemets, mais pas toujours. Pour la version finale, recompose le texte en vraies polices (Instrument Serif, Geist Mono).
+Le prompt n'a reçu **aucune Image Prompt**, donc `--iw` est ignoré. Deux causes :
+
+1. **L'URL n'a pas pu être récupérée.** Beaucoup de sites (paroisse-mons.be, delcampe, Wikimedia) bloquent le chargement de leurs images depuis un autre site. Midjourney exige une URL publique et directe vers l'image.
+2. **Sur midjourney.com, l'image a été rangée en Style Reference ou Omni Reference.** `--iw` ne concerne que les **Image Prompts**.
+
+**Méthode fiable (5 minutes, une seule fois) :**
+
+1. Télécharge les images de référence sur ton ordinateur.
+2. Sur midjourney.com → _Imagine_ → icône image (ou glisser-déposer dans la barre) → dépose chaque image dans la zone **Image Prompts**, pas Style ni Omni.
+3. Soit tu génères directement en collant le texte de [`midjourney-prompts-texte.md`](midjourney-prompts-texte.md) ;
+4. Soit tu fais clic droit sur la vignette → _Copy link_, tu obtiens une URL hébergée par Midjourney, et tu me l'envoies (ou tu la mets dans `docs/brand/mj-refs.json`) : je régénère ce fichier avec ces URL, qui fonctionnent partout, y compris sur Discord.
+
+Sur **Discord**, les URL en tête de prompt fonctionnent si elles sont directes (se terminant en .jpg/.png) et non bloquées. Les URL Midjourney (`s.mj.run/…`) et Discord CDN marchent toujours.
+
+## Réglages
+
+- **`--iw`** (0,35 à 0,45) : assez pour la silhouette, pas assez pour importer le réalisme. Monte à 0,8 pour coller davantage au motif, descends à 0,2 pour plus de liberté.
+- Images en **Image Prompt**, jamais en Style Reference (`--sref`) : un style photo contaminerait le rendu flat.
+- Car d'Or : deux photos combinées. Dragon : l'affiche Doudou 2026 et la photo du Lumeçon.
+- Versions **avec texte** : Midjourney v7 rend les mots courts entre guillemets, mais pas toujours. Pour la version finale, recompose le texte en vraies polices (Instrument Serif, Geist Mono).
+
+### Images à joindre / URL actuelles
 
 | Référence                | URL                                                                                                                                                                                                             |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
