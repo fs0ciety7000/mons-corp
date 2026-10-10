@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import ParisClock from './ParisClock.svelte';
+	import MonsClock from './MonsClock.svelte';
 	import Logo from '#lib/components/brand/Logo.svelte';
 	import { nav } from '#lib/data/site.ts';
 	import { isHolding, site } from '#lib/sites/config.ts';
@@ -88,7 +88,7 @@
 
 		<div class="flex items-center gap-6 md:gap-10">
 			<div class="hidden overflow-clip md:block">
-				<span data-nav-item class="block"><ParisClock /></span>
+				<span data-nav-item class="block"><MonsClock /></span>
 			</div>
 			<ul class="flex items-center gap-5 md:gap-8">
 				{#each nav as item, i (item.href)}

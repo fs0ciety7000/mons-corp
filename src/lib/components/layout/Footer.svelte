@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { divisions } from '#lib/data/divisions.ts';
-	import { site, socials } from '#lib/data/site.ts';
+	import { site } from '#lib/data/site.ts';
 	import { magnetic, reveal } from '#lib/motion/actions.ts';
-	import ParisClock from './ParisClock.svelte';
+	import MonsClock from './MonsClock.svelte';
 	import Logo from '#lib/components/brand/Logo.svelte';
 	import { onMount } from 'svelte';
 	import { gsap } from '#lib/motion/gsap.ts';
@@ -106,17 +106,9 @@
 				{/each}
 			</ul>
 		</div>
-		<div class="col-span-2 lg:col-span-3">
-			<p class="mb-4 label text-ash">Réseaux</p>
-			<ul class="space-y-2">
-				{#each socials as s (s.label)}
-					<li><a href={s.href} class="foot-link" rel="noopener" target="_blank">{s.label}</a></li>
-				{/each}
-			</ul>
-		</div>
-		<div class="col-span-4 md:col-span-8 lg:col-span-2 lg:text-right">
+		<div class="col-span-2 md:col-span-8 lg:col-span-5 lg:text-right">
 			<p class="mb-4 label text-ash">{site.city}</p>
-			<ParisClock />
+			<MonsClock />
 		</div>
 	</div>
 
@@ -125,7 +117,6 @@
 			>© {new Date().getFullYear()}
 			{isHolding ? 'CARDOR Media' : `${current.name} · une division de CARDOR Media`} — Tous droits réservés</span
 		>
-		<span class="label">Opéré depuis la salle des machines</span>
 	</div>
 
 	<div class="mt-16 flex items-end justify-between gap-6 gutter-x">

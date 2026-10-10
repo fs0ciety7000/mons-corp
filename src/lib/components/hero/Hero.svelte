@@ -91,7 +91,9 @@
 		<!-- Meta row -->
 		<div class="flex items-start justify-between gap-6 gutter-x text-ash">
 			<p data-hero-meta class="max-w-[22ch] label">[CM—2026] Holding de divertissement</p>
-			<p data-hero-meta class="hidden text-right label md:block">Paris — 48.8566° N, 2.3522° E</p>
+			<p data-hero-meta class="hidden text-right label md:block">
+				Mons, Belgique — 50.4542° N, 3.9523° E
+			</p>
 		</div>
 
 		<!-- Wordmark -->

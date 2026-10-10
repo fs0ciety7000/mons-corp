@@ -135,7 +135,7 @@ Basées sur `onNavigate` de SvelteKit :
 | Bouton magnétique        | Attraction dans un rayon de 1,4× sa taille, translation max 30 % ; retour `cardor.elastic`.                                                                    |
 | Liens                    | Soulignement `scaleX 0 → 1` origin left à l'entrée, origin right à la sortie.                                                                                  |
 | Ligne de division (hero) | Au survol : texte passe en italique (swap de police instantané masqué par un `yPercent` de 100 % via double ligne), index qui défile, Noyau qui change d'état. |
-| Horloge Paris            | Secondes qui roulent en `yPercent` (tambour).                                                                                                                  |
+| Horloge Mons             | Secondes qui roulent en `yPercent` (tambour).                                                                                                                  |
 
 ## 9. Accessibilité & fallbacks
 

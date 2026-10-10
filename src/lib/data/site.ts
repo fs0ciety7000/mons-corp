@@ -6,14 +6,8 @@ export const site = {
 	url: siteUrl(SITE),
 	description: current.description,
 	email: current.email,
-	city: 'Mons · Paris',
-	timezone: 'Europe/Paris'
+	city: 'Mons · Belgique',
+	timezone: 'Europe/Brussels'
 };
 
 export const nav = current.nav;
-
-export const socials = [
-	{ href: 'https://www.linkedin.com/', label: 'LinkedIn' },
-	{ href: 'https://www.instagram.com/', label: 'Instagram' },
-	{ href: 'https://x.com/', label: 'X' }
-];

@@ -18,4 +18,4 @@
 	});
 </script>
 
-<span class="label tabular-nums"><span class="text-ash">PAR</span>&nbsp;{time}</span>
+<span class="label tabular-nums"><span class="text-ash">MONS</span>&nbsp;{time}</span>

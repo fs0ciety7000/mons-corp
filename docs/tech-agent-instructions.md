@@ -102,7 +102,7 @@ _Contexte_ : sur mobile (Samsung Internet, 2026-10-10), titres figés en glyphes
     │   │   ├── states.ts              # Les 4 états d'uniforms (rapport Motion §4.2)
     │   │   └── shaders/               # noise · core.vert/frag · dust.vert/frag · post.vert/frag
     │   └── components/
-    │       ├── layout/                # Nav, Footer, Preloader, Cursor, Grain, PageCurtain, ParisClock
+    │       ├── layout/                # Nav, Footer, Preloader, Cursor, Grain, PageCurtain, MonsClock
     │       ├── hero/                  # Hero, CoreCanvas
     │       └── sections/              # Manifesto, Divisions, Marquee
     └── routes/

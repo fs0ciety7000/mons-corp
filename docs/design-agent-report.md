@@ -118,7 +118,7 @@ Toute l'interface est pensée comme une **salle de projection** : noir profond, 
 /contact          Formulaire + adresses + presse
 ```
 
-Navigation : **barre minimale fixe** (logo à gauche, horloge Paris + menu à droite). Le menu s'ouvre en **plein écran** avec les 3 divisions en très grand, chacune prévisualisant son état du Noyau au survol.
+Navigation : **barre minimale fixe** (logo à gauche, horloge Mons (Belgique) + menu à droite). Le menu s'ouvre en **plein écran** avec les 3 divisions en très grand, chacune prévisualisant son état du Noyau au survol.
 
 ## 7. Composants & comportements
 
