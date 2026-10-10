@@ -8,7 +8,39 @@
 	import Marquee from '#lib/components/sections/Marquee.svelte';
 	import Projects from './Projects.svelte';
 	import { content } from './content.ts';
+	import { projects } from './projects.ts';
+	import { jsonLd } from '#lib/seo/seo.ts';
+	import { siteUrl } from '#lib/sites/config.ts';
+
+	// Rich results: the studio's published works, as VideoGame / WebApplication items.
+	const works = jsonLd({
+		'@context': 'https://schema.org',
+		'@type': 'ItemList',
+		name: 'Projets OCC Interactive',
+		itemListElement: projects.map((p, i) => ({
+			'@type': 'ListItem',
+			position: i + 1,
+			item: {
+				'@type': p.kind === 'jeu' ? 'VideoGame' : 'WebApplication',
+				name: p.name,
+				description: p.pitch,
+				url: p.url,
+				image: `${siteUrl('interactive')}${p.cover}`,
+				applicationCategory: p.kind === 'jeu' ? 'GameApplication' : 'BusinessApplication',
+				operatingSystem: 'Web',
+				...(p.kind === 'jeu'
+					? { gamePlatform: 'Web browser', genre: p.category.split('·')[1]?.trim() }
+					: {}),
+				creator: { '@id': `${siteUrl('interactive')}/#organization` }
+			}
+		}))
+	});
 </script>
+
+<svelte:head>
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -- serialised JSON-LD, < escaped -->
+	{@html works}
+</svelte:head>
 
 <DivisionHero hero={content.hero}>
 	{#snippet signature()}

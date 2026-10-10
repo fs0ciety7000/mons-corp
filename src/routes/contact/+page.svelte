@@ -1,17 +1,11 @@
 <script lang="ts">
+	import Seo from '#lib/components/seo/Seo.svelte';
 	import { divisions } from '#lib/data/divisions.ts';
 	import { site } from '#lib/data/site.ts';
 	import { reveal } from '#lib/motion/actions.ts';
 </script>
 
-<svelte:head>
-	<title>Contact — {site.name}</title>
-	<meta
-		name="description"
-		content="Parlons de votre prochain monde. Contactez CARDOR Media et ses studios."
-	/>
-	<link rel="canonical" href="{site.url}/contact" />
-</svelte:head>
+<Seo page="contact" />
 
 <section class="pt-40 pb-24 md:pt-56" aria-labelledby="contact-title">
 	<div class="grid-cardor gap-y-10">

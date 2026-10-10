@@ -95,19 +95,20 @@
 		</div>
 
 		<div class="my-auto gutter-x pt-10 md:pt-0">
-			<p data-dhero-lines class="mb-3 font-mono text-sm tracking-[0.6em] text-signal md:text-base">
-				OCC
-			</p>
-			<h1
-				id="hero-title"
-				bind:this={title}
-				class={[
-					'font-display leading-[0.82] tracking-[-0.035em] whitespace-nowrap',
-					italic && 'italic'
-				]}
-				style:font-size={size}
-			>
-				{site.short}
+			<!-- One h1 carrying the full studio name (SEO), styled as two lines. -->
+			<h1 id="hero-title">
+				<span
+					data-dhero-lines
+					class="mb-3 block font-mono text-sm tracking-[0.6em] text-signal md:text-base">OCC</span
+				>
+				<span
+					bind:this={title}
+					class={[
+						'block font-display leading-[0.82] tracking-[-0.035em] whitespace-nowrap',
+						italic && 'italic'
+					]}
+					style:font-size={size}>{site.short}</span
+				>
 			</h1>
 		</div>
 

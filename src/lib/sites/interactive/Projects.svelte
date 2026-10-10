@@ -57,7 +57,7 @@
 					<div class="relative aspect-[16/10] overflow-clip border-b border-smoke bg-graphite">
 						<img
 							src={p.cover}
-							alt=""
+							alt="{p.name} — {p.category}"
 							loading="lazy"
 							decoding="async"
 							width="1200"

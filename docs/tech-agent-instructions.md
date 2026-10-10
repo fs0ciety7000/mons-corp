@@ -75,6 +75,17 @@ _Contexte_ : sur mobile (Samsung Internet, 2026-10-10), titres figés en glyphes
 - **Pas de Lenis sur tactile** (`isTouch()`), on garde le défilement natif. `isFinePointer()` exclut `any-pointer: coarse` : plus de curseur personnalisé, d'effets aimantés ni de traînée d'encre sur téléphone, même avec un stylet.
 - Test de non-régression : parcours tactile complet (CPU ×4), 0 élément visible masqué sur les 4 sites.
 
+### ADR-011 : SEO et images de partage générées depuis une source unique
+
+_Contexte_ : les quatre sites partageaient une seule image OG générique, sans sitemap ni données structurées par division.
+
+- **Source unique** : `src/lib/seo/pages.json` (titre ≤ 62 car., description ≤ 150, carte OG) alimente les balises `<head>` (`Seo.svelte`), le sitemap et le générateur d'images.
+- **Images OG** 1200×630 (JPEG q88, ~120 Ko) et icônes (32/180/192/512) générées hors build par `scripts/build-og.mjs` (Playwright + Chromium, polices embarquées en base64) puis versionnées dans `static/og/` et `static/icons/`. Aucune dépendance runtime ajoutée. Régénérer après toute modification de `pages.json` ou des emblèmes :
+  `PLAYWRIGHT_DIR=<dossier contenant playwright> node scripts/build-og.mjs`
+- **Par site** : canonical, Open Graph (`fr_BE`), Twitter `summary_large_image`, JSON-LD `Organization` (adresse Mons, Hainaut, BE ; `subOrganization` / `parentOrganization`) + `WebSite`, `BreadcrumbList` hors accueil, `ItemList` des projets sur Interactive.
+- `robots.txt`, `sitemap.xml` (avec `image:image`) et `manifest.webmanifest` sont des routes prérendues propres à chaque site. `lang="fr-BE"`. Page 404 en `noindex`.
+- Limite connue : les alias `*.fs0ciety.org` servent le même contenu ; le canonical pointe vers `cardormedia.com`.
+
 ## 3. Arborescence
 
 ```

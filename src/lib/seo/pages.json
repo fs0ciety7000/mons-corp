@@ -1,0 +1,118 @@
+{
+	"holding": {
+		"home": {
+			"path": "/",
+			"title": "CARDOR Media — Holding de divertissement à Mons, Belgique",
+			"description": "Holding de divertissement née à Mons : jeux vidéo et web 3D, sound design et doublage, illustration et lore. Trois studios, un seul noyau créatif.",
+			"og": {
+				"kicker": "Holding de divertissement · Mons, Belgique",
+				"heading": "CARDOR <i>Media</i>",
+				"sub": "Trois studios, un seul noyau créatif.",
+				"emblems": ["cardor-emblem", "interactive", "sound", "creative"],
+				"alt": "CARDOR Media : le Car d’Or, le Dragon, le Beffroi et le Singe, emblèmes des studios de la maison"
+			}
+		},
+		"contact": {
+			"path": "/contact",
+			"title": "Contact — CARDOR Media, Mons",
+			"description": "Production, partenariat, presse ou candidature : écrivez à CARDOR Media et à ses studios OCC Interactive, Soundworks et Creative Lab, à Mons.",
+			"og": {
+				"kicker": "Contact · CARDOR Media",
+				"heading": "Parlons de votre <i>prochain</i> monde.",
+				"sub": "hello@cardormedia.com",
+				"emblems": ["cardor-monogram"],
+				"alt": "Contact CARDOR Media — roue du Car d’Or"
+			}
+		},
+		"marque": {
+			"path": "/marque",
+			"title": "Charte de marque « Le cortège montois » — CARDOR Media",
+			"description": "Emblèmes, construction, zone de protection, couleurs, tailles minimales et lockups de CARDOR Media et de ses trois studios : le cortège montois.",
+			"og": {
+				"kicker": "Charte de marque · Sketchboard technique",
+				"heading": "Le cortège <i>montois</i>.",
+				"sub": "Car d’Or · Dragon · Beffroi · Singe du Grand-Garde",
+				"emblems": ["cardor-emblem"],
+				"alt": "Charte de marque CARDOR Media — le Car d’Or"
+			}
+		}
+	},
+	"interactive": {
+		"home": {
+			"path": "/",
+			"title": "OCC Interactive — Studio jeux vidéo & développement web à Mons",
+			"description": "Le studio jeux vidéo et web de CARDOR Media, à Mons : jeux de stratégie et d’action jouables dans le navigateur, applications et outils métier.",
+			"og": {
+				"kicker": "Jeux vidéo & développement web · Mons",
+				"heading": "Interactive",
+				"sub": "Des mondes que l’on habite.",
+				"emblems": ["interactive"],
+				"alt": "OCC Interactive — le Dragon du Doudou en facettes"
+			}
+		},
+		"contact": {
+			"path": "/contact",
+			"title": "Contact — OCC Interactive",
+			"description": "Un jeu, une application ou un site à forger ? Écrivez à OCC Interactive, le studio jeux vidéo et web de CARDOR Media à Mons.",
+			"og": {
+				"kicker": "Contact · OCC Interactive",
+				"heading": "Un monde <i>à bâtir</i> ?",
+				"sub": "interactive@cardormedia.com",
+				"emblems": ["interactive"],
+				"alt": "Contact OCC Interactive — le Dragon du Doudou"
+			}
+		}
+	},
+	"sound": {
+		"home": {
+			"path": "/",
+			"title": "OCC Soundworks — Sound design, doublage & musique à Mons",
+			"description": "Le studio son de CARDOR Media, à Mons : sound design, doublage et voix, musique originale, mixage et mastering pour le jeu, l’animation et le web.",
+			"og": {
+				"kicker": "Sound design · Doublage · Musique · Mons",
+				"heading": "<i>Soundworks</i>",
+				"sub": "Des mondes que l’on entend.",
+				"emblems": ["sound"],
+				"alt": "OCC Soundworks — le Beffroi de Mons en ondes"
+			}
+		},
+		"contact": {
+			"path": "/contact",
+			"title": "Contact — OCC Soundworks",
+			"description": "Un projet à faire résonner ? Sound design, doublage, musique ou mixage : écrivez à OCC Soundworks, le studio son de CARDOR Media à Mons.",
+			"og": {
+				"kicker": "Contact · OCC Soundworks",
+				"heading": "Faisons <i>résonner</i> votre monde.",
+				"sub": "soundworks@cardormedia.com",
+				"emblems": ["sound"],
+				"alt": "Contact OCC Soundworks — le Beffroi"
+			}
+		}
+	},
+	"creative": {
+		"home": {
+			"path": "/",
+			"title": "OCC Creative Lab — Illustration, direction artistique & lore",
+			"description": "L’atelier de CARDOR Media, à Mons : illustration et concept art, direction artistique, écriture et lore, identités visuelles pour le jeu et l’édition.",
+			"og": {
+				"kicker": "Illustration · Direction artistique · Lore · Mons",
+				"heading": "<i>Creative Lab</i>",
+				"sub": "Des mondes que l’on raconte.",
+				"emblems": ["creative"],
+				"alt": "OCC Creative Lab — le Singe du Grand-Garde à l’encre"
+			}
+		},
+		"contact": {
+			"path": "/contact",
+			"title": "Contact — OCC Creative Lab",
+			"description": "Une histoire à faire naître ? Illustration, direction artistique ou lore : écrivez à OCC Creative Lab, l’atelier de CARDOR Media à Mons.",
+			"og": {
+				"kicker": "Contact · OCC Creative Lab",
+				"heading": "Une histoire <i>à faire naître</i> ?",
+				"sub": "creative@cardormedia.com",
+				"emblems": ["creative"],
+				"alt": "Contact OCC Creative Lab — le Singe du Grand-Garde"
+			}
+		}
+	}
+}

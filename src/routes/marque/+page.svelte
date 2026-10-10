@@ -1,8 +1,8 @@
 <script lang="ts">
+	import Seo from '#lib/components/seo/Seo.svelte';
 	import Logo from '#lib/components/brand/Logo.svelte';
 	import Construction from '#lib/components/brand/Construction.svelte';
 	import { emblems, type LogoName } from '#lib/data/logos.ts';
-	import { site } from '#lib/data/site.ts';
 	import { reveal } from '#lib/motion/actions.ts';
 
 	const marks: { name: LogoName; label: string; accent: string }[] = [
@@ -75,14 +75,7 @@
 	];
 </script>
 
-<svelte:head>
-	<title>Charte de marque — {site.name}</title>
-	<meta
-		name="description"
-		content="Sketchboard technique de la marque CARDOR Media : emblèmes, construction, couleurs, tailles minimales et lockups."
-	/>
-	<link rel="canonical" href="{site.url}/marque" />
-</svelte:head>
+<Seo page="marque" />
 
 <div class="blueprint">
 	<!-- Title block -->

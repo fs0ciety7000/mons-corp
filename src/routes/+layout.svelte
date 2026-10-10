@@ -9,7 +9,10 @@
 	import PageCurtain from '#lib/components/layout/PageCurtain.svelte';
 	import Footer from '#lib/components/layout/Footer.svelte';
 	import { startSmoothScroll } from '#lib/motion/lenis.ts';
-	import { site } from '#lib/data/site.ts';
+	import { isHolding, SITE } from '#lib/sites/config.ts';
+	import { jsonLd, siteGraph } from '#lib/seo/seo.ts';
+
+	const graph = jsonLd(siteGraph());
 
 	let { children }: LayoutProps = $props();
 
@@ -17,10 +20,14 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-	<meta property="og:site_name" content={site.name} />
-	<meta property="og:type" content="website" />
-	<meta name="twitter:card" content="summary_large_image" />
+	{#if isHolding}
+		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+	{/if}
+	<link rel="icon" href="/icons/{SITE}-32.png" sizes="32x32" type="image/png" />
+	<link rel="apple-touch-icon" href="/icons/{SITE}-180.png" />
+	<link rel="manifest" href="/manifest.webmanifest" />
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -- serialised JSON-LD, < escaped -->
+	{@html graph}
 </svelte:head>
 
 <a
