@@ -137,15 +137,9 @@
 			]}
 		>
 			{#if isHolding}
-				<Logo
-					name="cardor-emblem"
-					variant="mono"
-					animate="hover"
-					onready={rollWheels}
-					class="w-full"
-				/>
+				<Logo name="cardor-emblem" variant="mono" onready={rollWheels} class="w-full" />
 			{:else}
-				<Logo name={current.emblem} animate="loop" class="h-full w-auto" />
+				<Logo name={current.emblem} animate="hover" class="h-full w-auto" />
 			{/if}
 		</div>
 		<p class="max-w-[34ch] text-right label text-ash">

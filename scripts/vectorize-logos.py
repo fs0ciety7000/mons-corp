@@ -19,10 +19,10 @@ import vtracer
 
 # id: (source png, number of tones, default colours per tone)
 SELECTION = {
-    "cardor-emblem": ("cardor-cardor-1-mono.png", 1, ["#EDE8DF"]),
+    "cardor-emblem": ("cardor-cardor-1-mono.png", 1, ["#D4A84B"]),
     "cardor-monogram": ("cardor-02-color-wheel.png", 3, ["#D4A84B", "#EDE8DF", "#FF3B1F"]),
     "interactive": ("interactive-dragon-2-color.png", 2, ["#C6FF3D", "#5B7A00"]),
-    "sound": ("soundworks-beffroi-1-mono.png", 1, ["#EDE8DF"]),
+    "sound": ("soundworks-beffroi-1-mono.png", 1, ["#7B5CFF"]),
     "creative": ("creative-singe-2-color.png", 2, ["#FFB547", "#A66A0B"]),
 }
 BG = np.array([7, 7, 10], dtype=float)

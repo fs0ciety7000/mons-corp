@@ -42,3 +42,22 @@ Monochrome (`currentColor`) au repos, **remplissage aux couleurs de la marque au
 - `prefers-reduced-motion` : aucune animation de parties (la couleur au survol reste).
 - Échec de chargement du SVG détaillé : le sprite statique reste affiché.
 - Les parties sont enveloppées (`<g transform>` extérieur / `<g class="part">` animé) pour que GSAP n'écrase jamais la position d'origine.
+
+## Révision v1.1 (après la revue du Motion Agent)
+
+| Constat de la revue                                                                  | Correction                                                                                                                                                                 |
+| ------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Emblèmes des lignes du hero bloqués sous la ligne (intro GSAP contre transition CSS) | `.row-emblem` exclu de l'intro ; boîte `relative` + emblème `absolute inset-0`                                                                                             |
+| Footer : le survol faisait sauter les roues liées au scroll (`+=360` figé)           | Timeline **reconstruite à chaque lecture** (`build()`) ; footer holding piloté par le scroll seul                                                                          |
+| Moyeux qui quittent les roues                                                        | Les parties dont le centre est dans une roue tournent avec elle, autour de son axe                                                                                         |
+| Car d'Or : glissement arrière                                                        | Plus de translation ; rebond amorti `y: [-8,0,-4,0,-1.5,0]` + tangage de 1,5° autour de la roue arrière                                                                    |
+| Monogramme : rotation qui semble inversée (11°/frame ≈ ½ pas de rayon)               | 1,6 s en `cardor.out` ; noyau `scale 1.6` puis retour `cardor.elastic`                                                                                                     |
+| Dragon : un clignotement plutôt qu'un glitch                                         | Opacité fixe ; sauts arrondis au pixel ; fantôme RVB magenta en `steps`                                                                                                    |
+| Beffroi : déformation des bulbes                                                     | **Refait** : bande d'onde `[1.5,.7,1.25,.85,1.1,1]` du centre vers l'extérieur ; barres du mur ±6 % depuis la base ; arcs à 1,04                                           |
+| Singe : un simple balancement, une plume qui tremble                                 | Tête et bras seuls autour de l'épaule ; un trait de plume lent puis une **arabesque d'encre** tracée (DrawSVG) qui s'efface                                                |
+| Trop de mouvement autonome (principe « Silence »)                                    | Boucles toutes les **12 s**, uniquement visibles, pause si l'onglet est caché ; footers des divisions en survol seulement                                                  |
+| DrawSVG dispersé, emblème rogné possiblement invisible                               | Révélation par motif : tracé en ordre de lecture (roue, Car d'Or, singe), barres qui montent depuis la base (beffroi), « boot » glitch (dragon) ; seuil 1 % et repli à 4 s |
+
+Couleurs « marque » : Car d'Or en **Or #D4A84B**, Beffroi en **Ultraviolet #7B5CFF** (au lieu du blanc os hérité des versions monochromes).
+
+**MorphSVG** : retenu pour une prochaine itération (morphing roue → silhouette de la division dans le preloader et le rideau), avec des silhouettes simplifiées en un seul tracé.

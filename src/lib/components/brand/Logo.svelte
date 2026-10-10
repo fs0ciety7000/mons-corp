@@ -3,9 +3,9 @@
 	import sprite from '#lib/assets/logos.svg?url';
 	import { logos, type LogoName } from '#lib/data/logos.ts';
 	import {
-		drawInTimeline,
-		emblemTimeline,
+		emblemMotion,
 		loadEmblem,
+		revealTimeline,
 		type EmblemParts
 	} from '#lib/brand/emblem-motion.ts';
 	import { prefersReducedMotion } from '#lib/motion/tokens.ts';
@@ -20,7 +20,7 @@
 		animate?: 'hover' | 'loop';
 		/** Closest ancestor (CSS selector) that triggers hover. Defaults to the parent element. */
 		host?: string;
-		/** Draw the outlines in, then fill, the first time the emblem scrolls into view. */
+		/** Per-motif reveal (pen draw, bars rising, glitch boot) the first time it scrolls into view. */
 		drawIn?: boolean;
 		/** Called once the emblem is inlined, with its animatable parts. */
 		onready?: (parts: EmblemParts) => void;
@@ -82,38 +82,45 @@
 			if (disposed) return;
 			const root = svg.querySelector<SVGGElement>('g[data-root]');
 			if (!root) return;
-			const { tl, parts } = emblemTimeline(
-				name,
-				root,
-				logos[name].viewBox.split(' ').map(Number)[2]
-			);
+			const { build, parts } = emblemMotion(name, root, logos[name].viewBox.split(' ').map(Number));
 			onready?.(parts);
-			cleanups.push(() => tl.kill());
 			const reduce = prefersReducedMotion();
-			let ready = Promise.resolve();
-			if (drawIn && !reduce) {
-				const draw = drawInTimeline(root);
-				cleanups.push(() => draw.kill());
-				ready = new Promise<void>((resolve) => {
-					const io = new IntersectionObserver(
-						([e]) => {
-							if (!e.isIntersecting) return;
-							io.disconnect();
-							draw.play().then(() => resolve());
-						},
-						{ threshold: 0.35 }
-					);
-					io.observe(svg);
-					cleanups.push(() => io.disconnect());
+			if (reduce) return;
+
+			let current: gsap.core.Timeline | null = null;
+			let revealing = false;
+			const play = () => {
+				if (revealing || current?.isActive() || document.hidden) return;
+				current?.kill();
+				current = build();
+			};
+			cleanups.push(() => current?.kill());
+
+			// First view: per-motif reveal. Played when ≥1% visible, or after 4 s at the latest
+			// so a clipped emblem can never stay invisible (Motion review).
+			if (drawIn) {
+				const reveal = revealTimeline(name, root);
+				revealing = true;
+				const start = () => {
+					io.disconnect();
+					clearTimeout(fallback);
+					reveal.play().then(() => (revealing = false));
+				};
+				const io = new IntersectionObserver(([e]) => e.isIntersecting && start(), {
+					threshold: 0.01
+				});
+				io.observe(svg);
+				const fallback = setTimeout(() => {
+					if (svg.getBoundingClientRect().top < innerHeight) start();
+				}, 4000);
+				cleanups.push(() => {
+					io.disconnect();
+					clearTimeout(fallback);
+					reveal.kill();
 				});
 			}
-			if (!animate || reduce) return;
-			await ready;
-			if (disposed) return;
+			if (!animate) return;
 
-			const play = () => {
-				if (!tl.isActive()) tl.restart();
-			};
 			hostEl?.addEventListener('pointerenter', play);
 			hostEl?.addEventListener('focusin', play);
 			cleanups.push(() => {
@@ -121,13 +128,14 @@
 				hostEl?.removeEventListener('focusin', play);
 			});
 
+			// Loop: only while in view, every 12 s ("Silence" principle), paused when hidden.
 			if (animate === 'loop') {
 				let timer: ReturnType<typeof setInterval> | undefined;
 				const io = new IntersectionObserver(([e]) => {
 					clearInterval(timer);
 					if (e.isIntersecting) {
-						play();
-						timer = setInterval(play, 5200);
+						setTimeout(play, revealing ? 2600 : 300);
+						timer = setInterval(play, 12000);
 					}
 				});
 				io.observe(svg);

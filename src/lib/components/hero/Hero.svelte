@@ -57,7 +57,12 @@
 					{ scaleX: 0, transformOrigin: '0% 50%', duration: duration.lg, stagger: stagger.cards },
 					1.3
 				)
-				.from('[data-hero-row] > *', { yPercent: 110, duration: duration.md, stagger: 0.04 }, 1.45)
+				.from(
+					'[data-hero-row] > :not(.row-emblem)',
+					{ yPercent: 110, duration: duration.md, stagger: 0.04 },
+					1.45
+				)
+				// .row-emblem stays out of the intro: its CSS transitions own transform/opacity (Motion review).
 				.from('[data-hero-scroll]', { autoAlpha: 0, y: 12, duration: duration.md }, 1.8);
 		}, root);
 
@@ -137,9 +142,15 @@
 								>{d.index}</span
 							>
 							<span
-								class="row-emblem grid size-9 shrink-0 place-items-center self-center text-ash group-hover:text-(--division) md:size-11"
+								class="row-emblem relative size-9 shrink-0 self-center text-ash group-hover:text-(--division) md:size-11"
 							>
-								<Logo name={d.id} swap animate="hover" host=".division-row" class="size-full" />
+								<Logo
+									name={d.id}
+									swap
+									animate="hover"
+									host=".division-row"
+									class="absolute inset-0 size-full"
+								/>
 							</span>
 							<span class="swap relative flex-1 font-display text-h2 whitespace-nowrap">
 								<span class="swap-a block">{d.name}</span>
