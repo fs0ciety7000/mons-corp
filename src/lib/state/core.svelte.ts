@@ -9,7 +9,7 @@ export const core = $state({
 	active: 'holding' as CoreStateId,
 	/** True once the preloader has finished and the intro may play. */
 	ready: false,
-	/** Audio level 0–1 injected by OCC Soundworks' generative drone. */
+	/** Audio level 0–1 injected by CM Soundworks' generative drone. */
 	audio: 0,
 	/** Set when WebGL failed — UI switches to the CSS fallback. */
 	webglFailed: false

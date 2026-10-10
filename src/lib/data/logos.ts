@@ -32,19 +32,19 @@ export const emblems: Record<
 	},
 	interactive: {
 		motif: 'Le Dragon du Doudou',
-		entity: 'OCC Interactive',
+		entity: 'CM Interactive',
 		meaning: 'Le combat du Lumeçon : du jeu, du rythme, une foule qui joue ensemble.',
 		source: 'interactive-dragon-2-color'
 	},
 	sound: {
 		motif: 'Le Beffroi',
-		entity: 'OCC Soundworks',
+		entity: 'CM Soundworks',
 		meaning: 'Quarante-neuf cloches au-dessus de la ville : le son qui porte loin.',
 		source: 'soundworks-beffroi-1-mono'
 	},
 	creative: {
 		motif: 'Le Singe du Grand-Garde',
-		entity: 'OCC Creative Lab',
+		entity: 'CM Creative Lab',
 		meaning:
 			'On lui caresse la tête pour la chance ; sa queue devient une plume : le récit qui porte bonheur.',
 		source: 'creative-singe-2-color'

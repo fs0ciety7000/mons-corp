@@ -21,7 +21,7 @@ export const divisions: Division[] = [
 	{
 		id: 'interactive',
 		index: '01',
-		name: 'OCC Interactive',
+		name: 'CM Interactive',
 		short: 'Interactive',
 		tagline: 'Des mondes que l’on habite.',
 		description:
@@ -35,7 +35,7 @@ export const divisions: Division[] = [
 	{
 		id: 'sound',
 		index: '02',
-		name: 'OCC Soundworks',
+		name: 'CM Soundworks',
 		short: 'Soundworks',
 		tagline: 'Des mondes que l’on entend.',
 		description:
@@ -49,7 +49,7 @@ export const divisions: Division[] = [
 	{
 		id: 'creative',
 		index: '03',
-		name: 'OCC Creative Lab',
+		name: 'CM Creative Lab',
 		short: 'Creative Lab',
 		tagline: 'Des mondes que l’on raconte.',
 		description:

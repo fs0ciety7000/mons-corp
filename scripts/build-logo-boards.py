@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 src, out = sys.argv[1], sys.argv[2]
 os.makedirs(out, exist_ok=True)
-brands = {"cardor": "CARDOR MEDIA", "interactive": "OCC INTERACTIVE", "soundworks": "OCC SOUNDWORKS", "creative": "OCC CREATIVE LAB"}
+brands = {"cardor": "CARDOR MEDIA", "interactive": "CM INTERACTIVE", "soundworks": "CM SOUNDWORKS", "creative": "CM CREATIVE LAB"}
 motifs = {"beffroi": "BEFFROI", "cardor": "CAR D'OR", "dragon": "DRAGON (DOUDOU)", "singe": "SINGE DU GRAND-GARDE"}
 variants = {"1-mono": "MONOCHROME", "2-color": "COULEUR", "3-text": "AVEC TEXTE"}
 CELL, PAD, HEAD, LEFT = 420, 16, 90, 230

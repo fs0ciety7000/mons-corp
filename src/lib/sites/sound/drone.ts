@@ -1,5 +1,5 @@
 /**
- * OCC Soundworks — generative "carillon" drone (docs/sites/soundworks.md).
+ * CM Soundworks — generative "carillon" drone (docs/sites/soundworks.md).
  * No audio file: a fifths drone through a slowly breathing low-pass filter, with
  * occasional bell partials in A minor pentatonic, like the 49 bells of the Mons belfry.
  * The AudioContext is created on an explicit user gesture only.

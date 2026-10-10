@@ -1,4 +1,4 @@
-/** Projects of OCC Interactive — content carried over from studios.fs0ciety.org. */
+/** Projects of CM Interactive — content carried over from studios.fs0ciety.org. */
 export type ProjectKind = 'jeu' | 'web';
 
 export interface Project {

@@ -131,7 +131,7 @@ interface ScrambleOptions {
 }
 
 /**
- * use:scramble — OCC Interactive signature (docs/sites/interactive.md):
+ * use:scramble — CM Interactive signature (docs/sites/interactive.md):
  * characters resolve left → right out of block glyphs.
  */
 export const scramble: Action<HTMLElement, ScrambleOptions | undefined> = (node, options = {}) => {

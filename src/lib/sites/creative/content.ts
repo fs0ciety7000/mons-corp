@@ -2,7 +2,7 @@ import type { DivisionContent } from '#lib/sites/division/types.ts';
 
 export const content: DivisionContent = {
 	hero: {
-		kicker: '[OCC—03] Illustration · Direction artistique · Lore',
+		kicker: '[CM—03] Illustration · Direction artistique · Lore',
 		meta: 'Atelier — Mons',
 		lead: 'L’atelier où naissent les univers avant qu’ils ne prennent vie : des images, des personnages, des mots et des légendes qui tiennent ensemble.',
 		cta: { label: 'Les ateliers', href: '#ateliers' }

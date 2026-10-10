@@ -2,7 +2,7 @@ import type { DivisionContent } from '#lib/sites/division/types.ts';
 
 export const content: DivisionContent = {
 	hero: {
-		kicker: '[OCC—01] Jeux vidéo & développement web',
+		kicker: '[CM—01] Jeux vidéo & développement web',
 		meta: 'Mons — 50.4542° N, 3.9523° E',
 		lead: 'Nous forgeons des mondes jouables et des expériences web taillées pour durer. Un studio, deux métiers, la même exigence.',
 		cta: { label: 'Voir les projets', href: '#projets' }

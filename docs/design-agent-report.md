@@ -51,11 +51,11 @@ Toute l'interface est pensée comme une **salle de projection** : noir profond, 
 
 ### 3.3 Signaux divisions
 
-| Division         | Token         | Hex                     | Secondaire | Caractère                                                                                          |
-| ---------------- | ------------- | ----------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
-| OCC Interactive  | `interactive` | `#C6FF3D` (Acid)        | `#5B7A00`  | Électrique, numérique, ludique                                                                     |
-| OCC Soundworks   | `sound`       | `#7B5CFF` (Ultraviolet) | `#3A2A9E`  | Nocturne, vibratoire, profond (4,6:1 sur void : AA, réservé aux textes ≥ 14 px gras ou aux aplats) |
-| OCC Creative Lab | `creative`    | `#FFB547` (Amber)       | `#A66A0B`  | Chaud, artisanal, lumineux                                                                         |
+| Division        | Token         | Hex                     | Secondaire | Caractère                                                                                          |
+| --------------- | ------------- | ----------------------- | ---------- | -------------------------------------------------------------------------------------------------- |
+| CM Interactive  | `interactive` | `#C6FF3D` (Acid)        | `#5B7A00`  | Électrique, numérique, ludique                                                                     |
+| CM Soundworks   | `sound`       | `#7B5CFF` (Ultraviolet) | `#3A2A9E`  | Nocturne, vibratoire, profond (4,6:1 sur void : AA, réservé aux textes ≥ 14 px gras ou aux aplats) |
+| CM Creative Lab | `creative`    | `#FFB547` (Amber)       | `#A66A0B`  | Chaud, artisanal, lumineux                                                                         |
 
 **Règle d'or :** **une seule couleur signal visible à la fois** par écran. Sur le site holding, la couleur d'une division n'apparaît que lorsqu'on interagit avec elle (hover, section dédiée).
 

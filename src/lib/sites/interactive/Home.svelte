@@ -16,7 +16,7 @@
 	const works = jsonLd({
 		'@context': 'https://schema.org',
 		'@type': 'ItemList',
-		name: 'Projets OCC Interactive',
+		name: 'Projets CM Interactive',
 		itemListElement: projects.map((p, i) => ({
 			'@type': 'ListItem',
 			position: i + 1,

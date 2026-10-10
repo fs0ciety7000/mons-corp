@@ -99,7 +99,7 @@
 			<h1 id="hero-title">
 				<span
 					data-dhero-lines
-					class="mb-3 block font-mono text-sm tracking-[0.6em] text-signal md:text-base">OCC</span
+					class="mb-3 block font-mono text-sm tracking-[0.6em] text-signal md:text-base">CM</span
 				>
 				<span
 					bind:this={title}

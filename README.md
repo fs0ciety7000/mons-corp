@@ -1,6 +1,6 @@
 # CARDOR Media — cardormedia.com
 
-Site corporate de la holding **CARDOR Media** (OCC Interactive · OCC Soundworks · OCC Creative Lab).
+Site corporate de la holding **CARDOR Media** (CM Interactive · CM Soundworks · CM Creative Lab).
 
 **Stack** : SvelteKit 3 · Svelte 5 · Tailwind CSS 4 · GSAP 3.15 (ScrollTrigger, SplitText, CustomEase) · Lenis · Three.js · adapter-node · Docker/Coolify.
 

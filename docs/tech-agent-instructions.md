@@ -148,12 +148,12 @@ docker build -t cardor-web .
 
 **État : ✅ en production** (certificats Let's Encrypt, projet Coolify « CARDOR Media »).
 
-| Site             | Production                                            | Alias infrastructure         | App Coolify (uuid)                                | `PUBLIC_SITE` |
-| ---------------- | ----------------------------------------------------- | ---------------------------- | ------------------------------------------------- | ------------- |
-| CARDOR Media     | https://cardormedia.com · https://www.cardormedia.com | cardor.fs0ciety.org          | `cardor-web` (`szxysnkgapr4g7bseqbrruka`)         | `holding`     |
-| OCC Interactive  | https://interactive.cardormedia.com                   | occ-interactive.fs0ciety.org | `cardor-interactive` (`luwdosthown6up9dyyokmkby`) | `interactive` |
-| OCC Soundworks   | https://sound.cardormedia.com                         | occ-soundworks.fs0ciety.org  | `cardor-sound` (`myii0yozmypvugxatkzo4xs3`)       | `sound`       |
-| OCC Creative Lab | https://creative.cardormedia.com                      | occ-creative.fs0ciety.org    | `cardor-creative` (`ourwq427ufzwruc9tcq9ytzq`)    | `creative`    |
+| Site            | Production                                            | Alias infrastructure         | App Coolify (uuid)                                | `PUBLIC_SITE` |
+| --------------- | ----------------------------------------------------- | ---------------------------- | ------------------------------------------------- | ------------- |
+| CARDOR Media    | https://cardormedia.com · https://www.cardormedia.com | cardor.fs0ciety.org          | `cardor-web` (`szxysnkgapr4g7bseqbrruka`)         | `holding`     |
+| CM Interactive  | https://interactive.cardormedia.com                   | occ-interactive.fs0ciety.org | `cardor-interactive` (`luwdosthown6up9dyyokmkby`) | `interactive` |
+| CM Soundworks   | https://sound.cardormedia.com                         | occ-soundworks.fs0ciety.org  | `cardor-sound` (`myii0yozmypvugxatkzo4xs3`)       | `sound`       |
+| CM Creative Lab | https://creative.cardormedia.com                      | occ-creative.fs0ciety.org    | `cardor-creative` (`ourwq427ufzwruc9tcq9ytzq`)    | `creative`    |
 
 - **Build** : Dockerfile, port 3000, même dépôt et même branche pour les 4 apps ; `PUBLIC_SITE` et `PUBLIC_DEPLOY_ENV=production` sont des variables de build ; `ORIGIN` = domaine de production.
 - **Healthcheck** : `GET /healthz` sur **127.0.0.1**:3000. Ne pas mettre `localhost` : sous Alpine, il se résout en `::1` alors que Node écoute en IPv4.

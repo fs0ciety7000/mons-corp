@@ -128,7 +128,7 @@ Avec texte
 stacked logo lockup, the symbol on top, below it the wordmark "CARDOR" in tall sharp high-contrast editorial serif capitals in bone white, and "Media" in gold italic serif underneath; the symbol is the lucky bronze monkey of Mons crouching in profile with one hand resting on top of its head, modern geometric emblem, bold flat shapes, confident negative space, premium heritage maison, flat gilded gold #D4A84B and bone white #EDE8DF with one single small ember red #FF3B1F accent, on solid near-black #07070A, flat vector, exact spelling --iw 0.45 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
 ```
 
-### OCC Interactive
+### CM Interactive
 
 #### Beffroi
 
@@ -149,7 +149,7 @@ flat vector logo symbol, the baroque belfry of Mons, a slender square bell tower
 Avec texte
 
 ```
-stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "OCC" above the word "Interactive" in sharp editorial serif, the dot of the i as a lime square pixel; the symbol is the baroque belfry of Mons, a slender square bell tower crowned by three stacked bulbous onion domes and a small lantern spire, flanked by four small domed corner turrets, rebuilt in faceted low-poly triangles like a solid game asset, crisp straight edges, one facet offset like a glitch, video game studio, flat acid lime #C6FF3D with olive #5B7A00 facets, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
+stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "CM" above the word "Interactive" in sharp editorial serif, the dot of the i as a lime square pixel; the symbol is the baroque belfry of Mons, a slender square bell tower crowned by three stacked bulbous onion domes and a small lantern spire, flanked by four small domed corner turrets, rebuilt in faceted low-poly triangles like a solid game asset, crisp straight edges, one facet offset like a glitch, video game studio, flat acid lime #C6FF3D with olive #5B7A00 facets, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
 ```
 
 #### Car d'Or
@@ -171,7 +171,7 @@ flat vector logo symbol, the Car d'Or processional carriage of Mons in side prof
 Avec texte
 
 ```
-stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "OCC" above the word "Interactive" in sharp editorial serif, the dot of the i as a lime square pixel; the symbol is the Car d'Or processional carriage of Mons in side profile, boat-shaped body with a raised stern, spiral volute at the prow, small domed reliquary lantern at the front, two large spoked wheels, no cherubs, rebuilt in faceted low-poly triangles like a solid game asset, crisp straight edges, one facet offset like a glitch, video game studio, flat acid lime #C6FF3D with olive #5B7A00 facets, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
+stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "CM" above the word "Interactive" in sharp editorial serif, the dot of the i as a lime square pixel; the symbol is the Car d'Or processional carriage of Mons in side profile, boat-shaped body with a raised stern, spiral volute at the prow, small domed reliquary lantern at the front, two large spoked wheels, no cherubs, rebuilt in faceted low-poly triangles like a solid game asset, crisp straight edges, one facet offset like a glitch, video game studio, flat acid lime #C6FF3D with olive #5B7A00 facets, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
 ```
 
 #### Dragon du Doudou
@@ -193,7 +193,7 @@ flat vector logo symbol, the Doudou dragon of Mons in side profile, long body, o
 Avec texte
 
 ```
-stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "OCC" above the word "Interactive" in sharp editorial serif, the dot of the i as a lime square pixel; the symbol is the Doudou dragon of Mons in side profile, long body, open crocodile-like snout, a row of triangular spikes along the back, long curling tail, rebuilt in faceted low-poly triangles like a solid game asset, crisp straight edges, one facet offset like a glitch, video game studio, flat acid lime #C6FF3D with olive #5B7A00 facets, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
+stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "CM" above the word "Interactive" in sharp editorial serif, the dot of the i as a lime square pixel; the symbol is the Doudou dragon of Mons in side profile, long body, open crocodile-like snout, a row of triangular spikes along the back, long curling tail, rebuilt in faceted low-poly triangles like a solid game asset, crisp straight edges, one facet offset like a glitch, video game studio, flat acid lime #C6FF3D with olive #5B7A00 facets, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
 ```
 
 #### Singe du Grand-Garde
@@ -215,10 +215,10 @@ flat vector logo symbol, the lucky bronze monkey of Mons crouching in profile wi
 Avec texte
 
 ```
-stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "OCC" above the word "Interactive" in sharp editorial serif, the dot of the i as a lime square pixel; the symbol is the lucky bronze monkey of Mons crouching in profile with one hand resting on top of its head, rebuilt in faceted low-poly triangles like a solid game asset, crisp straight edges, one facet offset like a glitch, video game studio, flat acid lime #C6FF3D with olive #5B7A00 facets, on solid near-black #07070A, flat vector, exact spelling --iw 0.45 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
+stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "CM" above the word "Interactive" in sharp editorial serif, the dot of the i as a lime square pixel; the symbol is the lucky bronze monkey of Mons crouching in profile with one hand resting on top of its head, rebuilt in faceted low-poly triangles like a solid game asset, crisp straight edges, one facet offset like a glitch, video game studio, flat acid lime #C6FF3D with olive #5B7A00 facets, on solid near-black #07070A, flat vector, exact spelling --iw 0.45 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
 ```
 
-### OCC Soundworks
+### CM Soundworks
 
 #### Beffroi
 
@@ -239,7 +239,7 @@ flat vector logo symbol, the baroque belfry of Mons, a slender square bell tower
 Avec texte
 
 ```
-stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "OCC" above the word "Soundworks" in high-contrast italic editorial serif; the symbol is the baroque belfry of Mons, a slender square bell tower crowned by three stacked bulbous onion domes and a small lantern spire, flanked by four small domed corner turrets, built from vertical audio waveform bars and concentric sound rings so the silhouette emerges from sound, audio studio, no microphone, no headphones, flat ultraviolet #7B5CFF with deep indigo #3A2A9E and a few bone white accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
+stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "CM" above the word "Soundworks" in high-contrast italic editorial serif; the symbol is the baroque belfry of Mons, a slender square bell tower crowned by three stacked bulbous onion domes and a small lantern spire, flanked by four small domed corner turrets, built from vertical audio waveform bars and concentric sound rings so the silhouette emerges from sound, audio studio, no microphone, no headphones, flat ultraviolet #7B5CFF with deep indigo #3A2A9E and a few bone white accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
 ```
 
 #### Car d'Or
@@ -261,7 +261,7 @@ flat vector logo symbol, the Car d'Or processional carriage of Mons in side prof
 Avec texte
 
 ```
-stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "OCC" above the word "Soundworks" in high-contrast italic editorial serif; the symbol is the Car d'Or processional carriage of Mons in side profile, boat-shaped body with a raised stern, spiral volute at the prow, small domed reliquary lantern at the front, two large spoked wheels, no cherubs, built from vertical audio waveform bars and concentric sound rings so the silhouette emerges from sound, audio studio, no microphone, no headphones, flat ultraviolet #7B5CFF with deep indigo #3A2A9E and a few bone white accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
+stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "CM" above the word "Soundworks" in high-contrast italic editorial serif; the symbol is the Car d'Or processional carriage of Mons in side profile, boat-shaped body with a raised stern, spiral volute at the prow, small domed reliquary lantern at the front, two large spoked wheels, no cherubs, built from vertical audio waveform bars and concentric sound rings so the silhouette emerges from sound, audio studio, no microphone, no headphones, flat ultraviolet #7B5CFF with deep indigo #3A2A9E and a few bone white accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
 ```
 
 #### Dragon du Doudou
@@ -283,7 +283,7 @@ flat vector logo symbol, the Doudou dragon of Mons in side profile, long body, o
 Avec texte
 
 ```
-stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "OCC" above the word "Soundworks" in high-contrast italic editorial serif; the symbol is the Doudou dragon of Mons in side profile, long body, open crocodile-like snout, a row of triangular spikes along the back, long curling tail, built from vertical audio waveform bars and concentric sound rings so the silhouette emerges from sound, audio studio, no microphone, no headphones, flat ultraviolet #7B5CFF with deep indigo #3A2A9E and a few bone white accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
+stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "CM" above the word "Soundworks" in high-contrast italic editorial serif; the symbol is the Doudou dragon of Mons in side profile, long body, open crocodile-like snout, a row of triangular spikes along the back, long curling tail, built from vertical audio waveform bars and concentric sound rings so the silhouette emerges from sound, audio studio, no microphone, no headphones, flat ultraviolet #7B5CFF with deep indigo #3A2A9E and a few bone white accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
 ```
 
 #### Singe du Grand-Garde
@@ -305,10 +305,10 @@ flat vector logo symbol, the lucky bronze monkey of Mons crouching in profile wi
 Avec texte
 
 ```
-stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "OCC" above the word "Soundworks" in high-contrast italic editorial serif; the symbol is the lucky bronze monkey of Mons crouching in profile with one hand resting on top of its head, built from vertical audio waveform bars and concentric sound rings so the silhouette emerges from sound, audio studio, no microphone, no headphones, flat ultraviolet #7B5CFF with deep indigo #3A2A9E and a few bone white accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.45 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
+stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "CM" above the word "Soundworks" in high-contrast italic editorial serif; the symbol is the lucky bronze monkey of Mons crouching in profile with one hand resting on top of its head, built from vertical audio waveform bars and concentric sound rings so the silhouette emerges from sound, audio studio, no microphone, no headphones, flat ultraviolet #7B5CFF with deep indigo #3A2A9E and a few bone white accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.45 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
 ```
 
-### OCC Creative Lab
+### CM Creative Lab
 
 #### Beffroi
 
@@ -329,7 +329,7 @@ flat vector logo symbol, the baroque belfry of Mons, a slender square bell tower
 Avec texte
 
 ```
-stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "OCC" above "Creative Lab" in high-contrast editorial serif with "Creative" in italic and a calligraphic swash; the symbol is the baroque belfry of Mons, a slender square bell tower crowned by three stacked bulbous onion domes and a small lantern spire, flanked by four small domed corner turrets, drawn in a few confident calligraphic brush-ink strokes, one stroke ending in a quill nib flourish, art and storytelling studio, no paintbrush object, flat warm amber #FFB547 strokes with ochre #A66A0B accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
+stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "CM" above "Creative Lab" in high-contrast editorial serif with "Creative" in italic and a calligraphic swash; the symbol is the baroque belfry of Mons, a slender square bell tower crowned by three stacked bulbous onion domes and a small lantern spire, flanked by four small domed corner turrets, drawn in a few confident calligraphic brush-ink strokes, one stroke ending in a quill nib flourish, art and storytelling studio, no paintbrush object, flat warm amber #FFB547 strokes with ochre #A66A0B accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
 ```
 
 #### Car d'Or
@@ -351,7 +351,7 @@ flat vector logo symbol, the Car d'Or processional carriage of Mons in side prof
 Avec texte
 
 ```
-stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "OCC" above "Creative Lab" in high-contrast editorial serif with "Creative" in italic and a calligraphic swash; the symbol is the Car d'Or processional carriage of Mons in side profile, boat-shaped body with a raised stern, spiral volute at the prow, small domed reliquary lantern at the front, two large spoked wheels, no cherubs, drawn in a few confident calligraphic brush-ink strokes, one stroke ending in a quill nib flourish, art and storytelling studio, no paintbrush object, flat warm amber #FFB547 strokes with ochre #A66A0B accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
+stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "CM" above "Creative Lab" in high-contrast editorial serif with "Creative" in italic and a calligraphic swash; the symbol is the Car d'Or processional carriage of Mons in side profile, boat-shaped body with a raised stern, spiral volute at the prow, small domed reliquary lantern at the front, two large spoked wheels, no cherubs, drawn in a few confident calligraphic brush-ink strokes, one stroke ending in a quill nib flourish, art and storytelling studio, no paintbrush object, flat warm amber #FFB547 strokes with ochre #A66A0B accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
 ```
 
 #### Dragon du Doudou
@@ -373,7 +373,7 @@ flat vector logo symbol, the Doudou dragon of Mons in side profile, long body, o
 Avec texte
 
 ```
-stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "OCC" above "Creative Lab" in high-contrast editorial serif with "Creative" in italic and a calligraphic swash; the symbol is the Doudou dragon of Mons in side profile, long body, open crocodile-like snout, a row of triangular spikes along the back, long curling tail, drawn in a few confident calligraphic brush-ink strokes, one stroke ending in a quill nib flourish, art and storytelling studio, no paintbrush object, flat warm amber #FFB547 strokes with ochre #A66A0B accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
+stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "CM" above "Creative Lab" in high-contrast editorial serif with "Creative" in italic and a calligraphic swash; the symbol is the Doudou dragon of Mons in side profile, long body, open crocodile-like snout, a row of triangular spikes along the back, long curling tail, drawn in a few confident calligraphic brush-ink strokes, one stroke ending in a quill nib flourish, art and storytelling studio, no paintbrush object, flat warm amber #FFB547 strokes with ochre #A66A0B accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.4 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
 ```
 
 #### Singe du Grand-Garde
@@ -395,7 +395,7 @@ flat vector logo symbol, the lucky bronze monkey of Mons crouching in profile wi
 Avec texte
 
 ```
-stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "OCC" above "Creative Lab" in high-contrast editorial serif with "Creative" in italic and a calligraphic swash; the symbol is the lucky bronze monkey of Mons crouching in profile with one hand resting on top of its head, drawn in a few confident calligraphic brush-ink strokes, one stroke ending in a quill nib flourish, art and storytelling studio, no paintbrush object, flat warm amber #FFB547 strokes with ochre #A66A0B accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.45 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
+stacked logo lockup, the symbol on top, below it small widely spaced monospace capitals "CM" above "Creative Lab" in high-contrast editorial serif with "Creative" in italic and a calligraphic swash; the symbol is the lucky bronze monkey of Mons crouching in profile with one hand resting on top of its head, drawn in a few confident calligraphic brush-ink strokes, one stroke ending in a quill nib flourish, art and storytelling studio, no paintbrush object, flat warm amber #FFB547 strokes with ochre #A66A0B accents, on solid near-black #07070A, flat vector, exact spelling --iw 0.45 --v 7 --style raw --stylize 40 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, mockup, people, background scenery
 ```
 
 ---

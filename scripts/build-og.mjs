@@ -31,19 +31,19 @@ const SITES = {
 		icon: 'cardor-monogram'
 	},
 	interactive: {
-		name: 'OCC Interactive',
+		name: 'CM Interactive',
 		signal: '#C6FF3D',
 		host: 'interactive.cardormedia.com',
 		icon: 'interactive'
 	},
 	sound: {
-		name: 'OCC Soundworks',
+		name: 'CM Soundworks',
 		signal: '#7B5CFF',
 		host: 'sound.cardormedia.com',
 		icon: 'sound'
 	},
 	creative: {
-		name: 'OCC Creative Lab',
+		name: 'CM Creative Lab',
 		signal: '#FFB547',
 		host: 'creative.cardormedia.com',
 		icon: 'creative'
@@ -101,7 +101,7 @@ function card(siteId, page) {
 	${art}
 	<p class="kicker"><b>●</b> ${og.kicker}</p>
 	<div class="title">
-		${isDivisionHome ? '<p class="occ">OCC</p>' : ''}
+		${isDivisionHome ? '<p class="occ">CM</p>' : ''}
 		<h1>${og.heading}</h1>
 		<p class="sub">${og.sub}</p>
 	</div>

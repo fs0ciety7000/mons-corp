@@ -19,9 +19,9 @@ Le site corporate `cardormedia.com` n'est pas une plaquette. C'est **la premièr
 
 ```
 CARDOR Media (holding)                      cardormedia.com
-├── OCC Interactive   — Web & jeu vidéo 3D   interactive.cardormedia.com
-├── OCC Soundworks    — Sound design, doublage, musique   sound.cardormedia.com
-├── OCC Creative Lab  — Illustration, graphisme, rédaction, lore   creative.cardormedia.com
+├── CM Interactive   — Web & jeu vidéo 3D   interactive.cardormedia.com
+├── CM Soundworks    — Sound design, doublage, musique   sound.cardormedia.com
+├── CM Creative Lab  — Illustration, graphisme, rédaction, lore   creative.cardormedia.com
 └── Infrastructure    — back-office, Coolify   *.fs0ciety.org
 ```
 

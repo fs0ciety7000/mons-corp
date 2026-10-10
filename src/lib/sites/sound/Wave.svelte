@@ -4,7 +4,7 @@
 	import { gsap } from '#lib/motion/gsap.ts';
 	import { prefersReducedMotion } from '#lib/motion/tokens.ts';
 
-	// OCC Soundworks signature: a waveform crossing the page, amplified by the drone.
+	// CM Soundworks signature: a waveform crossing the page, amplified by the drone.
 	let path: SVGPathElement;
 	const W = 1200;
 	const N = 160;

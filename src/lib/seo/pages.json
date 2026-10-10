@@ -15,7 +15,7 @@
 		"contact": {
 			"path": "/contact",
 			"title": "Contact — CARDOR Media, Mons",
-			"description": "Production, partenariat, presse ou candidature : écrivez à CARDOR Media et à ses studios OCC Interactive, Soundworks et Creative Lab, à Mons.",
+			"description": "Production, partenariat, presse ou candidature : écrivez à CARDOR Media et à ses studios CM Interactive, Soundworks et Creative Lab, à Mons.",
 			"og": {
 				"kicker": "Contact · CARDOR Media",
 				"heading": "Parlons de votre <i>prochain</i> monde.",
@@ -40,78 +40,78 @@
 	"interactive": {
 		"home": {
 			"path": "/",
-			"title": "OCC Interactive — Studio jeux vidéo & développement web à Mons",
+			"title": "CM Interactive — Studio jeux vidéo & développement web à Mons",
 			"description": "Le studio jeux vidéo et web de CARDOR Media, à Mons : jeux de stratégie et d’action jouables dans le navigateur, applications et outils métier.",
 			"og": {
 				"kicker": "Jeux vidéo & développement web · Mons",
 				"heading": "Interactive",
 				"sub": "Des mondes que l’on habite.",
 				"emblems": ["interactive"],
-				"alt": "OCC Interactive — le Dragon du Doudou en facettes"
+				"alt": "CM Interactive — le Dragon du Doudou en facettes"
 			}
 		},
 		"contact": {
 			"path": "/contact",
-			"title": "Contact — OCC Interactive",
-			"description": "Un jeu, une application ou un site à forger ? Écrivez à OCC Interactive, le studio jeux vidéo et web de CARDOR Media à Mons.",
+			"title": "Contact — CM Interactive",
+			"description": "Un jeu, une application ou un site à forger ? Écrivez à CM Interactive, le studio jeux vidéo et web de CARDOR Media à Mons.",
 			"og": {
-				"kicker": "Contact · OCC Interactive",
+				"kicker": "Contact · CM Interactive",
 				"heading": "Un monde <i>à bâtir</i> ?",
 				"sub": "contact@cardormedia.com",
 				"emblems": ["interactive"],
-				"alt": "Contact OCC Interactive — le Dragon du Doudou"
+				"alt": "Contact CM Interactive — le Dragon du Doudou"
 			}
 		}
 	},
 	"sound": {
 		"home": {
 			"path": "/",
-			"title": "OCC Soundworks — Sound design, doublage & musique à Mons",
+			"title": "CM Soundworks — Sound design, doublage & musique à Mons",
 			"description": "Le studio son de CARDOR Media, à Mons : sound design, doublage et voix, musique originale, mixage et mastering pour le jeu, l’animation et le web.",
 			"og": {
 				"kicker": "Sound design · Doublage · Musique · Mons",
 				"heading": "<i>Soundworks</i>",
 				"sub": "Des mondes que l’on entend.",
 				"emblems": ["sound"],
-				"alt": "OCC Soundworks — le Beffroi de Mons en ondes"
+				"alt": "CM Soundworks — le Beffroi de Mons en ondes"
 			}
 		},
 		"contact": {
 			"path": "/contact",
-			"title": "Contact — OCC Soundworks",
-			"description": "Un projet à faire résonner ? Sound design, doublage, musique ou mixage : écrivez à OCC Soundworks, le studio son de CARDOR Media à Mons.",
+			"title": "Contact — CM Soundworks",
+			"description": "Un projet à faire résonner ? Sound design, doublage, musique ou mixage : écrivez à CM Soundworks, le studio son de CARDOR Media à Mons.",
 			"og": {
-				"kicker": "Contact · OCC Soundworks",
+				"kicker": "Contact · CM Soundworks",
 				"heading": "Faisons <i>résonner</i> votre monde.",
 				"sub": "contact@cardormedia.com",
 				"emblems": ["sound"],
-				"alt": "Contact OCC Soundworks — le Beffroi"
+				"alt": "Contact CM Soundworks — le Beffroi"
 			}
 		}
 	},
 	"creative": {
 		"home": {
 			"path": "/",
-			"title": "OCC Creative Lab — Illustration, direction artistique & lore",
+			"title": "CM Creative Lab — Illustration, direction artistique & lore",
 			"description": "L’atelier de CARDOR Media, à Mons : illustration et concept art, direction artistique, écriture et lore, identités visuelles pour le jeu et l’édition.",
 			"og": {
 				"kicker": "Illustration · Direction artistique · Lore · Mons",
 				"heading": "<i>Creative Lab</i>",
 				"sub": "Des mondes que l’on raconte.",
 				"emblems": ["creative"],
-				"alt": "OCC Creative Lab — le Singe du Grand-Garde à l’encre"
+				"alt": "CM Creative Lab — le Singe du Grand-Garde à l’encre"
 			}
 		},
 		"contact": {
 			"path": "/contact",
-			"title": "Contact — OCC Creative Lab",
-			"description": "Une histoire à faire naître ? Illustration, direction artistique ou lore : écrivez à OCC Creative Lab, l’atelier de CARDOR Media à Mons.",
+			"title": "Contact — CM Creative Lab",
+			"description": "Une histoire à faire naître ? Illustration, direction artistique ou lore : écrivez à CM Creative Lab, l’atelier de CARDOR Media à Mons.",
 			"og": {
-				"kicker": "Contact · OCC Creative Lab",
+				"kicker": "Contact · CM Creative Lab",
 				"heading": "Une histoire <i>à faire naître</i> ?",
 				"sub": "contact@cardormedia.com",
 				"emblems": ["creative"],
-				"alt": "Contact OCC Creative Lab — le Singe du Grand-Garde"
+				"alt": "Contact CM Creative Lab — le Singe du Grand-Garde"
 			}
 		}
 	}

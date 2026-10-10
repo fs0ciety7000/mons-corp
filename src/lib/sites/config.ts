@@ -6,7 +6,7 @@ export type SiteId = 'holding' | 'interactive' | 'sound' | 'creative';
 export interface SiteConfig {
 	id: SiteId;
 	name: string;
-	/** Short label used next to "OCC" in lockups. */
+	/** Short label used next to "CM" in lockups. */
 	short: string;
 	emblem: LogoName;
 	signal: string;
@@ -45,7 +45,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 	},
 	interactive: {
 		id: 'interactive',
-		name: 'OCC Interactive',
+		name: 'CM Interactive',
 		short: 'Interactive',
 		emblem: 'interactive',
 		signal: '#C6FF3D',
@@ -54,7 +54,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 		email: 'contact@cardormedia.com',
 		tagline: 'Des mondes que l’on habite',
 		description:
-			'OCC Interactive, le studio jeux vidéo et web de CARDOR Media : jeux de stratégie et d’action jouables dans le navigateur, applications et outils métier. Forgé à Mons.',
+			'CM Interactive, le studio jeux vidéo et web de CARDOR Media : jeux de stratégie et d’action jouables dans le navigateur, applications et outils métier. Forgé à Mons.',
 		nav: [
 			{ href: '/#projets', label: 'Projets' },
 			{ href: '/#methode', label: 'Méthode' },
@@ -69,7 +69,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 	},
 	sound: {
 		id: 'sound',
-		name: 'OCC Soundworks',
+		name: 'CM Soundworks',
 		short: 'Soundworks',
 		emblem: 'sound',
 		signal: '#7B5CFF',
@@ -78,7 +78,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 		email: 'contact@cardormedia.com',
 		tagline: 'Des mondes que l’on entend',
 		description:
-			'OCC Soundworks, le studio son de CARDOR Media : sound design, doublage et voix, musique originale, mixage et mastering pour le jeu, l’animation et le web.',
+			'CM Soundworks, le studio son de CARDOR Media : sound design, doublage et voix, musique originale, mixage et mastering pour le jeu, l’animation et le web.',
 		nav: [
 			{ href: '/#savoir-faire', label: 'Savoir-faire' },
 			{ href: '/#chaine', label: 'Chaîne' },
@@ -93,7 +93,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 	},
 	creative: {
 		id: 'creative',
-		name: 'OCC Creative Lab',
+		name: 'CM Creative Lab',
 		short: 'Creative Lab',
 		emblem: 'creative',
 		signal: '#FFB547',
@@ -102,7 +102,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 		email: 'contact@cardormedia.com',
 		tagline: 'Des mondes que l’on raconte',
 		description:
-			'OCC Creative Lab, l’atelier de CARDOR Media : illustration et concept art, direction artistique, écriture et lore, identités visuelles.',
+			'CM Creative Lab, l’atelier de CARDOR Media : illustration et concept art, direction artistique, écriture et lore, identités visuelles.',
 		nav: [
 			{ href: '/#ateliers', label: 'Ateliers' },
 			{ href: '/#methode', label: 'Méthode' },

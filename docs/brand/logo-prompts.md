@@ -1,4 +1,4 @@
-# Logos CARDOR Media & divisions OCC — Prompts v2 « Car d'Or »
+# Logos CARDOR Media & divisions CM — Prompts v2 « Car d'Or »
 
 > Livrable du **Design & UX Agent**, v2 (2026-10-10). Remplace la v1 « cercle abstrait ».
 > **Nano Banana** : 25 explorations déjà générées (Nano Banana Pro, `gemini-3-pro-image`) → `docs/brand/logos/v1/`.
@@ -38,7 +38,7 @@ Le **Car d'Or** est le carrosse processionnel doré de Mons (XVIIIᵉ s.), qui p
 
 - **CARDOR** : capitales serif éditoriales hautes, contraste fort (_Instrument Serif_ / Didone), approche serrée.
 - **Media** : même famille, **italique**, en or, glissé sous le R final (le « geste » de la charte).
-- **OCC** : petites capitales **mono espacées** (_Geist Mono_). Nom de la division en serif ; italique pour Soundworks et Creative.
+- **CM** : petites capitales **mono espacées** (_Geist Mono_). Nom de la division en serif ; italique pour Soundworks et Creative.
 - Sceau : capitales romaines gravées, espacées (« CARDOR MEDIA · MONS · MMXXVI »).
 
 ---
@@ -47,12 +47,12 @@ Le **Car d'Or** est le carrosse processionnel doré de Mons (XVIIIᵉ s.), qui p
 
 Planches : [`sheet-holding.webp`](logos/v1/sheet-holding.webp) · [`sheet-divisions.webp`](logos/v1/sheet-divisions.webp) · [`family-board.webp`](logos/v1/family-board.webp)
 
-| Marque               | Monochrome sans texte                                                                                                                              | Couleur sans texte                                  | Avec texte                                                                                                                                                   | Car d'Or complet          |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- |
-| **CARDOR Media**     | `cardor-01-mono-wheel`, `cardor-03-mono-volute`, `cardor-07-mono-carriage`, `cardor-09-mono-carriage-monoline`, `cardor-10-mono-carriage-in-wheel` | `cardor-02-color-wheel`, `cardor-08-color-carriage` | `cardor-04-text-lockup`, `cardor-05-text-wordmark-mono`, `cardor-06-text-seal`, `cardor-11-text-carriage-stacked`, `cardor-12-text-carriage-horizontal-mono` | 07 → 12                   |
-| **OCC Interactive**  | `interactive-01-mono`                                                                                                                              | `interactive-02-color`                              | `interactive-03-text`                                                                                                                                        | `interactive-04-carriage` |
-| **OCC Soundworks**   | `soundworks-01-mono`                                                                                                                               | `soundworks-02-color`                               | `soundworks-03-text`                                                                                                                                         | `soundworks-04-carriage`  |
-| **OCC Creative Lab** | `creative-01-mono`                                                                                                                                 | `creative-02-color`                                 | `creative-03-text`                                                                                                                                           | `creative-04-carriage`    |
+| Marque              | Monochrome sans texte                                                                                                                              | Couleur sans texte                                  | Avec texte                                                                                                                                                   | Car d'Or complet          |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- |
+| **CARDOR Media**    | `cardor-01-mono-wheel`, `cardor-03-mono-volute`, `cardor-07-mono-carriage`, `cardor-09-mono-carriage-monoline`, `cardor-10-mono-carriage-in-wheel` | `cardor-02-color-wheel`, `cardor-08-color-carriage` | `cardor-04-text-lockup`, `cardor-05-text-wordmark-mono`, `cardor-06-text-seal`, `cardor-11-text-carriage-stacked`, `cardor-12-text-carriage-horizontal-mono` | 07 → 12                   |
+| **CM Interactive**  | `interactive-01-mono`                                                                                                                              | `interactive-02-color`                              | `interactive-03-text`                                                                                                                                        | `interactive-04-carriage` |
+| **CM Soundworks**   | `soundworks-01-mono`                                                                                                                               | `soundworks-02-color`                               | `soundworks-03-text`                                                                                                                                         | `soundworks-04-carriage`  |
+| **CM Creative Lab** | `creative-01-mono`                                                                                                                                 | `creative-02-color`                                 | `creative-03-text`                                                                                                                                           | `creative-04-carriage`    |
 
 **Avis du Design Agent (pour guider le choix, pas pour trancher) :**
 
@@ -98,12 +98,12 @@ Ce fichier est généré par `scripts/build-midjourney-prompts.py` : modifie les
 
 Matrice complète **4 marques × 4 motifs × 3 variantes** (monochrome, couleur, avec texte), générée avec Nano Banana Pro. Les fichiers sont dans `docs/brand/logos/v2/` et suivent le nommage `<marque>-<motif>-<1-mono|2-color|3-text>.webp`.
 
-| Marque           | Planche                                                     |
-| ---------------- | ----------------------------------------------------------- |
-| CARDOR Media     | [`board-cardor.webp`](logos/v2/board-cardor.webp)           |
-| OCC Interactive  | [`board-interactive.webp`](logos/v2/board-interactive.webp) |
-| OCC Soundworks   | [`board-soundworks.webp`](logos/v2/board-soundworks.webp)   |
-| OCC Creative Lab | [`board-creative.webp`](logos/v2/board-creative.webp)       |
+| Marque          | Planche                                                     |
+| --------------- | ----------------------------------------------------------- |
+| CARDOR Media    | [`board-cardor.webp`](logos/v2/board-cardor.webp)           |
+| CM Interactive  | [`board-interactive.webp`](logos/v2/board-interactive.webp) |
+| CM Soundworks   | [`board-soundworks.webp`](logos/v2/board-soundworks.webp)   |
+| CM Creative Lab | [`board-creative.webp`](logos/v2/board-creative.webp)       |
 
 > ✅ 48/48 générés (les 3 cases Creative Lab × Singe ont été relancées après levée de la limite de dépense API).
 >
@@ -120,12 +120,12 @@ Matrice complète **4 marques × 4 motifs × 3 variantes** (monochrome, couleur,
 
 ### Traitement par marque (identique pour tous les motifs)
 
-| Marque           | Écriture graphique                                   | Couleurs                                                      |
-| ---------------- | ---------------------------------------------------- | ------------------------------------------------------------- |
-| CARDOR Media     | Emblème géométrique, aplats francs                   | Or `#D4A84B` + bone `#EDE8DF` + un seul point Ember `#FF3B1F` |
-| OCC Interactive  | Low-poly facetté, une facette décalée (glitch)       | Acid `#C6FF3D` + olive `#5B7A00`                              |
-| OCC Soundworks   | Barres d'onde et anneaux concentriques               | Ultraviolet `#7B5CFF` + indigo `#3A2A9E`                      |
-| OCC Creative Lab | Traits d'encre calligraphiques, terminaison en plume | Amber `#FFB547` + ocre `#A66A0B`                              |
+| Marque          | Écriture graphique                                   | Couleurs                                                      |
+| --------------- | ---------------------------------------------------- | ------------------------------------------------------------- |
+| CARDOR Media    | Emblème géométrique, aplats francs                   | Or `#D4A84B` + bone `#EDE8DF` + un seul point Ember `#FF3B1F` |
+| CM Interactive  | Low-poly facetté, une facette décalée (glitch)       | Acid `#C6FF3D` + olive `#5B7A00`                              |
+| CM Soundworks   | Barres d'onde et anneaux concentriques               | Ultraviolet `#7B5CFF` + indigo `#3A2A9E`                      |
+| CM Creative Lab | Traits d'encre calligraphiques, terminaison en plume | Amber `#FFB547` + ocre `#A66A0B`                              |
 
 **Lecture du Design Agent** (pour guider le choix) :
 

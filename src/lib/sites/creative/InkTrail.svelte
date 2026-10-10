@@ -4,7 +4,7 @@
 	import { isFinePointer, prefersReducedMotion } from '#lib/motion/tokens.ts';
 
 	/**
-	 * OCC Creative Lab signature: the cursor leaves a fading amber ink stroke.
+	 * CM Creative Lab signature: the cursor leaves a fading amber ink stroke.
 	 * Width follows speed like a brush (slow = wide). Rendered on gsap.ticker (ADR-004).
 	 */
 	let canvas: HTMLCanvasElement;

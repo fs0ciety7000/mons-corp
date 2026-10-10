@@ -46,7 +46,7 @@
 					<div class="relative">
 						<p class="mb-3 label text-ash">Emblème — {emblems[d.id].motif}</p>
 						<h3 class="font-display text-h1">
-							<span class="block text-ash">OCC</span>
+							<span class="block text-ash">CM</span>
 							<span
 								class="block transition-colors duration-500 group-hover:text-(--division) group-hover:italic"
 								>{d.short}</span

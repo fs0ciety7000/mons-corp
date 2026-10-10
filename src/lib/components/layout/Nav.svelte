@@ -78,7 +78,7 @@
 						<Logo name={site.emblem} variant="mono" animate="hover" host="a" class="size-full" />
 					</span>
 					<span class="flex flex-col">
-						<span class="font-mono text-[0.6875rem] tracking-[0.4em]">OCC</span>
+						<span class="font-mono text-[0.6875rem] tracking-[0.4em]">CM</span>
 						<span class={['leading-none', site.id !== 'interactive' && 'italic']}>{site.short}</span
 						>
 					</span>

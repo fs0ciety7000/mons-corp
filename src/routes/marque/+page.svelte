@@ -8,9 +8,9 @@
 	const marks: { name: LogoName; label: string; accent: string }[] = [
 		{ name: 'cardor-monogram', label: 'CARDOR Media — monogramme « La roue »', accent: '#D4A84B' },
 		{ name: 'cardor-emblem', label: 'CARDOR Media — emblème « Le Car d’Or »', accent: '#D4A84B' },
-		{ name: 'interactive', label: 'OCC Interactive — « Le Dragon »', accent: '#C6FF3D' },
-		{ name: 'sound', label: 'OCC Soundworks — « Le Beffroi »', accent: '#7B5CFF' },
-		{ name: 'creative', label: 'OCC Creative Lab — « Le Singe »', accent: '#FFB547' }
+		{ name: 'interactive', label: 'CM Interactive — « Le Dragon »', accent: '#C6FF3D' },
+		{ name: 'sound', label: 'CM Soundworks — « Le Beffroi »', accent: '#7B5CFF' },
+		{ name: 'creative', label: 'CM Creative Lab — « Le Singe »', accent: '#FFB547' }
 	];
 
 	const swatches = [
@@ -69,9 +69,9 @@
 	const downloads: { file: string; label: string }[] = [
 		{ file: 'cardor-monogram.svg', label: 'Monogramme CARDOR (roue)' },
 		{ file: 'cardor-emblem.svg', label: 'Emblème CARDOR (Car d’Or)' },
-		{ file: 'interactive.svg', label: 'OCC Interactive (Dragon)' },
-		{ file: 'sound.svg', label: 'OCC Soundworks (Beffroi)' },
-		{ file: 'creative.svg', label: 'OCC Creative Lab (Singe)' }
+		{ file: 'interactive.svg', label: 'CM Interactive (Dragon)' },
+		{ file: 'sound.svg', label: 'CM Soundworks (Beffroi)' },
+		{ file: 'creative.svg', label: 'CM Creative Lab (Singe)' }
 	];
 </script>
 
@@ -260,7 +260,7 @@
 			</h2>
 			<p class="col-span-4 max-w-[60ch] text-ash md:col-span-6 lg:col-span-6 lg:col-start-4">
 				Composés en vraies polices : Instrument Serif pour les noms (« Media » toujours en italique
-				or), Geist Mono espacé pour « OCC ». L'écart entre le signe et le texte vaut
+				or), Geist Mono espacé pour « CM ». L'écart entre le signe et le texte vaut
 				<span class="font-mono text-bone">1x</span> ; la hauteur du signe vaut la hauteur de capitale
 				plus le jambage.
 			</p>
@@ -294,7 +294,7 @@
 					<div class="flex items-center gap-[0.4em] text-[clamp(2rem,3.4vw,3.2rem)]">
 						<Logo name={l.id as LogoName} animate="hover" host=".lockup" class="h-[1.5em] w-auto" />
 						<span class="flex flex-col">
-							<span class="font-mono text-[0.3em] tracking-[0.5em]" style:color={l.c}>OCC</span>
+							<span class="font-mono text-[0.3em] tracking-[0.5em]" style:color={l.c}>CM</span>
 							<span class={['font-display leading-none', l.it && 'italic']}>{l.n}</span>
 						</span>
 					</div>

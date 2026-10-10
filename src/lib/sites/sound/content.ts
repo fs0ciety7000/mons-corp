@@ -2,7 +2,7 @@ import type { DivisionContent } from '#lib/sites/division/types.ts';
 
 export const content: DivisionContent = {
 	hero: {
-		kicker: '[OCC—02] Sound design · Doublage · Musique',
+		kicker: '[CM—02] Sound design · Doublage · Musique',
 		meta: '48 kHz / 24 bit — Mons',
 		lead: 'Nous donnons un pouls aux œuvres : des voix qui incarnent, des sons qui situent, des musiques qui restent. Pour le jeu, l’animation, la fiction et le web.',
 		cta: { label: 'Nos savoir-faire', href: '#savoir-faire' }

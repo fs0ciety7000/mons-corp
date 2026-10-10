@@ -1,4 +1,4 @@
-# OCC Creative Lab : rapports d'agents
+# CM Creative Lab : rapports d'agents
 
 ## 🎨 Design & UX Agent
 
