@@ -17,7 +17,7 @@ export function pageSeo(key: PageKey) {
 	const base = siteUrl(SITE);
 	return {
 		...p,
-		url: p.path === '/' ? base : `${base}${p.path}`,
+		url: p.path === '/' ? `${base}/` : `${base}${p.path}`,
 		image: `${base}/og/${SITE}-${key}.jpg`
 	};
 }
