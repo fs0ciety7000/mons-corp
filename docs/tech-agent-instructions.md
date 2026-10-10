@@ -117,28 +117,28 @@ npm run build   # build production
 docker build -t cardor-web .
 ```
 
-## 6. Déploiement Coolify
+## 6. Déploiement Coolify (production)
 
-**État : ✅ en ligne sur https://cardor.fs0ciety.org** (préproduction, certificat Let's Encrypt).
+**État : ✅ en production** (certificats Let's Encrypt, projet Coolify « CARDOR Media »).
 
-| Réglage                | Valeur                                                                                                                               |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| Projet / environnement | « CARDOR Media » / `production`                                                                                                      |
-| Application            | `cardor-web` (uuid `szxysnkgapr4g7bseqbrruka`), serveur `localhost` (152.53.176.13)                                                  |
-| Source                 | dépôt public `fs0ciety7000/mons-corp`, branche `claude/wonderful-davinci-8s3sqr`                                                     |
-| Build pack             | **Dockerfile**, port **3000**                                                                                                        |
-| Variables              | `ORIGIN=https://cardor.fs0ciety.org` (`NODE_ENV`, `PORT`, `HOST` sont fixés dans l'image)                                            |
-| Healthcheck            | `GET /healthz` sur **127.0.0.1**:3000. Ne pas mettre `localhost` : sous Alpine, il se résout en `::1` alors que Node écoute en IPv4. |
-| DNS                    | wildcard `*.fs0ciety.org` → serveur ; aucun enregistrement à créer                                                                   |
+| Site             | Production                                            | Alias infrastructure         | App Coolify (uuid)                                | `PUBLIC_SITE` |
+| ---------------- | ----------------------------------------------------- | ---------------------------- | ------------------------------------------------- | ------------- |
+| CARDOR Media     | https://cardormedia.com · https://www.cardormedia.com | cardor.fs0ciety.org          | `cardor-web` (`szxysnkgapr4g7bseqbrruka`)         | `holding`     |
+| OCC Interactive  | https://interactive.cardormedia.com                   | occ-interactive.fs0ciety.org | `cardor-interactive` (`luwdosthown6up9dyyokmkby`) | `interactive` |
+| OCC Soundworks   | https://sound.cardormedia.com                         | occ-soundworks.fs0ciety.org  | `cardor-sound` (`myii0yozmypvugxatkzo4xs3`)       | `sound`       |
+| OCC Creative Lab | https://creative.cardormedia.com                      | occ-creative.fs0ciety.org    | `cardor-creative` (`ourwq427ufzwruc9tcq9ytzq`)    | `creative`    |
 
-**Redéployer** (le dépôt est public sans GitHub App, donc un push ne déclenche pas de build automatique) :
+- **Build** : Dockerfile, port 3000, même dépôt et même branche pour les 4 apps ; `PUBLIC_SITE` et `PUBLIC_DEPLOY_ENV=production` sont des variables de build ; `ORIGIN` = domaine de production.
+- **Healthcheck** : `GET /healthz` sur **127.0.0.1**:3000. Ne pas mettre `localhost` : sous Alpine, il se résout en `::1` alors que Node écoute en IPv4.
+- **DNS** (Cloudflare, zone `cardormedia.com`) : A `@`, `www`, `interactive`, `sound`, `creative` → 152.53.176.13, en **DNS only** ; CAA `issue letsencrypt.org`. Script : `scripts/cloudflare-dns.sh` (idempotent ; `PROXIED=true` pour passer en orange une fois les certificats émis).
+- **Bascule domaines / env** : `scripts/coolify-production.sh`.
+- **Redéployer** (pas de déploiement automatique au push : dépôt public sans GitHub App) :
 
 ```bash
 curl -X POST "$COOLIFY_API_URL/api/v1/deploy" -H "Authorization: Bearer $COOLIFY_API_TOKEN" \
-  -H "Content-Type: application/json" -d '{"uuid":"szxysnkgapr4g7bseqbrruka"}'
+  -H "Content-Type: application/json" \
+  -d '{"uuid":"szxysnkgapr4g7bseqbrruka,luwdosthown6up9dyyokmkby,myii0yozmypvugxatkzo4xs3,ourwq427ufzwruc9tcq9ytzq"}'
 ```
-
-**Passage en production sur `cardormedia.com`** : zone Cloudflare + enregistrements DNS (A apex et `www` → 152.53.176.13), puis ajouter `https://cardormedia.com,https://www.cardormedia.com` aux domaines de l'app, mettre `ORIGIN=https://cardormedia.com` et redéployer. Les sous-domaines `interactive.`, `sound.` et `creative.` seront des apps Coolify distinctes.
 
 ## 7. Feuille de route technique
 

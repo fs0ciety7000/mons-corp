@@ -49,14 +49,14 @@ CARDOR Media (holding)                      cardormedia.com
 
 ## 5. Stack validée
 
-| Domaine     | Choix                                                                                                    | Statut     |
-| ----------- | -------------------------------------------------------------------------------------------------------- | ---------- |
-| Framework   | **SvelteKit 3 + Svelte 5 (runes)** + TypeScript                                                          | ✅ validé  |
-| Styling     | **Tailwind CSS 4** (tokens via `@theme`)                                                                 | ✅ validé  |
-| Motion      | **GSAP 3.15** (ScrollTrigger, SplitText, CustomEase) + **Lenis**                                         | ✅ validé  |
-| 3D          | **Three.js** natif + shaders GLSL maison (Threlte écarté pour le hero, cf. ADR-003)                      | ✅ validé  |
-| Runtime     | `@sveltejs/adapter-node` → image Docker Node 22 alpine                                                   | ✅ validé  |
-| Déploiement | **Coolify** — préprod en ligne : https://cardor.fs0ciety.org (projet « CARDOR Media », app `cardor-web`) | ✅ déployé |
+| Domaine     | Choix                                                                                                                  | Statut           |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| Framework   | **SvelteKit 3 + Svelte 5 (runes)** + TypeScript                                                                        | ✅ validé        |
+| Styling     | **Tailwind CSS 4** (tokens via `@theme`)                                                                               | ✅ validé        |
+| Motion      | **GSAP 3.15** (ScrollTrigger, SplitText, CustomEase) + **Lenis**                                                       | ✅ validé        |
+| 3D          | **Three.js** natif + shaders GLSL maison (Threlte écarté pour le hero, cf. ADR-003)                                    | ✅ validé        |
+| Runtime     | `@sveltejs/adapter-node` → image Docker Node 22 alpine                                                                 | ✅ validé        |
+| Déploiement | **Coolify** — production : cardormedia.com · interactive. · sound. · creative.cardormedia.com (alias `*.fs0ciety.org`) | ✅ en production |
 
 ## 6. Règles non négociables
 
