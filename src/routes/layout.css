@@ -97,6 +97,36 @@
 	}
 }
 
+/* Veil between the WebGL emblem and the hero text (design review 2026-10-10): the lead paragraph
+   always sits on a background of luminance ≤ 0.05 (≥ 7:1 for bone/90). */
+@utility hero-scrim {
+	--v: var(--color-void);
+	background: linear-gradient(
+		to bottom,
+		color-mix(in srgb, var(--v) 50%, transparent) 0%,
+		transparent 16%,
+		transparent 40%,
+		color-mix(in srgb, var(--v) 78%, transparent) 56%,
+		color-mix(in srgb, var(--v) 94%, transparent) 68%,
+		var(--v) 100%
+	);
+	@media (width >= 48rem) {
+		background:
+			radial-gradient(
+				ellipse 55% 45% at 12% 88%,
+				color-mix(in srgb, var(--v) 85%, transparent),
+				transparent 70%
+			),
+			linear-gradient(
+				to bottom,
+				color-mix(in srgb, var(--v) 50%, transparent) 0%,
+				transparent 18%,
+				transparent 62%,
+				color-mix(in srgb, var(--v) 88%, transparent) 100%
+			);
+	}
+}
+
 @utility gutter-x {
 	padding-inline: 16px;
 	@media (width >= 48rem) {

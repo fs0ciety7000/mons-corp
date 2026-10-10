@@ -62,6 +62,8 @@ Une **sphère vivante** (icosaèdre subdivisé, ~80 000 triangles sur desktop, ~
 
 Autour, un **halo de poussière** (6 000 points, 2 000 sur mobile) en orbite lente, qui s'agite avec la vitesse du curseur.
 
+> **v1.2 (2026-10-10) — Le Noyau prend la forme de l'emblème.** La sphère est remplacée par l'emblème extrudé du site, avec le même rendu (fresnel, irisation bornée, éclipse, halo, poussière). Holding = roue (un tour en ~42 s) ; Interactive = dragon (salve de glitch de 120 ms toutes les ~5 s, décalage ≤ 2 %) ; Soundworks = beffroi (onde de 2,4 s, ±6 % de luminance) ; Creative Lab = singe (flux de bruit ≤ 0,04). Sur la holding, survoler une division fait pivoter l'emblème vers celui de la division. Cadrage par `camera.setViewOffset` : au-dessus du titre sur mobile (centre NDC 0,22 ; 0,45, 62 % de la largeur), à droite dès 768 px. Lisibilité : voile `hero-scrim` + atténuation à 30 % dans la passe post sous la zone de texte, luminance de la teinte plafonnée selon la couleur signal. Tilt ≤ 0,18 rad, énergie plafonnée à 0,4, disparition au scroll (× 1 − 1,6 s). Animations réduites : une image fixe en pose 3/4. Code : `src/lib/webgl/emblem.ts`, `shaders/emblem.{vert,frag}`.
+
 ### 4.2 Les quatre états (uniforms interpolés par GSAP)
 
 | État                 | Déclencheur           | `uColor`              | `uNoiseFreq` | `uNoiseAmp` | `uFacet`                                                        | `uPulse`                                              | `uFlow`                                  |

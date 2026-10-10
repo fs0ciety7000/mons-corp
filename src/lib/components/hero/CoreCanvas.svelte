@@ -18,7 +18,8 @@
 	// DOM → WebGL: morph whenever the active state changes.
 	$effect(() => {
 		const id = core.active;
-		scene?.setState(id);
+		const reduce = prefersReducedMotion();
+		scene?.setState(id, reduce).then(() => reduce && scene?.render());
 	});
 
 	// Birth of the Core once the preloader lifts (motion report §5, t = 1.90 s).
@@ -68,9 +69,9 @@
 			try {
 				const { CoreScene } = await import('#lib/webgl/CoreScene.ts');
 				if (disposed) return;
-				instance = new CoreScene(canvas, { lowPower, onError: markFailed });
-				if (!instance.compile()) return markFailed();
-				instance.setState(core.active, true);
+				instance = new CoreScene(canvas, { lowPower, still: reduce, onError: markFailed });
+				if (!(await instance.init(core.active))) return disposed ? undefined : markFailed();
+				if (disposed) return;
 				scene = instance;
 			} catch {
 				return markFailed();
@@ -155,11 +156,24 @@
 	.fallback {
 		background:
 			radial-gradient(
-				circle at 50% 45%,
+				circle at var(--fx, 61%) var(--fy, 27%),
 				color-mix(in oklab, var(--c) 55%, transparent) 0%,
 				color-mix(in oklab, var(--c) 18%, transparent) 18%,
 				transparent 42%
 			),
 			var(--color-void);
+	}
+	/* Same framing as the WebGL emblem (CoreScene `framing`). */
+	@media (min-width: 768px) {
+		.fallback {
+			--fx: 65%;
+			--fy: 35%;
+		}
+	}
+	@media (min-width: 1024px) {
+		.fallback {
+			--fx: 68%;
+			--fy: 44%;
+		}
 	}
 </style>

@@ -82,10 +82,7 @@
 	<CoreCanvas trigger={root} />
 
 	<!-- Legibility veil (design report §8: text on WebGL) -->
-	<div
-		class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,transparent_45%,rgb(7_7_10/0.85)_100%)]"
-		aria-hidden="true"
-	></div>
+	<div class="pointer-events-none absolute inset-0 hero-scrim" aria-hidden="true"></div>
 
 	<div data-hero class="invisible relative z-10 flex flex-1 flex-col pt-24 md:pt-28">
 		<!-- Meta row -->

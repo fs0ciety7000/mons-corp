@@ -6,6 +6,7 @@ uniform float uTime;
 uniform float uAberration;
 uniform float uGlow;
 uniform vec2 uCenter;
+uniform float uScrimTop;
 
 varying vec2 vUv;
 
@@ -28,7 +29,10 @@ void main() {
 
 	// Soft halo behind the Core.
 	vec2 hc = (uv - uCenter) * vec2(uResolution.x / uResolution.y, 1.0);
-	col += uColor * exp(-length(hc) * 3.2) * 0.16 * uGlow;
+	col += uColor * exp(-length(hc) * 3.2) * 0.1 * uGlow;
+
+	// Scrim under the text zone (bottom of the hero): the Core dims to 30 % there.
+	col *= mix(0.3, 1.0, smoothstep(uScrimTop - 0.15, uScrimTop, uv.y));
 
 	// Vignette towards the Void background.
 	vec3 voidColor = vec3(0.027, 0.027, 0.039);

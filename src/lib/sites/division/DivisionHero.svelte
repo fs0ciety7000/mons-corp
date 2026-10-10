@@ -83,10 +83,7 @@
 	aria-labelledby="hero-title"
 >
 	<CoreCanvas trigger={root} />
-	<div
-		class="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,transparent_40%,rgb(7_7_10/0.88)_100%)]"
-		aria-hidden="true"
-	></div>
+	<div class="pointer-events-none absolute inset-0 hero-scrim" aria-hidden="true"></div>
 
 	<div data-dhero class="invisible relative z-10 flex flex-1 flex-col pt-24 md:pt-28">
 		<div class="flex items-start justify-between gap-6 gutter-x text-ash">
@@ -135,14 +132,19 @@
 					class="label text-ash transition-colors hover:text-bone"
 					data-cursor="Maison">Une division de<br />CARDOR Media ↗</a
 				>
-				<div data-dhero-emblem class="h-24 w-28 shrink-0 md:h-32 md:w-36" aria-hidden="true">
-					<Logo
-						name={site.emblem}
-						animate="loop"
-						drawIn
-						host="[data-dhero-emblem]"
-						class="size-full"
-					/>
+				<!-- Dimmed while the 3D emblem fills the hero; full again without WebGL. -->
+				<div
+					class={['shrink-0 transition-opacity duration-700', !core.webglFailed && 'opacity-35']}
+				>
+					<div data-dhero-emblem class="h-24 w-28 md:h-32 md:w-36" aria-hidden="true">
+						<Logo
+							name={site.emblem}
+							animate="loop"
+							drawIn
+							host="[data-dhero-emblem]"
+							class="size-full"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
