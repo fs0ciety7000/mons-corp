@@ -21,7 +21,7 @@
 		<li class="col-span-4 md:col-span-8 lg:col-span-4" use:reveal={{ type: 'block' }}>
 			<a href={siteUrl('holding')} class="sister group" style:--c="var(--color-or)">
 				<span class="size-14 shrink-0 text-or"
-					><Logo name="cardor-monogram" class="size-full" /></span
+					><Logo name="cardor-monogram" animate="hover" host=".sister" class="size-full" /></span
 				>
 				<span class="flex-1">
 					<span class="block label text-ash">Maison mère</span>
@@ -42,7 +42,7 @@
 					data-cursor={s.cursorLabel}
 				>
 					<span class="size-14 shrink-0 text-ash transition-colors group-hover:text-(--c)">
-						<Logo name={s.emblem} variant="mono" class="size-full" />
+						<Logo name={s.emblem} swap animate="hover" host=".sister" class="size-full" />
 					</span>
 					<span class="flex-1">
 						<span class="block label text-ash">Studio frère</span>

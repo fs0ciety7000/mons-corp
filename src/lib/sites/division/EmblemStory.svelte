@@ -15,7 +15,12 @@
 			<div class="relative aspect-square border border-smoke bg-ink">
 				<div class="emblem-glow absolute inset-0" aria-hidden="true"></div>
 				<div class="absolute inset-[14%]">
-					<Logo name={site.emblem} class="size-full" title="Emblème {site.name} : {emblem.motif}" />
+					<Logo
+						name={site.emblem}
+						animate="loop"
+						class="size-full"
+						title="Emblème {site.name} : {emblem.motif}"
+					/>
 				</div>
 			</div>
 		</div>

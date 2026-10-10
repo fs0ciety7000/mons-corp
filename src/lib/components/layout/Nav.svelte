@@ -75,7 +75,7 @@
 					<span class="flex items-baseline gap-1.5">CARDOR<span class="italic">Media</span></span>
 				{:else}
 					<span class="block size-8 md:size-9">
-						<Logo name={site.emblem} variant="mono" class="size-full" />
+						<Logo name={site.emblem} variant="mono" animate="hover" host="a" class="size-full" />
 					</span>
 					<span class="flex flex-col">
 						<span class="font-mono text-[0.6875rem] tracking-[0.4em]">OCC</span>

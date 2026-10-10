@@ -7,6 +7,7 @@
 	import { onMount } from 'svelte';
 	import { gsap } from '#lib/motion/gsap.ts';
 	import { prefersReducedMotion } from '#lib/motion/tokens.ts';
+	import type { EmblemParts } from '#lib/brand/emblem-motion.ts';
 	import { isHolding, site as current, siteUrl } from '#lib/sites/config.ts';
 
 	const word = isHolding ? 'CARDOR' : current.short;
@@ -20,6 +21,21 @@
 		: [...current.nav, { href: '/#emblème', label: 'Emblème' }];
 
 	let carriage: HTMLElement;
+
+	// The Car d'Or wheels turn while it climbs (scroll-linked), and on hover.
+	function rollWheels({ wheels }: EmblemParts) {
+		if (prefersReducedMotion() || !wheels.length) return;
+		gsap.fromTo(
+			wheels,
+			{ rotation: -540 },
+			{
+				rotation: 0,
+				ease: 'none',
+				transformOrigin: '50% 50%',
+				scrollTrigger: { trigger: carriage, start: 'top bottom', end: 'top 55%', scrub: 0.8 }
+			}
+		);
+	}
 
 	// "La montée du Car d'Or": the carriage climbs into frame as the footer arrives.
 	onMount(() => {
@@ -121,9 +137,15 @@
 			]}
 		>
 			{#if isHolding}
-				<Logo name="cardor-emblem" variant="mono" class="w-full" />
+				<Logo
+					name="cardor-emblem"
+					variant="mono"
+					animate="hover"
+					onready={rollWheels}
+					class="w-full"
+				/>
 			{:else}
-				<Logo name={current.emblem} class="h-full w-auto" />
+				<Logo name={current.emblem} animate="loop" class="h-full w-auto" />
 			{/if}
 		</div>
 		<p class="max-w-[34ch] text-right label text-ash">

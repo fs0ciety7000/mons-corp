@@ -40,7 +40,7 @@
 					</div>
 
 					<div class="relative my-10 h-48 w-full md:h-56" aria-hidden="true">
-						<Logo name={d.id} class="emblem size-full" />
+						<Logo name={d.id} animate="hover" host=".card" class="emblem size-full" />
 					</div>
 
 					<div class="relative">

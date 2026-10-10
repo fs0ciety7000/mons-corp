@@ -77,7 +77,9 @@
 		{#each order as name, i (name)}
 			<li class="col-span-4 lg:col-span-3" style:--accent={accents[name]}>
 				<div data-cortege-emblem class="relative aspect-square border border-smoke bg-ink">
-					<div class="absolute inset-[12%]"><Logo {name} class="size-full" /></div>
+					<div class="absolute inset-[12%]">
+						<Logo {name} animate="hover" host="li" class="size-full" />
+					</div>
 				</div>
 				<p class="mt-6 label text-(--accent)">0{i + 1} — {emblems[name].entity}</p>
 				<h3 class="mt-3 font-display text-h2">{emblems[name].motif}</h3>

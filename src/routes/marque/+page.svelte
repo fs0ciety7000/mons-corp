@@ -234,7 +234,9 @@
 				{#each marks as mk (mk.name)}
 					<div class="flex items-center bg-void p-3 text-sm">{emblems[mk.name].motif}</div>
 					<div class="relative aspect-[4/3] bg-void">
-						<div class="absolute inset-[14%]"><Logo name={mk.name} class="size-full" /></div>
+						<div class="absolute inset-[14%]">
+							<Logo name={mk.name} animate="hover" class="size-full" />
+						</div>
 					</div>
 					<div class="relative aspect-[4/3] bg-void text-bone">
 						<div class="absolute inset-[14%]">
@@ -273,7 +275,7 @@
 		<div class="grid-cardor mt-12 gap-6">
 			<div class="lockup col-span-4 md:col-span-8 lg:col-span-6">
 				<div class="flex items-center gap-[0.35em] text-[clamp(2.5rem,5vw,4.5rem)]">
-					<Logo name="cardor-monogram" class="h-[1.05em] w-auto" />
+					<Logo name="cardor-monogram" animate="hover" host=".lockup" class="h-[1.05em] w-auto" />
 					<span class="font-display leading-none tracking-[-0.02em]"
 						>CARDOR<span class="ml-[0.18em] text-or italic">Media</span></span
 					>
@@ -282,7 +284,13 @@
 			</div>
 			<div class="lockup col-span-4 md:col-span-8 lg:col-span-6">
 				<div class="flex flex-col items-center text-[clamp(2.5rem,5vw,4.5rem)]">
-					<Logo name="cardor-emblem" class="h-[1.6em] w-auto text-or" variant="mono" />
+					<Logo
+						name="cardor-emblem"
+						animate="hover"
+						host=".lockup"
+						class="h-[1.6em] w-auto text-or"
+						variant="mono"
+					/>
 					<span class="mt-[0.3em] font-display leading-none tracking-[-0.02em]">CARDOR</span>
 					<span class="font-display text-[0.62em] leading-none text-or italic">Media</span>
 				</div>
@@ -291,7 +299,7 @@
 			{#each [{ id: 'interactive', n: 'Interactive', it: false, c: '#C6FF3D' }, { id: 'sound', n: 'Soundworks', it: true, c: '#7B5CFF' }, { id: 'creative', n: 'Creative Lab', it: true, c: '#FFB547' }] as l (l.id)}
 				<div class="lockup col-span-4 md:col-span-8 lg:col-span-4">
 					<div class="flex items-center gap-[0.4em] text-[clamp(2rem,3.4vw,3.2rem)]">
-						<Logo name={l.id as LogoName} class="h-[1.5em] w-auto" />
+						<Logo name={l.id as LogoName} animate="hover" host=".lockup" class="h-[1.5em] w-auto" />
 						<span class="flex flex-col">
 							<span class="font-mono text-[0.3em] tracking-[0.5em]" style:color={l.c}>OCC</span>
 							<span class={['font-display leading-none', l.it && 'italic']}>{l.n}</span>

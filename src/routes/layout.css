@@ -208,3 +208,22 @@
 		}
 	}
 }
+
+/* Emblem colour swap: mono at rest, brand colours on hover (docs/brand/emblem-motion.md) */
+.logo.is-swap {
+	--logo-t1: currentColor;
+	--logo-t2: color-mix(in oklab, currentColor 45%, black);
+	--logo-t3: currentColor;
+}
+.logo.is-swap[data-logo='cardor-monogram'] {
+	--logo-t2: transparent;
+}
+[data-emblem-host]:is(:hover, :focus-visible) .logo.is-swap,
+.logo.is-swap:hover {
+	--logo-t1: initial;
+	--logo-t2: initial;
+	--logo-t3: initial;
+}
+.logo :is(path, circle) {
+	transition: fill 0.6s var(--ease-cardor-out);
+}

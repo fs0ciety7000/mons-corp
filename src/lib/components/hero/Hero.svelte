@@ -139,16 +139,16 @@
 							<span
 								class="row-emblem grid size-9 shrink-0 place-items-center self-center text-ash group-hover:text-(--division) md:size-11"
 							>
-								<Logo name={d.id} variant="mono" class="size-full" />
+								<Logo name={d.id} swap animate="hover" host=".division-row" class="size-full" />
 							</span>
-							<span class="swap relative flex-1 font-display text-h2">
+							<span class="swap relative flex-1 font-display text-h2 whitespace-nowrap">
 								<span class="swap-a block">{d.name}</span>
 								<span
 									class="swap-b absolute inset-0 block text-(--division) italic"
 									aria-hidden="true">{d.name}</span
 								>
 							</span>
-							<span class="hidden label text-ash sm:block">{d.host}</span>
+							<span class="hidden label text-ash xl:block">{d.host}</span>
 							<svg
 								class="size-4 shrink-0 self-center text-ash transition-transform duration-500 ease-(--ease-cardor-out) group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-(--division)"
 								viewBox="0 0 16 16"
