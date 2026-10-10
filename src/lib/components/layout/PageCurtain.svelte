@@ -3,6 +3,7 @@
 	import { gsap, ScrollTrigger } from '#lib/motion/gsap.ts';
 	import { ease, prefersReducedMotion } from '#lib/motion/tokens.ts';
 	import { scrollToTop } from '#lib/motion/lenis.ts';
+	import Logo from '#lib/components/brand/Logo.svelte';
 
 	let curtain: HTMLElement;
 
@@ -20,6 +21,12 @@
 					curtain,
 					{ clipPath: 'inset(100% 0% 0% 0%)' },
 					{ clipPath: 'inset(0% 0% 0% 0%)', duration: 0.6, ease: ease.inOut }
+				)
+				.fromTo(
+					'[data-curtain-wheel]',
+					{ rotation: -180, scale: 0.6 },
+					{ rotation: 0, scale: 1, duration: 0.9, ease: ease.out },
+					0.1
 				)
 				.fromTo(
 					'[data-curtain-label]',
@@ -52,7 +59,12 @@
 	class="invisible fixed inset-0 z-[80] grid place-items-center bg-ember text-void"
 	aria-hidden="true"
 >
-	<span class="overflow-clip">
-		<span data-curtain-label class="block font-display text-h1 italic">CARDOR</span>
-	</span>
+	<div class="flex items-center gap-5">
+		<span data-curtain-wheel class="block size-[clamp(3rem,6vw,5.5rem)]">
+			<Logo name="cardor-monogram" variant="mono" class="size-full" />
+		</span>
+		<span class="overflow-clip">
+			<span data-curtain-label class="block font-display text-h1 italic">CARDOR</span>
+		</span>
+	</div>
 </div>

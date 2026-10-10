@@ -1,0 +1,32 @@
+{
+	"cardor-emblem": {
+		"viewBox": "142 212 739 599",
+		"ratio": 1.2337,
+		"tones": 1,
+		"colours": ["#EDE8DF"]
+	},
+	"cardor-monogram": {
+		"viewBox": "0 0 100 100",
+		"ratio": 1.0,
+		"tones": 3,
+		"colours": ["#D4A84B", "#EDE8DF", "#FF3B1F"]
+	},
+	"interactive": {
+		"viewBox": "127 199 770 625",
+		"ratio": 1.232,
+		"tones": 2,
+		"colours": ["#C6FF3D", "#5B7A00"]
+	},
+	"sound": {
+		"viewBox": "325 131 373 761",
+		"ratio": 0.4901,
+		"tones": 1,
+		"colours": ["#EDE8DF"]
+	},
+	"creative": {
+		"viewBox": "181 180 661 663",
+		"ratio": 0.997,
+		"tones": 2,
+		"colours": ["#FFB547", "#A66A0B"]
+	}
+}

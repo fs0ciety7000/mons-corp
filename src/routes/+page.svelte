@@ -3,6 +3,7 @@
 	import Manifesto from '#lib/components/sections/Manifesto.svelte';
 	import Marquee from '#lib/components/sections/Marquee.svelte';
 	import Divisions from '#lib/components/sections/Divisions.svelte';
+	import Cortege from '#lib/components/sections/Cortege.svelte';
 	import { site } from '#lib/data/site.ts';
 </script>
 
@@ -19,3 +20,4 @@
 <Manifesto />
 <Marquee />
 <Divisions />
+<Cortege />

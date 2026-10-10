@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import ParisClock from './ParisClock.svelte';
+	import Logo from '#lib/components/brand/Logo.svelte';
 	import { nav } from '#lib/data/site.ts';
 	import { core } from '#lib/state/core.svelte.ts';
 	import { gsap, ScrollTrigger } from '#lib/motion/gsap.ts';
@@ -12,6 +13,14 @@
 	onMount(() => {
 		const ctx = gsap.context(() => {
 			gsap.set(root, { autoAlpha: 0 });
+			// The Car d'Or wheel rolls with the page: two turns top → bottom, reverses on the way up.
+			if (!prefersReducedMotion()) {
+				gsap.to('[data-nav-wheel]', {
+					rotation: 720,
+					ease: 'none',
+					scrollTrigger: { start: 0, end: 'max', scrub: 0.6 }
+				});
+			}
 			// Hide on scroll down, reveal on scroll up.
 			ScrollTrigger.create({
 				start: 'top -120',
@@ -55,10 +64,13 @@
 			<a
 				href="/"
 				data-nav-item
-				class="flex items-baseline gap-1.5 font-display text-2xl leading-none md:text-3xl"
+				class="flex items-center gap-3 font-display text-2xl leading-none md:text-3xl"
 				aria-label="CARDOR Media — accueil"
 			>
-				CARDOR<span class="italic">Media</span>
+				<span data-nav-wheel class="block size-7 md:size-8">
+					<Logo name="cardor-monogram" variant="mono" class="size-full" />
+				</span>
+				<span class="flex items-baseline gap-1.5">CARDOR<span class="italic">Media</span></span>
 			</a>
 		</div>
 

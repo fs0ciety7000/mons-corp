@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import CoreCanvas from './CoreCanvas.svelte';
+	import Logo from '#lib/components/brand/Logo.svelte';
 	import { divisions, type DivisionId } from '#lib/data/divisions.ts';
 	import { core, setCoreState } from '#lib/state/core.svelte.ts';
 	import { gsap, SplitText } from '#lib/motion/gsap.ts';
@@ -135,6 +136,11 @@
 							<span class="w-8 label text-ash transition-colors group-hover:text-(--division)"
 								>{d.index}</span
 							>
+							<span
+								class="row-emblem grid size-9 shrink-0 place-items-center self-center text-ash group-hover:text-(--division) md:size-11"
+							>
+								<Logo name={d.id} variant="mono" class="size-full" />
+							</span>
 							<span class="swap relative flex-1 font-display text-h2">
 								<span class="swap-a block">{d.name}</span>
 								<span
@@ -174,6 +180,19 @@
 	.division-row:hover .swap-b,
 	.division-row:focus-visible .swap-b {
 		transform: translateY(0);
+	}
+	.row-emblem {
+		opacity: 0.4;
+		transform: scale(0.82) rotate(-6deg);
+		transition:
+			opacity 0.5s var(--ease-cardor-out),
+			transform 0.8s var(--ease-cardor-out),
+			color 0.4s;
+	}
+	.division-row:hover .row-emblem,
+	.division-row:focus-visible .row-emblem {
+		opacity: 1;
+		transform: none;
 	}
 	.swap {
 		overflow: clip;

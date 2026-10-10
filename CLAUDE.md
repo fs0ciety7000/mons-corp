@@ -86,14 +86,16 @@ Une fonctionnalité est **DONE** uniquement si **toutes** les cases sont cochée
 
 ## 8. Documents de référence
 
-| Fichier                           | Propriétaire               | Rôle                                |
-| --------------------------------- | -------------------------- | ----------------------------------- |
-| `CLAUDE.md`                       | PM                         | Vision, règles, DoD                 |
-| `workflow.md`                     | PM                         | Protocole de collaboration agents   |
-| `docs/design-agent-report.md`     | Design & UX Agent          | Système de design                   |
-| `docs/motion-agent-report.md`     | Motion & Interaction Agent | Chorégraphie & stratégie GSAP/WebGL |
-| `docs/tech-agent-instructions.md` | Tech Lead Agent            | Architecture, ADR, conventions      |
-| `docs/brand/logo-prompts.md`      | Design & UX Agent          | Prompts IA pour les logos           |
+| Fichier                                      | Propriétaire               | Rôle                                                                        |
+| -------------------------------------------- | -------------------------- | --------------------------------------------------------------------------- |
+| `CLAUDE.md`                                  | PM                         | Vision, règles, DoD                                                         |
+| `workflow.md`                                | PM                         | Protocole de collaboration agents                                           |
+| `docs/design-agent-report.md`                | Design & UX Agent          | Système de design                                                           |
+| `docs/motion-agent-report.md`                | Motion & Interaction Agent | Chorégraphie & stratégie GSAP/WebGL                                         |
+| `docs/tech-agent-instructions.md`            | Tech Lead Agent            | Architecture, ADR, conventions                                              |
+| `docs/brand/logo-prompts.md`                 | Design & UX Agent          | Prompts IA pour les logos                                                   |
+| `docs/brand/brand-decision.md`               | PM + 3 agents              | Choix des emblèmes et avis des agents                                       |
+| `/marque` (site) + `docs/brand/sketchboard/` | Design & UX Agent          | Sketchboard technique (construction, tailles, couleurs, lockups, interdits) |
 
 ## 9. Commandes
 

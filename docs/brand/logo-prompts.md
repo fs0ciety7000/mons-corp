@@ -105,7 +105,9 @@ Matrice complète **4 marques × 4 motifs × 3 variantes** (monochrome, couleur,
 | OCC Soundworks   | [`board-soundworks.webp`](logos/v2/board-soundworks.webp)   |
 | OCC Creative Lab | [`board-creative.webp`](logos/v2/board-creative.webp)       |
 
-> ⚠️ 45/48 générés. Les 3 cases **Creative Lab × Singe** ont été bloquées par la limite de dépense de l'API Gemini (HTTP 429). Pour les relancer : `LOGO_JOBS=scripts/logo-jobs-mons.json python3 scripts/generate-logos.py <refs> <sortie> creative-singe-1-mono creative-singe-2-color creative-singe-3-text`, puis `python3 scripts/build-logo-boards.py <sortie> docs/brand/logos/v2`.
+> ✅ 48/48 générés (les 3 cases Creative Lab × Singe ont été relancées après levée de la limite de dépense API).
+>
+> **Sélection finale** : voir [`brand-decision.md`](brand-decision.md) et la page `/marque` du site.
 
 ### Les motifs
 

@@ -13,11 +13,13 @@ docker build -t cardor-web . && docker run -p 3000:3000 cardor-web
 
 ## Gouvernance
 
-| Document                                                             | Rôle                                              |
-| -------------------------------------------------------------------- | ------------------------------------------------- |
-| [`CLAUDE.md`](CLAUDE.md)                                             | Manifeste PM : vision, règles, Definition of Done |
-| [`workflow.md`](workflow.md)                                         | Protocole PM × agents, gates de validation        |
-| [`docs/design-agent-report.md`](docs/design-agent-report.md)         | Système de design                                 |
-| [`docs/motion-agent-report.md`](docs/motion-agent-report.md)         | Stratégie motion / WebGL                          |
-| [`docs/tech-agent-instructions.md`](docs/tech-agent-instructions.md) | Architecture & ADR                                |
-| [`docs/brand/logo-prompts.md`](docs/brand/logo-prompts.md)           | Prompts Midjourney / Nano Banana pour les logos   |
+| Document                                                             | Rôle                                                         |
+| -------------------------------------------------------------------- | ------------------------------------------------------------ |
+| [`CLAUDE.md`](CLAUDE.md)                                             | Manifeste PM : vision, règles, Definition of Done            |
+| [`workflow.md`](workflow.md)                                         | Protocole PM × agents, gates de validation                   |
+| [`docs/design-agent-report.md`](docs/design-agent-report.md)         | Système de design                                            |
+| [`docs/motion-agent-report.md`](docs/motion-agent-report.md)         | Stratégie motion / WebGL                                     |
+| [`docs/tech-agent-instructions.md`](docs/tech-agent-instructions.md) | Architecture & ADR                                           |
+| [`docs/brand/logo-prompts.md`](docs/brand/logo-prompts.md)           | Prompts Midjourney / Nano Banana pour les logos              |
+| [`docs/brand/brand-decision.md`](docs/brand/brand-decision.md)       | Décision de marque « Le cortège montois »                    |
+| [`docs/brand/sketchboard/`](docs/brand/sketchboard)                  | Planches techniques exportées (aussi en ligne sur `/marque`) |

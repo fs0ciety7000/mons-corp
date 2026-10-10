@@ -3,6 +3,7 @@
 	import { core } from '#lib/state/core.svelte.ts';
 	import { gsap } from '#lib/motion/gsap.ts';
 	import { ease, prefersReducedMotion } from '#lib/motion/tokens.ts';
+	import Logo from '#lib/components/brand/Logo.svelte';
 
 	let root = $state<HTMLElement>();
 	let count = $state(0);
@@ -41,6 +42,19 @@
 				onUpdate: () => (count = counter.v)
 			})
 				.to('[data-pre-bar]', { scaleX: 1, duration: total, ease: ease.snap }, 0)
+				// The Car d'Or wheel turns with the counter, then its Ember core ignites.
+				.fromTo(
+					'[data-pre-wheel]',
+					{ rotation: -540, scale: 0.85 },
+					{ rotation: 0, scale: 1, duration: total, ease: ease.snap },
+					0
+				)
+				.fromTo(
+					'[data-pre-core]',
+					{ scale: 0 },
+					{ scale: 1, duration: 0.6, ease: ease.elastic },
+					total - 0.15
+				)
 				.to('[data-pre-inner]', { yPercent: -30, autoAlpha: 0, duration: 0.6, ease: ease.in })
 				.add(() => {
 					core.ready = true;
@@ -70,6 +84,19 @@
 		<div data-pre-inner class="flex items-start justify-between">
 			<span class="label text-ash">CARDOR Media</span>
 			<span class="label text-ash">Initialisation du noyau</span>
+		</div>
+		<div
+			data-pre-inner
+			class="pointer-events-none absolute top-1/2 left-1/2 size-[clamp(9rem,26vw,20rem)] -translate-x-1/2 -translate-y-1/2"
+			aria-hidden="true"
+		>
+			<div data-pre-wheel class="relative size-full" style="--logo-t3: transparent">
+				<Logo name="cardor-monogram" class="size-full" />
+			</div>
+			<span
+				data-pre-core
+				class="absolute top-1/2 left-1/2 -mt-[2.4%] -ml-[2.4%] block size-[4.8%] scale-0 rounded-full bg-ember"
+			></span>
 		</div>
 		<div data-pre-inner class="flex items-end justify-between gap-6">
 			<span class="font-display text-[clamp(5rem,18vw,16rem)] leading-[0.8] tabular-nums"

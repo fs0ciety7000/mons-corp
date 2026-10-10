@@ -1,7 +1,6 @@
 <script lang="ts">
 	import './layout.css';
 	import { onMount } from 'svelte';
-	import favicon from '#lib/assets/favicon.svg';
 	import type { LayoutProps } from './$types';
 	import Preloader from '#lib/components/layout/Preloader.svelte';
 	import Nav from '#lib/components/layout/Nav.svelte';
@@ -18,7 +17,7 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 	<meta property="og:site_name" content={site.name} />
 	<meta property="og:type" content="website" />
 	<meta name="twitter:card" content="summary_large_image" />

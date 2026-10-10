@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { divisions } from '#lib/data/divisions.ts';
 	import { reveal } from '#lib/motion/actions.ts';
+	import { emblems } from '#lib/data/logos.ts';
+	import Logo from '#lib/components/brand/Logo.svelte';
 </script>
 
 <section id="divisions" class="relative section-y" aria-labelledby="divisions-title">
@@ -23,7 +25,7 @@
 			>
 				<a
 					href={d.url}
-					class="card group relative flex h-full min-h-[520px] flex-col overflow-clip border border-smoke bg-ink p-6 md:p-8"
+					class="card group relative flex h-full flex-col overflow-clip border border-smoke bg-ink p-6 md:p-8"
 					style:--division={d.color}
 					data-cursor={d.cursorLabel}
 				>
@@ -37,7 +39,12 @@
 						>
 					</div>
 
-					<div class="relative mt-auto">
+					<div class="relative my-10 h-48 w-full md:h-56" aria-hidden="true">
+						<Logo name={d.id} class="emblem size-full" />
+					</div>
+
+					<div class="relative">
+						<p class="mb-3 label text-ash">Emblème — {emblems[d.id].motif}</p>
 						<h3 class="font-display text-h1">
 							<span class="block text-ash">OCC</span>
 							<span
@@ -71,6 +78,21 @@
 	.card:hover,
 	.card:focus-visible {
 		border-color: color-mix(in oklab, var(--division) 45%, var(--color-smoke));
+	}
+	.card :global(.emblem) {
+		filter: grayscale(1) brightness(0.75);
+		opacity: 0.55;
+		transform: scale(0.94);
+		transition:
+			filter 0.8s var(--ease-cardor-out),
+			opacity 0.8s var(--ease-cardor-out),
+			transform 1.2s var(--ease-cardor-out);
+	}
+	.card:hover :global(.emblem),
+	.card:focus-visible :global(.emblem) {
+		filter: none;
+		opacity: 1;
+		transform: scale(1.04);
 	}
 	.orb {
 		position: absolute;

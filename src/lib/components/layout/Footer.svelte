@@ -3,11 +3,36 @@
 	import { site, socials } from '#lib/data/site.ts';
 	import { magnetic, reveal } from '#lib/motion/actions.ts';
 	import ParisClock from './ParisClock.svelte';
+	import Logo from '#lib/components/brand/Logo.svelte';
+	import { onMount } from 'svelte';
+	import { gsap } from '#lib/motion/gsap.ts';
+	import { prefersReducedMotion } from '#lib/motion/tokens.ts';
+
+	let carriage: HTMLElement;
+
+	// "La montée du Car d'Or": the carriage climbs into frame as the footer arrives.
+	onMount(() => {
+		if (prefersReducedMotion()) return;
+		const ctx = gsap.context(() => {
+			gsap.fromTo(
+				carriage,
+				{ xPercent: -160, yPercent: 40, rotate: -6 },
+				{
+					xPercent: 0,
+					yPercent: 0,
+					rotate: 0,
+					ease: 'none',
+					scrollTrigger: { trigger: carriage, start: 'top bottom', end: 'top 55%', scrub: 0.8 }
+				}
+			);
+		});
+		return () => ctx.revert();
+	});
 </script>
 
 <footer class="relative overflow-clip border-t border-smoke pt-24 md:pt-40">
 	<div class="grid-cardor gap-y-12">
-		<p class="col-span-4 label text-ash md:col-span-8 lg:col-span-12" use:reveal>[03] — Contact</p>
+		<p class="col-span-4 label text-ash md:col-span-8 lg:col-span-12" use:reveal>[04] — Contact</p>
 		<h2
 			class="col-span-4 font-display text-display md:col-span-8 lg:col-span-9"
 			use:reveal={{ type: 'chars' }}
@@ -42,6 +67,8 @@
 			<p class="mb-4 label text-ash">Maison</p>
 			<ul class="space-y-2">
 				<li><a href="/#manifeste" class="foot-link">Manifeste</a></li>
+				<li><a href="/#cortege" class="foot-link">Héritage</a></li>
+				<li><a href="/marque" class="foot-link">Charte de marque</a></li>
 				<li><a href="/contact" class="foot-link">Contact</a></li>
 			</ul>
 		</div>
@@ -62,6 +89,15 @@
 	<div class="mt-20 flex flex-col justify-between gap-4 gutter-x pb-8 text-ash md:flex-row">
 		<span class="label">© {new Date().getFullYear()} CARDOR Media — Tous droits réservés</span>
 		<span class="label">Opéré depuis la salle des machines</span>
+	</div>
+
+	<div class="mt-16 flex items-end justify-between gap-6 gutter-x">
+		<div bind:this={carriage} class="w-[clamp(7rem,14vw,13rem)] text-or">
+			<Logo name="cardor-emblem" variant="mono" class="w-full" />
+		</div>
+		<p class="max-w-[34ch] text-right label text-ash">
+			Né à Mons<br />sous le signe du Car d’Or
+		</p>
 	</div>
 
 	<p
