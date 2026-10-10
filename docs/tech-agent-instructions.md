@@ -109,12 +109,26 @@ docker build -t cardor-web .
 
 ## 6. Déploiement Coolify
 
-1. Coolify → _New Resource_ → _Public/Private Repository_ → `fs0ciety7000/mons-corp`, branche de prod.
-2. Build Pack : **Dockerfile**. Port exposé : **3000**.
-3. Variables : `ORIGIN=https://cardormedia.com`, `NODE_ENV=production` (déjà dans l'image), `PORT=3000`.
-4. Domaines : `https://cardormedia.com`, `https://www.cardormedia.com` (redirection www → apex).
-5. Healthcheck : `GET /healthz` → `200 ok`.
-6. Les sous-domaines (`interactive.`, `sound.`, `creative.`) seront des ressources Coolify distinctes (une app par division), qui réutiliseront ce socle (voir §7).
+**État : ✅ en ligne sur https://cardor.fs0ciety.org** (préproduction, certificat Let's Encrypt).
+
+| Réglage                | Valeur                                                                                                                               |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Projet / environnement | « CARDOR Media » / `production`                                                                                                      |
+| Application            | `cardor-web` (uuid `szxysnkgapr4g7bseqbrruka`), serveur `localhost` (152.53.176.13)                                                  |
+| Source                 | dépôt public `fs0ciety7000/mons-corp`, branche `claude/wonderful-davinci-8s3sqr`                                                     |
+| Build pack             | **Dockerfile**, port **3000**                                                                                                        |
+| Variables              | `ORIGIN=https://cardor.fs0ciety.org` (`NODE_ENV`, `PORT`, `HOST` sont fixés dans l'image)                                            |
+| Healthcheck            | `GET /healthz` sur **127.0.0.1**:3000. Ne pas mettre `localhost` : sous Alpine, il se résout en `::1` alors que Node écoute en IPv4. |
+| DNS                    | wildcard `*.fs0ciety.org` → serveur ; aucun enregistrement à créer                                                                   |
+
+**Redéployer** (le dépôt est public sans GitHub App, donc un push ne déclenche pas de build automatique) :
+
+```bash
+curl -X POST "$COOLIFY_API_URL/api/v1/deploy" -H "Authorization: Bearer $COOLIFY_API_TOKEN" \
+  -H "Content-Type: application/json" -d '{"uuid":"szxysnkgapr4g7bseqbrruka"}'
+```
+
+**Passage en production sur `cardormedia.com`** : zone Cloudflare + enregistrements DNS (A apex et `www` → 152.53.176.13), puis ajouter `https://cardormedia.com,https://www.cardormedia.com` aux domaines de l'app, mettre `ORIGIN=https://cardormedia.com` et redéployer. Les sous-domaines `interactive.`, `sound.` et `creative.` seront des apps Coolify distinctes.
 
 ## 7. Feuille de route technique
 
