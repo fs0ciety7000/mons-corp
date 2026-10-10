@@ -8,6 +8,10 @@ RUN npm ci
 
 FROM deps AS build
 WORKDIR /app
+# ADR-008: the same image recipe builds the four sites.
+ARG PUBLIC_SITE=holding
+ARG PUBLIC_DEPLOY_ENV=production
+ENV PUBLIC_SITE=$PUBLIC_SITE PUBLIC_DEPLOY_ENV=$PUBLIC_DEPLOY_ENV
 COPY . .
 RUN npm run build && npm prune --omit=dev
 

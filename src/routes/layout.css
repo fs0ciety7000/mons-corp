@@ -23,6 +23,10 @@
 	--color-ember: #ff3b1f;
 	--color-ember-deep: #c2260f;
 
+	/* Site signal — swapped per site via [data-site] (ADR-008) */
+	--color-signal: #ff3b1f;
+	--color-signal-deep: #c2260f;
+
 	/* Heritage gold — the Car d'Or (logo & heritage moments only) */
 	--color-or: #d4a84b;
 
@@ -122,7 +126,19 @@
 @layer base {
 	:root {
 		color-scheme: dark;
-		--division: var(--color-ember);
+		--division: var(--color-signal);
+	}
+	:root[data-site='interactive'] {
+		--color-signal: var(--color-interactive);
+		--color-signal-deep: var(--color-interactive-deep);
+	}
+	:root[data-site='sound'] {
+		--color-signal: var(--color-sound);
+		--color-signal-deep: var(--color-sound-deep);
+	}
+	:root[data-site='creative'] {
+		--color-signal: var(--color-creative);
+		--color-signal-deep: var(--color-creative-deep);
 	}
 
 	html {
@@ -144,12 +160,12 @@
 	}
 
 	::selection {
-		background: var(--color-ember);
+		background: var(--color-signal);
 		color: var(--color-void);
 	}
 
 	:focus-visible {
-		outline: 2px solid var(--color-ember);
+		outline: 2px solid var(--color-signal);
 		outline-offset: 4px;
 		border-radius: 2px;
 	}

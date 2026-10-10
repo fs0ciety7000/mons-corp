@@ -23,7 +23,7 @@
 			class="col-span-4 font-display text-display md:col-span-8 lg:col-span-10"
 			use:reveal={{ type: 'chars', start: false, delay: 0.2 }}
 		>
-			Parlons de votre <em class="text-ember">prochain</em> monde.
+			Parlons de votre <em class="text-signal">prochain</em> monde.
 		</h1>
 		<p
 			class="col-span-4 max-w-[48ch] text-lead text-ash md:col-span-6"
@@ -34,7 +34,7 @@
 		</p>
 		<a
 			href="mailto:{site.email}"
-			class="col-span-4 font-display text-h2 italic underline decoration-smoke decoration-1 underline-offset-8 transition-colors hover:decoration-ember md:col-span-8"
+			class="col-span-4 font-display text-h2 italic underline decoration-smoke decoration-1 underline-offset-8 transition-colors hover:decoration-signal md:col-span-8"
 			data-cursor="Écrire"
 			use:reveal={{ type: 'block', start: false, delay: 0.6 }}>{site.email}</a
 		>

@@ -58,6 +58,7 @@ export class CoreScene {
 	private pointerVelocity = 0;
 	private scroll = 0;
 	private charge = 0;
+	private external = 0;
 	private maxDpr: number;
 	private dpr: number;
 	private frameTimes: number[] = [];
@@ -259,6 +260,11 @@ export class CoreScene {
 		this.scroll = p;
 	}
 
+	/** External energy 0–1 (e.g. audio level), added to the surface amplitude. */
+	setExternalEnergy(v: number) {
+		this.external += (v - this.external) * 0.25;
+	}
+
 	/** Hold-to-charge interaction (desktop). */
 	setCharge(on: boolean) {
 		gsap.to(this, {
@@ -278,7 +284,7 @@ export class CoreScene {
 		// Pointer smoothing + decaying velocity energy.
 		this.pointerSmooth.lerp(this.pointer, 0.06);
 		this.pointerVelocity *= 0.94;
-		const energyBoost = this.pointerVelocity * 0.25 + this.charge * 0.6;
+		const energyBoost = this.pointerVelocity * 0.25 + this.charge * 0.6 + this.external * 1.4;
 
 		this.core.rotation.y = elapsed * 0.08 + this.pointerSmooth.x * 0.45;
 		this.core.rotation.x = -this.pointerSmooth.y * 0.3;

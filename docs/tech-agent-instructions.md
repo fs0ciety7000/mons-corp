@@ -49,6 +49,16 @@ Coolify construit le `Dockerfile` (build → runtime `node:22-alpine`, utilisate
 
 `src/lib/state/core.svelte.ts` expose l'état du Noyau (`active`, `reveal`). Le hero et les sections écrivent, `CoreCanvas` lit et lance les tweens d'uniforms. Aucune dépendance de store externe.
 
+### ADR-008 : Un code source, quatre sites
+
+Holding et divisions partagent design system, Noyau WebGL, motion, logos et shell. Le site cible est fixé **au build** : `PUBLIC_SITE` (`holding` · `interactive` · `sound` · `creative`) devient la constante `__SITE__` (`vite.config.ts`, `define`), donc les branches mortes sont éliminées et les pages restent prérendues. `PUBLIC_DEPLOY_ENV` (`production` · `staging`) choisit les URL croisées (`src/lib/sites/config.ts → siteUrl`).
+
+- `hooks.server.ts` pose `data-site` sur `<html>` : le token `--color-signal` (et `-deep`) bascule vers la couleur de la division. Les composants partagés utilisent `text-signal` / `bg-signal`, jamais `ember` directement.
+- `src/routes/+page.svelte` aiguille vers `src/lib/sites/<site>/Home.svelte`. `/marque` n'existe que pour la holding (404 ailleurs, non prérendu).
+- Composants de division génériques dans `src/lib/sites/division/` (hero, manifeste, offre, méthode, emblème, studios frères, « bientôt »), avec un contenu typé par site (`content.ts`) et une signature motion propre (scramble, drone WebAudio, encre).
+- Docker : `ARG PUBLIC_SITE` / `ARG PUBLIC_DEPLOY_ENV`, une application Coolify par site, même dépôt et même branche.
+- _Alternative écartée_ : un monorepo à 4 apps (plus de duplication de configuration, et 4 fois les mises à jour de dépendances pour un gain nul en v0.x).
+
 ## 3. Arborescence
 
 ```

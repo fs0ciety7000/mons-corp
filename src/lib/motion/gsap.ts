@@ -12,6 +12,8 @@ function register() {
 	gsap.registerPlugin(ScrollTrigger, SplitText, CustomEase);
 	for (const [name, path] of Object.entries(easeCurves)) CustomEase.create(name, path);
 	gsap.defaults({ ease: 'cardor.out', duration: 0.8 });
+	// Shared timelines target elements that only exist on some sites (ADR-008).
+	gsap.config({ nullTargetWarn: false });
 	gsap.ticker.lagSmoothing(0);
 	registered = true;
 }

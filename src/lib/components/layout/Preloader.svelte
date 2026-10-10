@@ -4,6 +4,7 @@
 	import { gsap } from '#lib/motion/gsap.ts';
 	import { ease, prefersReducedMotion } from '#lib/motion/tokens.ts';
 	import Logo from '#lib/components/brand/Logo.svelte';
+	import { isHolding, site } from '#lib/sites/config.ts';
 
 	let root = $state<HTMLElement>();
 	let count = $state(0);
@@ -14,8 +15,8 @@
 		const reduce = prefersReducedMotion();
 		let visited = false;
 		try {
-			visited = sessionStorage.getItem('cardor:visited') === '1';
-			sessionStorage.setItem('cardor:visited', '1');
+			visited = sessionStorage.getItem(`cardor:visited:${site.id}`) === '1';
+			sessionStorage.setItem(`cardor:visited:${site.id}`, '1');
 		} catch {
 			/* storage unavailable: play the full intro */
 		}
@@ -42,7 +43,20 @@
 				onUpdate: () => (count = counter.v)
 			})
 				.to('[data-pre-bar]', { scaleX: 1, duration: total, ease: ease.snap }, 0)
-				// The Car d'Or wheel turns with the counter, then its Ember core ignites.
+				// Division sites: the emblem is revealed bottom-up with the counter
+				// (stepped like a loading bar for Interactive).
+				.fromTo(
+					'[data-pre-emblem]',
+					{ clipPath: 'inset(100% 0% 0% 0%)', scale: 0.92 },
+					{
+						clipPath: 'inset(0% 0% 0% 0%)',
+						scale: 1,
+						duration: total,
+						ease: site.id === 'interactive' ? 'steps(12)' : ease.snap
+					},
+					0
+				)
+				// Holding: the Car d'Or wheel turns with the counter, then its Ember core ignites.
 				.fromTo(
 					'[data-pre-wheel]',
 					{ rotation: -540, scale: 0.85 },
@@ -82,31 +96,37 @@
 		aria-label="Chargement"
 	>
 		<div data-pre-inner class="flex items-start justify-between">
-			<span class="label text-ash">CARDOR Media</span>
-			<span class="label text-ash">Initialisation du noyau</span>
+			<span class="label text-ash">{site.name}</span>
+			<span class="label text-ash">{site.preloader}</span>
 		</div>
 		<div
 			data-pre-inner
 			class="pointer-events-none absolute top-1/2 left-1/2 size-[clamp(9rem,26vw,20rem)] -translate-x-1/2 -translate-y-1/2"
 			aria-hidden="true"
 		>
-			<div data-pre-wheel class="relative size-full" style="--logo-t3: transparent">
-				<Logo name="cardor-monogram" class="size-full" />
-			</div>
-			<span
-				data-pre-core
-				class="absolute top-1/2 left-1/2 -mt-[2.4%] -ml-[2.4%] block size-[4.8%] scale-0 rounded-full bg-ember"
-			></span>
+			{#if isHolding}
+				<div data-pre-wheel class="relative size-full" style="--logo-t3: transparent">
+					<Logo name="cardor-monogram" class="size-full" />
+				</div>
+				<span
+					data-pre-core
+					class="absolute top-1/2 left-1/2 -mt-[2.4%] -ml-[2.4%] block size-[4.8%] scale-0 rounded-full bg-signal"
+				></span>
+			{:else}
+				<div data-pre-emblem class="size-full">
+					<Logo name={site.emblem} class="size-full" />
+				</div>
+			{/if}
 		</div>
 		<div data-pre-inner class="flex items-end justify-between gap-6">
 			<span class="font-display text-[clamp(5rem,18vw,16rem)] leading-[0.8] tabular-nums"
 				>{display}</span
 			>
-			<span class="mb-3 label text-ember">●&nbsp;REC</span>
+			<span class="mb-3 label text-signal">●&nbsp;REC</span>
 		</div>
 		<span
 			data-pre-bar
-			class="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-ember"
+			class="absolute inset-x-0 bottom-0 h-px origin-left scale-x-0 bg-signal"
 			aria-hidden="true"
 		></span>
 	</div>

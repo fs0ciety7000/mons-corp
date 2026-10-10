@@ -3,6 +3,7 @@
 	import { gsap, ScrollTrigger } from '#lib/motion/gsap.ts';
 	import { ease, prefersReducedMotion } from '#lib/motion/tokens.ts';
 	import { scrollToTop } from '#lib/motion/lenis.ts';
+	import { site } from '#lib/sites/config.ts';
 	import Logo from '#lib/components/brand/Logo.svelte';
 
 	let curtain: HTMLElement;
@@ -56,15 +57,17 @@
 
 <div
 	bind:this={curtain}
-	class="invisible fixed inset-0 z-[80] grid place-items-center bg-ember text-void"
+	class="invisible fixed inset-0 z-[80] grid place-items-center bg-signal text-void"
 	aria-hidden="true"
 >
 	<div class="flex items-center gap-5">
 		<span data-curtain-wheel class="block size-[clamp(3rem,6vw,5.5rem)]">
-			<Logo name="cardor-monogram" variant="mono" class="size-full" />
+			<Logo name={site.emblem} variant="mono" class="size-full" />
 		</span>
 		<span class="overflow-clip">
-			<span data-curtain-label class="block font-display text-h1 italic">CARDOR</span>
+			<span data-curtain-label class="block font-display text-h1 italic"
+				>{site.id === 'holding' ? 'CARDOR' : site.short}</span
+			>
 		</span>
 	</div>
 </div>

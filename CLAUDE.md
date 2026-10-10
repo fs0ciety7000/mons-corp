@@ -94,6 +94,7 @@ Une fonctionnalité est **DONE** uniquement si **toutes** les cases sont cochée
 | `docs/motion-agent-report.md`                | Motion & Interaction Agent | Chorégraphie & stratégie GSAP/WebGL                                         |
 | `docs/tech-agent-instructions.md`            | Tech Lead Agent            | Architecture, ADR, conventions                                              |
 | `docs/brand/logo-prompts.md`                 | Design & UX Agent          | Prompts IA pour les logos                                                   |
+| `docs/sites/*.md`                            | PM + 3 agents              | Brief et rapports des sites Interactive, Soundworks, Creative Lab           |
 | `docs/brand/brand-decision.md`               | PM + 3 agents              | Choix des emblèmes et avis des agents                                       |
 | `/marque` (site) + `docs/brand/sketchboard/` | Design & UX Agent          | Sketchboard technique (construction, tailles, couleurs, lockups, interdits) |
 
@@ -104,5 +105,6 @@ npm run dev        # serveur de dev (http://localhost:5173)
 npm run check      # svelte-check + TS
 npm run lint       # prettier + eslint
 npm run build      # build production (adapter-node → ./build)
+PUBLIC_SITE=interactive npm run build   # un site de division (holding|interactive|sound|creative)
 docker build -t cardor-web . && docker run -p 3000:3000 cardor-web
 ```

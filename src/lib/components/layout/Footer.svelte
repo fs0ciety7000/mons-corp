@@ -7,6 +7,17 @@
 	import { onMount } from 'svelte';
 	import { gsap } from '#lib/motion/gsap.ts';
 	import { prefersReducedMotion } from '#lib/motion/tokens.ts';
+	import { isHolding, site as current, siteUrl } from '#lib/sites/config.ts';
+
+	const word = isHolding ? 'CARDOR' : current.short;
+	const sectionLinks = isHolding
+		? [
+				{ href: '/#manifeste', label: 'Manifeste' },
+				{ href: '/#cortege', label: 'Héritage' },
+				{ href: '/marque', label: 'Charte de marque' },
+				{ href: '/contact', label: 'Contact' }
+			]
+		: [...current.nav, { href: '/#emblème', label: 'Emblème' }];
 
 	let carriage: HTMLElement;
 
@@ -32,12 +43,12 @@
 
 <footer class="relative overflow-clip border-t border-smoke pt-24 md:pt-40">
 	<div class="grid-cardor gap-y-12">
-		<p class="col-span-4 label text-ash md:col-span-8 lg:col-span-12" use:reveal>[04] — Contact</p>
+		<p class="col-span-4 label text-ash md:col-span-8 lg:col-span-12" use:reveal>Contact</p>
 		<h2
 			class="col-span-4 font-display text-display md:col-span-8 lg:col-span-9"
 			use:reveal={{ type: 'chars' }}
 		>
-			Fabriquons <em class="text-ember">votre</em> monde.
+			Fabriquons <em class="text-signal">votre</em> monde.
 		</h2>
 		<div class="col-span-4 flex items-end md:col-span-8 lg:col-span-3 lg:justify-end">
 			<a
@@ -54,22 +65,29 @@
 
 	<div class="grid-cardor mt-24 gap-y-10 border-t border-smoke pt-10 md:mt-32">
 		<div class="col-span-4 lg:col-span-4">
-			<p class="mb-4 label text-ash">Divisions</p>
+			<p class="mb-4 label text-ash">{isHolding ? 'Divisions' : 'La maison'}</p>
 			<ul class="space-y-2">
+				{#if !isHolding}
+					<li><a href={siteUrl('holding')} class="foot-link">CARDOR Media ↗</a></li>
+				{/if}
 				{#each divisions as d (d.id)}
 					<li>
-						<a href={d.url} class="foot-link" style:--division={d.color}>{d.name}</a>
+						<a
+							href={d.id === current.id ? '/' : d.url}
+							class="foot-link"
+							style:--division={d.color}
+							aria-current={d.id === current.id ? 'page' : undefined}>{d.name}</a
+						>
 					</li>
 				{/each}
 			</ul>
 		</div>
 		<div class="col-span-2 lg:col-span-3">
-			<p class="mb-4 label text-ash">Maison</p>
+			<p class="mb-4 label text-ash">{isHolding ? 'Maison' : current.short}</p>
 			<ul class="space-y-2">
-				<li><a href="/#manifeste" class="foot-link">Manifeste</a></li>
-				<li><a href="/#cortege" class="foot-link">Héritage</a></li>
-				<li><a href="/marque" class="foot-link">Charte de marque</a></li>
-				<li><a href="/contact" class="foot-link">Contact</a></li>
+				{#each sectionLinks as l (l.href)}
+					<li><a href={l.href} class="foot-link">{l.label}</a></li>
+				{/each}
 			</ul>
 		</div>
 		<div class="col-span-2 lg:col-span-3">
@@ -87,24 +105,42 @@
 	</div>
 
 	<div class="mt-20 flex flex-col justify-between gap-4 gutter-x pb-8 text-ash md:flex-row">
-		<span class="label">© {new Date().getFullYear()} CARDOR Media — Tous droits réservés</span>
+		<span class="label"
+			>© {new Date().getFullYear()}
+			{isHolding ? 'CARDOR Media' : `${current.name} · une division de CARDOR Media`} — Tous droits réservés</span
+		>
 		<span class="label">Opéré depuis la salle des machines</span>
 	</div>
 
 	<div class="mt-16 flex items-end justify-between gap-6 gutter-x">
-		<div bind:this={carriage} class="w-[clamp(7rem,14vw,13rem)] text-or">
-			<Logo name="cardor-emblem" variant="mono" class="w-full" />
+		<div
+			bind:this={carriage}
+			class={[
+				isHolding ? 'w-[clamp(7rem,14vw,13rem)] text-or' : 'h-[clamp(5rem,10vw,9rem)]',
+				'shrink-0'
+			]}
+		>
+			{#if isHolding}
+				<Logo name="cardor-emblem" variant="mono" class="w-full" />
+			{:else}
+				<Logo name={current.emblem} class="h-full w-auto" />
+			{/if}
 		</div>
 		<p class="max-w-[34ch] text-right label text-ash">
-			Né à Mons<br />sous le signe du Car d’Or
+			{#if isHolding}
+				Né à Mons<br />sous le signe du Car d’Or
+			{:else}
+				Une division de CARDOR Media<br />née à Mons, sous le signe du Doudou
+			{/if}
 		</p>
 	</div>
 
 	<p
-		class="pointer-events-none mt-4 -mb-[0.18em] text-center font-display text-[33vw] leading-[0.8] tracking-[-0.04em] whitespace-nowrap text-graphite select-none"
+		class="pointer-events-none mt-4 -mb-[0.18em] text-center font-display leading-[0.8] tracking-[-0.04em] whitespace-nowrap text-graphite select-none"
+		style:font-size="{Math.min(33, 200 / word.length)}vw"
 		aria-hidden="true"
 	>
-		CARDOR
+		{word}
 	</p>
 </footer>
 
@@ -113,7 +149,7 @@
 		content: '';
 		position: absolute;
 		inset: 0;
-		background: var(--color-ember);
+		background: var(--color-signal);
 		transform: translateY(101%);
 		border-radius: inherit;
 		transition: transform 0.6s var(--ease-cardor-out);

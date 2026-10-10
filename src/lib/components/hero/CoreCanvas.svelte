@@ -48,7 +48,10 @@
 			stop();
 		};
 
-		const tick = (_time: number, delta: number) => instance?.render(delta);
+		const tick = (_time: number, delta: number) => {
+			instance?.setExternalEnergy(core.audio);
+			instance?.render(delta);
+		};
 		const start = () => {
 			if (running || reduce || !instance) return;
 			gsap.ticker.add(tick);

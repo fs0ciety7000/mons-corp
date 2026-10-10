@@ -53,7 +53,7 @@
 						class="px-6 font-display text-display whitespace-nowrap md:px-10"
 						class:italic={i % 2 === 1}>{w}</span
 					>
-					<span class="text-h2 text-ember">✦</span>
+					<span class="text-h2 text-signal">✦</span>
 				{/each}
 			</div>
 		{/each}

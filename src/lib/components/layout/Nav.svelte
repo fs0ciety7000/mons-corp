@@ -3,6 +3,7 @@
 	import ParisClock from './ParisClock.svelte';
 	import Logo from '#lib/components/brand/Logo.svelte';
 	import { nav } from '#lib/data/site.ts';
+	import { isHolding, site } from '#lib/sites/config.ts';
 	import { core } from '#lib/state/core.svelte.ts';
 	import { gsap, ScrollTrigger } from '#lib/motion/gsap.ts';
 	import { ease, prefersReducedMotion } from '#lib/motion/tokens.ts';
@@ -65,12 +66,23 @@
 				href="/"
 				data-nav-item
 				class="flex items-center gap-3 font-display text-2xl leading-none md:text-3xl"
-				aria-label="CARDOR Media — accueil"
+				aria-label="{site.name} — accueil"
 			>
-				<span data-nav-wheel class="block size-7 md:size-8">
-					<Logo name="cardor-monogram" variant="mono" class="size-full" />
-				</span>
-				<span class="flex items-baseline gap-1.5">CARDOR<span class="italic">Media</span></span>
+				{#if isHolding}
+					<span data-nav-wheel class="block size-7 md:size-8">
+						<Logo name="cardor-monogram" variant="mono" class="size-full" />
+					</span>
+					<span class="flex items-baseline gap-1.5">CARDOR<span class="italic">Media</span></span>
+				{:else}
+					<span class="block size-8 md:size-9">
+						<Logo name={site.emblem} variant="mono" class="size-full" />
+					</span>
+					<span class="flex flex-col">
+						<span class="font-mono text-[0.6875rem] tracking-[0.4em]">OCC</span>
+						<span class={['leading-none', site.id !== 'interactive' && 'italic']}>{site.short}</span
+						>
+					</span>
+				{/if}
 			</a>
 		</div>
 

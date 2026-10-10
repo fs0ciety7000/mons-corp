@@ -94,3 +94,63 @@ export const magnetic: Action<HTMLElement, number | undefined> = (node, strength
 };
 
 export { ScrollTrigger };
+
+const GLYPHS = '▚▞░▒▓/\\<>_-=+*#';
+
+interface ScrambleOptions {
+	/** Play when the element scrolls into view. */
+	onReveal?: boolean;
+	/** CSS selector of an ancestor whose hover replays the effect. */
+	hoverParent?: string;
+	duration?: number;
+}
+
+/**
+ * use:scramble — OCC Interactive signature (docs/sites/interactive.md):
+ * characters resolve left → right out of block glyphs.
+ */
+export const scramble: Action<HTMLElement, ScrambleOptions | undefined> = (node, options = {}) => {
+	const { onReveal = true, hoverParent, duration: d = 0.8 } = options;
+	if (prefersReducedMotion()) return;
+
+	const final = node.textContent ?? '';
+	const state = { p: 0 };
+	let tween: gsap.core.Tween | null = null;
+
+	const render = () => {
+		const n = Math.floor(state.p * final.length);
+		let out = final.slice(0, n);
+		for (let i = n; i < final.length; i++) {
+			out += final[i] === ' ' ? ' ' : GLYPHS[(Math.random() * GLYPHS.length) | 0];
+		}
+		node.textContent = out;
+	};
+	const play = () => {
+		tween?.kill();
+		state.p = 0;
+		tween = gsap.to(state, {
+			p: 1,
+			duration: d,
+			ease: 'cardor.snap',
+			onUpdate: render,
+			onComplete: () => (node.textContent = final)
+		});
+	};
+
+	let st: ScrollTrigger | undefined;
+	if (onReveal) {
+		node.textContent = final.replace(/\S/g, '░');
+		st = ScrollTrigger.create({ trigger: node, start: 'top 90%', once: true, onEnter: play });
+	}
+	const parent = hoverParent ? node.closest<HTMLElement>(hoverParent) : null;
+	parent?.addEventListener('pointerenter', play);
+
+	return {
+		destroy() {
+			tween?.kill();
+			st?.kill();
+			parent?.removeEventListener('pointerenter', play);
+			node.textContent = final;
+		}
+	};
+};
