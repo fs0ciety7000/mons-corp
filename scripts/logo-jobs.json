@@ -1,0 +1,155 @@
+{
+	"prefix": "You are a world-class brand identity designer (Pentagram / Koto level). Output ONE flat, vector-style logo, perfectly centered on a plain solid background with generous margins. No mockup, no photo, no 3D render, no drop shadow, no texture, no gradient unless asked. The attached photo is ONLY a motif reference: it shows the Car d'Or, the 18th-century gilded processional carriage of Mons, Belgium. Abstract and modernize its shapes; never copy the photo, no cherubs, no realistic baroque ornament. ",
+	"jobs": [
+		{
+			"id": "cardor-01-mono-wheel",
+			"ref": "wheel",
+			"aspect": "1:1",
+			"prompt": "Logo symbol for CARDOR Media, an entertainment holding company. Motif: the Car d'Or carriage wheel reduced to a modern geometric emblem: a bold outer ring, 14 rounded turned-wood baluster spokes (smooth bulbous profiles, never blades) drawn as clean geometric shapes, and a strong central hub (the 'core'). Single color: bone white #EDE8DF on solid near-black #07070A. No text. Perfectly symmetric, legible at 24 px, timeless and premium, like a heraldic seal reinvented by Swiss modernism."
+		},
+		{
+			"id": "cardor-02-color-wheel",
+			"ref": "wheel",
+			"aspect": "1:1",
+			"prompt": "Logo symbol for CARDOR Media, an entertainment holding company. Motif: the Car d'Or carriage wheel as a modern geometric emblem: bold outer ring and 14 tapered spokes in flat gilded gold #D4A84B, the central hub in bone white #EDE8DF, and one small ember red #FF3B1F solid dot at the exact center (the core). Solid near-black #07070A background. Flat colors only, no text, perfectly symmetric, premium."
+		},
+		{
+			"id": "cardor-03-mono-volute",
+			"ref": "volute",
+			"aspect": "1:1",
+			"prompt": "Alternative logo symbol for CARDOR Media: the golden volute (spiral scroll) of the carriage prow, redrawn as a precise geometric spiral of two and a half turns built from concentric arcs of decreasing radius, ending at its center in a solid circle (the core). Single color bone white #EDE8DF on #07070A. No text. Minimal, iconic, legible at small size."
+		},
+		{
+			"id": "cardor-04-text-lockup",
+			"ref": "wheel",
+			"aspect": "3:2",
+			"prompt": "Horizontal logo lockup reading exactly \"CARDOR Media\". Left: the geometric Car d'Or wheel emblem (outer ring, 14 tapered spokes, central hub) in flat gold #D4A84B. Right: \"CARDOR\" in tall, sharp, high-contrast editorial serif capitals (Instrument Serif / Didone feel, tight letter spacing) in bone white #EDE8DF, and \"Media\" in the same serif family, italic lowercase, in gold #D4A84B, tucked under the final R. Background #07070A. Spelling must be exact. No other text."
+		},
+		{
+			"id": "cardor-05-text-wordmark-mono",
+			"ref": "none",
+			"aspect": "3:2",
+			"prompt": "Pure typographic wordmark reading exactly \"CARDOR Media\" for an entertainment holding. \"CARDOR\" in very tall, razor-sharp, high-contrast editorial serif capitals; the counter of the letter O is replaced by a tiny geometric wheel with 14 spokes. \"Media\" in the same serif, italic lowercase, smaller, overlapping the bottom right of the final R. Single color bone white #EDE8DF on #07070A, cinematic like an A24 title card. Spelling must be exact."
+		},
+		{
+			"id": "cardor-06-text-seal",
+			"ref": "wheel",
+			"aspect": "1:1",
+			"prompt": "Circular seal badge for CARDOR Media. Center: the geometric Car d'Or wheel emblem (ring, 14 spokes, hub). Around it, between two thin concentric rings, text set on the circle reading exactly \"CARDOR MEDIA\" at the top and \"MONS · MMXXVI\" at the bottom, in widely spaced engraved Roman serif capitals. Monochrome flat gold #D4A84B on #07070A. Spelling must be exact. No other text."
+		},
+		{
+			"id": "interactive-01-mono",
+			"ref": "wheel",
+			"aspect": "1:1",
+			"prompt": "Logo symbol for OCC Interactive, a 3D video game and real-time web studio, sibling of a carriage-wheel emblem. The same wheel (outer ring, 14 spokes, central hub) rebuilt as a faceted low-poly polygon: the ring made of 14 flat straight segments, each spoke a sharp triangular facet, the hub a hexagon. One spoke facet is slightly offset outward like a selected polygon or a glitch. Single color bone white #EDE8DF on #07070A. No text. Crisp, geometric, iconic."
+		},
+		{
+			"id": "interactive-02-color",
+			"ref": "wheel",
+			"aspect": "1:1",
+			"prompt": "Logo symbol for OCC Interactive, a 3D video game and web studio: a carriage wheel (outer ring, 14 spokes, central hub) rebuilt as a faceted low-poly polygon, ring of 14 flat segments, triangular spoke facets, hexagonal hub, one facet offset like a glitch. Flat acid lime #C6FF3D with a few facets in darker olive #5B7A00 to suggest depth (flat colors, no gradients). Background #07070A. No text."
+		},
+		{
+			"id": "interactive-03-text",
+			"ref": "wheel",
+			"aspect": "3:2",
+			"prompt": "Horizontal logo lockup reading exactly \"OCC Interactive\". Left: a faceted low-poly carriage wheel symbol (14 segments, hexagonal hub, one facet offset) in acid lime #C6FF3D. Right: \"OCC\" in small, widely spaced monospace capitals in bone white #EDE8DF above \"Interactive\" set in a sharp high-contrast editorial serif in bone white, where the dot of the i is a small lime square pixel. Background #07070A. Spelling must be exact. No other text."
+		},
+		{
+			"id": "soundworks-01-mono",
+			"ref": "wheel",
+			"aspect": "1:1",
+			"prompt": "Logo symbol for OCC Soundworks, a sound design, voice dubbing and music studio, sibling of a carriage-wheel emblem. The same wheel where the 14 spokes become radial audio waveform bars of varying lengths (a radial equalizer), inside a thin outer ring; the hub is made of three concentric rings like a speaker cone. No microphones, no headphones, no music notes. Single color bone white #EDE8DF on #07070A. No text. Elegant and iconic."
+		},
+		{
+			"id": "soundworks-02-color",
+			"ref": "wheel",
+			"aspect": "1:1",
+			"prompt": "Logo symbol for OCC Soundworks, a sound and voice studio: a carriage wheel whose 14 spokes are radial waveform bars of varying length inside a thin ring, the hub as three concentric speaker-cone rings. Flat ultraviolet #7B5CFF with the hub rings in deep indigo #3A2A9E and a bone white #EDE8DF center dot. Background #07070A. No text, flat colors only."
+		},
+		{
+			"id": "soundworks-03-text",
+			"ref": "wheel",
+			"aspect": "3:2",
+			"prompt": "Horizontal logo lockup reading exactly \"OCC Soundworks\". Left: a radial-waveform carriage wheel symbol (14 bar spokes, concentric hub) in ultraviolet #7B5CFF. Right: \"OCC\" in small widely spaced monospace capitals in bone white #EDE8DF above \"Soundworks\" in a high-contrast editorial serif italic in bone white, the two letters o echoing the concentric hub rings. Background #07070A. Spelling must be exact. No other text."
+		},
+		{
+			"id": "creative-01-mono",
+			"ref": "volute",
+			"aspect": "1:1",
+			"prompt": "Logo symbol for OCC Creative Lab, an illustration, art direction, writing and lore studio, sibling of a carriage-wheel emblem. The golden volute (spiral scroll) of the carriage transformed into a single calligraphic ink stroke: a spiral that swells and tapers like a brush stroke and ends at its center in a quill nib shape; a thin outer ring frames it as a reference to the wheel. Single color bone white #EDE8DF on #07070A. No text, no paintbrush, no pencil."
+		},
+		{
+			"id": "creative-02-color",
+			"ref": "volute",
+			"aspect": "1:1",
+			"prompt": "Logo symbol for OCC Creative Lab, an art and storytelling studio: a calligraphic ink-stroke spiral derived from a baroque volute, swelling and tapering, ending in a quill nib at its center, framed by a thin ring. Flat warm amber #FFB547 stroke, the nib in deep ochre #A66A0B, thin ring in bone white #EDE8DF. Background #07070A. No text, flat colors only."
+		},
+		{
+			"id": "creative-03-text",
+			"ref": "volute",
+			"aspect": "3:2",
+			"prompt": "Horizontal logo lockup reading exactly \"OCC Creative Lab\". Left: a calligraphic ink-stroke spiral symbol ending in a quill nib, in amber #FFB547. Right: \"OCC\" in small widely spaced monospace capitals in bone white #EDE8DF above \"Creative Lab\" in a high-contrast editorial serif, with \"Creative\" in italic and a delicate calligraphic swash on its final e. Background #07070A. Spelling must be exact. No other text."
+		},
+		{
+			"id": "cardor-07-mono-carriage",
+			"ref": "carriage",
+			"aspect": "1:1",
+			"prompt": "Logo symbol for CARDOR Media, an entertainment holding: the full Car d'Or seen in side profile, reduced to an essential geometric silhouette: a boat-shaped body with a raised stern, a spiral volute at the prow, a small domed reliquary lantern standing at the front, and two large spoked wheels (the rear one larger). Bold flat shapes, confident negative space, no cherubs, no ornament detail. Single color bone white #EDE8DF on #07070A. No text. Iconic and legible at small size, like a modern heraldic emblem."
+		},
+		{
+			"id": "cardor-08-color-carriage",
+			"ref": "carriage",
+			"aspect": "1:1",
+			"prompt": "Logo symbol for CARDOR Media: the full Car d'Or seen in side profile, reduced to an essential geometric silhouette: a boat-shaped body with a raised stern, a spiral volute at the prow, a small domed reliquary lantern standing at the front, and two large spoked wheels (the rear one larger). Body in flat bone white #EDE8DF, volute, rim lines, lantern and wheels in flat gilded gold #D4A84B, one tiny ember red #FF3B1F flame in the lantern. Background #07070A. Flat colors, no gradients, no text, premium and minimal."
+		},
+		{
+			"id": "cardor-09-mono-carriage-monoline",
+			"ref": "carriage",
+			"aspect": "1:1",
+			"prompt": "Monoline logo for CARDOR Media: the full Car d'Or seen in side profile, reduced to an essential geometric silhouette: a boat-shaped body with a raised stern, a spiral volute at the prow, a small domed reliquary lantern standing at the front, and two large spoked wheels (the rear one larger), drawn with one continuous uniform-weight line, elegant and precise, like a luxury maison emblem. Gold #D4A84B line on #07070A. No text, no fill."
+		},
+		{
+			"id": "cardor-10-mono-carriage-in-wheel",
+			"ref": "carriage",
+			"aspect": "1:1",
+			"prompt": "Emblem for CARDOR Media: inside a bold circle whose inner edge carries 14 short spoke notches (a wheel), sits the full Car d'Or seen in side profile, reduced to an essential geometric silhouette: a boat-shaped body with a raised stern, a spiral volute at the prow, a small domed reliquary lantern standing at the front, and two large spoked wheels (the rear one larger) as a solid flat silhouette. Single color bone white #EDE8DF on #07070A. No text. Balanced, iconic, seal-like."
+		},
+		{
+			"id": "cardor-11-text-carriage-stacked",
+			"ref": "carriage",
+			"aspect": "1:1",
+			"prompt": "Stacked logo lockup: on top, the full Car d'Or seen in side profile, reduced to an essential geometric silhouette: a boat-shaped body with a raised stern, a spiral volute at the prow, a small domed reliquary lantern standing at the front, and two large spoked wheels (the rear one larger) as a flat gold #D4A84B silhouette; below, the wordmark reading exactly \"CARDOR\" in tall, sharp, high-contrast editorial serif capitals in bone white #EDE8DF, with \"Media\" in italic lowercase gold #D4A84B centered underneath. Background #07070A. Spelling must be exact. No other text."
+		},
+		{
+			"id": "cardor-12-text-carriage-horizontal-mono",
+			"ref": "carriage",
+			"aspect": "3:2",
+			"prompt": "Horizontal monochrome logo lockup: left, the full Car d'Or seen in side profile, reduced to an essential geometric silhouette: a boat-shaped body with a raised stern, a spiral volute at the prow, a small domed reliquary lantern standing at the front, and two large spoked wheels (the rear one larger) as a flat silhouette; right, \"CARDOR\" in sharp editorial serif capitals and \"Media\" in italic of the same serif. Everything in bone white #EDE8DF on #07070A. Spelling must be exact: \"CARDOR Media\". No other text."
+		},
+		{
+			"id": "interactive-04-carriage",
+			"ref": "carriage",
+			"aspect": "1:1",
+			"prompt": "Logo symbol for OCC Interactive, a 3D video game studio: the side-profile silhouette of the Car d'Or processional carriage (boat-shaped body, prow volute, small lantern, two spoked wheels) rebuilt in faceted low-poly triangles, like a game asset wireframe made solid, one facet offset like a glitch. Flat acid lime #C6FF3D and olive #5B7A00 on #07070A. No text."
+		},
+		{
+			"id": "soundworks-04-carriage",
+			"ref": "carriage",
+			"aspect": "1:1",
+			"prompt": "Logo symbol for OCC Soundworks, a sound and voice studio: the side-profile silhouette of the Car d'Or processional carriage whose body is built from vertical audio waveform bars of varying height (the carriage's outline emerges from the waveform), two wheels as concentric speaker rings. Flat ultraviolet #7B5CFF with bone white #EDE8DF accents on #07070A. No text, no microphone."
+		},
+		{
+			"id": "creative-04-carriage",
+			"ref": "carriage",
+			"aspect": "1:1",
+			"prompt": "Logo symbol for OCC Creative Lab, an illustration and storytelling studio: the side-profile silhouette of the Car d'Or processional carriage drawn in a few confident calligraphic brush-ink strokes, the prow volute as a flourish ending in a quill nib, wheels as single ink circles. Flat amber #FFB547 strokes on #07070A. No text, no paintbrush object."
+		},
+		{
+			"id": "family-board",
+			"ref": "wheel",
+			"aspect": "16:9",
+			"prompt": "Brand architecture board on solid #07070A showing four sibling logo symbols in one row, equal size and spacing, all derived from the same carriage wheel: (1) CARDOR Media: geometric wheel with ring, 14 tapered spokes and hub, gold #D4A84B with an ember red #FF3B1F center dot; (2) OCC Interactive: the wheel rebuilt as faceted low-poly, acid lime #C6FF3D; (3) OCC Soundworks: spokes as radial waveform bars with a concentric hub, ultraviolet #7B5CFF; (4) OCC Creative Lab: a calligraphic ink spiral ending in a quill nib inside a thin ring, amber #FFB547. Under each symbol, its name in small widely spaced monospace capitals in bone white #EDE8DF: exactly \"CARDOR MEDIA\", \"OCC INTERACTIVE\", \"OCC SOUNDWORKS\", \"OCC CREATIVE LAB\". Flat vector, consistent line weights, Swiss grid presentation. Spelling must be exact."
+		}
+	]
+}
