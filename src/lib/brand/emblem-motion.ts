@@ -191,3 +191,33 @@ export function emblemTimeline(name: LogoName, root: SVGGElement, width: number)
 	}
 	return { tl, parts };
 }
+
+/**
+ * "Tracé à la plume": the outlines draw themselves (DrawSVGPlugin), then the fills arrive.
+ * Each shape is stroked with its own layer colour so the line is already the brand colour.
+ */
+export function drawInTimeline(root: SVGGElement) {
+	const shapes = [...root.querySelectorAll<SVGGeometryElement>('.part > *')];
+	for (const s of shapes) {
+		const layer = s.closest('[fill]');
+		s.setAttribute('stroke', layer?.getAttribute('fill') ?? 'currentColor');
+		s.setAttribute('stroke-width', '1.25');
+		s.setAttribute('vector-effect', 'non-scaling-stroke');
+		s.setAttribute('stroke-linejoin', 'round');
+	}
+	gsap.set(shapes, { fillOpacity: 0, drawSVG: '0%' });
+	return gsap
+		.timeline({ paused: true })
+		.to(shapes, {
+			drawSVG: '100%',
+			duration: 1.8,
+			ease: 'cardor.inOut',
+			stagger: { amount: 0.9, from: 'random' }
+		})
+		.to(
+			shapes,
+			{ fillOpacity: 1, duration: 0.7, ease: 'cardor.out', stagger: { amount: 0.25 } },
+			'-=0.45'
+		)
+		.to(shapes, { strokeOpacity: 0, duration: 0.5 }, '-=0.3');
+}

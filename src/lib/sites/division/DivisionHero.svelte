@@ -135,7 +135,13 @@
 					data-cursor="Maison">Une division de<br />CARDOR Media ↗</a
 				>
 				<div data-dhero-emblem class="h-24 w-28 shrink-0 md:h-32 md:w-36" aria-hidden="true">
-					<Logo name={site.emblem} animate="loop" host="[data-dhero-emblem]" class="size-full" />
+					<Logo
+						name={site.emblem}
+						animate="loop"
+						drawIn
+						host="[data-dhero-emblem]"
+						class="size-full"
+					/>
 				</div>
 			</div>
 		</div>

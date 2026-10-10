@@ -2,7 +2,12 @@
 	import { onMount, tick } from 'svelte';
 	import sprite from '#lib/assets/logos.svg?url';
 	import { logos, type LogoName } from '#lib/data/logos.ts';
-	import { emblemTimeline, loadEmblem, type EmblemParts } from '#lib/brand/emblem-motion.ts';
+	import {
+		drawInTimeline,
+		emblemTimeline,
+		loadEmblem,
+		type EmblemParts
+	} from '#lib/brand/emblem-motion.ts';
 	import { prefersReducedMotion } from '#lib/motion/tokens.ts';
 
 	interface Props {
@@ -15,6 +20,8 @@
 		animate?: 'hover' | 'loop';
 		/** Closest ancestor (CSS selector) that triggers hover. Defaults to the parent element. */
 		host?: string;
+		/** Draw the outlines in, then fill, the first time the emblem scrolls into view. */
+		drawIn?: boolean;
 		/** Called once the emblem is inlined, with its animatable parts. */
 		onready?: (parts: EmblemParts) => void;
 		/** Accessible label. Omit for decorative use. */
@@ -28,6 +35,7 @@
 		swap = false,
 		animate,
 		host,
+		drawIn = false,
 		onready,
 		title,
 		class: className = ''
@@ -59,7 +67,7 @@
 	onMount(() => {
 		const hostEl = (host ? svg.closest<HTMLElement>(host) : null) ?? svg.parentElement;
 		if (swap) hostEl?.setAttribute('data-emblem-host', '');
-		if (!animate && !onready) return;
+		if (!animate && !onready && !drawIn) return;
 
 		let disposed = false;
 		const cleanups: Array<() => void> = [];
@@ -81,7 +89,27 @@
 			);
 			onready?.(parts);
 			cleanups.push(() => tl.kill());
-			if (!animate || prefersReducedMotion()) return;
+			const reduce = prefersReducedMotion();
+			let ready = Promise.resolve();
+			if (drawIn && !reduce) {
+				const draw = drawInTimeline(root);
+				cleanups.push(() => draw.kill());
+				ready = new Promise<void>((resolve) => {
+					const io = new IntersectionObserver(
+						([e]) => {
+							if (!e.isIntersecting) return;
+							io.disconnect();
+							draw.play().then(() => resolve());
+						},
+						{ threshold: 0.35 }
+					);
+					io.observe(svg);
+					cleanups.push(() => io.disconnect());
+				});
+			}
+			if (!animate || reduce) return;
+			await ready;
+			if (disposed) return;
 
 			const play = () => {
 				if (!tl.isActive()) tl.restart();

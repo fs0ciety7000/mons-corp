@@ -18,6 +18,7 @@
 					<Logo
 						name={site.emblem}
 						animate="loop"
+						drawIn
 						class="size-full"
 						title="Emblème {site.name} : {emblem.motif}"
 					/>
