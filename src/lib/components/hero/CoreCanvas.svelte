@@ -18,8 +18,7 @@
 	// DOM → WebGL: morph whenever the active state changes.
 	$effect(() => {
 		const id = core.active;
-		const reduce = prefersReducedMotion();
-		scene?.setState(id, reduce).then(() => reduce && scene?.render());
+		scene?.setState(id);
 	});
 
 	// Birth of the Core once the preloader lifts (motion report §5, t = 1.90 s).
@@ -69,9 +68,9 @@
 			try {
 				const { CoreScene } = await import('#lib/webgl/CoreScene.ts');
 				if (disposed) return;
-				instance = new CoreScene(canvas, { lowPower, still: reduce, onError: markFailed });
-				if (!(await instance.init(core.active))) return disposed ? undefined : markFailed();
-				if (disposed) return;
+				instance = new CoreScene(canvas, { lowPower, onError: markFailed });
+				if (!instance.compile()) return markFailed();
+				instance.setState(core.active, true);
 				scene = instance;
 			} catch {
 				return markFailed();
@@ -149,31 +148,23 @@
 		class="fallback absolute inset-0 transition-[background] duration-1000"
 		style:--c={fallbackColor}
 	></div>
-	<canvas bind:this={canvas} class="absolute inset-0 size-full" class:hidden={failed}></canvas>
+	<!-- Dimmed so the hero text stays readable over the Core (design review 2026-10-10). -->
+	<canvas
+		bind:this={canvas}
+		class="absolute inset-0 size-full opacity-55 md:opacity-75"
+		class:hidden={failed}
+	></canvas>
 </div>
 
 <style>
 	.fallback {
 		background:
 			radial-gradient(
-				circle at var(--fx, 61%) var(--fy, 27%),
+				circle at 50% 45%,
 				color-mix(in oklab, var(--c) 55%, transparent) 0%,
 				color-mix(in oklab, var(--c) 18%, transparent) 18%,
 				transparent 42%
 			),
 			var(--color-void);
-	}
-	/* Same framing as the WebGL emblem (CoreScene `framing`). */
-	@media (min-width: 768px) {
-		.fallback {
-			--fx: 65%;
-			--fy: 35%;
-		}
-	}
-	@media (min-width: 1024px) {
-		.fallback {
-			--fx: 68%;
-			--fy: 44%;
-		}
 	}
 </style>
