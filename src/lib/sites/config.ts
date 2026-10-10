@@ -51,7 +51,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 		signal: '#C6FF3D',
 		signalDeep: '#5B7A00',
 		coreState: 'interactive',
-		email: 'interactive@cardormedia.com',
+		email: 'contact@cardormedia.com',
 		tagline: 'Des mondes que l’on habite',
 		description:
 			'OCC Interactive, le studio jeux vidéo et web de CARDOR Media : jeux de stratégie et d’action jouables dans le navigateur, applications et outils métier. Forgé à Mons.',
@@ -75,7 +75,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 		signal: '#7B5CFF',
 		signalDeep: '#3A2A9E',
 		coreState: 'sound',
-		email: 'soundworks@cardormedia.com',
+		email: 'contact@cardormedia.com',
 		tagline: 'Des mondes que l’on entend',
 		description:
 			'OCC Soundworks, le studio son de CARDOR Media : sound design, doublage et voix, musique originale, mixage et mastering pour le jeu, l’animation et le web.',
@@ -99,7 +99,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 		signal: '#FFB547',
 		signalDeep: '#A66A0B',
 		coreState: 'creative',
-		email: 'creative@cardormedia.com',
+		email: 'contact@cardormedia.com',
 		tagline: 'Des mondes que l’on raconte',
 		description:
 			'OCC Creative Lab, l’atelier de CARDOR Media : illustration et concept art, direction artistique, écriture et lore, identités visuelles.',
