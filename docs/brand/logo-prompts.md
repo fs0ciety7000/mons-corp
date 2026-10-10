@@ -233,3 +233,94 @@ circular seal badge, geometric carriage wheel in the center, engraved spaced rom
 2. **Vectorisation** : Illustrator Image Trace ou Vectorizer.ai, puis redessin manuel (rayons strictement égaux, angles à 360/14 = 25,714°, épaisseurs harmonisées entre les 4 symboles).
 3. Typo des lockups recomposée en vraies polices (Instrument Serif, Geist Mono), jamais l'IA en final.
 4. Déclinaisons : négatif (void sur paper `#F6F3EE`), 1 couleur, favicon 16/32 px (moyeu + 7 rayons), version animée (la roue tourne, puis se transforme en Noyau WebGL au chargement du site).
+
+---
+
+## 4. v2 « Patrimoine de Mons » : Beffroi · Car d'Or · Dragon · Singe
+
+Matrice complète **4 marques × 4 motifs × 3 variantes** (monochrome, couleur, avec texte), générée avec Nano Banana Pro. Les fichiers sont dans `docs/brand/logos/v2/` et suivent le nommage `<marque>-<motif>-<1-mono|2-color|3-text>.webp`.
+
+| Marque           | Planche                                                     |
+| ---------------- | ----------------------------------------------------------- |
+| CARDOR Media     | [`board-cardor.webp`](logos/v2/board-cardor.webp)           |
+| OCC Interactive  | [`board-interactive.webp`](logos/v2/board-interactive.webp) |
+| OCC Soundworks   | [`board-soundworks.webp`](logos/v2/board-soundworks.webp)   |
+| OCC Creative Lab | [`board-creative.webp`](logos/v2/board-creative.webp)       |
+
+> ⚠️ 45/48 générés. Les 3 cases **Creative Lab × Singe** ont été bloquées par la limite de dépense de l'API Gemini (HTTP 429). Pour les relancer : `LOGO_JOBS=scripts/logo-jobs-mons.json python3 scripts/generate-logos.py <refs> <sortie> creative-singe-1-mono creative-singe-2-color creative-singe-3-text`, puis `python3 scripts/build-logo-boards.py <sortie> docs/brand/logos/v2`.
+
+### Les motifs
+
+| Motif                          | Symbole                               | Description utilisée                                                             |
+| ------------------------------ | ------------------------------------- | -------------------------------------------------------------------------------- |
+| **Beffroi** (UNESCO)           | Hauteur, vigie, signal qui porte loin | Tour carrée élancée, trois bulbes empilés, lanternon, quatre tourelles d'angle   |
+| **Car d'Or**                   | Le véhicule des œuvres, la procession | Coque en bateau, poupe relevée, volute de proue, lanterne-reliquaire, deux roues |
+| **Dragon du Doudou** (Lumeçon) | Le combat, le spectacle, l'énergie    | Long corps, gueule de crocodile, crête de piques, queue enroulée                 |
+| **Singe du Grand-Garde**       | La chance, la complicité, le geste    | Petit singe accroupi, une main posée sur la tête                                 |
+
+### Traitement par marque (identique pour tous les motifs)
+
+| Marque           | Écriture graphique                                   | Couleurs                                                      |
+| ---------------- | ---------------------------------------------------- | ------------------------------------------------------------- |
+| CARDOR Media     | Emblème géométrique, aplats francs                   | Or `#D4A84B` + bone `#EDE8DF` + un seul point Ember `#FF3B1F` |
+| OCC Interactive  | Low-poly facetté, une facette décalée (glitch)       | Acid `#C6FF3D` + olive `#5B7A00`                              |
+| OCC Soundworks   | Barres d'onde et anneaux concentriques               | Ultraviolet `#7B5CFF` + indigo `#3A2A9E`                      |
+| OCC Creative Lab | Traits d'encre calligraphiques, terminaison en plume | Amber `#FFB547` + ocre `#A66A0B`                              |
+
+**Lecture du Design Agent** (pour guider le choix) :
+
+- **CARDOR × Singe** et **CARDOR × Dragon (couleur)** ont le plus de caractère : très « maison », ils fonctionnent en petit. **CARDOR × Car d'Or (texte)** est le plus narratif pour la holding.
+- **Interactive × Dragon (couleur)** et **× Singe** : l'écriture low-poly est immédiatement « jeu vidéo ».
+- **Soundworks × Beffroi (mono)** : superbe, le beffroi devient une partition, et la cloche du beffroi sonne juste pour un studio son.
+- **Creative × Car d'Or** et **× Dragon (texte)** : la plume dans la volute est la piste la plus cohérente.
+- **Piste d'architecture possible** : un motif par entité (Car d'Or = holding, Dragon = Interactive, Beffroi = Soundworks, Singe = Creative Lab) plutôt qu'un même motif décliné. À trancher ensemble.
+
+### Prompts Midjourney v7 : motifs v2
+
+Mode d'emploi identique au § 2 (photo en image prompt `--iw 0.35–0.45`, jamais en `--sref`). Remplace `{TRAITEMENT}` et `{COULEURS}` par la ligne de la marque :
+
+| Marque       | `{TRAITEMENT}`                                                                            | `{COULEURS}`                                                     |
+| ------------ | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| CARDOR       | `modern geometric emblem, bold flat shapes, confident negative space`                     | `gilded gold #D4A84B and bone white, one small ember red accent` |
+| Interactive  | `rebuilt in faceted low-poly triangles like a game asset, one facet offset like a glitch` | `acid lime #C6FF3D and olive #5B7A00`                            |
+| Soundworks   | `built from vertical audio waveform bars and concentric sound rings`                      | `ultraviolet #7B5CFF and deep indigo #3A2A9E`                    |
+| Creative Lab | `drawn in a few confident calligraphic brush-ink strokes ending in a quill nib flourish`  | `warm amber #FFB547 and ochre #A66A0B`                           |
+
+Suffixe : `--v 7 --style raw --stylize 60 --ar 1:1 --no photo, 3d render, gradient, shadow, texture, people, text`
+
+**Beffroi**
+
+```
+<IMAGE_BEFFROI> flat vector logo symbol, the baroque belfry of Mons, slender square bell tower crowned by three stacked bulbous onion domes and a small lantern spire, four small domed corner turrets, {TRAITEMENT}, single color bone white #EDE8DF on near-black #07070A, iconic, legible at small size --iw 0.4 <suffixe>
+<IMAGE_BEFFROI> flat vector logo symbol, the baroque belfry of Mons with stacked onion domes and corner turrets, {TRAITEMENT}, {COULEURS} on near-black #07070A, flat colors --iw 0.4 <suffixe>
+```
+
+**Car d'Or**
+
+```
+<IMAGE_CARROSSE> flat vector logo symbol, side profile of the Car d'Or processional carriage, boat-shaped body, raised stern, prow spiral volute, small domed reliquary lantern, two large spoked wheels, {TRAITEMENT}, single color bone white on near-black --iw 0.4 <suffixe>
+<IMAGE_CARROSSE> same carriage, {TRAITEMENT}, {COULEURS} on near-black, flat colors --iw 0.4 <suffixe>
+```
+
+**Dragon du Doudou**
+
+```
+<IMAGE_DRAGON> flat vector logo symbol, the Doudou dragon of Mons in side profile, long body, open crocodile-like snout, row of triangular spikes along the back, long curling tail, {TRAITEMENT}, single color bone white on near-black --iw 0.4 <suffixe>
+<IMAGE_DRAGON> same dragon, {TRAITEMENT}, {COULEURS} on near-black, flat colors --iw 0.4 <suffixe>
+```
+
+**Singe du Grand-Garde**
+
+```
+<IMAGE_SINGE> flat vector logo symbol, the lucky bronze monkey of Mons crouching in profile with one hand resting on top of its head, {TRAITEMENT}, single color bone white on near-black --iw 0.45 <suffixe>
+<IMAGE_SINGE> same monkey, {TRAITEMENT}, {COULEURS} on near-black, flat colors --iw 0.45 <suffixe>
+```
+
+**Avec texte** : génère le symbole dans MJ, puis compose le wordmark en vraies polices (cf. § 0). Si tu veux tout de même tester dans MJ, ajoute au prompt couleur :
+`stacked logo lockup, the symbol on top, below it the wordmark "CARDOR" in tall sharp high-contrast editorial serif capitals with "Media" in gold italic serif` (ou `small spaced monospace "OCC" above "Interactive" / "Soundworks" in italic serif / "Creative Lab" with italic Creative`), puis passe en `--ar 1:1 --stylize 40`.
+
+Références photo :
+
+- Beffroi : `https://commons.wikimedia.org/wiki/File:0_Mons_-_Beffroi_(1).JPG`
+- Dragon : `https://i.ibb.co/KcHMy4K8/Capture-d-cran-20261010-152927.png` (affiche Doudou 2026, très bonne direction flat/géométrique) et la photo du Lumeçon
+- Singe : `https://www.delcampe.net/static/img_large/auction/002/035/998/392_001.jpg`

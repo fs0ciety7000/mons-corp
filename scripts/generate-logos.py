@@ -1,14 +1,14 @@
 """Generate logo explorations with Nano Banana Pro (Gemini image API).
 
-Usage: GEMINI_API_KEY=... python3 scripts/generate-logos.py <refs_dir> <out_dir> [job_id ...]
-Reference images expected in <refs_dir>: wheel.jpg, volute.jpg.
+Usage: [LOGO_JOBS=scripts/logo-jobs-mons.json] GEMINI_API_KEY=... python3 scripts/generate-logos.py <refs_dir> <out_dir> [job_id ...]
+Reference images expected in <refs_dir>: <ref>.jpg for every "ref" used by the jobs file.
 """
 import base64, json, os, sys, urllib.request, concurrent.futures as cf
 
 MODEL = os.environ.get("LOGO_MODEL", "gemini-3-pro-image")
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent"
 here = os.path.dirname(os.path.abspath(__file__))
-cfg = json.load(open(os.path.join(here, "logo-jobs.json")))
+cfg = json.load(open(os.environ.get("LOGO_JOBS", os.path.join(here, "logo-jobs.json"))))
 refs_dir, out_dir = sys.argv[1], sys.argv[2]
 only = set(sys.argv[3:])
 
