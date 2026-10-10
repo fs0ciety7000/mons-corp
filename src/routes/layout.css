@@ -1,0 +1,191 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@import '@fontsource/instrument-serif/latin-400.css';
+@import '@fontsource/instrument-serif/latin-400-italic.css';
+@import '@fontsource-variable/geist/wght.css';
+@import '@fontsource-variable/geist-mono/wght.css';
+
+/* ------------------------------------------------------------------
+ * CARDOR Media — design tokens (docs/design-agent-report.md §3–5)
+ * ------------------------------------------------------------------ */
+@theme {
+	/* Neutrals */
+	--color-void: #07070a;
+	--color-ink: #0e0e13;
+	--color-graphite: #1a1a22;
+	--color-smoke: #2a2a33;
+	--color-ash: #8a8794;
+	--color-bone: #ede8df;
+	--color-paper: #f6f3ee;
+
+	/* Holding signal */
+	--color-ember: #ff3b1f;
+	--color-ember-deep: #c2260f;
+
+	/* Division signals */
+	--color-interactive: #c6ff3d;
+	--color-interactive-deep: #5b7a00;
+	--color-sound: #7b5cff;
+	--color-sound-deep: #3a2a9e;
+	--color-creative: #ffb547;
+	--color-creative-deep: #a66a0b;
+
+	/* Type */
+	--font-display: 'Instrument Serif', 'Times New Roman', serif;
+	--font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+	--font-mono: 'Geist Mono Variable', ui-monospace, 'SFMono-Regular', monospace;
+
+	--text-mega: clamp(4.5rem, 17vw, 22rem);
+	--text-mega--line-height: 0.82;
+	--text-mega--letter-spacing: -0.035em;
+	--text-display: clamp(3rem, 8vw, 9rem);
+	--text-display--line-height: 0.88;
+	--text-display--letter-spacing: -0.03em;
+	--text-h1: clamp(2.25rem, 5vw, 5.5rem);
+	--text-h1--line-height: 0.92;
+	--text-h1--letter-spacing: -0.025em;
+	--text-h2: clamp(1.75rem, 3.2vw, 3.5rem);
+	--text-h2--line-height: 1;
+	--text-h2--letter-spacing: -0.02em;
+	--text-lead: clamp(1.125rem, 1.6vw, 1.625rem);
+	--text-lead--line-height: 1.35;
+	--text-micro: 0.6875rem;
+	--text-micro--line-height: 1.4;
+	--text-micro--letter-spacing: 0.12em;
+
+	/* Motion (CSS side — GSAP mirrors these in src/lib/motion/tokens.ts) */
+	--ease-cardor-out: cubic-bezier(0.16, 1, 0.3, 1);
+	--ease-cardor-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+	--ease-cardor-in: cubic-bezier(0.7, 0, 0.84, 0);
+
+	/* Breakpoints (design report §5) */
+	--breakpoint-md: 48rem;
+	--breakpoint-lg: 80rem;
+	--breakpoint-xl: 120rem;
+}
+
+/* Grid system: 4 / 8 / 12 columns */
+@utility grid-cardor {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	column-gap: 16px;
+	padding-inline: 16px;
+	margin-inline: auto;
+	max-width: 2400px;
+
+	@media (width >= 48rem) {
+		grid-template-columns: repeat(8, minmax(0, 1fr));
+		column-gap: 20px;
+		padding-inline: 32px;
+	}
+	@media (width >= 80rem) {
+		grid-template-columns: repeat(12, minmax(0, 1fr));
+		column-gap: 24px;
+		padding-inline: 48px;
+	}
+	@media (width >= 120rem) {
+		column-gap: 32px;
+		padding-inline: 64px;
+	}
+}
+
+@utility gutter-x {
+	padding-inline: 16px;
+	@media (width >= 48rem) {
+		padding-inline: 32px;
+	}
+	@media (width >= 80rem) {
+		padding-inline: 48px;
+	}
+	@media (width >= 120rem) {
+		padding-inline: 64px;
+	}
+}
+
+@utility label {
+	font-family: var(--font-mono);
+	font-size: var(--text-micro);
+	line-height: var(--text-micro--line-height);
+	letter-spacing: var(--text-micro--letter-spacing);
+	text-transform: uppercase;
+	font-weight: 450;
+}
+
+@utility section-y {
+	padding-block: clamp(6rem, 14vw, 14rem);
+}
+
+@layer base {
+	:root {
+		color-scheme: dark;
+		--division: var(--color-ember);
+	}
+
+	html {
+		background: var(--color-void);
+		color: var(--color-bone);
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-rendering: optimizeLegibility;
+		scrollbar-width: thin;
+		scrollbar-color: var(--color-smoke) var(--color-void);
+	}
+
+	body {
+		background: var(--color-void);
+		font-family: var(--font-sans);
+		font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+		line-height: 1.55;
+		overflow-x: clip;
+	}
+
+	::selection {
+		background: var(--color-ember);
+		color: var(--color-void);
+	}
+
+	:focus-visible {
+		outline: 2px solid var(--color-ember);
+		outline-offset: 4px;
+		border-radius: 2px;
+	}
+
+	/* Lenis */
+	html.lenis,
+	html.lenis body {
+		height: auto;
+	}
+	.lenis:not(.lenis-autoToggle).lenis-stopped {
+		overflow: clip;
+	}
+	.lenis [data-lenis-prevent] {
+		overscroll-behavior: contain;
+	}
+
+	/* Custom cursor: hide native cursor only on fine pointers once enabled */
+	@media (hover: hover) and (pointer: fine) {
+		html.has-cursor,
+		html.has-cursor a,
+		html.has-cursor button {
+			cursor: none;
+		}
+	}
+
+	/* Line masks used by SplitText reveals */
+	.split-mask {
+		overflow: clip;
+		padding-bottom: 0.08em;
+		margin-bottom: -0.08em;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			scroll-behavior: auto !important;
+		}
+	}
+}
