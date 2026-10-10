@@ -3,7 +3,7 @@
 	import Logo from '#lib/components/brand/Logo.svelte';
 	import { emblems, type LogoName } from '#lib/data/logos.ts';
 	import { gsap } from '#lib/motion/gsap.ts';
-	import { ease, prefersReducedMotion } from '#lib/motion/tokens.ts';
+	import { ease, onFirstView, prefersReducedMotion } from '#lib/motion/tokens.ts';
 	import { reveal } from '#lib/motion/actions.ts';
 
 	const order: LogoName[] = ['cardor-emblem', 'interactive', 'sound', 'creative'];
@@ -19,10 +19,11 @@
 
 	onMount(() => {
 		if (prefersReducedMotion()) return;
+		const stops: Array<() => void> = [];
 		const ctx = gsap.context(() => {
 			// Each emblem is revealed through a circular mask, like a spotlight on the procession.
 			gsap.utils.toArray<HTMLElement>('[data-cortege-emblem]').forEach((el, i) => {
-				gsap.fromTo(
+				const tw = gsap.fromTo(
 					el,
 					{ clipPath: 'circle(0% at 50% 60%)', yPercent: 12 },
 					{
@@ -31,9 +32,10 @@
 						duration: 1.4,
 						ease: ease.out,
 						delay: (i % 4) * 0.08,
-						scrollTrigger: { trigger: el, start: 'top 85%', once: true }
+						paused: true
 					}
 				);
+				stops.push(onFirstView(el, () => tw.play()));
 			});
 
 			// The procession advances: the row drifts sideways as the section scrolls by.
@@ -49,7 +51,10 @@
 				);
 			});
 		}, root);
-		return () => ctx.revert();
+		return () => {
+			stops.forEach((fn) => fn());
+			ctx.revert();
+		};
 	});
 </script>
 

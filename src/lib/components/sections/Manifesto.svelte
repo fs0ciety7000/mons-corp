@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { gsap, SplitText } from '#lib/motion/gsap.ts';
-	import { prefersReducedMotion } from '#lib/motion/tokens.ts';
+	import { isTouch, prefersReducedMotion } from '#lib/motion/tokens.ts';
 	import { reveal } from '#lib/motion/actions.ts';
 
 	let root: HTMLElement;
@@ -18,7 +18,8 @@
 	];
 
 	onMount(() => {
-		if (prefersReducedMotion()) return;
+		// Scroll-scrubbed illumination is a desktop nicety; touch devices get the full text.
+		if (prefersReducedMotion() || isTouch()) return;
 		const ctx = gsap.context(() => {
 			const words = SplitText.create(statement, { type: 'words' }).words;
 			// Scroll-scrubbed word illumination (motion report §7).

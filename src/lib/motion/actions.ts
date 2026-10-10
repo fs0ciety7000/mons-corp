@@ -1,18 +1,26 @@
 import type { Action } from 'svelte/action';
 import { gsap, ScrollTrigger, SplitText } from './gsap.ts';
-import { duration, ease, isFinePointer, prefersReducedMotion, stagger } from './tokens.ts';
+import {
+	duration,
+	ease,
+	isFinePointer,
+	onFirstView,
+	prefersReducedMotion,
+	stagger
+} from './tokens.ts';
 
 interface RevealOptions {
 	/** Split granularity. `block` animates the element as a whole. */
 	type?: 'lines' | 'words' | 'chars' | 'block';
 	delay?: number;
-	/** ScrollTrigger start. Pass `false` to play immediately. */
+	/** Pass `false` to play immediately instead of on first view. */
 	start?: string | false;
 }
 
 /**
  * use:reveal — masked entrance primitive (motion report §3).
- * Never a bare opacity fade, except under reduced motion.
+ * Never a bare opacity fade, except under reduced motion. Triggered on first view through
+ * IntersectionObserver (see onFirstView), not ScrollTrigger.
  */
 export const reveal: Action<HTMLElement, RevealOptions | undefined> = (node, options = {}) => {
 	const { type = 'lines', delay = 0, start = 'top 85%' } = options;
@@ -22,11 +30,17 @@ export const reveal: Action<HTMLElement, RevealOptions | undefined> = (node, opt
 		return;
 	}
 
-	const ctx = gsap.context(() => {
-		const scrollTrigger = start === false ? undefined : { trigger: node, start, once: true };
+	const immediate = start === false;
+	let revealed = immediate;
+	let current: gsap.core.Animation | null = null;
+	const play = () => {
+		revealed = true;
+		current?.play();
+	};
 
+	const ctx = gsap.context(() => {
 		if (type === 'block') {
-			gsap.fromTo(
+			current = gsap.fromTo(
 				node,
 				{ yPercent: 18, autoAlpha: 0, clipPath: 'inset(0 0 100% 0)' },
 				{
@@ -36,7 +50,7 @@ export const reveal: Action<HTMLElement, RevealOptions | undefined> = (node, opt
 					duration: duration.lg,
 					ease: ease.out,
 					delay,
-					scrollTrigger
+					paused: !revealed
 				}
 			);
 			return;
@@ -49,21 +63,32 @@ export const reveal: Action<HTMLElement, RevealOptions | undefined> = (node, opt
 			autoSplit: true,
 			onSplit(self) {
 				const targets = type === 'lines' ? self.lines : type === 'words' ? self.words : self.chars;
-				return gsap.from(targets, {
+				// Re-splits (resize, fonts) must not hide text that was already revealed.
+				const tween = gsap.from(targets, {
 					yPercent: 110,
 					rotate: type === 'chars' ? 6 : 0,
 					duration: duration.lg,
 					ease: ease.out,
 					stagger: stagger[type],
 					delay,
-					scrollTrigger
+					paused: !revealed
 				});
+				if (revealed && current) tween.progress(1);
+				current = tween;
+				return tween;
 			}
 		});
 		gsap.set(node, { autoAlpha: 1 });
 	}, node);
 
-	return { destroy: () => ctx.revert() };
+	const stop = immediate ? () => {} : onFirstView(node, play);
+
+	return {
+		destroy: () => {
+			stop();
+			ctx.revert();
+		}
+	};
 };
 
 /** use:magnetic — element is attracted to the pointer, springs back elastically. */
@@ -137,10 +162,10 @@ export const scramble: Action<HTMLElement, ScrambleOptions | undefined> = (node,
 		});
 	};
 
-	let st: ScrollTrigger | undefined;
+	let stop = () => {};
 	if (onReveal) {
 		node.textContent = final.replace(/\S/g, '░');
-		st = ScrollTrigger.create({ trigger: node, start: 'top 90%', once: true, onEnter: play });
+		stop = onFirstView(node, play, '0px 0px -6% 0px');
 	}
 	const parent = hoverParent ? node.closest<HTMLElement>(hoverParent) : null;
 	parent?.addEventListener('pointerenter', play);
@@ -148,7 +173,7 @@ export const scramble: Action<HTMLElement, ScrambleOptions | undefined> = (node,
 	return {
 		destroy() {
 			tween?.kill();
-			st?.kill();
+			stop();
 			parent?.removeEventListener('pointerenter', play);
 			node.textContent = final;
 		}

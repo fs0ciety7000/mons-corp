@@ -4,7 +4,7 @@
 	import { SITE } from '#lib/sites/config.ts';
 	import { reveal, scramble } from '#lib/motion/actions.ts';
 	import { gsap } from '#lib/motion/gsap.ts';
-	import { prefersReducedMotion } from '#lib/motion/tokens.ts';
+	import { onFirstView, prefersReducedMotion } from '#lib/motion/tokens.ts';
 
 	let { index, label, title, id }: { index: string; label: string; title: Title; id?: string } =
 		$props();
@@ -22,10 +22,14 @@
 				strokeDashoffset: 0,
 				duration: 1.4,
 				ease: 'cardor.inOut',
-				scrollTrigger: { trigger: stroke, start: 'top 85%', once: true }
+				paused: true
 			}
 		);
-		return () => tw.kill();
+		const stop = onFirstView(stroke, () => tw.play());
+		return () => {
+			stop();
+			tw.kill();
+		};
 	});
 </script>
 

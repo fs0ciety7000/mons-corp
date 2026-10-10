@@ -1,6 +1,6 @@
 import Lenis from 'lenis';
 import { gsap, ScrollTrigger } from './gsap.ts';
-import { prefersReducedMotion } from './tokens.ts';
+import { isTouch, prefersReducedMotion } from './tokens.ts';
 
 let instance: Lenis | null = null;
 
@@ -9,7 +9,8 @@ let instance: Lenis | null = null;
  * Disabled for reduced motion; touch devices keep native scrolling.
  */
 export function startSmoothScroll(): () => void {
-	if (prefersReducedMotion() || instance) return () => {};
+	// Touch devices keep native scrolling (inertia, address bar, a11y): no Lenis at all.
+	if (prefersReducedMotion() || isTouch() || instance) return () => {};
 
 	const lenis = new Lenis({ lerp: 0.1, wheelMultiplier: 1, autoRaf: false });
 	instance = lenis;

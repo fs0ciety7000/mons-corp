@@ -66,6 +66,15 @@ Fournis par le paquet `gsap` déjà présent (gratuits depuis la 3.13) : **aucun
 - **DrawSVG** : révélation « tracé à la plume » des emblèmes et arabesque d'encre du singe.
 - **MorphSVG** : preloader des divisions, où la roue CARDOR devient un disque qui se morphe en silhouette de la division. Les silhouettes, chacune en un seul tracé dans le viewBox de l'emblème, sont générées par `scripts/build-silhouettes.py` vers `src/lib/data/silhouettes.json`. On morphe toujours une forme simple vers une forme simple (recommandation du Motion Agent).
 
+### ADR-010 : Entrées au scroll via IntersectionObserver, pas de Lenis sur tactile
+
+_Contexte_ : sur mobile (Samsung Internet, 2026-10-10), titres figés en glyphes et blocs invisibles. Reproduit en tactile avec CPU ×4 : la hauteur de la page varie pendant le chargement (images, re-split des textes), donc les seuils ScrollTrigger `once` sont calculés sur des positions périmées.
+
+- Les **entrées « une seule fois »** (`use:reveal`, `use:scramble`, emblèmes du cortège, trait de plume) utilisent `onFirstView()` (IntersectionObserver, `src/lib/motion/tokens.ts`), insensible aux changements de mise en page. Un re-split SplitText ne recache jamais un texte déjà révélé.
+- ScrollTrigger reste réservé aux effets **liés au scroll** (scrub, parallaxe, navigation). Sur tactile, l'illumination scrubbée du manifeste est désactivée : le texte s'affiche plein.
+- **Pas de Lenis sur tactile** (`isTouch()`), on garde le défilement natif. `isFinePointer()` exclut `any-pointer: coarse` : plus de curseur personnalisé, d'effets aimantés ni de traînée d'encre sur téléphone, même avec un stylet.
+- Test de non-régression : parcours tactile complet (CPU ×4), 0 élément visible masqué sur les 4 sites.
+
 ## 3. Arborescence
 
 ```

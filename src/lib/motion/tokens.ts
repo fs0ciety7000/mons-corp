@@ -36,7 +36,43 @@ export function prefersReducedMotion(): boolean {
 	return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
+/**
+ * True only for a real mouse/trackpad device. Phones and tablets are excluded even when
+ * a stylus makes the browser report a fine pointer (seen on Samsung Internet).
+ */
 export function isFinePointer(): boolean {
 	if (typeof window === 'undefined') return false;
-	return window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+	return (
+		window.matchMedia('(hover: hover) and (pointer: fine)').matches &&
+		!window.matchMedia('(any-pointer: coarse)').matches
+	);
+}
+
+/** Any touch-capable input (phone, tablet, touch laptop). */
+export function isTouch(): boolean {
+	if (typeof window === 'undefined') return false;
+	return window.matchMedia('(any-pointer: coarse)').matches || navigator.maxTouchPoints > 0;
+}
+
+/**
+ * Run `fn` once, the first time `node` enters the viewport. IntersectionObserver-based on
+ * purpose: one-shot entrances must never depend on scroll-position bookkeeping, which some
+ * mobile browsers break (missing reveals on Samsung Internet, 2026-10-10).
+ */
+export function onFirstView(node: Element, fn: () => void, rootMargin = '0px 0px -12% 0px') {
+	if (typeof IntersectionObserver === 'undefined') {
+		fn();
+		return () => {};
+	}
+	const io = new IntersectionObserver(
+		(entries) => {
+			if (entries.some((e) => e.isIntersecting)) {
+				io.disconnect();
+				fn();
+			}
+		},
+		{ rootMargin }
+	);
+	io.observe(node);
+	return () => io.disconnect();
 }
