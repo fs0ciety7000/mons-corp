@@ -61,12 +61,18 @@
 	const kinds = (Object.keys(kindLabels) as AppKind[]).filter((k) =>
 		catalog.some((a) => a.kind === k)
 	);
+	const hits = (text: string) => words.every((w) => text.includes(w));
 	const countStudio = (s: StudioFilter) =>
-		catalog.filter((a) => (s === 'tous' || a.studio === s) && (kind === 'tous' || a.kind === kind))
-			.length;
+		index.filter(
+			({ app, text }) =>
+				(s === 'tous' || app.studio === s) && (kind === 'tous' || app.kind === kind) && hits(text)
+		).length;
 	const countKind = (k: 'tous' | AppKind) =>
-		catalog.filter(
-			(a) => (studio === 'tous' || a.studio === studio) && (k === 'tous' || a.kind === k)
+		index.filter(
+			({ app, text }) =>
+				(studio === 'tous' || app.studio === studio) &&
+				(k === 'tous' || app.kind === k) &&
+				hits(text)
 		).length;
 
 	const reset = () => {
@@ -219,19 +225,22 @@
 
 <svelte:window onkeydown={onKey} />
 
+<span id="newtab-hint" hidden>s’ouvre dans un nouvel onglet</span>
+
 <section
 	bind:this={hero}
-	class="relative overflow-clip pt-24 pb-8 md:pt-32 md:pb-10"
+	class="relative pt-20 pb-6 md:pt-32 md:pb-10"
 	aria-labelledby="apps-title"
 >
 	<div class="glow pointer-events-none absolute inset-0" aria-hidden="true"></div>
 	<div data-ahero class="invisible relative">
 		<div class="flex flex-wrap items-start justify-between gap-4 gutter-x text-ash">
 			<p data-ahero-up class="label">[CM—APPS] Le lanceur de la maison</p>
-			<p data-ahero-up class="flex items-center gap-2 label" aria-live="polite">
+			<p data-ahero-up class="flex items-center gap-2 label">
 				{#if status.at !== null}
 					<span class="live-dot" aria-hidden="true"></span>
-					{upCount} / {catalog.length} en ligne · vérifié {agoLabel(checkedAgo ?? 0)}
+					<span aria-live="polite">{upCount} / {catalog.length} en ligne</span>
+					<span>· vérifié {agoLabel(checkedAgo ?? 0)}</span>
 				{:else if status.failed}
 					État en direct indisponible
 				{:else}
@@ -240,225 +249,227 @@
 			</p>
 		</div>
 
-		<div class="mt-10 gutter-x md:mt-14">
+		<div class="mt-6 gutter-x md:mt-14">
 			<h1
 				id="apps-title"
 				bind:this={title}
-				class="max-w-[18ch] font-display text-[clamp(2.75rem,6.4vw,7rem)] leading-[0.9] tracking-[-0.03em]"
+				class="max-w-[18ch] font-display text-[clamp(2.5rem,5.5vw,6rem)] leading-[0.9] tracking-[-0.03em]"
 			>
 				Tous nos <em class="text-signal">mondes</em>, à portée de clic.
 			</h1>
-			<p data-ahero-up class="mt-6 max-w-[52ch] text-lead text-bone/80">
+			<p data-ahero-up class="mt-6 max-w-[52ch] text-lead text-bone/80 max-sm:hidden">
 				Les jeux, applications, outils et créations des trois studios de CARDOR Media. Cherchez,
 				filtrez, ouvrez.
 			</p>
 		</div>
-
-		<!-- Toolbar -->
-		<div data-ahero-up class="mt-10 gutter-x">
-			<div class="search group">
-				<svg viewBox="0 0 24 24" class="size-5 shrink-0 text-ash" aria-hidden="true"
-					><circle
-						cx="11"
-						cy="11"
-						r="7"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="1.6"
-					/><path
-						d="m20 20-3.5-3.5"
-						stroke="currentColor"
-						stroke-width="1.6"
-						stroke-linecap="round"
-					/></svg
-				>
-				<label for="apps-search" class="sr-only">Rechercher un projet</label>
-				<input
-					id="apps-search"
-					bind:this={searchEl}
-					bind:value={query}
-					onkeydown={onSearchKey}
-					type="search"
-					autocomplete="off"
-					spellcheck="false"
-					placeholder="Rechercher un jeu, une app, une plateforme…"
-					class="min-w-0 flex-1 bg-transparent text-lg outline-none placeholder:text-ash md:text-xl"
-					aria-describedby="apps-search-hint"
-				/>
-				<kbd class="kbd max-sm:hidden" aria-hidden="true">/</kbd>
-			</div>
-			<p id="apps-search-hint" class="sr-only">
-				Entrée ouvre le premier résultat dans un nouvel onglet, Échap efface la recherche.
-			</p>
-
-			<div class="mt-5 flex flex-wrap items-center justify-between gap-4">
-				<div class="flex flex-wrap gap-2" role="group" aria-label="Filtrer par studio">
-					<button
-						type="button"
-						class={['chip', studio === 'tous' && 'is-active']}
-						aria-pressed={studio === 'tous'}
-						onclick={() => (studio = 'tous')}
-						>Tous <span class="opacity-60">{countStudio('tous')}</span></button
-					>
-					{#each studios as s (s)}
-						<button
-							type="button"
-							class={['chip', studio === s && 'is-active']}
-							style:--division={division(s).color}
-							aria-pressed={studio === s}
-							onclick={() => (studio = studio === s ? 'tous' : s)}
-						>
-							<span class="chip-dot" aria-hidden="true"></span>{division(s).name}
-							<span class="opacity-60">{countStudio(s)}</span>
-						</button>
-					{/each}
-				</div>
-				<div
-					class="flex items-center gap-1 rounded-full border border-smoke p-1"
-					role="group"
-					aria-label="Affichage"
-				>
-					<button
-						type="button"
-						class={['seg', view === 'tuiles' && 'is-active']}
-						aria-pressed={view === 'tuiles'}
-						onclick={() => (view = 'tuiles')}>Tuiles</button
-					>
-					<button
-						type="button"
-						class={['seg', view === 'dock' && 'is-active']}
-						aria-pressed={view === 'dock'}
-						onclick={() => (view = 'dock')}>Icônes</button
-					>
-				</div>
-			</div>
-			<div class="mt-3 flex flex-wrap gap-2" role="group" aria-label="Filtrer par type">
-				<button
-					type="button"
-					class={['chip chip-sm', kind === 'tous' && 'is-active']}
-					aria-pressed={kind === 'tous'}
-					onclick={() => (kind = 'tous')}>Tous les types</button
-				>
-				{#each kinds as k (k)}
-					<button
-						type="button"
-						class={['chip chip-sm', kind === k && 'is-active']}
-						aria-pressed={kind === k}
-						disabled={countKind(k) === 0}
-						onclick={() => (kind = kind === k ? 'tous' : k)}
-						>{kindPlural[k]}
-						<span class="opacity-60">{countKind(k)}</span></button
-					>
-				{/each}
-			</div>
-		</div>
 	</div>
 </section>
 
-<div id="projets" class="relative pb-24 md:pb-32">
-	<p class="sr-only" aria-live="polite">
-		{matches.length} projet{matches.length > 1 ? 's' : ''} affiché{matches.length > 1 ? 's' : ''}
-	</p>
+<div class="relative">
+	<!-- Toolbar: the search box sticks while the catalogue scrolls. -->
+	<div data-ahero-up class="search-bar mt-8 gutter-x md:mt-10">
+		<label for="apps-search" class="search group">
+			<svg viewBox="0 0 24 24" class="size-5 shrink-0 text-ash" aria-hidden="true"
+				><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.6" /><path
+					d="m20 20-3.5-3.5"
+					stroke="currentColor"
+					stroke-width="1.6"
+					stroke-linecap="round"
+				/></svg
+			>
+			<input
+				id="apps-search"
+				bind:this={searchEl}
+				bind:value={query}
+				onkeydown={onSearchKey}
+				type="search"
+				autocomplete="off"
+				spellcheck="false"
+				placeholder="Rechercher un jeu, une app, une plateforme…"
+				aria-label="Rechercher un projet"
+				class="min-w-0 flex-1 bg-transparent text-lg outline-none placeholder:text-ash md:text-xl"
+				aria-describedby="apps-search-hint"
+			/>
+			<kbd class="kbd max-sm:hidden" aria-hidden="true">/</kbd>
+		</label>
+	</div>
+	<div data-ahero-up class="gutter-x">
+		<p id="apps-search-hint" class="sr-only">
+			Entrée ouvre le premier résultat dans un nouvel onglet, Échap efface la recherche.
+		</p>
 
-	{#if recent.length && !filtering}
-		<section class="mb-12 gutter-x" aria-labelledby="recent-title">
-			<h2 id="recent-title" class="mb-4 label text-ash">Récemment ouverts</h2>
-			<ul class="flex gap-2 overflow-x-auto pb-2">
-				{#each recent as a (a.id)}
-					<li class="w-28 shrink-0 md:w-32">
-						<AppTile
-							app={a}
-							color={division(a.studio).color}
-							probe={status.results[a.id]}
-							view="dock"
-							onopen={opened}
-						/>
-					</li>
+		<div class="mt-5 flex flex-wrap items-center justify-between gap-4">
+			<div class="scroller flex flex-wrap gap-2" role="group" aria-label="Filtrer par studio">
+				<button
+					type="button"
+					class={['chip', studio === 'tous' && 'is-active']}
+					aria-pressed={studio === 'tous'}
+					onclick={() => (studio = 'tous')}
+					>Tous <span class="tabular-nums">{countStudio('tous')}</span></button
+				>
+				{#each studios as s (s)}
+					<button
+						type="button"
+						class={['chip', studio === s && 'is-active']}
+						style:--division={division(s).color}
+						aria-pressed={studio === s}
+						onclick={() => (studio = studio === s ? 'tous' : s)}
+					>
+						<span class="chip-dot" aria-hidden="true"></span>{division(s).name}
+						<span class="tabular-nums">{countStudio(s)}</span>
+					</button>
 				{/each}
-			</ul>
-		</section>
-	{/if}
-
-	{#if matches.length === 0}
-		<div class="gutter-x">
-			<div class="border border-dashed border-smoke p-10 text-center md:p-16">
-				<p class="font-display text-h2">Aucun monde ne répond à « {query || 'ces filtres'} ».</p>
-				<button type="button" class="chip mt-6" onclick={reset}>Tout afficher</button>
+			</div>
+			<div
+				class="flex items-center gap-1 rounded-full border border-smoke p-1"
+				role="group"
+				aria-label="Affichage"
+			>
+				<button
+					type="button"
+					class={['seg', view === 'tuiles' && 'is-active']}
+					aria-pressed={view === 'tuiles'}
+					onclick={() => (view = 'tuiles')}>Tuiles</button
+				>
+				<button
+					type="button"
+					class={['seg', view === 'dock' && 'is-active']}
+					aria-pressed={view === 'dock'}
+					onclick={() => (view = 'dock')}>Icônes</button
+				>
 			</div>
 		</div>
-	{/if}
-
-	{#each studios as s (s)}
-		{@const d = division(s)}
-		{@const items = matches.filter((a) => a.studio === s)}
-		{#if items.length || (!filtering && s === 'sound') || (studio === s && !items.length && !words.length && kind === 'tous')}
-			<section
-				class="studio mt-6 first:mt-0"
-				style:--division={d.color}
-				aria-labelledby="studio-{s}"
+		<div class="scroller mt-3 flex flex-wrap gap-2" role="group" aria-label="Filtrer par type">
+			<button
+				type="button"
+				class={['chip chip-sm', kind === 'tous' && 'is-active']}
+				aria-pressed={kind === 'tous'}
+				onclick={() => (kind = 'tous')}>Tous les types</button
 			>
-				<header
-					class="mb-6 flex items-end justify-between gap-4 border-t border-smoke gutter-x pt-6"
+			{#each kinds as k (k)}
+				<button
+					type="button"
+					class={['chip chip-sm', kind === k && 'is-active']}
+					aria-pressed={kind === k}
+					disabled={countKind(k) === 0}
+					onclick={() => (kind = kind === k ? 'tous' : k)}
+					>{kindPlural[k]}
+					<span class="tabular-nums">{countKind(k)}</span></button
 				>
-					<div class="flex items-center gap-4">
-						<span class="block h-10 w-12 shrink-0 md:h-12 md:w-14">
-							<Logo name={d.id} animate="hover" host=".studio" class="size-full" />
-						</span>
-						<div>
-							<h2 id="studio-{s}" class="font-display text-h2 leading-none">{d.name}</h2>
-							<p class="mt-1 label text-ash">
-								{items.length ? `${items.length} projet${items.length > 1 ? 's' : ''}` : 'Bientôt'} ·
-								{d.tagline}
-							</p>
-						</div>
-					</div>
-					<a href={d.url} class="studio-link label max-sm:hidden" data-cursor="Visiter"
-						>{d.host} ↗</a
-					>
-				</header>
+			{/each}
+		</div>
+	</div>
 
-				{#if items.length}
-					<ul
-						class={view === 'dock'
-							? 'grid grid-cols-3 gap-2 gutter-x sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8'
-							: 'grid-cardor gap-y-6'}
-					>
-						{#each items as a (a.id)}
-							<li
-								class={view === 'dock' ? '' : 'col-span-4 md:col-span-4 lg:col-span-4'}
-								animate:flip={{ duration: ms(450) }}
-								in:fade={{ duration: ms(250) }}
-							>
-								<AppTile
-									app={a}
-									color={d.color}
-									probe={status.results[a.id]}
-									{view}
-									onopen={opened}
-								/>
-							</li>
-						{/each}
-					</ul>
-				{:else}
-					<div class="gutter-x">
-						<a href={d.url} class="soon group block border border-dashed border-smoke p-8 md:p-10">
-							<p class="label text-(--division)">Bientôt</p>
-							<p class="mt-3 font-display text-h2">
-								Le carillon <em class="text-(--division)">s’accorde</em>.
-							</p>
-							<p class="mt-3 max-w-[52ch] text-ash">
-								Les premières productions de {d.name} rejoindront le lanceur dès leur sortie. En attendant,
-								découvrez le studio.
-							</p>
-							<span class="mt-5 inline-block label text-bone group-hover:text-(--division)"
-								>{d.host} ↗</span
-							>
-						</a>
-					</div>
-				{/if}
+	<div id="projets" class="relative mt-10 pb-24 md:pb-32">
+		<p class="sr-only" aria-live="polite">
+			{matches.length} projet{matches.length > 1 ? 's' : ''} affiché{matches.length > 1 ? 's' : ''}
+		</p>
+
+		{#if recent.length && !filtering}
+			<section class="mb-12 gutter-x" aria-labelledby="recent-title">
+				<h2 id="recent-title" class="mb-4 label text-ash">Récemment ouverts</h2>
+				<ul class="flex gap-2 overflow-x-auto pb-2">
+					{#each recent as a (a.id)}
+						<li class="w-28 shrink-0 md:w-32">
+							<AppTile
+								app={a}
+								color={division(a.studio).color}
+								probe={status.results[a.id]}
+								view="dock"
+								onopen={opened}
+							/>
+						</li>
+					{/each}
+				</ul>
 			</section>
 		{/if}
-	{/each}
+
+		{#if matches.length === 0}
+			<div class="gutter-x">
+				<div class="border border-dashed border-smoke p-10 text-center md:p-16">
+					<p class="font-display text-h2">Aucun monde ne répond à « {query || 'ces filtres'} ».</p>
+					<button type="button" class="chip mt-6" onclick={reset}>Tout afficher</button>
+				</div>
+			</div>
+		{/if}
+
+		{#each studios as s (s)}
+			{@const d = division(s)}
+			{@const items = matches.filter((a) => a.studio === s)}
+			{#if items.length || (!filtering && s === 'sound') || (studio === s && !items.length && !words.length && kind === 'tous')}
+				<section
+					class="studio mt-6 first:mt-0"
+					style:--division={d.color}
+					aria-labelledby="studio-{s}"
+				>
+					<header
+						class="mb-6 flex items-end justify-between gap-4 border-t border-smoke gutter-x pt-6"
+					>
+						<div class="flex items-center gap-4">
+							<span class="block h-10 w-12 shrink-0 md:h-12 md:w-14">
+								<Logo name={d.id} animate="hover" host=".studio" class="size-full" />
+							</span>
+							<div>
+								<h2 id="studio-{s}" class="font-display text-h2 leading-none">{d.name}</h2>
+								<p class="mt-1 label text-ash">
+									{items.length
+										? `${items.length} projet${items.length > 1 ? 's' : ''}`
+										: 'Bientôt'} ·
+									{d.tagline}
+								</p>
+							</div>
+						</div>
+						<a href={d.url} class="studio-link label max-sm:hidden" data-cursor="Visiter"
+							>{d.host} ↗</a
+						>
+					</header>
+
+					{#if items.length}
+						<ul
+							class={view === 'dock'
+								? 'grid grid-cols-3 gap-2 gutter-x sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8'
+								: 'grid-cardor gap-y-6'}
+						>
+							{#each items as a (a.id)}
+								<li
+									class={view === 'dock' ? '' : 'col-span-4 md:col-span-4 lg:col-span-4'}
+									animate:flip={{ duration: ms(450) }}
+									in:fade={{ duration: ms(250) }}
+								>
+									<AppTile
+										app={a}
+										color={d.color}
+										probe={status.results[a.id]}
+										{view}
+										onopen={opened}
+									/>
+								</li>
+							{/each}
+						</ul>
+					{:else}
+						<div class="gutter-x">
+							<a
+								href={d.url}
+								class="soon group block border border-dashed border-smoke p-8 md:p-10"
+							>
+								<p class="label text-(--division)">Bientôt</p>
+								<p class="mt-3 font-display text-h2">
+									Le carillon <em class="text-(--division)">s’accorde</em>.
+								</p>
+								<p class="mt-3 max-w-[52ch] text-ash">
+									Les premières productions de {d.name} rejoindront le lanceur dès leur sortie. En attendant,
+									découvrez le studio.
+								</p>
+								<span class="mt-5 inline-block label text-bone group-hover:text-(--division)"
+									>{d.host} ↗</span
+								>
+							</a>
+						</div>
+					{/if}
+				</section>
+			{/if}
+		{/each}
+	</div>
 </div>
 
 <section id="studios" class="border-t border-smoke section-y" aria-labelledby="studios-title">
@@ -512,14 +523,35 @@
 		width: 0.45rem;
 		height: 0.45rem;
 		border-radius: 999px;
-		background: var(--color-signal);
+		background: var(--color-bone);
+	}
+	/* Sticky search: the box stays at hand while the catalogue scrolls (no "/" key on touch). */
+	.search-bar {
+		position: sticky;
+		top: 0.75rem;
+		z-index: 20;
+	}
+	.search-bar .search {
+		backdrop-filter: blur(12px);
+	}
+	@media (max-width: 767px) {
+		.scroller {
+			flex-wrap: nowrap;
+			overflow-x: auto;
+			margin-inline: -16px;
+			padding-inline: 16px;
+			scrollbar-width: none;
+		}
+		.scroller > * {
+			flex: none;
+		}
 	}
 	.search {
 		display: flex;
 		align-items: center;
 		gap: 0.9rem;
 		border: 1px solid var(--color-smoke);
-		background: color-mix(in oklab, var(--color-ink) 85%, transparent);
+		background: color-mix(in oklab, var(--color-void) 90%, transparent);
 		border-radius: 999px;
 		padding: 0.95rem 1.25rem;
 		transition: border-color 0.4s var(--ease-cardor-out);
@@ -557,7 +589,7 @@
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
 	}
-	.chip:hover:not(:disabled) {
+	.chip:hover:not(:disabled):not(.is-active) {
 		color: var(--color-bone);
 		border-color: var(--color-bone);
 	}
@@ -576,11 +608,15 @@
 		border-radius: 999px;
 		background: var(--division);
 	}
+	.chip-sm.is-active {
+		background: var(--color-bone);
+		border-color: var(--color-bone);
+	}
 	.chip.is-active .chip-dot {
 		background: var(--color-void);
 	}
 	.seg {
-		min-height: 2.25rem;
+		min-height: 2.75rem;
 		border-radius: 999px;
 		padding: 0.35rem 0.9rem;
 		font-family: var(--font-mono);

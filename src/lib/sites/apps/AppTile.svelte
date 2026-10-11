@@ -29,6 +29,7 @@
 		rel="noopener"
 		class="dock group"
 		style:--division={color}
+		aria-describedby="newtab-hint"
 		data-cursor="Ouvrir"
 		data-app={app.id}
 		onclick={() => onopen(app.id)}
@@ -38,12 +39,17 @@
 			<span class={['dot', state]} aria-hidden="true"></span>
 		</span>
 		<span class="mt-3 block text-center text-sm leading-tight">{app.name}</span>
-		<span class="mt-1 block text-center label text-ash">{kindLabels[app.kind]}</span>
-		<span class="sr-only">, {stateLabel}, s'ouvre dans un nouvel onglet</span>
+		{#if state === 'down'}
+			<span class="mt-1 block text-center label text-ember">Injoignable</span>
+		{:else}
+			<span class="mt-1 block text-center label text-ash">{kindLabels[app.kind]}</span>
+		{/if}
 	</a>
 {:else}
 	<article class="tile group" style:--division={color} data-app={app.id}>
-		<div class="relative aspect-[16/10] overflow-clip border-b border-smoke bg-graphite">
+		<div
+			class="relative aspect-[16/10] overflow-clip border-b border-smoke bg-graphite max-sm:aspect-[16/7]"
+		>
 			<img
 				src={app.cover}
 				alt=""
@@ -84,9 +90,9 @@
 						target="_blank"
 						rel="noopener"
 						class="stretched"
+						aria-describedby="newtab-hint"
 						data-cursor="Ouvrir"
-						onclick={() => onopen(app.id)}
-						>{app.name}<span class="sr-only">, s'ouvre dans un nouvel onglet</span></a
+						onclick={() => onopen(app.id)}>{app.name}</a
 					>
 				</h3>
 				<span
@@ -96,7 +102,7 @@
 			</div>
 			<p class="label text-ash">{app.category}</p>
 			<p class="text-bone/90">{app.pitch}</p>
-			<ul class="flex flex-wrap gap-1.5" aria-label="Plateformes">
+			<ul class="flex flex-wrap gap-1.5 max-sm:hidden" aria-label="Plateformes">
 				{#each app.platforms as p (p)}
 					<li
 						class="rounded-full border border-smoke px-2.5 py-1 font-mono text-[0.6875rem] text-ash"
@@ -117,6 +123,7 @@
 								target="_blank"
 								rel="noopener"
 								class="sub label"
+								aria-describedby="newtab-hint"
 								onclick={() => onopen(app.id)}>{l.label} ↗</a
 							>
 						{/each}
@@ -181,6 +188,9 @@
 		translate: 0 -4px;
 	}
 	.sub {
+		display: inline-flex;
+		align-items: center;
+		min-height: 2.75rem;
 		color: var(--color-ash);
 		background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
 		transition:
@@ -250,6 +260,12 @@
 	}
 	.dot.down {
 		background: var(--color-ember);
+		/* A cross, so "unreachable" never relies on colour alone. */
+		background-image:
+			linear-gradient(45deg, transparent 42%, var(--color-void) 42% 58%, transparent 58%),
+			linear-gradient(-45deg, transparent 42%, var(--color-void) 42% 58%, transparent 58%);
+		width: 0.7rem;
+		height: 0.7rem;
 	}
 	@keyframes pulse {
 		70% {
