@@ -9,7 +9,11 @@
 	import Marquee from '#lib/components/sections/Marquee.svelte';
 	import Listen from './Listen.svelte';
 	import Wave from './Wave.svelte';
+	import Productions from './Productions.svelte';
 	import { content } from './content.ts';
+	import type { Release } from '#lib/sound/catalog.ts';
+
+	let { releases }: { releases: Release[] | null } = $props();
 </script>
 
 <DivisionHero hero={content.hero}>
@@ -23,5 +27,9 @@
 <Offer index="02" offer={content.offer} />
 <Method index="03" method={content.method} />
 <EmblemStory index="04" emblem={content.emblem} />
-{#if content.soon}<Soon index="05" soon={content.soon} />{/if}
+{#if releases?.length}
+	<Productions index="05" {releases} />
+{:else if content.soon}
+	<Soon index="05" soon={content.soon} />
+{/if}
 <Sisters />

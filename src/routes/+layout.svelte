@@ -1,6 +1,7 @@
 <script lang="ts">
 	import './layout.css';
 	import { onMount } from 'svelte';
+	import { page } from '$app/state';
 	import type { LayoutProps } from './$types';
 	import Preloader from '#lib/components/layout/Preloader.svelte';
 	import Nav from '#lib/components/layout/Nav.svelte';
@@ -16,7 +17,12 @@
 
 	let { children }: LayoutProps = $props();
 
-	onMount(() => startSmoothScroll());
+	// The Soundworks admin (ADR-013) is a plain tool: no preloader, smooth scroll or site chrome.
+	const tool = $derived(page.url.pathname.startsWith('/admin'));
+
+	onMount(() => {
+		if (!page.url.pathname.startsWith('/admin')) return startSmoothScroll();
+	});
 </script>
 
 <svelte:head>
@@ -30,20 +36,24 @@
 	{@html graph}
 </svelte:head>
 
-<a
-	href="#main"
-	class="fixed top-4 left-4 z-[110] -translate-y-24 bg-bone px-4 py-3 label text-void focus:translate-y-0"
-	>Aller au contenu</a
->
-
-<Preloader />
-<Nav />
-<PageCurtain />
-
-<main id="main">
+{#if tool}
 	{@render children()}
-</main>
+{:else}
+	<a
+		href="#main"
+		class="fixed top-4 left-4 z-[110] -translate-y-24 bg-bone px-4 py-3 label text-void focus:translate-y-0"
+		>Aller au contenu</a
+	>
 
-<Footer />
-<Grain />
-<Cursor />
+	<Preloader />
+	<Nav />
+	<PageCurtain />
+
+	<main id="main">
+		{@render children()}
+	</main>
+
+	<Footer />
+	<Grain />
+	<Cursor />
+{/if}

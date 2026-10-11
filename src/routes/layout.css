@@ -187,6 +187,8 @@
 		font-size: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 		line-height: 1.55;
 		overflow-x: clip;
+		/* CM Soundworks' fixed album player (ADR-013) never hides the end of the page. */
+		padding-bottom: var(--player-h, 0px);
 	}
 
 	::selection {

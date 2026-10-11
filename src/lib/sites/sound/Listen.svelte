@@ -13,15 +13,26 @@
 		if (drone.playing) {
 			drone.stop();
 			playing = false;
+			if (core.soundOwner === 'drone') core.soundOwner = null;
 		} else {
+			core.soundOwner = 'drone';
 			await drone.start();
 			playing = true;
 		}
 	}
 
+	// One source at a time: the album player takes the speakers from the drone (ADR-013).
+	$effect(() => {
+		if (core.soundOwner !== 'drone' && playing) {
+			drone?.stop();
+			playing = false;
+		}
+	});
+
 	// Feed the audio level into the shared state: the Core and the wave pulse with the sound.
 	onMount(() => {
 		const tick = () => {
+			if (core.soundOwner === 'player') return;
 			const target = drone?.playing ? drone.level() : 0;
 			core.audio += (target - core.audio) * 0.2;
 		};

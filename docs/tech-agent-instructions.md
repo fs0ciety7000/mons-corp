@@ -96,6 +96,16 @@ _Contexte_ : il faut une page « recensement » de tous les projets des studios,
 - Recherche sans accents, filtres studio / type, vue Tuiles ou Icônes et « récemment ouverts » (`localStorage`, confort seulement). « / » focalise la recherche, Entrée ouvre le premier résultat, Échap efface.
 - Aucune dépendance ajoutée ; pas de WebGL sur ce site (outil d'accès rapide, la performance prime).
 
+### ADR-013 : Productions de CM Soundworks sur R2, lecteur intégré et admin
+
+_Contexte_ : publier la bande originale de Privatix (et les sorties suivantes) dans la section [05] de sound.cardormedia.com, écoutable et téléchargeable, sans redéployer le site à chaque ajout.
+
+- **Stockage** : bucket R2 `cardor-media`, servi par **media.cardormedia.com** (cache immuable, CORS limité aux origines Soundworks). Préfixe `soundworks/` ; `soundworks/catalog.json` est la source unique (types et validation : `src/lib/sound/catalog.ts`). Chaque enregistrement garde la version précédente dans `soundworks/backups/`.
+- **Rendu** : la page d'accueil du site sound est rendue par le serveur (`+page.server.ts`, `prerender = SITE !== 'sound'`, cache 60 s) pour que la liste des titres et le JSON-LD `MusicAlbum` soient dans le HTML ; les autres sites restent prérendus. Sans catalogue joignable, le bloc « En préparation » reste affiché.
+- **Lecteur** : un seul `<audio>` (`src/lib/sound/player.svelte.ts`) analysé par Web Audio (`crossorigin`) ; son niveau alimente `core.audio` comme le carillon génératif. `core.soundOwner` garantit une seule source à la fois. Barre fixe (précédent / lecture / suivant, position, téléchargement), Media Session, clavier ; animations figées en mouvement réduit.
+- **Admin** : `/admin` sur le site sound seulement (404 ailleurs, non prérendu, `noindex`, sans l'habillage du site). Mot de passe unique `SOUNDWORKS_ADMIN_PASSWORD` (≥ 12 car.), cookie de session HMAC `SOUNDWORKS_SESSION_SECRET` (≥ 32 car., 12 h, `SameSite=Strict`), 5 essais / 15 min par adresse, contrôle d'origine sur les API. Les fichiers partent **directement du navigateur vers R2** par URL présignée (type, taille et en-têtes signés) ; pochette recadrée en carré 1600 px JPEG + 800 px WebP dans le navigateur ; durée lue à l'envoi ; archive ZIP de l'album reconstruite côté serveur, sans recompression.
+- **Sans dépendance** : signature SigV4 (`src/lib/server/r2.ts`) et ZIP (`src/lib/server/zip.ts`) sur `node:crypto` / `node:zlib`. Variables d'exécution du site sound : `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY` (jeton limité au bucket), `R2_BUCKET`, `MEDIA_BASE_URL`, plus les deux secrets d'admin. Les fichiers retirés du catalogue restent dans R2 (aucune suppression automatique).
+
 ## 3. Arborescence
 
 ```

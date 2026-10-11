@@ -6,6 +6,8 @@
 	import SoundHome from '#lib/sites/sound/Home.svelte';
 	import CreativeHome from '#lib/sites/creative/Home.svelte';
 	import AppsHome from '#lib/sites/apps/Home.svelte';
+
+	let { data } = $props();
 </script>
 
 <Seo page="home" />
@@ -14,7 +16,7 @@
 {#if SITE === 'interactive'}
 	<InteractiveHome />
 {:else if SITE === 'sound'}
-	<SoundHome />
+	<SoundHome releases={data.releases} />
 {:else if SITE === 'creative'}
 	<CreativeHome />
 {:else if SITE === 'apps'}
