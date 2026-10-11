@@ -528,8 +528,11 @@
 	/* Sticky search: the box stays at hand while the catalogue scrolls (no "/" key on touch). */
 	.search-bar {
 		position: sticky;
-		top: 0.75rem;
+		top: 0;
 		z-index: 20;
+		padding-block: 0.75rem;
+		/* Solid band behind the box so filters never show through while stuck. */
+		background: linear-gradient(var(--color-void) 75%, transparent);
 	}
 	.search-bar .search {
 		backdrop-filter: blur(12px);
