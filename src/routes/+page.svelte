@@ -5,17 +5,20 @@
 	import InteractiveHome from '#lib/sites/interactive/Home.svelte';
 	import SoundHome from '#lib/sites/sound/Home.svelte';
 	import CreativeHome from '#lib/sites/creative/Home.svelte';
+	import AppsHome from '#lib/sites/apps/Home.svelte';
 </script>
 
 <Seo page="home" />
 
-<!-- ADR-008: one route, four sites — the branch is fixed at build time. -->
+<!-- ADR-008: one route, five sites — the branch is fixed at build time. -->
 {#if SITE === 'interactive'}
 	<InteractiveHome />
 {:else if SITE === 'sound'}
 	<SoundHome />
 {:else if SITE === 'creative'}
 	<CreativeHome />
+{:else if SITE === 'apps'}
+	<AppsHome />
 {:else}
 	<HoldingHome />
 {/if}

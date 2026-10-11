@@ -6,7 +6,7 @@ export const GET = () =>
 	new Response(
 		JSON.stringify({
 			name: site.name,
-			short_name: SITE === 'holding' ? 'CARDOR' : site.short,
+			short_name: SITE === 'holding' ? 'CARDOR' : SITE === 'apps' ? 'CARDOR Apps' : site.short,
 			description: site.description,
 			lang: 'fr-BE',
 			start_url: '/',

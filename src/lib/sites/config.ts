@@ -1,7 +1,7 @@
 import type { LogoName } from '#lib/data/logos.ts';
 import type { CoreStateId } from '#lib/data/divisions.ts';
 
-export type SiteId = 'holding' | 'interactive' | 'sound' | 'creative';
+export type SiteId = 'holding' | 'interactive' | 'sound' | 'creative' | 'apps';
 
 export interface SiteConfig {
 	id: SiteId;
@@ -114,6 +114,31 @@ export const sites: Record<SiteId, SiteConfig> = {
 		},
 		cursorLabel: 'Voir',
 		preloader: 'Encrage de la plume'
+	},
+	// ADR-012: the app launcher wears the house identity (ember, wheel) and lists every studio's work.
+	apps: {
+		id: 'apps',
+		name: 'CARDOR Apps',
+		short: 'Apps',
+		emblem: 'cardor-monogram',
+		signal: '#FF3B1F',
+		signalDeep: '#C2260F',
+		coreState: 'holding',
+		email: 'contact@cardormedia.com',
+		tagline: 'Tous nos mondes, à portée de clic',
+		description:
+			'Le lanceur de CARDOR Media : tous les jeux, applications et créations de CM Interactive, CM Soundworks et CM Creative Lab, à ouvrir en un clic.',
+		nav: [
+			{ href: '/#projets', label: 'Projets' },
+			{ href: '/#studios', label: 'Studios' },
+			{ href: '/contact', label: 'Contact' }
+		],
+		urls: {
+			production: 'https://apps.cardormedia.com',
+			staging: 'https://cardor-apps.fs0ciety.org'
+		},
+		cursorLabel: 'Ouvrir',
+		preloader: 'Ouverture du lanceur'
 	}
 };
 
@@ -121,6 +146,8 @@ export const sites: Record<SiteId, SiteConfig> = {
 export const SITE: SiteId = __SITE__;
 export const site: SiteConfig = sites[SITE];
 export const isHolding = SITE === 'holding';
+/** Sites that wear the house identity (wheel, ember, CARDOR lockup) rather than a division's. */
+export const isMaison = SITE === 'holding' || SITE === 'apps';
 
 /** Public URL of a site for the current deployment environment. */
 export const siteUrl = (id: SiteId) => sites[id].urls[__DEPLOY_ENV__];

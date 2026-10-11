@@ -9,7 +9,7 @@
 	import PageCurtain from '#lib/components/layout/PageCurtain.svelte';
 	import Footer from '#lib/components/layout/Footer.svelte';
 	import { startSmoothScroll } from '#lib/motion/lenis.ts';
-	import { isHolding, SITE } from '#lib/sites/config.ts';
+	import { isMaison, SITE } from '#lib/sites/config.ts';
 	import { jsonLd, siteGraph } from '#lib/seo/seo.ts';
 
 	const graph = jsonLd(siteGraph());
@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-	{#if isHolding}
+	{#if isMaison}
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 	{/if}
 	<link rel="icon" href="/icons/{SITE}-32.png" sizes="32x32" type="image/png" />

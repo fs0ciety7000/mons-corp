@@ -8,9 +8,9 @@
 	import { gsap } from '#lib/motion/gsap.ts';
 	import { prefersReducedMotion } from '#lib/motion/tokens.ts';
 	import type { EmblemParts } from '#lib/brand/emblem-motion.ts';
-	import { isHolding, site as current, siteUrl } from '#lib/sites/config.ts';
+	import { isHolding, isMaison, site as current, siteUrl, SITE } from '#lib/sites/config.ts';
 
-	const word = isHolding ? 'CARDOR' : current.short;
+	const word = isMaison ? 'CARDOR' : current.short;
 	const sectionLinks = isHolding
 		? [
 				{ href: '/#manifeste', label: 'Manifeste' },
@@ -18,7 +18,9 @@
 				{ href: '/marque', label: 'Charte de marque' },
 				{ href: '/contact', label: 'Contact' }
 			]
-		: [...current.nav, { href: '/#emblème', label: 'Emblème' }];
+		: isMaison
+			? current.nav
+			: [...current.nav, { href: '/#emblème', label: 'Emblème' }];
 
 	let carriage: HTMLElement;
 
@@ -96,6 +98,9 @@
 						>
 					</li>
 				{/each}
+				{#if SITE !== 'apps'}
+					<li><a href={siteUrl('apps')} class="foot-link">Tous les projets ↗</a></li>
+				{/if}
 			</ul>
 		</div>
 		<div class="col-span-2 lg:col-span-3">
@@ -115,7 +120,7 @@
 	<div class="mt-20 flex flex-col justify-between gap-4 gutter-x pb-8 text-ash md:flex-row">
 		<span class="label"
 			>© {new Date().getFullYear()}
-			{isHolding ? 'CARDOR Media' : `${current.name} · une division de CARDOR Media`} — Tous droits réservés</span
+			{isMaison ? 'CARDOR Media' : `${current.name} · une division de CARDOR Media`} — Tous droits réservés</span
 		>
 	</div>
 
@@ -123,18 +128,18 @@
 		<div
 			bind:this={carriage}
 			class={[
-				isHolding ? 'w-[clamp(7rem,14vw,13rem)] text-or' : 'h-[clamp(5rem,10vw,9rem)]',
+				isMaison ? 'w-[clamp(7rem,14vw,13rem)] text-or' : 'h-[clamp(5rem,10vw,9rem)]',
 				'shrink-0'
 			]}
 		>
-			{#if isHolding}
+			{#if isMaison}
 				<Logo name="cardor-emblem" variant="mono" onready={rollWheels} class="w-full" />
 			{:else}
 				<Logo name={current.emblem} animate="hover" class="h-full w-auto" />
 			{/if}
 		</div>
 		<p class="max-w-[34ch] text-right label text-ash">
-			{#if isHolding}
+			{#if isMaison}
 				Né à Mons<br />sous le signe du Car d’Or
 			{:else}
 				Une division de CARDOR Media<br />née à Mons, sous le signe du Doudou

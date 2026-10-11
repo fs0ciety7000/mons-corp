@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Switch the four Coolify apps to their production domains on cardormedia.com
+# Switch the five Coolify apps to their production domains on cardormedia.com
 # (staging domains are kept as aliases), set PUBLIC_DEPLOY_ENV=production and redeploy.
 # Run AFTER scripts/cloudflare-dns.sh, once the records resolve.
 set -euo pipefail
@@ -13,6 +13,7 @@ APPS=(
 	"luwdosthown6up9dyyokmkby|https://interactive.cardormedia.com|https://occ-interactive.fs0ciety.org"
 	"myii0yozmypvugxatkzo4xs3|https://sound.cardormedia.com|https://occ-soundworks.fs0ciety.org"
 	"ourwq427ufzwruc9tcq9ytzq|https://creative.cardormedia.com|https://occ-creative.fs0ciety.org"
+	"im8yympvpq6xhmvrj6g5wy43|https://apps.cardormedia.com|https://cardor-apps.fs0ciety.org"
 )
 
 set_env() { # uuid key value

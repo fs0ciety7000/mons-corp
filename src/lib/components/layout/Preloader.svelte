@@ -4,7 +4,7 @@
 	import { gsap } from '#lib/motion/gsap.ts';
 	import { ease, prefersReducedMotion } from '#lib/motion/tokens.ts';
 	import Logo from '#lib/components/brand/Logo.svelte';
-	import { isHolding, site } from '#lib/sites/config.ts';
+	import { isMaison, site } from '#lib/sites/config.ts';
 	import { logos } from '#lib/data/logos.ts';
 	import silhouettes from '#lib/data/silhouettes.json';
 
@@ -68,7 +68,7 @@
 			// Division sites (Motion review): the wheel becomes a disc that morphs into the
 			// division silhouette (MorphSVG, one shape to one shape), then the detailed emblem
 			// is revealed over it.
-			if (!isHolding && silhouette) {
+			if (!isMaison && silhouette) {
 				const at = total * 0.55;
 				tl.to('[data-pre-wheel]', { autoAlpha: 0, scale: 0.94, duration: 0.25, ease: ease.in }, at)
 					.fromTo('[data-pre-morph]', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.15 }, at)
@@ -124,7 +124,7 @@
 			class="pointer-events-none absolute top-1/2 left-1/2 size-[clamp(9rem,26vw,20rem)] -translate-x-1/2 -translate-y-1/2"
 			aria-hidden="true"
 		>
-			{#if isHolding}
+			{#if isMaison}
 				<div data-pre-wheel class="relative size-full" style="--logo-t3: transparent">
 					<Logo name="cardor-monogram" class="size-full" />
 				</div>

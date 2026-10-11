@@ -3,7 +3,7 @@
 	import MonsClock from './MonsClock.svelte';
 	import Logo from '#lib/components/brand/Logo.svelte';
 	import { nav } from '#lib/data/site.ts';
-	import { isHolding, site } from '#lib/sites/config.ts';
+	import { isMaison, site } from '#lib/sites/config.ts';
 	import { core } from '#lib/state/core.svelte.ts';
 	import { gsap, ScrollTrigger } from '#lib/motion/gsap.ts';
 	import { ease, prefersReducedMotion } from '#lib/motion/tokens.ts';
@@ -68,11 +68,13 @@
 				class="flex items-center gap-3 font-display text-2xl leading-none md:text-3xl"
 				aria-label="{site.name} — accueil"
 			>
-				{#if isHolding}
+				{#if isMaison}
 					<span data-nav-wheel class="block size-7 md:size-8">
 						<Logo name="cardor-monogram" variant="mono" class="size-full" />
 					</span>
-					<span class="flex items-baseline gap-1.5">CARDOR<span class="italic">Media</span></span>
+					<span class="flex items-baseline gap-1.5"
+						>CARDOR<span class="italic">{site.short}</span></span
+					>
 				{:else}
 					<span class="block size-8 md:size-9">
 						<Logo name={site.emblem} variant="mono" animate="hover" host="a" class="size-full" />

@@ -47,6 +47,12 @@ const SITES = {
 		signal: '#FFB547',
 		host: 'creative.cardormedia.com',
 		icon: 'creative'
+	},
+	apps: {
+		name: 'CARDOR Apps',
+		signal: '#FF3B1F',
+		host: 'apps.cardormedia.com',
+		icon: 'cardor-monogram'
 	}
 };
 
@@ -88,7 +94,7 @@ h1 i { color: var(--s); }
 function card(siteId, page) {
 	const s = SITES[siteId];
 	const og = page.og;
-	const isDivisionHome = siteId !== 'holding' && page.path === '/';
+	const isDivisionHome = !['holding', 'apps'].includes(siteId) && page.path === '/';
 	const plain = og.heading.replace(/<[^>]+>/g, '');
 	const fs_ = plain.length > 22 ? 86 : plain.length > 12 ? 112 : 150;
 	const art =
@@ -105,7 +111,7 @@ function card(siteId, page) {
 		<h1>${og.heading}</h1>
 		<p class="sub">${og.sub}</p>
 	</div>
-	<p class="foot"><span class="wheel">${svg('cardor-monogram')}</span>${s.host}${siteId !== 'holding' ? '<span class="sep">·</span>une division de CARDOR Media' : ''}</p>
+	<p class="foot"><span class="wheel">${svg('cardor-monogram')}</span>${s.host}${!['holding', 'apps'].includes(siteId) ? '<span class="sep">·</span>une division de CARDOR Media' : ''}</p>
 	<div class="bar"></div>
 </div></body></html>`;
 }

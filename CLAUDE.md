@@ -22,6 +22,7 @@ CARDOR Media (holding)                      cardormedia.com
 ├── CM Interactive   — Web & jeu vidéo 3D   interactive.cardormedia.com
 ├── CM Soundworks    — Sound design, doublage, musique   sound.cardormedia.com
 ├── CM Creative Lab  — Illustration, graphisme, rédaction, lore   creative.cardormedia.com
+├── CARDOR Apps      — lanceur de tous les projets   apps.cardormedia.com
 └── Infrastructure    — back-office, Coolify   *.fs0ciety.org
 ```
 

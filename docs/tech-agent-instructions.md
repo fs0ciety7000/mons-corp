@@ -86,6 +86,16 @@ _Contexte_ : les quatre sites partageaient une seule image OG générique, sans 
 - `robots.txt`, `sitemap.xml` (avec `image:image`) et `manifest.webmanifest` sont des routes prérendues propres à chaque site. `lang="fr-BE"`. Page 404 en `noindex`.
 - Limite connue : les alias `*.fs0ciety.org` servent le même contenu ; le canonical pointe vers `cardormedia.com`.
 
+### ADR-012 : Lanceur d'apps, cinquième site de la base de code
+
+_Contexte_ : il faut une page « recensement » de tous les projets des studios, facile à parcourir et à ouvrir.
+
+- `PUBLIC_SITE=apps` → **apps.cardormedia.com** (alias `cardor-apps.fs0ciety.org`), même image Docker (ADR-008). Le site porte l'identité de la maison (`isMaison` : roue, braise, lockup « CARDOR Apps ») ; `isHolding` reste réservé aux contenus propres à la holding (charte, divisions du pied de page).
+- **Source unique** : `src/lib/sites/apps/catalog.ts`. Les projets CM Interactive reprennent les fiches de `src/lib/sites/interactive/projects.ts` ; un nouveau projet s'ajoute là, avec son icône (`static/sites/apps/icons/<id>.png`, 256 px) et sa couverture (1200×750 WebP).
+- **État en direct** : `GET /api/status` (non prérendu, 404 hors du site apps) interroge chaque projet côté serveur (redirections = en ligne, ≥ 500 ou délai de 6 s = injoignable), résultat partagé et mis en cache 60 s ; le navigateur le relit chaque minute, onglet visible seulement.
+- Recherche sans accents, filtres studio / type, vue Tuiles ou Icônes et « récemment ouverts » (`localStorage`, confort seulement). « / » focalise la recherche, Entrée ouvre le premier résultat, Échap efface.
+- Aucune dépendance ajoutée ; pas de WebGL sur ce site (outil d'accès rapide, la performance prime).
+
 ## 3. Arborescence
 
 ```

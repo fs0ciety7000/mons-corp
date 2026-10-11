@@ -99,7 +99,7 @@ export const projects: Project[] = [
 		features: [
 			'Vote en temps réel',
 			'Paniers individuels avec options',
-			'Remboursement QR SEPA, Wero, Bancontact'
+			'Remboursement QR SEPA, Revolut, PayPal'
 		],
 		stack: 'React 19 · Vite · Tailwind · TanStack Query · PocketBase · Go',
 		cover: '/sites/interactive/projects/occ-deliveries.webp'
@@ -109,16 +109,16 @@ export const projects: Project[] = [
 		name: 'CSM',
 		kind: 'web',
 		category: 'Outil métier · Exploitation ferroviaire',
-		status: 'En test',
-		url: 'https://test-csm.fs0ciety.org',
+		status: 'En ligne',
+		url: 'https://csm.fs0ciety.org',
 		pitch: 'Le poste de pilotage quotidien d’un centre d’exploitation ferroviaire.',
-		text: 'Commandes de bus et de taxis de remplacement, assistance aux voyageurs à mobilité réduite, suivi des perturbations et main courante partagée. Bons de commande en PDF et par e-mail.',
+		text: 'Commandes de bus et de taxis de remplacement, assistance aux voyageurs à mobilité réduite, suivi des perturbations et main courante partagée. Bons de commande en PDF, accès réservé aux agents.',
 		features: [
-			'Main courante collaborative',
+			'Journal d’exploitation collaboratif',
 			'Tableau de bord en direct',
 			'Accès par rôles, PWA, export PDF'
 		],
-		stack: 'SvelteKit · Svelte 5 · Tailwind · Supabase · PostgreSQL',
+		stack: 'Next.js · React 19 · Tailwind · PocketBase · GSAP',
 		cover: '/sites/interactive/projects/csm.webp'
 	}
 ];
