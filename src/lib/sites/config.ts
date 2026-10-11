@@ -124,7 +124,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 		signal: '#FF3B1F',
 		signalDeep: '#C2260F',
 		coreState: 'holding',
-		email: 'contact@cardormedia.com',
+		email: 'hello@cardormedia.com',
 		tagline: 'Tous nos mondes, à portée de clic',
 		description:
 			'Le lanceur de CARDOR Media : tous les jeux, applications et créations de CM Interactive, CM Soundworks et CM Creative Lab, à ouvrir en un clic.',
