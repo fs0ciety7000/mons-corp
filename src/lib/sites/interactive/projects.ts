@@ -75,7 +75,7 @@ export const projects: Project[] = [
 		kind: 'web',
 		category: 'Application · Web & Android',
 		status: 'En ligne',
-		url: 'https://tandem-agenda.app',
+		url: 'https://decouvrir.tandem-agenda.app/',
 		pitch: 'L’agenda partagé du foyer, pour s’organiser à deux.',
 		text: 'Tâches, tours de rôle, courses, repas, dépenses et calendrier, synchronisés en direct entre le web et Android, hors ligne et connectés à Google Agenda. En français, anglais et néerlandais.',
 		features: [

@@ -75,6 +75,6 @@ export const content: DivisionContent = {
 	},
 	soon: {
 		title: { before: 'Premières', em: 'planches.' },
-		text: 'Les premiers carnets, bibles d’univers et identités de l’atelier seront publiés ici. Une histoire à faire naître ? Écrivez-nous.'
+		text: 'Un artbook et un press kit de jeu, une bible visuelle d’univers, une identité de marque : les premiers carnets de l’atelier, à feuilleter en ligne.'
 	}
 };

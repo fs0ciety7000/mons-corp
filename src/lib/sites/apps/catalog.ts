@@ -89,7 +89,7 @@ export const catalog: AppEntry[] = [
 		access: 'public',
 		platforms: ['Navigateur', 'Windows', 'macOS', 'Linux', 'Android'],
 		links: [
-			{ label: 'Jouer', url: 'https://privatix.fs0ciety.org/jouer/' },
+			{ label: 'Jouer', url: 'https://privatix.fs0ciety.org/jouer/play3d.html' },
 			{ label: 'Artbook', url: 'https://privatix.fs0ciety.org/artbook.html' }
 		],
 		keywords: 'hack slash roguelite 3d rail sncb mons cheminot'
