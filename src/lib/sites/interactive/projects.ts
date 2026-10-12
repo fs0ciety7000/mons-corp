@@ -14,6 +14,8 @@ export interface Project {
 	stack: string;
 	cover: string;
 	stat?: { value: string; label: string };
+	/** JSON-LD overrides, aligned with the structured data of the project's own site. */
+	schema?: { category: string; os: string };
 }
 
 export const projects: Project[] = [
@@ -50,7 +52,8 @@ export const projects: Project[] = [
 			'Rendu 3D toon « Néon & Ballast »'
 		],
 		stack: 'Three.js · TypeScript · Vite · Electron',
-		cover: '/sites/interactive/projects/privatix.webp'
+		cover: '/sites/interactive/projects/privatix.webp',
+		schema: { category: 'GameApplication', os: 'Web, Windows, macOS, Linux, Android' }
 	},
 	{
 		id: 'tape-taupe',
@@ -85,7 +88,8 @@ export const projects: Project[] = [
 		],
 		stack: 'Next.js · NestJS · PostgreSQL · Redis · Kotlin · Jetpack Compose',
 		cover: '/sites/interactive/projects/tandem.webp',
-		stat: { value: 'AA', label: 'WCAG 2.2, audit sans violation' }
+		stat: { value: 'AA', label: 'WCAG 2.2, audit sans violation' },
+		schema: { category: 'LifestyleApplication', os: 'Web, Android' }
 	},
 	{
 		id: 'occ-deliveries',
@@ -102,7 +106,8 @@ export const projects: Project[] = [
 			'Remboursement QR SEPA, Revolut, PayPal'
 		],
 		stack: 'React 19 · Vite · Tailwind · TanStack Query · PocketBase · Go',
-		cover: '/sites/interactive/projects/occ-deliveries.webp'
+		cover: '/sites/interactive/projects/occ-deliveries.webp',
+		schema: { category: 'LifestyleApplication', os: 'Web' }
 	},
 	{
 		id: 'csm',

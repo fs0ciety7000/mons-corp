@@ -3,6 +3,42 @@
 	import { divisions } from '#lib/data/divisions.ts';
 	import { site } from '#lib/data/site.ts';
 	import { reveal } from '#lib/motion/actions.ts';
+	import { SITE, type SiteId } from '#lib/sites/config.ts';
+
+	// One heading and lead per site: five contact pages, five distinct answers to « why write? ».
+	const copy: Record<SiteId, { before: string; em: string; after: string; lead: string }> = {
+		holding: {
+			before: 'Parlons de votre',
+			em: 'prochain',
+			after: 'monde.',
+			lead: 'Production, partenariat, presse ou candidature : écrivez-nous, la bonne équipe vous répond sous 48 heures.'
+		},
+		interactive: {
+			before: 'Un jeu ou une app',
+			em: 'à forger',
+			after: '?',
+			lead: 'Jeu vidéo, application web, outil métier ou expérience WebGL : écrivez à CM Interactive, le studio vous répond sous 48 heures.'
+		},
+		sound: {
+			before: 'Un projet',
+			em: 'à faire résonner',
+			after: '?',
+			lead: 'Sound design, doublage, musique originale ou mixage : écrivez à CM Soundworks, le studio vous répond sous 48 heures.'
+		},
+		creative: {
+			before: 'Une histoire',
+			em: 'à faire naître',
+			after: '?',
+			lead: 'Illustration, direction artistique, écriture ou identité : écrivez à CM Creative Lab, l’atelier vous répond sous 48 heures.'
+		},
+		apps: {
+			before: 'Une question sur',
+			em: 'nos mondes',
+			after: '?',
+			lead: 'Un jeu qui coince, une application à découvrir ou une idée : écrivez-nous, nous répondons sous 48 heures.'
+		}
+	};
+	const c = copy[SITE];
 </script>
 
 <Seo page="contact" />
@@ -17,14 +53,14 @@
 			class="col-span-4 font-display text-display md:col-span-8 lg:col-span-10"
 			use:reveal={{ type: 'chars', start: false, delay: 0.2 }}
 		>
-			Parlons de votre <em class="text-signal">prochain</em> monde.
+			{c.before} <em class="text-signal">{c.em}</em>
+			{c.after}
 		</h1>
 		<p
 			class="col-span-4 max-w-[48ch] text-lead text-ash md:col-span-6"
 			use:reveal={{ start: false, delay: 0.5 }}
 		>
-			Production, partenariat, presse ou candidature : écrivez-nous, la bonne équipe vous répond
-			sous 48 heures.
+			{c.lead}
 		</p>
 		<a
 			href="mailto:{site.email}"

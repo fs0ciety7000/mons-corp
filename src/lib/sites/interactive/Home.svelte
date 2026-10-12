@@ -26,8 +26,9 @@
 				description: p.pitch,
 				url: p.url,
 				image: `${siteUrl('interactive')}${p.cover}`,
-				applicationCategory: p.kind === 'jeu' ? 'GameApplication' : 'BusinessApplication',
-				operatingSystem: 'Web',
+				applicationCategory:
+					p.schema?.category ?? (p.kind === 'jeu' ? 'GameApplication' : 'BusinessApplication'),
+				operatingSystem: p.schema?.os ?? 'Web',
 				...(p.kind === 'jeu'
 					? { gamePlatform: 'Web browser', genre: p.category.split('·')[1]?.trim() }
 					: {}),

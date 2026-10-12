@@ -14,7 +14,7 @@
 		},
 		"contact": {
 			"path": "/contact",
-			"title": "Contact — CARDOR Media, Mons",
+			"title": "Contact — CARDOR Media, holding de divertissement à Mons",
 			"description": "Production, partenariat, presse ou candidature : écrivez à CARDOR Media et à ses studios CM Interactive, Soundworks et Creative Lab, à Mons.",
 			"og": {
 				"kicker": "Contact · CARDOR Media",
@@ -52,7 +52,7 @@
 		},
 		"contact": {
 			"path": "/contact",
-			"title": "Contact — CM Interactive",
+			"title": "Contact — CM Interactive, studio jeux vidéo et web à Mons",
 			"description": "Un jeu, une application ou un site à forger ? Écrivez à CM Interactive, le studio jeux vidéo et web de CARDOR Media à Mons.",
 			"og": {
 				"kicker": "Contact · CM Interactive",
@@ -78,7 +78,7 @@
 		},
 		"contact": {
 			"path": "/contact",
-			"title": "Contact — CM Soundworks",
+			"title": "Contact — CM Soundworks, studio son et doublage à Mons",
 			"description": "Un projet à faire résonner ? Sound design, doublage, musique ou mixage : écrivez à CM Soundworks, le studio son de CARDOR Media à Mons.",
 			"og": {
 				"kicker": "Contact · CM Soundworks",
@@ -104,7 +104,7 @@
 		},
 		"contact": {
 			"path": "/contact",
-			"title": "Contact — CM Creative Lab",
+			"title": "Contact — CM Creative Lab, illustration et lore à Mons",
 			"description": "Une histoire à faire naître ? Illustration, direction artistique ou lore : écrivez à CM Creative Lab, l’atelier de CARDOR Media à Mons.",
 			"og": {
 				"kicker": "Contact · CM Creative Lab",
@@ -130,7 +130,7 @@
 		},
 		"contact": {
 			"path": "/contact",
-			"title": "Contact — CARDOR Apps",
+			"title": "Contact — CARDOR Apps, les jeux et apps de CARDOR Media",
 			"description": "Une question sur un jeu ou une application de CARDOR Media ? Écrivez-nous : nous répondons depuis Mons.",
 			"og": {
 				"kicker": "Contact · CARDOR Apps",
