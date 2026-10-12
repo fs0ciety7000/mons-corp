@@ -223,6 +223,46 @@ Direction musicale et post-production : CM Soundworks. Jeu : CM Interactive.
 #Privatix #BandeOriginale #GameMusic #Mons
 ```
 
+### Série « Les divisions » (3 posts)
+
+À publier après le Reel manifeste, un post par jour sur trois jours, dans l’ordre : ils forment une ligne de la grille. Visuels : `assets/instagram/holding-instagram-division-1-interactive.png`, `-2-soundworks.png`, `-3-creative.png`.
+
+**Division 1 · CM Interactive** · 371 / 2200 car.
+
+```text
+[01] CM Interactive. Des mondes que l’on habite.
+
+Nous forgeons des mondes jouables et des expériences web taillées pour durer. Jeux vidéo, web et applications, expériences WebGL, outils métier : un studio, deux métiers, la même exigence.
+
+Privatix, Cosmic Empires, Tape Taupe, Tandem : tout se joue sur interactive.cardormedia.com.
+
+#CMInteractive #GameDev #WebDev #Mons
+```
+
+**Division 2 · CM Soundworks** · 374 / 2200 car.
+
+```text
+[02] CM Soundworks. Des mondes que l’on entend.
+
+Un monde commence à s’entendre avant de se voir. Sound design, doublage et voix, musique originale, mixage et mastering : nous donnons un pouls aux œuvres, pour le jeu, l’animation, la fiction et le web.
+
+La bande originale de Privatix est à écouter sur sound.cardormedia.com.
+
+#CMSoundworks #SoundDesign #Doublage #GameMusic
+```
+
+**Division 3 · CM Creative Lab** · 443 / 2200 car.
+
+```text
+[03] CM Creative Lab. Des mondes que l’on raconte.
+
+L’atelier où naissent les univers avant qu’ils ne prennent vie : des images, des personnages, des mots et des légendes qui tiennent ensemble. Illustration et concept art, direction artistique, écriture et lore, identité.
+
+Premières planches : l’artbook de Privatix et la bible visuelle de Cosmic Empires, sur creative.cardormedia.com.
+
+#CMCreativeLab #ConceptArt #ArtDirection #Worldbuilding
+```
+
 ## Fiche Google Business Profile
 
 > ⚠ **À trancher avant de créer la fiche.** Google exclut les entreprises « online-only », les marques et les organisations : il faut un **contact en personne avec les clients** aux heures affichées (chez eux, ou dans un lieu avec signalétique permanente). Si CARDOR Media travaille uniquement à distance, la fiche risque le refus ou la suspension. Une seule fiche pour la maison : pas de fiche par studio.
