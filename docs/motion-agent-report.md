@@ -129,13 +129,13 @@ Basées sur `onNavigate` de SvelteKit :
 
 ## 8. Micro-interactions
 
-| Élément                  | Comportement                                                                                                                                                   |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Curseur                  | Point 8 px, `mix-blend-mode: difference`, `quickTo` x/y (0,35 s, `power3`). Survol d'un `[data-cursor]` → 64 px + label. Masqué au tactile.                    |
-| Bouton magnétique        | Attraction dans un rayon de 1,4× sa taille, translation max 30 % ; retour `cardor.elastic`.                                                                    |
-| Liens                    | Soulignement `scaleX 0 → 1` origin left à l'entrée, origin right à la sortie.                                                                                  |
-| Ligne de division (hero) | Au survol : texte passe en italique (swap de police instantané masqué par un `yPercent` de 100 % via double ligne), index qui défile, Noyau qui change d'état. |
-| Horloge Mons             | Secondes qui roulent en `yPercent` (tambour).                                                                                                                  |
+| Élément                  | Comportement                                                                                                                                                                                   |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Curseur                  | Point 8 px, `mix-blend-mode: difference`, `quickTo` x/y (0,12 s, `power3` ; 0,35 s jugé trop lent par l'utilisateur le 12/10). Survol d'un `[data-cursor]` → 64 px + label. Masqué au tactile. |
+| Bouton magnétique        | Attraction dans un rayon de 1,4× sa taille, translation max 30 % ; retour `cardor.elastic`.                                                                                                    |
+| Liens                    | Soulignement `scaleX 0 → 1` origin left à l'entrée, origin right à la sortie.                                                                                                                  |
+| Ligne de division (hero) | Au survol : texte passe en italique (swap de police instantané masqué par un `yPercent` de 100 % via double ligne), index qui défile, Noyau qui change d'état.                                 |
+| Horloge Mons             | Secondes qui roulent en `yPercent` (tambour).                                                                                                                                                  |
 
 ## 9. Accessibilité & fallbacks
 

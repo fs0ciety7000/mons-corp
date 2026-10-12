@@ -13,8 +13,11 @@
 		enabled = true;
 		document.documentElement.classList.add('has-cursor');
 
-		const xTo = gsap.quickTo(dot, 'x', { duration: 0.35, ease: 'power3.out' });
-		const yTo = gsap.quickTo(dot, 'y', { duration: 0.35, ease: 'power3.out' });
+		// The native cursor is hidden: the dot must stay glued to the pointer (0.12 s, user feedback
+		// 2026-10-12 — 0.35 s felt sluggish on desktop). The ring keeps its own slower scale ease.
+		const follow = { duration: 0.12, ease: 'power3.out' };
+		const xTo = gsap.quickTo(dot, 'x', follow);
+		const yTo = gsap.quickTo(dot, 'y', follow);
 		gsap.set(dot, { xPercent: -50, yPercent: -50, autoAlpha: 0 });
 
 		const move = (e: PointerEvent) => {
