@@ -178,7 +178,7 @@ Les liens 3 et 4 pointent vers les jeux en ligne (domaines `fs0ciety.org`, hors 
 
 ### 3 premières publications
 
-**Publication 1 · carrousel Privatix** (1080 × 1350) : couverture du jeu + 4 captures du press kit (L’Auditeur des Quais, le Discosaure, le butin et ses faisceaux de rareté, l’OCC). ⚠ Ne pas mettre en avant les planches satiriques qui caricaturent des personnes ou entités réelles.
+**Publication 1 · carrousel Privatix** (1080 × 1350) : couverture du jeu + 4 captures du press kit (L’Auditeur des Quais, le Discosaure, le butin et ses faisceaux de rareté, l’OCC). Slide 1 : `assets/instagram/interactive-instagram-privatix-1-cover.png`. ⚠ Ne pas mettre en avant les planches satiriques qui caricaturent des personnes ou entités réelles.
 
 **Légende 1** · 418 / 2200 car.
 
@@ -192,7 +192,7 @@ Jouable dans le navigateur et sur Windows, macOS et Linux. Lien en bio.
 #Privatix #IndieGame #Roguelite #GameDev #Mons
 ```
 
-**Publication 2 · Reel Cosmic Empires** : 9:16, 15 à 20 s, enregistrement d’une session réelle (galaxie, flottes, HUD), carte de fin avec `empire.webp`.
+**Publication 2 · Reel Cosmic Empires** : 9:16, 15 à 20 s, enregistrement d’une session réelle (galaxie, flottes, HUD), carte de fin avec `empire.webp`. Couverture : `assets/instagram/interactive-instagram-reel-cosmic-cover.png`.
 
 **Légende 2** · 384 / 2200 car.
 
@@ -206,7 +206,7 @@ Annonces et coulisses sur le devblog. Lien en bio.
 #CosmicEmpires #Strategy4X #BrowserGame #GameDev
 ```
 
-**Publication 3 · Tandem** (1080 × 1350) : `static/sites/interactive/projects/tandem.webp`.
+**Publication 3 · Tandem** (1080 × 1350) : `assets/instagram/interactive-instagram-tandem.png`.
 
 **Légende 3** · 366 / 2200 car.
 

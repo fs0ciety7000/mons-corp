@@ -178,7 +178,7 @@ Trois studios, un seul noyau créatif.
 
 ### 3 premières publications
 
-**Publication 1 · Reel manifeste** : Reel 9:16 de 10 à 15 s, enregistrement d’écran du preloader (la roue tourne de 000 à 100, le noyau Ember s’allume), puis du hero et du survol des trois divisions. Pas de musique tierce ; pour un son, un extrait de la BO de Privatix avec l’accord de CM Soundworks.
+**Publication 1 · Reel manifeste** : Reel 9:16 de 10 à 15 s, enregistrement d’écran du preloader (la roue tourne de 000 à 100, le noyau Ember s’allume), puis du hero et du survol des trois divisions. Couverture : `assets/instagram/holding-instagram-reel-manifeste-cover.png`. Pas de musique tierce ; pour un son, un extrait de la BO de Privatix avec l’accord de CM Soundworks.
 
 **Légende 1** · 335 / 2200 car.
 
@@ -193,7 +193,7 @@ Lien en bio.
 #CARDORMedia #Mons #GameDev #CreativeStudio
 ```
 
-**Publication 2 · carrousel « Le cortège »** (5 images 1080 × 1350) : 1. Car d’Or et roue · 2. Dragon · 3. Beffroi · 4. Singe · 5. les quatre réunis. Sources : `static/brand/*.svg`.
+**Publication 2 · carrousel « Le cortège »** (5 images 1080 × 1350) : 1. Car d’Or et roue · 2. Dragon · 3. Beffroi · 4. Singe · 5. les quatre réunis. Visuels : `assets/instagram/holding-instagram-cortege-1.png` à `-5.png`.
 
 **Légende 2** · 409 / 2200 car.
 
@@ -208,7 +208,7 @@ La charte « Le cortège montois » est en ligne : lien en bio.
 #Mons #Doudou #Branding #Identité
 ```
 
-**Publication 3 · la BO de Privatix** (1080 × 1080) : pochette officielle.
+**Publication 3 · la BO de Privatix** (1080 × 1350) : `assets/instagram/holding-instagram-bo-privatix.png` (pochette officielle, non recadrée).
 
 **Légende 3** · 399 / 2200 car.
 

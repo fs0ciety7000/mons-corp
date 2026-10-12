@@ -182,7 +182,7 @@ L’atelier de CARDOR Media, à Mons.
 
 ### 3 premières publications
 
-**Publication 1 · carrousel artbook de Privatix** (8 à 10 images 1080 × 1350) : model sheet de Léon / Léa, « Les cinq tenues », un ennemi, « Gamme des tailles », un décor, la palette, 2 ou 3 des six affiches. ⚠ Écarter les planches satiriques qui caricaturent des personnes ou entités réelles.
+**Publication 1 · carrousel artbook de Privatix** (8 à 10 images 1080 × 1350) : model sheet de Léon / Léa, « Les cinq tenues », un ennemi, « Gamme des tailles », un décor, la palette, 2 ou 3 des six affiches. Slide 1 : `assets/instagram/creative-instagram-artbook-1-cover.png`. ⚠ Écarter les planches satiriques qui caricaturent des personnes ou entités réelles.
 
 **Légende 1** · 348 / 2200 car.
 
@@ -196,7 +196,7 @@ Feuilletez-le en entier : lien en bio.
 #Privatix #Artbook #ConceptArt #CharacterDesign #GameArt
 ```
 
-**Publication 2 · carrousel bible de Cosmic Empires** (7 images) : moodboard, logo et palette, les quatre thèmes (Tactique, Holo, Cockpit, Netrunner), composants HUD, 28 emblèmes de rang, icônes, univers.
+**Publication 2 · carrousel bible de Cosmic Empires** (7 images) : moodboard, logo et palette, les quatre thèmes (Tactique, Holo, Cockpit, Netrunner), composants HUD, 28 emblèmes de rang, icônes, univers. Slide 1 : `assets/instagram/creative-instagram-bible-1-cover.png`.
 
 **Légende 2** · 330 / 2200 car.
 
@@ -210,7 +210,7 @@ Une seule histoire, de la connexion à la conquête.
 #CosmicEmpires #GameUI #DesignSystem #ArtDirection
 ```
 
-**Publication 3 · Reel « Une caresse pour la chance »** : 9:16, l’emblème du Singe sur creative.cardormedia.com (traînée d’encre, titres tracés), fin sur l’emblème fixe.
+**Publication 3 · Reel « Une caresse pour la chance »** : 9:16, l’emblème du Singe sur creative.cardormedia.com (traînée d’encre, titres tracés), fin sur l’emblème fixe. Couverture : `assets/instagram/creative-instagram-reel-singe-cover.png`.
 
 **Légende 3** · 356 / 2200 car.
 

@@ -29,7 +29,7 @@ L’ordre suit une règle simple : **réserver d’abord tous les identifiants**
 4. **CM Creative Lab · X**, **Instagram**, **Behance** (fixer l’URL avant toute impression : l’ancienne ne redirige pas), puis **YouTube**.
 5. **Liens croisés** : remplacer les bios par les variantes « après création » (avec les `@` réellement obtenus), compléter les liens Instagram, YouTube et Behance.
 6. **Fiche Google Business**, si la décision 1 est positive : c’est la plus longue (vérification par Google, jusqu’à 5 jours ouvrés).
-7. **Publier les 3 premiers posts** de chaque profil, étalés sur une à deux semaines.
+7. **Publier les premiers posts** de chaque profil, étalés sur une à deux semaines (sur Instagram holding : Reel manifeste, série « Les divisions », cortège, BO).
 8. **Me transmettre les URL réelles** des profils créés : elles iront dans le champ `sameAs` des données structurées `Organization` de chaque site (`src/lib/seo/seo.ts`). Rien n’y est ajouté avant.
 
 ## Check-lists
@@ -136,6 +136,28 @@ Rendus avec Chromium à partir des SVG de `static/brand/` et des polices du site
   - YouTube : tout le texte dans la zone sûre centrale 1546 × 423.
   - Google : l’essentiel dans le carré central (recadrages variables).
 - **Limite connue** : le Dragon et le Singe restent les tracés vectorisés depuis la génération IA. Ils sont propres à l’écran, mais un redessin manuel est prévu avant l’impression (`brand-decision.md`).
+
+### Visuels des premières publications Instagram
+
+Dans [`assets/instagram/`](assets/instagram/). Posts en 1080 × 1350 (4:5) : l’essentiel tient dans le carré central 1080 × 1080 que la grille du profil affiche. Couvertures de Reels en 1080 × 1920 : l’essentiel tient dans la zone 1080 × 1350 et au-dessus des 250 px du bas.
+
+| Compte          | Publication                         | Fichiers                                                                                 |
+| --------------- | ----------------------------------- | ---------------------------------------------------------------------------------------- |
+| CARDOR Media    | Reel manifeste (couverture)         | `holding-instagram-reel-manifeste-cover.png`                                             |
+| CARDOR Media    | Série « Les divisions » (3 posts)   | `holding-instagram-division-1-interactive.png` · `-2-soundworks.png` · `-3-creative.png` |
+| CARDOR Media    | Carrousel « Le cortège » (5 slides) | `holding-instagram-cortege-1.png` à `-5.png`                                             |
+| CARDOR Media    | BO de Privatix                      | `holding-instagram-bo-privatix.png`                                                      |
+| CM Interactive  | Carrousel Privatix (slide 1)        | `interactive-instagram-privatix-1-cover.png`                                             |
+| CM Interactive  | Reel Cosmic Empires (couverture)    | `interactive-instagram-reel-cosmic-cover.png`                                            |
+| CM Interactive  | Tandem                              | `interactive-instagram-tandem.png`                                                       |
+| CM Creative Lab | Carrousel artbook (slide 1)         | `creative-instagram-artbook-1-cover.png`                                                 |
+| CM Creative Lab | Carrousel bible (slide 1)           | `creative-instagram-bible-1-cover.png`                                                   |
+| CM Creative Lab | Reel « Une caresse pour la chance » | `creative-instagram-reel-singe-cover.png`                                                |
+
+- Les autres slides des carrousels Privatix, artbook et bible sont les vraies planches des œuvres : à exporter depuis l’artbook et la bible.
+- Les Reels eux-mêmes sont des enregistrements d’écran à tourner ; seules leurs couvertures sont fournies.
+- **À valider** : le key art de Privatix et la pochette de la BO montrent un logo ferroviaire réel (SNCB), et la couverture de l’artbook un personnage qui peut être une caricature. Ce sont les visuels officiels des œuvres, mais la règle du kit est de ne pas mettre la satire en avant au lancement.
+- Les séries de la holding portent chacune la couleur de leur division (une publication, une division, un signal). Seule la dernière slide du cortège réunit les quatre couleurs, comme la section « Le cortège » du site.
 
 ## Limites des plateformes (vérifiées le 2026-10-12)
 
