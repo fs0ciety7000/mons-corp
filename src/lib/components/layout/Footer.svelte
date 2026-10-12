@@ -3,6 +3,7 @@
 	import { site } from '#lib/data/site.ts';
 	import { magnetic, reveal } from '#lib/motion/actions.ts';
 	import MonsClock from './MonsClock.svelte';
+	import { socials } from '#lib/data/social.ts';
 	import Logo from '#lib/components/brand/Logo.svelte';
 	import { onMount } from 'svelte';
 	import { gsap } from '#lib/motion/gsap.ts';
@@ -117,11 +118,30 @@
 		</div>
 	</div>
 
-	<div class="mt-20 flex flex-col justify-between gap-4 gutter-x pb-8 text-ash md:flex-row">
+	<div
+		class="mt-20 flex flex-col justify-between gap-4 gutter-x pb-8 text-ash md:flex-row md:items-center"
+	>
 		<span class="label"
 			>© {new Date().getFullYear()}
 			{isMaison ? 'CARDOR Media' : `${current.name} · une division de CARDOR Media`} — Tous droits réservés</span
 		>
+		<ul class="-mx-3 flex items-center gap-1" aria-label="CARDOR Media sur les réseaux sociaux">
+			{#each socials as s (s.id)}
+				<li>
+					<a
+						href={s.url}
+						target="_blank"
+						rel="noopener me"
+						class="social"
+						aria-label="{s.name} {s.handle} (nouvel onglet)"
+						data-cursor={s.name}
+					>
+						<svg viewBox="0 0 24 24" aria-hidden="true"><path d={s.path} /></svg>
+						<span class="label">{s.name}</span>
+					</a>
+				</li>
+			{/each}
+		</ul>
 	</div>
 
 	<div class="mt-16 flex items-end justify-between gap-6 gutter-x">
@@ -172,6 +192,28 @@
 	}
 	.cta:active {
 		scale: 0.97;
+	}
+	.social {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		min-height: 2.75rem;
+		padding-inline: 0.75rem;
+		border-radius: 999px;
+		color: var(--color-ash);
+		transition:
+			color 0.3s,
+			background-color 0.3s;
+	}
+	.social svg {
+		width: 1.1rem;
+		height: 1.1rem;
+		fill: currentColor;
+	}
+	.social:hover,
+	.social:focus-visible {
+		color: var(--color-bone);
+		background: var(--color-graphite);
 	}
 	.foot-link {
 		background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;

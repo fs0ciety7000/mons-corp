@@ -1,4 +1,5 @@
 import pages from './pages.json';
+import { socials } from '#lib/data/social.ts';
 import { SITE, site as current, siteUrl, divisionSites, type SiteId } from '#lib/sites/config.ts';
 
 export type PageKey = 'home' | 'contact' | 'marque';
@@ -49,6 +50,7 @@ export function siteGraph() {
 	};
 	if (SITE === 'holding') {
 		org.alternateName = 'CARDOR';
+		org.sameAs = socials.map((s) => s.url);
 		org.subOrganization = divisionSites.map((d) => ({
 			'@type': 'Organization',
 			'@id': `${siteUrl(d.id)}/#organization`,

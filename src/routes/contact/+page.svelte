@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Seo from '#lib/components/seo/Seo.svelte';
+	import { socials } from '#lib/data/social.ts';
 	import { divisions } from '#lib/data/divisions.ts';
 	import { site } from '#lib/data/site.ts';
 	import { reveal } from '#lib/motion/actions.ts';
@@ -68,6 +69,30 @@
 			data-cursor="Écrire"
 			use:reveal={{ type: 'block', start: false, delay: 0.6 }}>{site.email}</a
 		>
+		<ul
+			class="col-span-4 flex flex-wrap gap-3 md:col-span-8"
+			aria-label="CARDOR Media sur les réseaux sociaux"
+			use:reveal={{ type: 'block', start: false, delay: 0.7 }}
+		>
+			{#each socials as s (s.id)}
+				<li>
+					<a
+						href={s.url}
+						target="_blank"
+						rel="noopener me"
+						class="inline-flex min-h-11 items-center gap-3 rounded-full border border-smoke px-5 text-bone transition-colors hover:border-signal"
+						aria-label="{s.name} {s.handle} (nouvel onglet)"
+						data-cursor={s.name}
+					>
+						<svg viewBox="0 0 24 24" class="size-5 fill-current" aria-hidden="true"
+							><path d={s.path} /></svg
+						>
+						<span>{s.name}</span>
+						<span class="font-mono text-xs text-ash">{s.handle}</span>
+					</a>
+				</li>
+			{/each}
+		</ul>
 	</div>
 
 	<ul class="grid-cardor mt-24 gap-y-6">
