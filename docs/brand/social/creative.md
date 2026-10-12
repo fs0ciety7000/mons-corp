@@ -95,12 +95,12 @@ https://creative.cardormedia.com
 
 ### 3 premières publications
 
-**Post 1 · artbook de Privatix** · 227 / 280 poids X
+**Post 1 · artbook de Privatix** · 225 / 280 poids X
 
 ```text
 Personnages, décors, affiches, kit presse.
 
-L’artbook de Privatix est en ligne : model sheets et turnarounds, gamme des tailles, quatre décors, huit couleurs nommées, six affiches.
+L’artbook de Privatix est en ligne : model sheets et turnarounds, gamme des tailles, cinq décors, huit couleurs nommées, six affiches.
 
 Planche par planche : privatix.fs0ciety.org/artbook.html
 ```
@@ -119,10 +119,10 @@ empire.fs0ciety.org/bible/
 
 Visuel : `static/sites/apps/covers/empire-bible.webp` ou la planche des 28 emblèmes de rang.
 
-**Post 3 · le Singe** · 250 / 280 poids X
+**Post 3 · le Singe** · 240 / 280 poids X
 
 ```text
-Sur la façade de l’hôtel de ville de Mons, un petit singe de bronze attend. On lui caresse la tête pour la chance.
+Sur la façade de l’hôtel de ville de Mons, un petit singe attend. On lui caresse la tête pour la chance.
 
 Le nôtre est tracé à l’encre, d’un seul geste. Sa queue s’achève en plume.
 
@@ -184,12 +184,12 @@ L’atelier de CARDOR Media, à Mons.
 
 **Publication 1 · carrousel artbook de Privatix** (8 à 10 images 1080 × 1350) : model sheet de Léon / Léa, « Les cinq tenues », un ennemi, « Gamme des tailles », un décor, la palette, 2 ou 3 des six affiches. ⚠ Écarter les planches satiriques qui caricaturent des personnes ou entités réelles.
 
-**Légende 1** · 324 / 2200 car.
+**Légende 1** · 348 / 2200 car.
 
 ```text
 Personnages, décors, affiches.
 
-L’artbook de Privatix réunit les model sheets et turnarounds, la gamme des tailles du casting, les décors des trois biomes, la palette de huit couleurs, les télégraphes des boss et six affiches.
+L’artbook de Privatix réunit les model sheets et turnarounds, la gamme des tailles du casting, les décors des trois biomes, la palette de huit couleurs, les télégraphes de combat, les patterns des boss et six affiches.
 
 Feuilletez-le en entier : lien en bio.
 
@@ -198,26 +198,26 @@ Feuilletez-le en entier : lien en bio.
 
 **Publication 2 · carrousel bible de Cosmic Empires** (7 images) : moodboard, logo et palette, les quatre thèmes (Tactique, Holo, Cockpit, Netrunner), composants HUD, 28 emblèmes de rang, icônes, univers.
 
-**Légende 2** · 342 / 2200 car.
+**Légende 2** · 330 / 2200 car.
 
 ```text
 Industriel, néon, holographique.
 
 La bible visuelle de Cosmic Empires : moodboard, identité, quatre postes de commandement, composants du HUD, storyboard, 28 emblèmes de progression, 28 icônes trois-quarts, factions et flotte.
 
-Une seule histoire, de l’écran de connexion au boss de saison.
+Une seule histoire, de la connexion à la conquête.
 
 #CosmicEmpires #GameUI #DesignSystem #ArtDirection
 ```
 
 **Publication 3 · Reel « Une caresse pour la chance »** : 9:16, l’emblème du Singe sur creative.cardormedia.com (traînée d’encre, titres tracés), fin sur l’emblème fixe.
 
-**Légende 3** · 366 / 2200 car.
+**Légende 3** · 356 / 2200 car.
 
 ```text
 Une caresse pour la chance.
 
-Sur la façade de l’hôtel de ville de Mons, un petit singe de bronze attend. La tradition veut qu’on lui caresse la tête de la main gauche : cela porte bonheur.
+Sur la façade de l’hôtel de ville de Mons, un petit singe attend. La tradition veut qu’on lui caresse la tête de la main gauche : cela porte bonheur.
 
 Le nôtre est tracé à l’encre, d’un seul geste. Sa queue s’achève en plume : le récit porte chance à qui le raconte, et c’est notre métier.
 
@@ -279,12 +279,12 @@ hello@cardormedia.com · creative.cardormedia.com
 Privatix : l’artbook, planche par planche
 ```
 
-**Vidéo 1 · description** · 595 / 5000 car.
+**Vidéo 1 · description** · 621 / 5000 car.
 
 ```text
 Visite guidée de l’artbook de Privatix, le hack ’n’ slash roguelite satirique de CM Interactive. Direction artistique : CM Creative Lab.
 
-Au programme : les neuf animations en jeu, les model sheets du héros Léon / Léa et des cinq tenues, les ennemis et les boss, la gamme des tailles du casting, les décors des trois biomes et du Centre opérationnel, le butin et le HUD, les télégraphes des boss, la palette de huit couleurs et les six affiches du press kit.
+Au programme : les neuf animations en jeu, les model sheets du héros Léon / Léa et des cinq tenues, les ennemis et les boss, la gamme des tailles du casting, les décors des trois biomes et du centre opérationnel, le butin et le HUD, les télégraphes de combat et les patterns des boss, la palette de huit couleurs et les six affiches du press kit.
 
 Artbook : https://privatix.fs0ciety.org/artbook.html
 Jouer : https://privatix.fs0ciety.org
@@ -315,10 +315,10 @@ L’atelier : https://creative.cardormedia.com
 Le cortège montois : construire quatre emblèmes
 ```
 
-**Vidéo 3 · description** · 426 / 5000 car.
+**Vidéo 3 · description** · 430 / 5000 car.
 
 ```text
-Un emblème par maison, tous tirés du Doudou de Mons : le Car d’Or et sa roue pour CARDOR Media, le Dragon pour CM Interactive, le Beffroi pour CM Soundworks, le Singe du Grand-Garde pour CM Creative Lab.
+Un emblème par maison, tous tirés du patrimoine montois : le Car d’Or et sa roue pour CARDOR Media, le Dragon pour CM Interactive, le Beffroi pour CM Soundworks, le Singe du Grand-Garde pour CM Creative Lab.
 
 Nous montrons la construction de la roue (14 rayons, un moyeu, un cœur Ember), les couleurs, les lockups et les interdits de la charte.
 
@@ -400,12 +400,12 @@ hello@cardormedia.com
 
 **Projet 1 · « Privatix : artbook et press kit »** · Champs : Illustration, Character Design, Art Direction · Couverture : planche « Gamme des tailles » recadrée en 808 × 632 (ou plus, même ratio). Modules : model sheets → gamme des tailles → décors → palette → affiches → press kit. ⚠ Écarter les planches satiriques visant des personnes ou entités réelles.
 
-**Projet 1 · texte** · 479 car.
+**Projet 1 · texte** · 497 car.
 
 ```text
-Privatix est un hack ’n’ slash roguelite satirique en 3D, développé par CM Interactive. CM Creative Lab en a fixé l’image : un rendu toon « Néon & Ballast » et une palette de huit couleurs nommées.
+Privatix est un hack ’n’ slash roguelite satirique en 3D, développé par CM Interactive. L’artbook en fixe l’image : un rendu toon « Néon & Ballast » et une palette de huit couleurs nommées.
 
-Le projet réunit les model sheets et turnarounds du héros et de ses cinq tenues, les ennemis et les boss, la gamme des tailles du casting, les décors des trois biomes, le butin et le HUD, les télégraphes des boss, et un press kit : logo, couverture, six affiches et captures clés.
+Le projet réunit les model sheets et turnarounds du héros et de ses cinq tenues, les ennemis et les boss, la gamme des tailles du casting, les décors des trois biomes, le butin et le HUD, les télégraphes de combat et les patterns des boss, et un press kit : logo, couverture, six affiches et captures clés.
 ```
 
 **Projet 2 · « Cosmic Empires : bible visuelle »** · Champs : UI/UX, Game Design, Art Direction · Couverture : `static/sites/apps/covers/empire-bible.webp`.

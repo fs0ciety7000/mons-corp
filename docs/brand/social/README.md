@@ -180,7 +180,7 @@ Toutes consultées le 2026-10-12. Les pages d’aide de X et de Behance refusent
 
 ## Règles appliquées
 
-- **Rien d’inventé** : ni chiffre, ni client, ni récompense, ni adresse, ni téléphone, ni horaire. Les seuls chiffres cités viennent des sites (206 notes de version de Cosmic Empires, 14 titres de la BO, 27 captures et 28 emblèmes de la bible) et sont à revérifier le jour de la publication.
+- **Rien d’inventé** : ni chiffre, ni client, ni récompense, ni adresse, ni téléphone, ni horaire. Chaque chiffre cité vient du dépôt ou des pages publiques des œuvres (49 cloches, 14 rayons de la roue, artbook, bible, BO) ; ceux qui peuvent bouger (206 notes de version de Cosmic Empires, 14 titres de la BO, 27 captures et 28 emblèmes de la bible) sont à revérifier le jour de la publication.
 - **Œuvres citées** : uniquement Privatix et son artbook, Cosmic Empires et sa bible visuelle, Tape Taupe, Tandem, OCC Deliveries, CSM, la charte « Le cortège montois » et la bande originale de Privatix, chacune attribuée au studio que le site lui donne : les jeux et les apps à CM Interactive, l’artbook, la bible et la charte à CM Creative Lab, la BO à CM Soundworks.
 - **Satire** : l’artbook de Privatix caricature des personnes et des entités réelles. Les premiers posts n’en montrent aucune planche.
 - **Typographie** : apostrophe typographique `’` partout. Si une plateforme l’affiche mal, la remplacer par `'` : la longueur ne change pas.

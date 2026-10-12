@@ -55,10 +55,10 @@ Un site se joue, un jeu se visite. Jeux dans le navigateur, applications et outi
 Le studio jeux vidéo et web de @cardormedia. Privatix, Cosmic Empires, Tape Taupe, Tandem. Des mondes que l’on habite. Forgé à Mons.
 ```
 
-**Bio EN** · 125 / 160 poids X
+**Bio EN** · 124 / 160 poids X
 
 ```text
-Video game and web studio at CARDOR Media, forged in Mons, Belgium. Privatix, Cosmic Empires, Tape Taupe: worlds you inhabit.
+CARDOR Media’s video game and web studio, forged in Mons, Belgium. Privatix, Cosmic Empires, Tape Taupe: worlds you inhabit.
 ```
 
 **Bio EN · variante** · 117 / 160 poids X
@@ -115,10 +115,10 @@ empire.fs0ciety.org
 
 Visuel : `static/sites/interactive/projects/empire.webp`.
 
-**Post 3 · Tape Taupe** · 253 / 280 poids X
+**Post 3 · Tape Taupe** · 260 / 280 poids X
 
 ```text
-Neuf trous. Des taupes de plus en plus rapides. Des bombes, trois boss, un boss final au niveau 12.
+Neuf trous. Des taupes de plus en plus rapides. Des bombes et trois boss, dont un boss final au niveau 12.
 
 Tape Taupe : l’arcade 8 bits à jouer le temps d’une pause, sur mobile comme sur ordinateur. Classements et musique synthétisée.
 

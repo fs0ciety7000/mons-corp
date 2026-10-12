@@ -195,10 +195,10 @@ Lien en bio.
 
 **Publication 2 · carrousel « Le cortège »** (5 images 1080 × 1350) : 1. Car d’Or et roue · 2. Dragon · 3. Beffroi · 4. Singe · 5. les quatre réunis. Sources : `static/brand/*.svg`.
 
-**Légende 2** · 397 / 2200 car.
+**Légende 2** · 409 / 2200 car.
 
 ```text
-Un emblème par maison, tous tirés du Doudou.
+Un emblème par maison, tous tirés du patrimoine montois.
 
 Le Car d’Or porte les œuvres comme le carrosse porte la châsse. Le Dragon du Doudou joue pour CM Interactive. Le Beffroi et ses 49 cloches sonnent pour CM Soundworks. Le Singe du Grand-Garde raconte pour CM Creative Lab.
 
@@ -210,12 +210,12 @@ La charte « Le cortège montois » est en ligne : lien en bio.
 
 **Publication 3 · la BO de Privatix** (1080 × 1080) : pochette officielle.
 
-**Légende 3** · 414 / 2200 car.
+**Légende 3** · 399 / 2200 car.
 
 ```text
 Privatix a sa bande originale.
 
-Quatorze titres et la musique de la bande-annonce : la prise de poste au petit matin, le Centre opérationnel de jour comme de nuit, les quais en combat, trois boss en plusieurs phases et le 7h12 du générique.
+Quatorze titres et la musique de la bande-annonce : la prise de poste, le centre opérationnel de jour comme de nuit, les quais en combat, trois boss en plusieurs phases et le 7h12 du générique.
 
 Direction musicale et post-production : CM Soundworks. Jeu : CM Interactive.
 À écouter et télécharger sur sound.cardormedia.com.
