@@ -149,7 +149,7 @@
 					.fromTo('[data-ahero]', { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 });
 				return;
 			}
-			const words = SplitText.create(title, { type: 'words', mask: 'words' }).words;
+			const words = SplitText.create(title, { type: 'words', mask: 'words', aria: 'none' }).words;
 			gsap.set('[data-ahero]', { autoAlpha: 1 });
 			timeline = gsap
 				.timeline({ paused: true, defaults: { ease: ease.out } })

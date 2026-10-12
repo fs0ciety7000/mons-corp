@@ -14,7 +14,7 @@
 		// Scroll-scrubbed illumination is a desktop nicety; touch devices get the full text.
 		if (prefersReducedMotion() || isTouch()) return;
 		const ctx = gsap.context(() => {
-			const words = SplitText.create(statement, { type: 'words' }).words;
+			const words = SplitText.create(statement, { type: 'words', aria: 'none' }).words;
 			gsap.fromTo(
 				words,
 				{ opacity: 0.16 },

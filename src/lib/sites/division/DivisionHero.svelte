@@ -33,9 +33,14 @@
 			}
 			const chars = SplitText.create(title, {
 				type: 'chars',
-				mask: glitch ? undefined : 'chars'
+				mask: glitch ? undefined : 'chars',
+				aria: 'none'
 			}).chars;
-			const lines = SplitText.create('[data-dhero-lines]', { type: 'lines', mask: 'lines' }).lines;
+			const lines = SplitText.create('[data-dhero-lines]', {
+				type: 'lines',
+				mask: 'lines',
+				aria: 'none'
+			}).lines;
 			gsap.set('[data-dhero]', { autoAlpha: 1 });
 
 			timeline = gsap.timeline({ paused: true, defaults: { ease: ease.out } });
@@ -98,8 +103,11 @@
 					data-dhero-lines
 					class="mb-3 block font-mono text-sm tracking-[0.6em] text-signal md:text-base">CM</span
 				>
+				<!-- The animated letters are hidden from screen readers; this copy is read instead. -->
+				<span class="sr-only">{site.short}</span>
 				<span
 					bind:this={title}
+					aria-hidden="true"
 					class={[
 						'block font-display leading-[0.82] tracking-[-0.035em] whitespace-nowrap',
 						italic && 'italic'

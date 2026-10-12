@@ -24,9 +24,21 @@
 				return;
 			}
 
-			const chars = SplitText.create(wordmark, { type: 'chars', mask: 'chars' }).chars;
-			const metas = SplitText.create('[data-hero-meta]', { type: 'lines', mask: 'lines' }).lines;
-			const lead = SplitText.create('[data-hero-lead]', { type: 'lines', mask: 'lines' }).lines;
+			const chars = SplitText.create(wordmark, {
+				type: 'chars',
+				mask: 'chars',
+				aria: 'none'
+			}).chars;
+			const metas = SplitText.create('[data-hero-meta]', {
+				type: 'lines',
+				mask: 'lines',
+				aria: 'none'
+			}).lines;
+			const lead = SplitText.create('[data-hero-lead]', {
+				type: 'lines',
+				mask: 'lines',
+				aria: 'none'
+			}).lines;
 
 			gsap.set('[data-hero]', { autoAlpha: 1 });
 
@@ -96,8 +108,11 @@
 		<!-- Wordmark -->
 		<div class="relative mt-auto mb-auto gutter-x pt-10 md:pt-0">
 			<h1 id="hero-title" class="relative font-display leading-[0.8] tracking-[-0.035em]">
+				<!-- The animated letters are hidden from screen readers; this copy is read instead. -->
+				<span class="sr-only">CARDOR</span>
 				<span
 					bind:this={wordmark}
+					aria-hidden="true"
 					class="block text-[clamp(4.75rem,24.5vw,36rem)] whitespace-nowrap">CARDOR</span
 				>
 				<span

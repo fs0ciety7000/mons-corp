@@ -60,6 +60,8 @@ export const reveal: Action<HTMLElement, RevealOptions | undefined> = (node, opt
 			type: type === 'lines' ? 'lines' : `lines,${type}`,
 			mask: 'lines',
 			linesClass: 'split-line',
+			// aria-label is only valid on headings: elsewhere the split text stays plain text.
+			aria: /^H[1-6]$/.test(node.tagName) ? 'auto' : 'none',
 			autoSplit: true,
 			onSplit(self) {
 				const targets = type === 'lines' ? self.lines : type === 'words' ? self.words : self.chars;
