@@ -18,7 +18,22 @@
 	const count = (id: 'tous' | ProjectKind) =>
 		id === 'tous' ? projects.length : projects.filter((p) => p.kind === id).length;
 	const ms = (v: number) => (prefersReducedMotion() ? 0 : v);
-	const roman = ['I', 'II', 'III', 'IV', 'V', 'VI'];
+	const roman = (n: number) =>
+		(
+			[
+				[10, 'X'],
+				[9, 'IX'],
+				[5, 'V'],
+				[4, 'IV'],
+				[1, 'I']
+			] as const
+		).reduce((acc, [v, s]) => {
+			while (n >= v) {
+				acc += s;
+				n -= v;
+			}
+			return acc;
+		}, '');
 </script>
 
 <section id="projets" class="relative section-y" aria-labelledby="projets-title">
@@ -72,7 +87,7 @@
 							{p.status}
 						</span>
 						<span class="absolute top-4 right-4 font-mono text-xs text-bone/80"
-							>{roman[projects.indexOf(p)]} / VI</span
+							>{roman(projects.indexOf(p) + 1)} / {roman(projects.length)}</span
 						>
 					</div>
 					<div class="flex flex-1 flex-col gap-4 p-6 md:p-8">
