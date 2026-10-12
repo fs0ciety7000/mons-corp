@@ -19,7 +19,7 @@ Un seul code source, quatre builds. `PUBLIC_SITE` (`holding` · `interactive` ·
 
 ## Contenu : règles PM
 
-- **Interactive** reprend le contenu réel du studio (`studios.fs0ciety.org`) : 6 projets en ligne, méthode Esquisse → Lancement, deux disciplines.
+- **Interactive** reprend le contenu réel du studio (`studios.fs0ciety.org`) : 7 projets en ligne, méthode Esquisse → Lancement, deux disciplines.
 - **Soundworks** et **Creative Lab** n'ont pas encore de références publiques : **on n'invente aucun client ni chiffre**. On présente les savoir-faire, la méthode et une démonstration interactive (son génératif, encre), plus un bloc « Premières productions : bientôt ».
 - Chaque site renvoie vers la maison mère et vers les deux studios frères.
 
