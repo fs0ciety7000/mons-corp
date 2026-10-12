@@ -73,6 +73,24 @@ export const projects: Project[] = [
 		cover: '/sites/interactive/projects/tape-taupe.webp'
 	},
 	{
+		id: 'space-invador',
+		name: 'Space Invador',
+		kind: 'jeu',
+		category: 'Jeu · Arcade',
+		status: 'En ligne',
+		url: 'https://space-invador.fs0ciety.org',
+		pitch: 'Le Lumeçon débarque de l’espace. Tenez la ligne.',
+		text: 'Un Space Invaders aux couleurs de Mons. Saint-Georges défend le beffroi face au cortège du Doudou : Diables, Hommes de feuilles, Chinchins. Toutes les cinq vagues, le Dragon descend. Sur mobile comme sur ordinateur.',
+		features: [
+			'Le Singe du Grand-Garde en cible bonus',
+			'Commandes tactiles et clavier',
+			'Classement en ligne avec anti-triche, PWA'
+		],
+		stack: 'SvelteKit · Svelte 5 · TypeScript · Canvas 2D · SQLite',
+		cover: '/sites/interactive/projects/space-invador.webp',
+		stat: { value: '5', label: 'vagues, puis le Dragon' }
+	},
+	{
 		id: 'tandem',
 		name: 'Tandem',
 		kind: 'web',

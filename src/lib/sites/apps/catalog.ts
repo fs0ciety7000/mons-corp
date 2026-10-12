@@ -100,6 +100,13 @@ export const catalog: AppEntry[] = [
 		platforms: ['Navigateur', 'PWA'],
 		keywords: 'taupe arcade pixel art 8 bits rétro whack mole classement'
 	}),
+	fromSheet('space-invador', {
+		kind: 'jeu',
+		access: 'public',
+		platforms: ['Navigateur', 'PWA'],
+		keywords:
+			'space invaders arcade doudou lumeçon dragon saint-georges mons classement rétro pixel mobile'
+	}),
 	{
 		id: 'railcards',
 		name: 'RailCards',
