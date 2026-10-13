@@ -10,6 +10,7 @@
 	import Listen from './Listen.svelte';
 	import Wave from './Wave.svelte';
 	import Productions from './Productions.svelte';
+	import Experiences from './Experiences.svelte';
 	import { content } from './content.ts';
 	import type { Release } from '#lib/sound/catalog.ts';
 
@@ -27,9 +28,10 @@
 <Offer index="02" offer={content.offer} />
 <Method index="03" method={content.method} />
 <EmblemStory index="04" emblem={content.emblem} />
+<Experiences index="05" />
 {#if releases?.length}
-	<Productions index="05" {releases} />
+	<Productions index="06" {releases} />
 {:else if content.soon}
-	<Soon index="05" soon={content.soon} />
+	<Soon index="06" soon={content.soon} />
 {/if}
 <Sisters />

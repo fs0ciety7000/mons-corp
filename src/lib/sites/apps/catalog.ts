@@ -137,6 +137,26 @@ export const catalog: AppEntry[] = [
 		keywords:
 			'murder party enquête coopérative multijoueur amis polar ducasse beffroi carillon mons soirée'
 	}),
+	fromSheet('carillon-casse-briques', {
+		kind: 'jeu',
+		access: 'public',
+		platforms: ['Navigateur'],
+		keywords:
+			'casse-briques breakout arkanoid cloches carillon beffroi musique notes pixel classement'
+	}),
+	fromSheet('poste-aiguillage', {
+		kind: 'jeu',
+		access: 'public',
+		platforms: ['Navigateur', 'Impression'],
+		keywords:
+			'coopératif deux joueurs keep talking signalisation aiguilleur régulateur train manuel privatix'
+	}),
+	fromSheet('quiz-du-doudou', {
+		kind: 'jeu',
+		access: 'public',
+		platforms: ['Navigateur', 'Grand écran'],
+		keywords: 'quiz culture générale soirée équipes qr code télé projecteur kahoot café'
+	}),
 	{
 		id: 'railcards',
 		name: 'RailCards',
@@ -172,6 +192,28 @@ export const catalog: AppEntry[] = [
 		platforms: ['Web', 'PWA'],
 		keywords: 'ferroviaire exploitation bus taxis pmr journal sncb client solutions'
 	}),
+	fromSheet('vitrine-express', {
+		kind: 'site',
+		access: 'public',
+		platforms: ['Web'],
+		keywords: 'site vitrine commerce café boutique association horaires devis mons offre'
+	}),
+	{
+		id: 'carillon-collectif',
+		name: 'Le Carillon',
+		studio: 'sound',
+		kind: 'creation',
+		category: 'Instrument collectif · Temps réel',
+		pitch: 'Faites sonner les cloches du beffroi de Mons, avec tous ceux qui sont là en ce moment.',
+		url: 'https://sound.cardormedia.com/carillon/',
+		status: 'En ligne',
+		access: 'public',
+		platforms: ['Navigateur', 'Mobile'],
+		icon: '/sites/apps/icons/carillon-collectif.png',
+		cover: '/sites/apps/covers/carillon-collectif.webp',
+		keywords:
+			'carillon cloches beffroi instrument musique collectif temps réel partition du jour doudou jouer ensemble'
+	},
 	{
 		id: 'devblog',
 		name: 'Devblog Cosmic Empires',
@@ -202,6 +244,22 @@ export const catalog: AppEntry[] = [
 		icon: '/sites/apps/icons/beffroi-8.png',
 		cover: '/sites/apps/covers/beffroi-8.webp',
 		keywords: 'police font typographie pixel art bitmap rétro 8 bits glyphes spécimen télécharger'
+	},
+	{
+		id: 'carte-mons',
+		name: 'Mons, la carte illustrée',
+		studio: 'creative',
+		kind: 'creation',
+		category: 'Illustration · Carte interactive',
+		pitch: 'La gravure de Mons et de l’univers CARDOR : zoomez et ouvrez la fiche de chaque lieu.',
+		url: 'https://carte.fs0ciety.org',
+		status: 'En test',
+		access: 'public',
+		platforms: ['Web'],
+		icon: '/sites/apps/icons/carte-mons.png',
+		cover: '/sites/apps/covers/carte-mons.webp',
+		keywords:
+			'carte plan illustrée gravure mons lieux beffroi grand-place gare privatix lumeçon univers'
 	},
 	{
 		id: 'privatix-artbook',
@@ -279,3 +337,13 @@ export const searchText = (a: AppEntry) =>
 		.toLowerCase();
 
 export const host = (url: string) => new URL(url).host;
+
+/** Latest releases shown on cardormedia.com, newest first: at least one per studio. */
+export const latest: string[] = [
+	'carillon-collectif',
+	'lumecon',
+	'privatix-jdr',
+	'meurtre-au-beffroi',
+	'arcade-cardor',
+	'carillon-casse-briques'
+];

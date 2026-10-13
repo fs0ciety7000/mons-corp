@@ -167,6 +167,63 @@ export const projects: Project[] = [
 		schema: { category: 'GameApplication', os: 'Web' }
 	},
 	{
+		id: 'carillon-casse-briques',
+		name: 'Carillon, le casse-briques',
+		kind: 'jeu',
+		category: 'Jeu · Casse-briques musical',
+		status: 'En ligne',
+		url: 'https://carillon.fs0ciety.org',
+		pitch: 'Brise les cloches du beffroi : chacune joue une note, et l’air se reconstitue.',
+		text: 'Un casse-briques en pixel art dans le carillon du beffroi de Mons. Chaque cloche brisée joue la note suivante d’un air, jusqu’à celui du Doudou : l’étape est gagnée quand la mélodie est entière. Sur mobile comme sur ordinateur.',
+		features: [
+			'Vingt-quatre étapes dans le beffroi',
+			'Chaque brique est une note de l’air',
+			'Classement en ligne'
+		],
+		stack: 'SvelteKit · Svelte 5 · TypeScript',
+		cover: '/sites/interactive/projects/carillon-casse-briques.webp',
+		stat: { value: '24', label: 'étapes jusqu’au sommet' },
+		schema: { category: 'GameApplication', os: 'Web' }
+	},
+	{
+		id: 'poste-aiguillage',
+		name: 'Poste d’aiguillage',
+		kind: 'jeu',
+		category: 'Jeu · Coopératif à deux',
+		status: 'En ligne',
+		url: 'https://aiguillage.fs0ciety.org',
+		pitch: 'Un train approche, le tableau s’affole. Parlez-vous.',
+		text: 'Trois heures du matin, poste de signalisation de Mons. L’aiguilleur voit les voyants, les leviers et le téléphone ; le régulateur tient le règlement de Privatix, aussi complet qu’incompréhensible. Chaque incident doit être résolu avant le passage du train.',
+		features: [
+			'Deux rôles asymétriques, à voix haute',
+			'En ligne sur deux appareils, ou sur un seul',
+			'Trois difficultés, manuel imprimable'
+		],
+		stack: 'SvelteKit · Svelte 5 · TypeScript',
+		cover: '/sites/interactive/projects/poste-aiguillage.webp',
+		stat: { value: '2', label: 'joueurs, un train' },
+		schema: { category: 'GameApplication', os: 'Web' }
+	},
+	{
+		id: 'quiz-du-doudou',
+		name: 'Le Quiz du Doudou',
+		kind: 'jeu',
+		category: 'Jeu · Quiz en direct',
+		status: 'En test',
+		url: 'https://quiz.fs0ciety.org',
+		pitch: 'Le quiz sur grand écran, les réponses au téléphone.',
+		text: 'L’animateur lance la partie sur la télé ou le projecteur, chacun répond depuis son téléphone en scannant un QR code. De 2 à 50 joueurs, en solo ou par équipes, sans rien installer. Les séries de questions sont encore en cours d’écriture.',
+		features: [
+			'Rejoindre par QR code ou code à six chiffres',
+			'En solo ou par équipes',
+			'Séries thématiques de douze questions'
+		],
+		stack: 'SvelteKit · Svelte 5 · TypeScript',
+		cover: '/sites/interactive/projects/quiz-du-doudou.webp',
+		stat: { value: '50', label: 'joueurs par partie' },
+		schema: { category: 'GameApplication', os: 'Web' }
+	},
+	{
 		id: 'tandem',
 		name: 'Tandem',
 		kind: 'web',
@@ -219,5 +276,23 @@ export const projects: Project[] = [
 		],
 		stack: 'Next.js · React 19 · Tailwind · PocketBase · GSAP',
 		cover: '/sites/interactive/projects/csm.webp'
+	},
+	{
+		id: 'vitrine-express',
+		name: 'Vitrine Express',
+		kind: 'web',
+		category: 'Offre · Sites vitrines',
+		status: 'En ligne',
+		url: 'https://vitrine.fs0ciety.org',
+		pitch: 'Votre commerce mérite mieux qu’une page Facebook.',
+		text: 'Notre offre de sites vitrines pour les commerces, cafés, ateliers et associations de Mons : horaires, carte, photos et itinéraire, clairs sur téléphone et toujours à jour. On s’occupe de tout, sur devis.',
+		features: [
+			'Horaires et carte toujours à jour',
+			'Pensé d’abord pour le téléphone',
+			'Formules sur devis, sans engagement'
+		],
+		stack: 'SvelteKit · Svelte 5 · TypeScript',
+		cover: '/sites/interactive/projects/vitrine-express.webp',
+		schema: { category: 'BusinessApplication', os: 'Web' }
 	}
 ];
