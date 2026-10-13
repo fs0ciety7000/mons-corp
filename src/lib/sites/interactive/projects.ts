@@ -148,6 +148,25 @@ export const projects: Project[] = [
 		schema: { category: 'GameApplication', os: 'Web' }
 	},
 	{
+		id: 'arcade-cardor',
+		name: 'L’Arcade CARDOR',
+		kind: 'jeu',
+		category: 'Jeu · Portail arcade',
+		status: 'En ligne',
+		url: 'https://arcade.cardormedia.com',
+		pitch: 'Un profil, tous les jeux.',
+		text: 'Le portail des jeux de CARDOR Media : un seul pseudo et un seul personnage d’un jeu à l’autre, des succès et un classement général de la semaine. Sans compte ni e-mail : le profil vit sur l’appareil et se retrouve avec un code de récupération. Tape Taupe et Space Invador ouvrent la salle.',
+		features: [
+			'Identité commune sans compte obligatoire',
+			'Succès vérifiés côté serveur',
+			'Classement général hebdomadaire'
+		],
+		stack: 'SvelteKit · Svelte 5 · TypeScript · SQLite · SDK ESM',
+		cover: '/sites/interactive/projects/arcade-cardor.webp',
+		stat: { value: '15', label: 'succès à débloquer' },
+		schema: { category: 'GameApplication', os: 'Web' }
+	},
+	{
 		id: 'tandem',
 		name: 'Tandem',
 		kind: 'web',
