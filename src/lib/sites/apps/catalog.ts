@@ -107,6 +107,29 @@ export const catalog: AppEntry[] = [
 		keywords:
 			'space invaders arcade doudou lumeçon dragon saint-georges mons classement rétro pixel mobile'
 	}),
+	fromSheet('lumecon', {
+		kind: 'jeu',
+		access: 'public',
+		platforms: ['Windows', 'macOS', 'Linux', 'Android'],
+		links: [
+			{ label: 'Télécharger', url: 'https://shooter.fs0ciety.org/telecharger' },
+			{ label: 'Bible', url: 'https://shooter.fs0ciety.org/bible' }
+		],
+		keywords: 'fps shooter 3d doom ducasse doudou dragon beffroi carillon chinchins mons godot'
+	}),
+	fromSheet('mot-du-doudou', {
+		kind: 'jeu',
+		access: 'public',
+		platforms: ['Navigateur', 'PWA'],
+		keywords: 'wordle mot du jour puzzle quotidien lettres patois montois doudou lexique'
+	}),
+	fromSheet('meurtre-au-beffroi', {
+		kind: 'jeu',
+		access: 'public',
+		platforms: ['Navigateur', 'Mobile'],
+		keywords:
+			'murder party enquête coopérative multijoueur amis polar ducasse beffroi carillon mons soirée'
+	}),
 	{
 		id: 'railcards',
 		name: 'RailCards',
@@ -156,6 +179,22 @@ export const catalog: AppEntry[] = [
 		icon: '/sites/apps/icons/devblog.png',
 		cover: '/sites/apps/covers/devblog.webp',
 		keywords: 'blog notes de version patch coulisses'
+	},
+	{
+		id: 'beffroi-8',
+		name: 'Beffroi 8',
+		studio: 'creative',
+		kind: 'creation',
+		category: 'Police pixel · Typographie de jeu',
+		pitch:
+			'La police pixel maison des jeux rétro de CM Interactive : essai, glyphes, téléchargements.',
+		url: 'https://creative.cardormedia.com/beffroi-8',
+		status: 'En ligne',
+		access: 'public',
+		platforms: ['Web', 'TTF', 'OTF', 'WOFF2'],
+		icon: '/sites/apps/icons/beffroi-8.png',
+		cover: '/sites/apps/covers/beffroi-8.webp',
+		keywords: 'police font typographie pixel art bitmap rétro 8 bits glyphes spécimen télécharger'
 	},
 	{
 		id: 'privatix-artbook',

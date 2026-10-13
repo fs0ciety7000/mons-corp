@@ -20,7 +20,10 @@
 	} = $props();
 
 	/** The atelier's published works: single source with the app launcher (ADR-012). */
-	const works = catalog.filter((a) => a.studio === 'creative');
+	// Beffroi 8 gets its live specimen card above when the manifest is available.
+	const works = $derived(
+		catalog.filter((a) => a.studio === 'creative' && !(beffroi && a.id === 'beffroi-8'))
+	);
 	const sample = `Ça déménage${NNBSP}! ♥ ★ ${pua(0xe000)}`;
 </script>
 

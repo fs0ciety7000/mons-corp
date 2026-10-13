@@ -91,6 +91,63 @@ export const projects: Project[] = [
 		stat: { value: '5', label: 'vagues, puis le Dragon' }
 	},
 	{
+		id: 'lumecon',
+		name: 'LUMEÇON',
+		kind: 'jeu',
+		category: 'Jeu · FPS 3D',
+		status: 'En ligne',
+		url: 'https://shooter.fs0ciety.org',
+		pitch: '12 h 58 : le carillon s’est tu, le combat n’a jamais fini.',
+		text: 'Un FPS nerveux à l’ancienne, en version moderne, au cœur d’une Ducasse infernale. Héritier des Chinchins, on traverse Mons de la rue de la Clef au beffroi, à la lance, au plomb et au bronze, jusqu’au Doudou enroulé autour de la tour.',
+		features: [
+			'Six zones et un boss en trois phases',
+			'Quatre armes tirées de la Ducasse et du beffroi',
+			'Clavier, manette et tactile, options d’accessibilité'
+		],
+		stack: 'Godot 4 · GDScript · audio procédural Python · Astro',
+		cover: '/sites/interactive/projects/lumecon.webp',
+		stat: { value: '49', label: 'cloches au carillon' },
+		schema: { category: 'GameApplication', os: 'Windows, macOS, Linux, Android' }
+	},
+	{
+		id: 'mot-du-doudou',
+		name: 'Le Mot du Doudou',
+		kind: 'jeu',
+		category: 'Jeu · Puzzle quotidien',
+		status: 'En ligne',
+		url: 'https://doudou.fs0ciety.org',
+		pitch: 'Un mot montois par jour, six essais pour le trouver.',
+		text: 'Le Wordle aux couleurs de Mons : chaque jour à minuit, heure de Bruxelles, un mot de cinq lettres à trouver, le même pour tout le monde. Mots du Doudou, du patois, de la vie montoise et du dictionnaire, avec une fiche après la partie et une grille à partager sans rien dévoiler.',
+		features: [
+			'Partage du score en grille d’emojis',
+			'Statistiques et séries, sur l’appareil',
+			'Mode daltonien, hors ligne, PWA'
+		],
+		stack: 'SvelteKit · Svelte 5 · TypeScript · Caddy',
+		cover: '/sites/interactive/projects/mot-du-doudou.webp',
+		stat: { value: '365', label: 'mots du jour, dont 59 montois' },
+		schema: { category: 'GameApplication', os: 'Web' }
+	},
+	{
+		id: 'meurtre-au-beffroi',
+		name: 'Meurtre au beffroi',
+		kind: 'jeu',
+		category: 'Jeu · Enquête coopérative',
+		status: 'En ligne',
+		url: 'https://beffroi.fs0ciety.org',
+		pitch: 'Une nuit de Ducasse, le gardien du beffroi est retrouvé mort.',
+		text: 'Une murder party en ligne pour 3 à 6 joueurs, chacun sur son téléphone. Chaque enquêteur a sa fiche secrète : on fouille les lieux, on interroge les témoins, on partage ses indices sur un tableau commun, puis on vote. Écrite avec CM Creative Lab.',
+		features: [
+			'Fiches privées, gardées côté serveur',
+			'Tableau d’enquête partagé en temps réel',
+			'Trois actes, accusation et révélation'
+		],
+		stack: 'SvelteKit · Svelte 5 · TypeScript · WebSocket · zod',
+		cover: '/sites/interactive/projects/meurtre-au-beffroi.webp',
+		stat: { value: '45', label: 'indices à trouver' },
+		schema: { category: 'GameApplication', os: 'Web' }
+	},
+	{
 		id: 'tandem',
 		name: 'Tandem',
 		kind: 'web',
