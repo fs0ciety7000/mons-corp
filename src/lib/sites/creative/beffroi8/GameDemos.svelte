@@ -49,8 +49,13 @@
 		});
 	}
 
+	// « Appuyez sur Start » blinks only once the title screen is on screen, for 5 s (WCAG 2.2.2).
+	let titleFigure = $state<HTMLElement>();
+	let titleSeen = $state(false);
+
 	onMount(() => {
-		if (prefersReducedMotion()) return;
+		const stopTitle = onFirstView(titleFigure!, () => (titleSeen = true));
+		if (prefersReducedMotion()) return stopTitle;
 		score = 0;
 		coins = 0;
 		typed = 0;
@@ -74,6 +79,7 @@
 			gsap.delayedCall(0.9, type)
 		);
 		return () => {
+			stopTitle();
 			stopHud();
 			stopDialog();
 			count?.kill();
@@ -153,7 +159,11 @@
 		</figure>
 
 		<!-- Title screen -->
-		<figure class="col-span-4 min-w-0 md:col-span-8 lg:col-span-12" use:wipe={{ delay: 0.1 }}>
+		<figure
+			bind:this={titleFigure}
+			class="col-span-4 min-w-0 md:col-span-8 lg:col-span-12"
+			use:wipe={{ delay: 0.1 }}
+		>
 			<div
 				class="screen pixel-box title-screen"
 				role="img"
@@ -168,7 +178,9 @@
 						<li class="text-ash"><span class="invisible">▶</span>CONTINUER</li>
 						<li class="text-ash"><span class="invisible">▶</span>OPTIONS</li>
 					</ul>
-					<p class="pixel blink">APPUYEZ SUR <span class="text-signal">{start}</span></p>
+					<p class="pixel" class:blink={titleSeen}>
+						APPUYEZ SUR <span class="text-signal">{start}</span>
+					</p>
 					<p class="pixel text-ash">© 2026 CARDOR MEDIA</p>
 				</div>
 			</div>
@@ -330,9 +342,10 @@
 		margin-right: calc(3 * var(--pixel-px));
 	}
 
-	/* 1 Hz, far below the 3 Hz flash limit; frozen visible under reduced motion. */
+	/* 1 Hz, far below the 3 Hz flash limit; ends visible; frozen under reduced motion. */
 	.blink {
-		animation: blink 1s steps(1, end) infinite;
+		/* 5 cycles then steady: no blinking content lasts more than 5 s (WCAG 2.2.2). */
+		animation: blink 1s steps(1, end) 5;
 	}
 	@keyframes blink {
 		50% {

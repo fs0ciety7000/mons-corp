@@ -6,9 +6,17 @@ import { SITE } from '#lib/sites/config.ts';
 export const prerender = SITE !== 'sound';
 
 export const load: PageServerLoad = async ({ setHeaders }) => {
-	if (SITE !== 'sound') return { releases: null };
+	if (SITE === 'creative') {
+		// The Beffroi 8 card: a few values derived here so the manifest stays server-side.
+		const { beffroiCard } = await import('#lib/sites/creative/beffroi8/home-card.server.ts');
+		return { releases: null, beffroi: beffroiCard() };
+	}
+	if (SITE !== 'sound') return { releases: null, beffroi: null };
 	const { readCatalog } = await import('#lib/server/sound-catalog.ts');
 	const catalog = await readCatalog();
 	setHeaders({ 'cache-control': 'public, max-age=60, stale-while-revalidate=300' });
-	return { releases: catalog?.releases.filter((r) => r.published && r.tracks.length) ?? null };
+	return {
+		releases: catalog?.releases.filter((r) => r.published && r.tracks.length) ?? null,
+		beffroi: null
+	};
 };

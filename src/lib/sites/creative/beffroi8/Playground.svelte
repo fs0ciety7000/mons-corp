@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount, tick } from 'svelte';
 	import SectionHead from '#lib/sites/division/SectionHead.svelte';
-	import { reveal } from '#lib/motion/actions.ts';
 	import ChoiceGroup from './ChoiceGroup.svelte';
 	import BitmapPreview from './BitmapPreview.svelte';
 	import { crisp, wipe } from './crisp.ts';
@@ -63,9 +62,16 @@
 	];
 	let field = $state<HTMLTextAreaElement>();
 
+	const MAX_LENGTH = 400;
+
 	async function add(ch: string) {
 		if (!field) return;
 		const { selectionStart: a, selectionEnd: b } = field;
+		// Same limit as the field's maxlength, which only guards typing.
+		if (text.length - (b - a) + ch.length > MAX_LENGTH) {
+			field.focus();
+			return;
+		}
 		text = text.slice(0, a) + ch + text.slice(b);
 		await tick();
 		field.focus();
@@ -85,7 +91,7 @@
 		<form
 			class="col-span-4 min-w-0 space-y-8 md:col-span-8 lg:col-span-4"
 			onsubmit={(e) => e.preventDefault()}
-			use:reveal={{ type: 'block' }}
+			use:wipe
 		>
 			<div>
 				<label for="essai-texte" class="mb-3 block label text-ash">Votre texte</label>
@@ -94,7 +100,7 @@
 					bind:this={field}
 					bind:value={text}
 					rows="4"
-					maxlength="400"
+					maxlength={MAX_LENGTH}
 					spellcheck="false"
 					aria-describedby="essai-aide"
 					class="block w-full resize-y border border-smoke bg-ink px-4 py-3 text-bone transition-colors hover:border-ash"

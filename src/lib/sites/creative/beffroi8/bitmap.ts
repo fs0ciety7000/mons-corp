@@ -62,6 +62,9 @@ function layout(bf: LoadedBitmapFont, text: string, maxWidth: number) {
 					if (width(cut + ch) > maxWidth) break;
 					cut += ch;
 				}
+				// A single glyph wider than the box still takes its own line (the canvas crops it):
+				// never an empty cut, which would loop forever.
+				if (!cut) cut = [...w][0];
 				lines.push(cut);
 				w = w.slice(cut.length);
 			}

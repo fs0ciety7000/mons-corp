@@ -1,5 +1,8 @@
 import raw from './manifest.json';
+import { fontFace } from './pixel.ts';
 import type { FontStyle, Glyph, Manifest } from './types.ts';
+
+export { ASSET_BASE, asset, fontFace, NNBSP, pixelVars, pua } from './pixel.ts';
 
 /**
  * Beffroi 8 specimen data (creative.cardormedia.com/beffroi-8). Everything on the page is
@@ -7,17 +10,6 @@ import type { FontStyle, Glyph, Manifest } from './types.ts';
  * without any code change.
  */
 export const manifest = raw as Manifest;
-
-/** Public base of the synchronised `dist/` (static/sites/creative/beffroi-8/). */
-export const ASSET_BASE = '/sites/creative/beffroi-8/';
-
-/** Narrow no-break space (U+202F), before ! ? ; : and inside « » in French. */
-export const NNBSP = String.fromCharCode(0x202f);
-
-/** A Private Use Area character, written by code point so sources stay readable. */
-export const pua = (cp: number) => String.fromCodePoint(cp);
-
-export const asset = (path: string) => ASSET_BASE + path;
 
 /** Complete archive, named by the font's build (`beffroi-vX.Y.Z.zip`, ARCHITECTURE §3). */
 export const zipPath = `beffroi-v${manifest.version}.zip`;
@@ -85,26 +77,5 @@ export function missingChars(style: FontStyle, text: string) {
 	return [...missing];
 }
 
-/**
- * Inline CSS custom properties that size a `.pixel` element (see pixel.css): the CSS
- * font-size is always `grid × k` px, a whole multiple of the grid, so every font pixel
- * covers exactly k CSS pixels.
- */
-export function pixelVars(style: FontStyle, k?: number) {
-	const vars = [
-		`--pixel-family: '${style.cssFamily}'`,
-		`--pixel-weight: ${style.cssWeight}`,
-		`--pixel-grid: ${style.grid}`,
-		`--pixel-lh: ${style.metrics.lineHeight}`
-	];
-	if (k) vars.push(`--pixel-k: ${k}`);
-	return vars.join('; ');
-}
-
 /** `@font-face` rules for every style of the manifest (same sources as fonts/css/beffroi.css). */
-export const fontFaces = manifest.styles
-	.map(
-		(s) =>
-			`@font-face{font-family:'${s.cssFamily}';src:url('${asset(s.files.woff2)}') format('woff2'),url('${asset(s.files.ttf)}') format('truetype');font-weight:${s.cssWeight};font-style:normal;font-display:swap}`
-	)
-	.join('');
+export const fontFaces = manifest.styles.map(fontFace).join('');

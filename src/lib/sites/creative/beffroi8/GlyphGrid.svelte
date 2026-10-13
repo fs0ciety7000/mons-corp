@@ -5,7 +5,7 @@
 	import { gsap } from '#lib/motion/gsap.ts';
 	import { onFirstView, prefersReducedMotion } from '#lib/motion/tokens.ts';
 	import ChoiceGroup from './ChoiceGroup.svelte';
-	import { crisp } from './crisp.ts';
+	import { crisp, wipe } from './crisp.ts';
 	import { copyText } from './copy.ts';
 	import {
 		categoriesOf,
@@ -29,16 +29,71 @@
 	let cat = $state('all');
 	const glyphs = $derived(style.glyphs.filter((g) => inCategory(g, cat)));
 
-	/** Cells are 76 px wide (4 per row at 360 px); a glyph wider than a cell spans two. */
-	const CELL_K = 4;
-	const wide = (g: Glyph) => g.advance * CELL_K > 60;
+	/**
+	 * Cells are 76 px wide (4 per row at 360 px) with an 8 px gap. Glyphs are drawn about 32 px
+	 * tall whatever the grid (×4 on 8 px, ×2 on 16 px, ×6 on 5 px); a glyph wider than one
+	 * cell spans as many columns as its CSS width needs.
+	 */
+	const CELL = 76;
+	const GAP = 8;
+	const cellK = $derived(Math.max(1, Math.round(32 / style.grid)));
+	const lineBox = $derived(style.metrics.lineHeight * cellK);
+	const span = (g: Glyph) =>
+		Math.max(1, Math.ceil((g.advance * cellK + 2 + 2 * GAP + GAP) / (CELL + GAP)));
+
+	// Roving tabindex: one Tab stop for the whole grid, arrows move inside it.
+	let rovingCp = $state<number | null>(null);
+	const focusCp = $derived(
+		rovingCp !== null && glyphs.some((g) => g.cp === rovingCp) ? rovingCp : glyphs[0]?.cp
+	);
+
+	function onKeydown(e: KeyboardEvent) {
+		const buttons = [...(list?.querySelectorAll<HTMLButtonElement>('button.cell') ?? [])];
+		const i = buttons.indexOf(document.activeElement as HTMLButtonElement);
+		if (i < 0) return;
+		let next: number;
+		if (e.key === 'ArrowRight') next = Math.min(i + 1, buttons.length - 1);
+		else if (e.key === 'ArrowLeft') next = Math.max(i - 1, 0);
+		else if (e.key === 'Home') next = 0;
+		else if (e.key === 'End') next = buttons.length - 1;
+		else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+			// Same column on the next / previous row, from the layout itself (spans vary).
+			const r = buttons[i].getBoundingClientRect();
+			const x = r.left + r.width / 2;
+			const down = e.key === 'ArrowDown';
+			const rows = buttons
+				.map((b, j) => ({ j, r: b.getBoundingClientRect() }))
+				.filter(({ r: o }) => (down ? o.top > r.bottom - 1 : o.bottom < r.top + 1));
+			if (rows.length) {
+				const top = down
+					? Math.min(...rows.map((o) => o.r.top))
+					: Math.max(...rows.map((o) => o.r.top));
+				const row = rows.filter((o) => o.r.top === top);
+				row.sort(
+					(a, b) => Math.abs(a.r.left + a.r.width / 2 - x) - Math.abs(b.r.left + b.r.width / 2 - x)
+				);
+				next = row[0].j;
+			} else next = i;
+		} else return;
+		e.preventDefault();
+		buttons[next].focus();
+	}
 
 	let activeCp = $state(65);
 	const active = $derived(
 		style.glyphs.find((g) => g.cp === activeCp) ?? style.glyphs.find((g) => !isBlank(g))!
 	);
-	/** Inspector scale: as large as fits 240 px, between ×4 and ×16. */
-	const bigK = $derived(Math.max(4, Math.min(16, Math.floor(240 / Math.max(active.advance, 1)))));
+	/** Inspector scale: as large as fits 240 × 160 px, at most ×16. */
+	const bigK = $derived(
+		Math.max(
+			1,
+			Math.min(
+				16,
+				Math.floor(240 / Math.max(active.advance, 1)),
+				Math.floor(160 / style.metrics.lineHeight)
+			)
+		)
+	);
 
 	let message = $state('');
 	let copied = $state<number | null>(null);
@@ -66,7 +121,7 @@
 		const stop = onFirstView(node, () => {
 			const cells = node.querySelectorAll('[data-cell]');
 			tween = prefersReducedMotion()
-				? gsap.fromTo(cells, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 })
+				? gsap.fromTo(cells, { opacity: 0 }, { opacity: 1, duration: 0.3 })
 				: gsap.fromTo(
 						cells,
 						{ clipPath: 'inset(100% 0% 0% 0%)' },
@@ -109,7 +164,7 @@
 
 		<div
 			class="col-span-4 flex flex-col gap-6 md:col-span-8 lg:col-span-12"
-			use:reveal={{ type: 'block', delay: 0.15 }}
+			use:wipe={{ delay: 0.15 }}
 		>
 			{#if manifest.styles.length > 1}
 				<ChoiceGroup
@@ -175,31 +230,38 @@
 		</aside>
 
 		<div class="col-span-4 min-w-0 md:col-span-8 lg:col-span-8">
-			<p id="glyphes-aide" class="sr-only">Activer un glyphe copie le caractère.</p>
+			<p id="glyphes-aide" class="sr-only">
+				Flèches pour parcourir les glyphes, Entrée pour copier le caractère.
+			</p>
 			<ul
 				bind:this={list}
 				class="cells"
-				style={pixelVars(style, CELL_K)}
+				style="{pixelVars(style, cellK)}; --cell-line: {lineBox}px"
 				aria-label="{glyphs.length} glyphes"
 				use:crisp
 			>
 				{#each glyphs as g (g.cp)}
-					<li class={[wide(g) && 'wide']} data-cell>
+					<li style="grid-column: span {span(g)}" data-cell>
 						<button
 							type="button"
 							class={['cell', copied === g.cp && 'is-copied', activeCp === g.cp && 'is-active']}
 							aria-label="{glyphName(g)}, {codepoint(g.cp)}"
 							aria-describedby="glyphes-aide"
+							tabindex={g.cp === focusCp ? 0 : -1}
 							data-cursor="Copier"
 							onpointerenter={() => (activeCp = g.cp)}
-							onfocus={() => (activeCp = g.cp)}
+							onfocus={() => {
+								activeCp = g.cp;
+								rovingCp = g.cp;
+							}}
 							onclick={() => copy(g)}
+							onkeydown={onKeydown}
 						>
 							<span class="glyph" aria-hidden="true">
 								{#if isBlank(g)}
 									<span
 										class="blank"
-										style="width: {g.advance * CELL_K}px; height: {style.metrics.cap * CELL_K}px"
+										style="width: {g.advance * cellK}px; height: {style.metrics.cap * cellK}px"
 									></span>
 								{:else}
 									<span class="pixel">{g.char}</span>
@@ -267,16 +329,14 @@
 		grid-auto-flow: dense;
 		gap: 8px;
 	}
-	.cells .wide {
-		grid-column: span 2;
-	}
 	.cell {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
+		gap: 6px;
 		width: 100%;
-		height: 88px;
+		height: 100%;
 		padding: 10px 0 6px;
 		border: 1px solid var(--color-smoke);
 		background: var(--color-ink);
@@ -303,7 +363,7 @@
 	.glyph {
 		display: grid;
 		place-items: center;
-		height: 40px;
+		height: var(--cell-line);
 	}
 	.blank {
 		display: block;

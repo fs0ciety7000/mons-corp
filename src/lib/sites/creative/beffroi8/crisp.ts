@@ -35,7 +35,8 @@ export const crisp: Action<HTMLElement> = (node) => {
 /**
  * use:wipe — entrance for pixel blocks: a stepped clip-path wipe, top → bottom (motion report
  * §1: « entrée en scène, jamais apparition »). Clip only, never a transform, so `use:crisp`
- * inside keeps measuring the final position. Reduced motion: 0.3 s fade.
+ * inside keeps measuring the final position. Clip and opacity never hide controls from Tab;
+ * focus inside finishes the wipe at once. Reduced motion: 0.3 s opacity fade.
  */
 export const wipe: Action<HTMLElement, { delay?: number; steps?: number } | undefined> = (
 	node,
@@ -45,7 +46,8 @@ export const wipe: Action<HTMLElement, { delay?: number; steps?: number } | unde
 	let tween: gsap.core.Tween | null = null;
 	let stop = () => {};
 	if (prefersReducedMotion()) {
-		tween = gsap.fromTo(node, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, delay });
+		// Opacity only, never visibility: controls inside stay reachable with Tab.
+		tween = gsap.fromTo(node, { opacity: 0 }, { opacity: 1, duration: 0.3, delay });
 	} else {
 		tween = gsap.fromTo(
 			node,
@@ -59,7 +61,15 @@ export const wipe: Action<HTMLElement, { delay?: number; steps?: number } | unde
 				clearProps: 'clipPath'
 			}
 		);
-		stop = onFirstView(node, () => tween?.play());
+		const play = () => tween?.play();
+		const stopView = onFirstView(node, play);
+		// Keyboard users reach the block before it has scrolled in: show it at once.
+		const focus = () => tween?.progress(1);
+		node.addEventListener('focusin', focus);
+		stop = () => {
+			stopView();
+			node.removeEventListener('focusin', focus);
+		};
 	}
 	return {
 		destroy() {

@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { onDestroy } from 'svelte';
 	import SectionHead from '#lib/sites/division/SectionHead.svelte';
-	import { reveal } from '#lib/motion/actions.ts';
 	import { site } from '#lib/sites/config.ts';
 	import { crisp, wipe } from './crisp.ts';
 	import { copyText } from './copy.ts';
@@ -78,9 +78,12 @@ this.add
 		const ok = await copyText(code);
 		message = ok ? `Extrait « ${title} » copié.` : 'Copie impossible : sélectionnez le code.';
 		copiedId = ok ? id : null;
-		setTimeout(() => (copiedId = null), 1600);
+		clearTimeout(timer);
+		timer = setTimeout(() => (copiedId = null), 1600);
 	}
 	let copiedId = $state<string | null>(null);
+	let timer: ReturnType<typeof setTimeout> | undefined;
+	onDestroy(() => clearTimeout(timer));
 </script>
 
 <section id="telecharger" class="relative section-y" aria-labelledby="telecharger-title">
@@ -93,13 +96,7 @@ this.add
 
 	<div class="grid-cardor mt-12 gap-y-10 md:mt-16">
 		<div class="col-span-4 min-w-0 space-y-8 md:col-span-8 lg:col-span-5">
-			<a
-				href={asset(zipPath)}
-				download
-				class="zip group"
-				data-cursor="Télécharger"
-				use:reveal={{ type: 'block' }}
-			>
+			<a href={asset(zipPath)} download class="zip group" data-cursor="Télécharger" use:wipe>
 				<span class="label text-ash">Archive complète · v{manifest.version}</span>
 				<span class="font-display text-h2"
 					>Tout <em class="text-signal">télécharger</em>
@@ -113,7 +110,7 @@ this.add
 				>
 			</a>
 
-			<div class="license" use:reveal={{ type: 'block', delay: 0.1 }}>
+			<div class="license" use:wipe={{ delay: 0.1 }}>
 				<p class="label text-signal">Licence · {manifest.license}</p>
 				<p class="mt-3 font-display text-lead italic">{license.title}.</p>
 				<p class="mt-3 text-ash">{license.text}</p>
@@ -163,10 +160,7 @@ this.add
 		</ul>
 
 		{#each snippets as sn, i (sn.id)}
-			<figure
-				class="col-span-4 min-w-0 md:col-span-8 lg:col-span-6"
-				use:reveal={{ type: 'block', delay: 0.1 * i }}
-			>
+			<figure class="col-span-4 min-w-0 md:col-span-8 lg:col-span-6" use:wipe={{ delay: 0.1 * i }}>
 				<figcaption class="code-head">
 					<span class="label text-ash">{sn.title}</span>
 					<button

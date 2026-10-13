@@ -18,7 +18,7 @@
 {:else if SITE === 'sound'}
 	<SoundHome releases={data.releases} />
 {:else if SITE === 'creative'}
-	<CreativeHome />
+	<CreativeHome beffroi={data.beffroi} />
 {:else if SITE === 'apps'}
 	<AppsHome />
 {:else}
