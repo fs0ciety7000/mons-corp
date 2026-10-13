@@ -125,6 +125,18 @@
 				"emblems": ["creative"],
 				"alt": "Beffroi 8, la police pixel de CARDOR Media — le Singe du Grand-Garde"
 			}
+		},
+		"privatix-jdr": {
+			"path": "/privatix-jdr",
+			"title": "Privatix, le jeu de rôle — livret gratuit par CM Creative Lab",
+			"description": "Un jeu de rôle sur table : des cheminots défendent la gare de Mons contre une mégacorporation. Règles en dix minutes, trois scénarios, PDF gratuits.",
+			"og": {
+				"kicker": "Jeu de rôle sur table · CM Creative Lab",
+				"heading": "Privatix, <i>le jeu de rôle</i>",
+				"sub": "3 à 6 joueurs + la Voix · une soirée · gratuit",
+				"emblems": ["creative"],
+				"alt": "Privatix, le jeu de rôle, livret de CM Creative Lab — le Singe du Grand-Garde"
+			}
 		}
 	},
 	"apps": {

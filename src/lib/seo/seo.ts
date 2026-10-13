@@ -2,7 +2,7 @@ import pages from './pages.json';
 import { socials } from '#lib/data/social.ts';
 import { SITE, site as current, siteUrl, divisionSites, type SiteId } from '#lib/sites/config.ts';
 
-export type PageKey = 'home' | 'contact' | 'marque' | 'beffroi-8';
+export type PageKey = 'home' | 'contact' | 'marque' | 'beffroi-8' | 'privatix-jdr';
 
 interface PageSeo {
 	path: string;

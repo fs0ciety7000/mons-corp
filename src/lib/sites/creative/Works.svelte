@@ -2,7 +2,7 @@
 	import SectionHead from '#lib/sites/division/SectionHead.svelte';
 	import { catalog } from '#lib/sites/apps/catalog.ts';
 	import { reveal } from '#lib/motion/actions.ts';
-	import { site } from '#lib/sites/config.ts';
+	import { site, sites } from '#lib/sites/config.ts';
 	import type { DivisionContent } from '#lib/sites/division/types.ts';
 	import '#lib/sites/creative/beffroi8/pixel.css';
 	import { crisp, wipe } from '#lib/sites/creative/beffroi8/crisp.ts';
@@ -25,6 +25,9 @@
 		catalog.filter((a) => a.studio === 'creative' && !(beffroi && a.id === 'beffroi-8'))
 	);
 	const sample = `Ça déménage${NNBSP}! ♥ ★ ${pua(0xe000)}`;
+	/** Works published on this very site (e.g. /privatix-jdr) open in place, by path. */
+	const own = sites.creative.urls.production;
+	const local = (url: string) => (url.startsWith(`${own}/`) ? url.slice(own.length) : null);
 </script>
 
 <svelte:head>
@@ -71,9 +74,9 @@
 		{#each works as w (w.id)}
 			<li class="col-span-4 lg:col-span-3">
 				<a
-					href={w.url}
-					target="_blank"
-					rel="noopener"
+					href={local(w.url) ?? w.url}
+					target={local(w.url) ? undefined : '_blank'}
+					rel={local(w.url) ? undefined : 'noopener'}
 					class="work group"
 					use:reveal={{ type: 'block' }}
 				>
@@ -93,7 +96,7 @@
 							<h3 class="font-display text-h2">{w.name}</h3>
 							<span
 								class="label text-ash transition-colors group-hover:text-signal"
-								aria-hidden="true">↗</span
+								aria-hidden="true">{local(w.url) ? '→' : '↗'}</span
 							>
 						</div>
 						<p class="label text-ash">{w.category}</p>

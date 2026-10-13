@@ -1,0 +1,46 @@
+{
+  "version": "0.1.0-dev",
+  "commit": "d6cbdcb",
+  "files": [
+    {
+      "id": "livret-ecran",
+      "label": "Livret (écran)",
+      "file": "privatix-jdr-livret-ecran-v0.1.0-dev.pdf",
+      "pages": 100,
+      "bytes": 2833425,
+      "sha256": "d18c963a3792dc0be40abc0abb74d0a830ddcea8f7991fef8ecc4ce516e77c20"
+    },
+    {
+      "id": "livret-impression",
+      "label": "Livret (impression, fonds perdus)",
+      "file": "privatix-jdr-livret-impression-v0.1.0-dev.pdf",
+      "pages": 100,
+      "bytes": 7441269,
+      "sha256": "f69b0332107e2f70cb107e9275665c23380ceb89ed2e3951c1eac86183158a44"
+    },
+    {
+      "id": "fiches-personnage",
+      "label": "Fiches de personnage (A4)",
+      "file": "privatix-jdr-fiches-personnage-v0.1.0-dev.pdf",
+      "pages": 7,
+      "bytes": 646378,
+      "sha256": "c52ffc684cfc8301844c333807c1fbc9086ceb57b3250c79ca514ee81ebe41aa"
+    },
+    {
+      "id": "ecran-de-la-voix",
+      "label": "Écran de la Voix (A4)",
+      "file": "privatix-jdr-ecran-de-la-voix-v0.1.0-dev.pdf",
+      "pages": 1,
+      "bytes": 95812,
+      "sha256": "402a897dbcc23f231e856429e494346917879f8804f6fda0dd080d91037a0ed9"
+    },
+    {
+      "id": "cartes-complications",
+      "label": "Cartes de Complication (A4)",
+      "file": "privatix-jdr-cartes-complications-v0.1.0-dev.pdf",
+      "pages": 3,
+      "bytes": 123871,
+      "sha256": "728e8a13ad352abd585f409b27c03303022ee1cfe3f64b6084b7b66982a7ffde"
+    }
+  ]
+}

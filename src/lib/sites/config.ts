@@ -107,6 +107,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 			{ href: '/#ateliers', label: 'Ateliers' },
 			{ href: '/#methode', label: 'Méthode' },
 			{ href: '/beffroi-8', label: 'Beffroi 8' },
+			{ href: '/privatix-jdr', label: 'Jeu de rôle' },
 			{ href: '/contact', label: 'Contact' }
 		],
 		urls: {
