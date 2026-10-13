@@ -28,3 +28,10 @@
 - **Performance** : seul le WOFF2 du premier style est préchargé ; `@font-face` générés depuis le manifest, en ligne (pas de requête CSS bloquante).
 - **Accueil** : la carte Beffroi 8 reçoit sa police et ses métriques du `load` serveur prérendu (`beffroi8/home-card.server.ts`) ; elle n'importe que `beffroi8/pixel.ts`, sans manifest, qui reste dans le seul paquet du spécimen.
 - **Clavier** : une seule tabulation pour la grille des glyphes (tabindex mobile ; flèches, Origine, Fin). Les blocs qui contiennent des contrôles entrent par `use:wipe` (clip et opacité, jamais `visibility`) : ils restent atteignables au Tab avant d'avoir été révélés.
+
+## 🎲 Privatix, le jeu de rôle (`/privatix-jdr`)
+
+- **Route** : `src/routes/privatix-jdr/` sur le modèle de `/beffroi-8` (prérendue sur creative, 404 ailleurs). Entrée de navigation « Jeu de rôle », sitemap et carte OG via `src/lib/seo/pages.json`, entrée du lanceur (`catalog.ts`, icône `privatix.png`, couverture `covers/privatix-jdr.webp`) ; la carte apparaît aussi dans « Premières planches » et s'ouvre dans l'onglet courant (lien du site lui-même).
+- **Fichiers** : `static/sites/creative/privatix-jdr/` est synchronisé par `scripts/sync-mons-corp.sh` du dépôt `privatix-jdr` (5 PDF versionnés, `manifest.json`, `SOURCE.md` ; jamais modifiés à la main). La page lit le manifest au build (`src/lib/sites/creative/privatix-jdr/content.ts`) : liens, noms de téléchargement, pages et poids en découlent, aucun nom de fichier en dur. Seuls les intitulés affichés sont associés aux `id` du manifest.
+- **Aperçus** : `apercu-couverture.webp`, `apercu-classe.webp` (pp. 26-27), `apercu-bestiaire.webp` (p. 43), rendus du livret écran (`pdftoppm -r 110`, WebP q82), dans le même dossier. À régénérer si la mise en page de ces pages change.
+- **Motion** : `use:reveal` pour les textes, `use:wipe` (clip, focus-safe) pour les blocs qui contiennent des liens ; mouvement réduit : fondus 0,3 s.

@@ -212,6 +212,23 @@ export const catalog: AppEntry[] = [
 		keywords: 'illustration concept art affiches presse personnages'
 	},
 	{
+		id: 'privatix-jdr',
+		name: 'Privatix, le jeu de rôle',
+		studio: 'creative',
+		kind: 'creation',
+		category: 'Jeu de rôle sur table · Livret PDF',
+		pitch:
+			'Des cheminots en 3x8 défendent la gare de Mons : règles en dix minutes, six métiers, trois scénarios.',
+		url: 'https://creative.cardormedia.com/privatix-jdr',
+		status: 'En ligne',
+		access: 'public',
+		platforms: ['PDF', 'Impression'],
+		icon: '/sites/apps/icons/privatix.png',
+		cover: '/sites/apps/covers/privatix-jdr.webp',
+		keywords:
+			'jdr jeu de role table livret pdf imprimer scenarios cheminots gare mons tasse ballast soiree gratuit'
+	},
+	{
 		id: 'empire-bible',
 		name: 'Bible visuelle Cosmic Empires',
 		studio: 'creative',
