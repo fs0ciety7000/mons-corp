@@ -1,6 +1,9 @@
 import type { DivisionContent } from '#lib/sites/division/types.ts';
 
-/** The reading platform built by CM Publishing (fs0ciety7000/cardor-publishing). */
+/**
+ * The reading platform built by CM Publishing (fs0ciety7000/cardor-publishing). Pre-production
+ * for now; it moves to lire.cardormedia.com when it goes live (ADR-014).
+ */
 export const platform = {
 	url: 'https://publishing.fs0ciety.org/',
 	themes: 'https://publishing.fs0ciety.org/labo/themes',

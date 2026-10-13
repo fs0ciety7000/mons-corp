@@ -1,27 +1,29 @@
 # Sites des divisions : brief PM
 
-> Lot 2 · 2026-10-10 · Statut : ✅ G1/G2/G3 validés pour la v0.1 des trois sites.
+> Lot 2 · 2026-10-10 · Statut : ✅ G1/G2/G3 validés pour la v0.1 des trois sites. CM Publishing ajouté le 2026-10-13 (ADR-014, rapport `publishing.md`).
 
 ## Objectif
 
 Donner à chaque division son propre site, sur son sous-domaine, **sous la même charte que la maison mère** mais avec sa personnalité : couleur primaire, emblème du cortège montois, contenu, signature de mouvement.
 
-| Site            | Production                  | Préproduction (Coolify)      | Signal                | Emblème           | Signature motion                                           |
-| --------------- | --------------------------- | ---------------------------- | --------------------- | ----------------- | ---------------------------------------------------------- |
-| CARDOR Media    | cardormedia.com             | cardor.fs0ciety.org          | Ember `#FF3B1F`       | Car d'Or + roue   | La roue qui roule                                          |
-| CM Interactive  | interactive.cardormedia.com | occ-interactive.fs0ciety.org | Acid `#C6FF3D`        | Dragon (low-poly) | **Glitch** : texte brouillé, facettes, easing `snap`       |
-| CM Soundworks   | sound.cardormedia.com       | occ-soundworks.fs0ciety.org  | Ultraviolet `#7B5CFF` | Beffroi (ondes)   | **Onde** : drone génératif WebAudio, le Noyau pulse au son |
-| CM Creative Lab | creative.cardormedia.com    | occ-creative.fs0ciety.org    | Amber `#FFB547`       | Singe (encre)     | **Encre** : traînée d'encre au curseur, titres tracés      |
+| Site            | Production                  | Préproduction (Coolify)      | Signal                | Emblème             | Signature motion                                                                    |
+| --------------- | --------------------------- | ---------------------------- | --------------------- | ------------------- | ----------------------------------------------------------------------------------- |
+| CARDOR Media    | cardormedia.com             | cardor.fs0ciety.org          | Ember `#FF3B1F`       | Car d'Or + roue     | La roue qui roule                                                                   |
+| CM Interactive  | interactive.cardormedia.com | occ-interactive.fs0ciety.org | Acid `#C6FF3D`        | Dragon (low-poly)   | **Glitch** : texte brouillé, facettes, easing `snap`                                |
+| CM Soundworks   | sound.cardormedia.com       | occ-soundworks.fs0ciety.org  | Ultraviolet `#7B5CFF` | Beffroi (ondes)     | **Onde** : drone génératif WebAudio, le Noyau pulse au son                          |
+| CM Creative Lab | creative.cardormedia.com    | occ-creative.fs0ciety.org    | Amber `#FFB547`       | Singe (encre)       | **Encre** : traînée d'encre au curseur, titres tracés                               |
+| CM Publishing   | publishing.cardormedia.com  | cm-publishing.fs0ciety.org   | Cuivre `#D08A5C`      | Châsse (orfèvrerie) | **Page** : lettres qui se lèvent, liseuse caméléon, le livre s'ouvre dans la châsse |
 
 ## Architecture (ADR-008)
 
-Un seul code source, quatre builds. `PUBLIC_SITE` (`holding` · `interactive` · `sound` · `creative`) est lu au build (`vite.config.ts` → constante `__SITE__`) et `PUBLIC_DEPLOY_ENV` (`production` · `staging`) choisit les URL croisées. Voir `docs/tech-agent-instructions.md` ADR-008.
+Un seul code source, six builds. `PUBLIC_SITE` (`holding` · `interactive` · `sound` · `creative` · `publishing` · `apps`) est lu au build (`vite.config.ts` → constante `__SITE__`) et `PUBLIC_DEPLOY_ENV` (`production` · `staging`) choisit les URL croisées. Voir `docs/tech-agent-instructions.md` ADR-008.
 
 ## Contenu : règles PM
 
 - **Interactive** reprend le contenu réel du studio (`studios.fs0ciety.org`) : 15 projets (dont un en test), méthode Esquisse → Lancement, deux disciplines.
 - **Soundworks** et **Creative Lab** n'ont pas encore de références publiques : **on n'invente aucun client ni chiffre**. On présente les savoir-faire, la méthode et une démonstration interactive (son génératif, encre), plus un bloc « Premières productions : bientôt ».
-- Chaque site renvoie vers la maison mère et vers les deux studios frères.
+- **Publishing** présente la maison d'édition ; sa plateforme (liseuse et auto-édition, dépôt `fs0ciety7000/cardor-publishing`) est un produit à part, au design indépendant, en préprod sur `publishing.fs0ciety.org` puis sur **`lire.cardormedia.com`** à sa mise en production. Catalogue de démonstration : aucun auteur ni titre présenté comme réel.
+- Chaque site renvoie vers la maison mère et vers les studios frères.
 
 ## Definition of Done (en plus de `CLAUDE.md` § 7)
 
