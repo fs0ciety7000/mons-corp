@@ -113,6 +113,18 @@
 				"emblems": ["creative"],
 				"alt": "Contact CM Creative Lab — le Singe du Grand-Garde"
 			}
+		},
+		"beffroi-8": {
+			"path": "/beffroi-8",
+			"title": "Beffroi 8 — police pixel de CARDOR Media, par CM Creative Lab",
+			"description": "Beffroi 8, la police pixel maison de CARDOR Media pour les jeux rétro de CM Interactive : essai en direct, tous les glyphes, HUD et téléchargements.",
+			"og": {
+				"kicker": "Police pixel · CM Creative Lab × CM Interactive",
+				"heading": "Beffroi <i>8</i>",
+				"sub": "Le carillon en pixels.",
+				"emblems": ["creative"],
+				"alt": "Beffroi 8, la police pixel de CARDOR Media — le Singe du Grand-Garde"
+			}
 		}
 	},
 	"apps": {

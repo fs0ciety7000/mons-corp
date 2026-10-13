@@ -75,6 +75,6 @@ export const content: DivisionContent = {
 	},
 	soon: {
 		title: { before: 'Premières', em: 'planches.' },
-		text: 'Un artbook et un press kit de jeu, une bible visuelle d’univers, une identité de marque : les premiers carnets de l’atelier, à feuilleter en ligne.'
+		text: 'Une police pixel, un artbook et un press kit de jeu, une bible visuelle d’univers, une identité de marque : les premiers carnets de l’atelier, à feuilleter en ligne.'
 	}
 };

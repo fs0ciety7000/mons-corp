@@ -17,3 +17,12 @@
 
 - `src/lib/sites/creative/InkTrail.svelte` : canvas plein écran `pointer-events: none`, rendu sur `gsap.ticker` (ADR-004), DPR ≤ 2, effacement par `destination-out`.
 - Build : `PUBLIC_SITE=creative`.
+
+## 🔤 Spécimen Beffroi 8 (`/beffroi-8`, première production de l'atelier)
+
+- **Route** : `src/routes/beffroi-8/` ; 404 hors du site creative (même garde que `/marque`), prérendue sur creative. Entrée de navigation « Beffroi 8 », sitemap et carte OG via `src/lib/seo/pages.json`, carte « Premières planches » sur l'accueil.
+- **Données** : `src/lib/sites/creative/beffroi8/manifest.json` et `static/sites/creative/beffroi-8/` sont synchronisés par `scripts/sync-mons-corp.sh` du dépôt `beffroi-8` (jamais modifiés à la main, manifest exclu de Prettier). Types : `beffroi8/types.ts` (miroir de `schema/manifest.schema.json`). Toute la page dérive du manifest : un nouveau style (Bold, 16 Display, 5 Mini) apparaît sans changement de code.
+- **Rendu net** (`beffroi8/pixel.css`) : `font-size = grille × k` px avec k entier, interligne en pixels de police, `font-synthesis: none`, lissage coupé. Variables locales à la page, pas de nouveau token de thème : `--pixel-family`, `--pixel-weight`, `--pixel-grid`, `--pixel-lh` (posées par `pixelVars()`), `--pixel-k` (échelle) et `--pixel-px` (un pixel de police en px CSS, pour bordures et marges des démos). `use:crisp` annule la fraction de pixel laissée par la grille fluide.
+- **Canvas maison** : atlas BMFont `.json` + `.png` chargés à l'approche de la section, dessin à l'échelle entière (`imageSmoothingEnabled = false`), redessiné à chaque saisie, sans boucle d'animation.
+- **Motion** : titre « imprimé » colonne par colonne (`steps(n)`, n = largeur en pixels de police), blocs pixel en volet `clip-path` à pas (`use:wipe`, jamais de transform sous `use:crisp`), score qui défile (`cardor.snap`), dialogue tapé ; clignotement à 1 Hz. Mouvement réduit : fondus 0,3 s, textes complets, clignotement figé.
+- **Performance** : seul le WOFF2 du premier style est préchargé ; `@font-face` générés depuis le manifest, en ligne (pas de requête CSS bloquante).
