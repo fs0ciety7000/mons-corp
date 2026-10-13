@@ -36,6 +36,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 			'CARDOR Media est une holding de divertissement : jeux vidéo et web 3D, son et doublage, illustration et récit. Trois studios, un seul noyau créatif.',
 		nav: [
 			{ href: '/#divisions', label: 'Divisions' },
+			{ href: '/#sorties', label: 'Sorties' },
 			{ href: '/#manifeste', label: 'Manifeste' },
 			{ href: '/contact', label: 'Contact' }
 		],
@@ -82,6 +83,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 		nav: [
 			{ href: '/#savoir-faire', label: 'Savoir-faire' },
 			{ href: '/#chaine', label: 'Chaîne' },
+			{ href: '/#experiences', label: 'Carillon' },
 			{ href: '/contact', label: 'Contact' }
 		],
 		urls: {

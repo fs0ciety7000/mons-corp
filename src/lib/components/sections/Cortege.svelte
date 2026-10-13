@@ -65,7 +65,7 @@
 	aria-labelledby="cortege-title"
 >
 	<div class="grid-cardor gap-y-8">
-		<p class="col-span-4 label text-ash md:col-span-2 lg:col-span-3" use:reveal>[03] — Héritage</p>
+		<p class="col-span-4 label text-ash md:col-span-2 lg:col-span-3" use:reveal>[04] — Héritage</p>
 		<div class="col-span-4 md:col-span-8 lg:col-span-9">
 			<h2 id="cortege-title" class="font-display text-display" use:reveal={{ type: 'chars' }}>
 				Nés à Mons, <em class="text-or">sous le signe</em> du Doudou.
