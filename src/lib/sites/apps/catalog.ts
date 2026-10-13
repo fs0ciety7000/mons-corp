@@ -137,6 +137,14 @@ export const catalog: AppEntry[] = [
 		keywords:
 			'murder party enquête coopérative multijoueur amis polar ducasse beffroi carillon mons soirée'
 	}),
+	fromSheet('arbre-aux-absents', {
+		kind: 'jeu',
+		access: 'public',
+		platforms: ['Navigateur', 'Windows', 'macOS', 'Linux', 'Android'],
+		links: [{ label: 'itch.io', url: 'https://cardorinteractive.itch.io/arbre-aux-absents' }],
+		keywords:
+			'enquête généalogique arbre généalogique famille archives registres lettres solo roottrees velmarche'
+	}),
 	fromSheet('carillon-casse-briques', {
 		kind: 'jeu',
 		access: 'public',
@@ -340,10 +348,10 @@ export const host = (url: string) => new URL(url).host;
 
 /** Latest releases shown on cardormedia.com, newest first: at least one per studio. */
 export const latest: string[] = [
+	'arbre-aux-absents',
 	'carillon-collectif',
 	'lumecon',
 	'privatix-jdr',
 	'meurtre-au-beffroi',
-	'arcade-cardor',
-	'carillon-casse-briques'
+	'arcade-cardor'
 ];

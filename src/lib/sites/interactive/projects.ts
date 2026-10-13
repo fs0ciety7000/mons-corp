@@ -148,6 +148,25 @@ export const projects: Project[] = [
 		schema: { category: 'GameApplication', os: 'Web' }
 	},
 	{
+		id: 'arbre-aux-absents',
+		name: 'L’Arbre aux absents',
+		kind: 'jeu',
+		category: 'Jeu · Enquête généalogique',
+		status: 'En ligne',
+		url: 'https://arbre.cardormedia.com',
+		pitch: 'Une famille effacée des registres. À vous de lui rendre ses noms.',
+		text: 'Un jeu d’enquête généalogique en solo, gratuit, dans un pays imaginaire. Lettres, actes, photographies et coupures de presse : on lit, on cherche aux archives, on recoupe, et l’on reconstitue l’arbre d’une famille sur quatre générations. Écrit et illustré avec CM Creative Lab.',
+		features: [
+			'30 personnes à identifier, 118 documents, plusieurs fins',
+			'Carte gravée et aquarellée de la Velmarche',
+			'Souris, tactile, clavier seul ou manette'
+		],
+		stack: 'Svelte 5 · TypeScript · Vite · Tauri 2 · SvelteKit',
+		cover: '/sites/interactive/projects/arbre-aux-absents.webp',
+		stat: { value: '30', label: 'absents à nommer' },
+		schema: { category: 'GameApplication', os: 'Web, Windows, macOS, Linux, Android' }
+	},
+	{
 		id: 'arcade-cardor',
 		name: 'L’Arcade CARDOR',
 		kind: 'jeu',
