@@ -1,46 +1,46 @@
 {
-  "version": "0.1.0-dev",
-  "commit": "d6cbdcb",
+  "version": "1.0.0",
+  "commit": "07fea88",
   "files": [
     {
       "id": "livret-ecran",
       "label": "Livret (écran)",
-      "file": "privatix-jdr-livret-ecran-v0.1.0-dev.pdf",
+      "file": "privatix-jdr-livret-ecran-v1.0.0.pdf",
       "pages": 100,
-      "bytes": 2833425,
-      "sha256": "d18c963a3792dc0be40abc0abb74d0a830ddcea8f7991fef8ecc4ce516e77c20"
+      "bytes": 2833423,
+      "sha256": "e6c44fd472cc36bfd399f53bdcb31961660c5e38239554330d6629d0d7ee87a0"
     },
     {
       "id": "livret-impression",
       "label": "Livret (impression, fonds perdus)",
-      "file": "privatix-jdr-livret-impression-v0.1.0-dev.pdf",
+      "file": "privatix-jdr-livret-impression-v1.0.0.pdf",
       "pages": 100,
-      "bytes": 7441269,
-      "sha256": "f69b0332107e2f70cb107e9275665c23380ceb89ed2e3951c1eac86183158a44"
+      "bytes": 7441268,
+      "sha256": "e1e8f317e2442aa119ef5cc589c223f963473a04ce8d2342a22f4f5e08fc323d"
     },
     {
       "id": "fiches-personnage",
       "label": "Fiches de personnage (A4)",
-      "file": "privatix-jdr-fiches-personnage-v0.1.0-dev.pdf",
+      "file": "privatix-jdr-fiches-personnage-v1.0.0.pdf",
       "pages": 7,
       "bytes": 646378,
-      "sha256": "c52ffc684cfc8301844c333807c1fbc9086ceb57b3250c79ca514ee81ebe41aa"
+      "sha256": "1febc0c9ccaed775548ab0b357f78a6c77a0783a877a16a57f4dfc320e9b6e36"
     },
     {
       "id": "ecran-de-la-voix",
       "label": "Écran de la Voix (A4)",
-      "file": "privatix-jdr-ecran-de-la-voix-v0.1.0-dev.pdf",
+      "file": "privatix-jdr-ecran-de-la-voix-v1.0.0.pdf",
       "pages": 1,
       "bytes": 95812,
-      "sha256": "402a897dbcc23f231e856429e494346917879f8804f6fda0dd080d91037a0ed9"
+      "sha256": "e4b0c10f26fe69d79395806ea86852b297fed95c54d9c169d09363fcdf951432"
     },
     {
       "id": "cartes-complications",
       "label": "Cartes de Complication (A4)",
-      "file": "privatix-jdr-cartes-complications-v0.1.0-dev.pdf",
+      "file": "privatix-jdr-cartes-complications-v1.0.0.pdf",
       "pages": 3,
       "bytes": 123871,
-      "sha256": "728e8a13ad352abd585f409b27c03303022ee1cfe3f64b6084b7b66982a7ffde"
+      "sha256": "e7f9ca686fb43534a9c014c02d6f5e305106c7f5c7b5035961bbfae6cb9dc788"
     }
   ]
 }
