@@ -1,0 +1,33 @@
+/*
+ * Beffroi 8 — crisp pixel text (beffroi-8 docs/DESIGN.md §8).
+ * The font-size is always a whole multiple of the style's grid (`grid × k` px) and the
+ * line-height a whole number of font pixels: no fractional size, no smoothing, no synthesis.
+ * Variables come from `pixelVars()` (specimen.ts); `--pixel-k` defaults to ×2.
+ */
+/* One font pixel, in CSS px, for text and for the boxes drawn around it (borders, gaps). */
+.pixel,
+.pixel-box {
+	--pixel-px: calc(var(--pixel-k, 2) * 1px);
+}
+
+.pixel {
+	font-family: var(--pixel-family, 'Beffroi 8'), var(--font-mono);
+	font-weight: var(--pixel-weight, 400);
+	font-style: normal;
+	font-size: calc(var(--pixel-grid, 8) * var(--pixel-px));
+	line-height: calc(var(--pixel-lh, 10) * var(--pixel-px));
+	letter-spacing: 0;
+	font-synthesis: none;
+	font-kerning: none;
+	font-variant-ligatures: none;
+	text-transform: none;
+	-webkit-font-smoothing: none;
+	-moz-osx-font-smoothing: auto;
+	font-smooth: never;
+	text-rendering: optimizeSpeed;
+}
+
+/* Bitmap atlases and canvases: nearest-neighbour scaling only. */
+.pixelated {
+	image-rendering: pixelated;
+}

@@ -4,12 +4,30 @@
 	import { reveal } from '#lib/motion/actions.ts';
 	import { site } from '#lib/sites/config.ts';
 	import type { DivisionContent } from '#lib/sites/division/types.ts';
+	import '#lib/sites/creative/beffroi8/pixel.css';
+	import { crisp, wipe } from '#lib/sites/creative/beffroi8/crisp.ts';
+	import { NNBSP, pixelVars, pua, type PixelFace } from '#lib/sites/creative/beffroi8/pixel.ts';
 
-	let { soon, index }: { soon: NonNullable<DivisionContent['soon']>; index: string } = $props();
+	let {
+		soon,
+		index,
+		beffroi = null
+	}: {
+		soon: NonNullable<DivisionContent['soon']>;
+		index: string;
+		/** Beffroi 8 card data, derived from the manifest by the home's server load. */
+		beffroi?: { face: PixelFace; css: string } | null;
+	} = $props();
 
 	/** The atelier's published works: single source with the app launcher (ADR-012). */
 	const works = catalog.filter((a) => a.studio === 'creative');
+	const sample = `Ça déménage${NNBSP}! ♥ ★ ${pua(0xe000)}`;
 </script>
+
+<svelte:head>
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -- @font-face built from the synced manifest -->
+	{#if beffroi}{@html `<style>${beffroi.css}</style>`}{/if}
+</svelte:head>
 
 <section id="planches" class="relative section-y" aria-labelledby="planches-title">
 	<SectionHead {index} label="Productions" title={soon.title} id="planches-title" />
@@ -18,8 +36,37 @@
 	</p>
 
 	<ul class="grid-cardor mt-12 gap-y-6">
+		<!-- First in-house production: the Beffroi 8 pixel font (its specimen lives on this site). -->
+		{#if beffroi}
+			<li class="col-span-4 lg:col-span-3">
+				<a href="/beffroi-8" class="work group" data-cursor="Essayer" use:wipe>
+					<div
+						class="relative grid aspect-[16/10] place-items-center overflow-clip border-b border-smoke bg-graphite"
+						aria-hidden="true"
+					>
+						<div class="flex flex-col items-center gap-4" use:crisp>
+							<span class="pixel" style={pixelVars(beffroi.face, 6)}>Beffroi 8</span>
+							<span class="pixel text-signal" style={pixelVars(beffroi.face, 2)}>{sample}</span>
+						</div>
+					</div>
+					<div class="flex flex-1 flex-col gap-3 p-6 md:p-8">
+						<div class="flex items-baseline justify-between gap-4">
+							<h3 class="font-display text-h2">Beffroi 8</h3>
+							<span
+								class="label text-ash transition-colors group-hover:text-signal"
+								aria-hidden="true">→</span
+							>
+						</div>
+						<p class="label text-ash">Police pixel · Typographie de jeu</p>
+						<p class="font-display text-lead italic">
+							La police maison des jeux rétro de CM Interactive : essai, glyphes, téléchargements.
+						</p>
+					</div>
+				</a>
+			</li>
+		{/if}
 		{#each works as w (w.id)}
-			<li class="col-span-4 lg:col-span-4">
+			<li class="col-span-4 lg:col-span-3">
 				<a
 					href={w.url}
 					target="_blank"

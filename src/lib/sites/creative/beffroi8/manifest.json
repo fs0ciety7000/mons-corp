@@ -1,0 +1,6977 @@
+{
+  "version": "1.0.0-dev",
+  "commit": "49cfb22",
+  "license": "CARDOR-reserved",
+  "categories": [
+    {
+      "id": "ascii",
+      "label": "Latin de base"
+    },
+    {
+      "id": "fr",
+      "label": "Français"
+    },
+    {
+      "id": "punct-fr",
+      "label": "Ponctuation"
+    },
+    {
+      "id": "game",
+      "label": "Jeu"
+    },
+    {
+      "id": "cardor",
+      "label": "Maison"
+    }
+  ],
+  "styles": [
+    {
+      "id": "beffroi-8-regular",
+      "family": "Beffroi 8",
+      "style": "Regular",
+      "cssFamily": "Beffroi 8",
+      "cssWeight": 400,
+      "grid": 8,
+      "upm": 1024,
+      "pxUnits": 128,
+      "metrics": {
+        "cap": 6,
+        "xHeight": 5,
+        "ascent": 7,
+        "descent": 2,
+        "top": 8,
+        "lineHeight": 10
+      },
+      "crispSizes": [
+        8,
+        16,
+        24,
+        32,
+        48
+      ],
+      "files": {
+        "ttf": "fonts/ttf/Beffroi8-Regular.ttf",
+        "otf": "fonts/otf/Beffroi8-Regular.otf",
+        "woff2": "fonts/woff2/Beffroi8-Regular.woff2",
+        "fnt": "bitmap/beffroi-8-regular.fnt",
+        "xml": "bitmap/beffroi-8-regular.xml",
+        "png": "bitmap/beffroi-8-regular.png",
+        "json": "bitmap/beffroi-8-regular.json"
+      },
+      "glyphs": [
+        {
+          "cp": 32,
+          "char": " ",
+          "name": "space",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 0,
+          "label": "Espace"
+        },
+        {
+          "cp": 33,
+          "char": "!",
+          "name": "exclam",
+          "cat": "ascii",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 34,
+          "char": "\"",
+          "name": "quotedbl",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 35,
+          "char": "#",
+          "name": "numbersign",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 36,
+          "char": "$",
+          "name": "dollar",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 37,
+          "char": "%",
+          "name": "percent",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 38,
+          "char": "&",
+          "name": "ampersand",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 39,
+          "char": "'",
+          "name": "quotesingle",
+          "cat": "ascii",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 40,
+          "char": "(",
+          "name": "parenleft",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 41,
+          "char": ")",
+          "name": "parenright",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 42,
+          "char": "*",
+          "name": "asterisk",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 43,
+          "char": "+",
+          "name": "plus",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 44,
+          "char": ",",
+          "name": "comma",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 45,
+          "char": "-",
+          "name": "hyphen",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 46,
+          "char": ".",
+          "name": "period",
+          "cat": "ascii",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 47,
+          "char": "/",
+          "name": "slash",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 48,
+          "char": "0",
+          "name": "zero",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 49,
+          "char": "1",
+          "name": "one",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 50,
+          "char": "2",
+          "name": "two",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 51,
+          "char": "3",
+          "name": "three",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 52,
+          "char": "4",
+          "name": "four",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 53,
+          "char": "5",
+          "name": "five",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 54,
+          "char": "6",
+          "name": "six",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 55,
+          "char": "7",
+          "name": "seven",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 56,
+          "char": "8",
+          "name": "eight",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 57,
+          "char": "9",
+          "name": "nine",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 58,
+          "char": ":",
+          "name": "colon",
+          "cat": "ascii",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 59,
+          "char": ";",
+          "name": "semicolon",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 60,
+          "char": "<",
+          "name": "less",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 61,
+          "char": "=",
+          "name": "equal",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 62,
+          "char": ">",
+          "name": "greater",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 63,
+          "char": "?",
+          "name": "question",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 64,
+          "char": "@",
+          "name": "at",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 65,
+          "char": "A",
+          "name": "A",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 66,
+          "char": "B",
+          "name": "B",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 67,
+          "char": "C",
+          "name": "C",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 68,
+          "char": "D",
+          "name": "D",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 69,
+          "char": "E",
+          "name": "E",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 70,
+          "char": "F",
+          "name": "F",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 71,
+          "char": "G",
+          "name": "G",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 72,
+          "char": "H",
+          "name": "H",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 73,
+          "char": "I",
+          "name": "I",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 74,
+          "char": "J",
+          "name": "J",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 75,
+          "char": "K",
+          "name": "K",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 76,
+          "char": "L",
+          "name": "L",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 77,
+          "char": "M",
+          "name": "M",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 78,
+          "char": "N",
+          "name": "N",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 79,
+          "char": "O",
+          "name": "O",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 80,
+          "char": "P",
+          "name": "P",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 81,
+          "char": "Q",
+          "name": "Q",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 82,
+          "char": "R",
+          "name": "R",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 83,
+          "char": "S",
+          "name": "S",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 84,
+          "char": "T",
+          "name": "T",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 85,
+          "char": "U",
+          "name": "U",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 86,
+          "char": "V",
+          "name": "V",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 87,
+          "char": "W",
+          "name": "W",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 88,
+          "char": "X",
+          "name": "X",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 89,
+          "char": "Y",
+          "name": "Y",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 90,
+          "char": "Z",
+          "name": "Z",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 91,
+          "char": "[",
+          "name": "bracketleft",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 92,
+          "char": "\\",
+          "name": "backslash",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 93,
+          "char": "]",
+          "name": "bracketright",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 94,
+          "char": "^",
+          "name": "asciicircum",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 95,
+          "char": "_",
+          "name": "underscore",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 96,
+          "char": "`",
+          "name": "grave",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 97,
+          "char": "a",
+          "name": "a",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 98,
+          "char": "b",
+          "name": "b",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 99,
+          "char": "c",
+          "name": "c",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 100,
+          "char": "d",
+          "name": "d",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 101,
+          "char": "e",
+          "name": "e",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 102,
+          "char": "f",
+          "name": "f",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 103,
+          "char": "g",
+          "name": "g",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 104,
+          "char": "h",
+          "name": "h",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 105,
+          "char": "i",
+          "name": "i",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 106,
+          "char": "j",
+          "name": "j",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 107,
+          "char": "k",
+          "name": "k",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 108,
+          "char": "l",
+          "name": "l",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 109,
+          "char": "m",
+          "name": "m",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 110,
+          "char": "n",
+          "name": "n",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 111,
+          "char": "o",
+          "name": "o",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 112,
+          "char": "p",
+          "name": "p",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 113,
+          "char": "q",
+          "name": "q",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 114,
+          "char": "r",
+          "name": "r",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 115,
+          "char": "s",
+          "name": "s",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 116,
+          "char": "t",
+          "name": "t",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 117,
+          "char": "u",
+          "name": "u",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 118,
+          "char": "v",
+          "name": "v",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 119,
+          "char": "w",
+          "name": "w",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 120,
+          "char": "x",
+          "name": "x",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 121,
+          "char": "y",
+          "name": "y",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 122,
+          "char": "z",
+          "name": "z",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 123,
+          "char": "{",
+          "name": "braceleft",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 124,
+          "char": "|",
+          "name": "bar",
+          "cat": "ascii",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 125,
+          "char": "}",
+          "name": "braceright",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 126,
+          "char": "~",
+          "name": "asciitilde",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 160,
+          "char": " ",
+          "name": "uni00A0",
+          "cat": "punct-fr",
+          "advance": 3,
+          "width": 0,
+          "label": "Espace insécable"
+        },
+        {
+          "cp": 161,
+          "char": "¡",
+          "name": "exclamdown",
+          "cat": "punct-fr",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 163,
+          "char": "£",
+          "name": "sterling",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 167,
+          "char": "§",
+          "name": "section",
+          "cat": "punct-fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 169,
+          "char": "©",
+          "name": "copyright",
+          "cat": "punct-fr",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 171,
+          "char": "«",
+          "name": "guillemotleft",
+          "cat": "punct-fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 174,
+          "char": "®",
+          "name": "registered",
+          "cat": "punct-fr",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 176,
+          "char": "°",
+          "name": "degree",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 177,
+          "char": "±",
+          "name": "plusminus",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 183,
+          "char": "·",
+          "name": "periodcentered",
+          "cat": "punct-fr",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 187,
+          "char": "»",
+          "name": "guillemotright",
+          "cat": "punct-fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 191,
+          "char": "¿",
+          "name": "questiondown",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 192,
+          "char": "À",
+          "name": "Agrave",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 194,
+          "char": "Â",
+          "name": "Acircumflex",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 196,
+          "char": "Ä",
+          "name": "Adieresis",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 198,
+          "char": "Æ",
+          "name": "AE",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 199,
+          "char": "Ç",
+          "name": "Ccedilla",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 200,
+          "char": "È",
+          "name": "Egrave",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 201,
+          "char": "É",
+          "name": "Eacute",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 202,
+          "char": "Ê",
+          "name": "Ecircumflex",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 203,
+          "char": "Ë",
+          "name": "Edieresis",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 206,
+          "char": "Î",
+          "name": "Icircumflex",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 207,
+          "char": "Ï",
+          "name": "Idieresis",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 212,
+          "char": "Ô",
+          "name": "Ocircumflex",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 214,
+          "char": "Ö",
+          "name": "Odieresis",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 215,
+          "char": "×",
+          "name": "multiply",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 217,
+          "char": "Ù",
+          "name": "Ugrave",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 219,
+          "char": "Û",
+          "name": "Ucircumflex",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 220,
+          "char": "Ü",
+          "name": "Udieresis",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 224,
+          "char": "à",
+          "name": "agrave",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 226,
+          "char": "â",
+          "name": "acircumflex",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 228,
+          "char": "ä",
+          "name": "adieresis",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 230,
+          "char": "æ",
+          "name": "ae",
+          "cat": "fr",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 231,
+          "char": "ç",
+          "name": "ccedilla",
+          "cat": "fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 232,
+          "char": "è",
+          "name": "egrave",
+          "cat": "fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 233,
+          "char": "é",
+          "name": "eacute",
+          "cat": "fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 234,
+          "char": "ê",
+          "name": "ecircumflex",
+          "cat": "fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 235,
+          "char": "ë",
+          "name": "edieresis",
+          "cat": "fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 238,
+          "char": "î",
+          "name": "icircumflex",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 239,
+          "char": "ï",
+          "name": "idieresis",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 244,
+          "char": "ô",
+          "name": "ocircumflex",
+          "cat": "fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 246,
+          "char": "ö",
+          "name": "odieresis",
+          "cat": "fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 247,
+          "char": "÷",
+          "name": "divide",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 249,
+          "char": "ù",
+          "name": "ugrave",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 251,
+          "char": "û",
+          "name": "ucircumflex",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 252,
+          "char": "ü",
+          "name": "udieresis",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 255,
+          "char": "ÿ",
+          "name": "ydieresis",
+          "cat": "fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 338,
+          "char": "Œ",
+          "name": "OE",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 339,
+          "char": "œ",
+          "name": "oe",
+          "cat": "fr",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 376,
+          "char": "Ÿ",
+          "name": "Ydieresis",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 8201,
+          "char": " ",
+          "name": "uni2009",
+          "cat": "punct-fr",
+          "advance": 2,
+          "width": 0,
+          "label": "Espace fine"
+        },
+        {
+          "cp": 8211,
+          "char": "–",
+          "name": "endash",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 8212,
+          "char": "—",
+          "name": "emdash",
+          "cat": "punct-fr",
+          "advance": 8,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 8216,
+          "char": "‘",
+          "name": "quoteleft",
+          "cat": "punct-fr",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 8217,
+          "char": "’",
+          "name": "quoteright",
+          "cat": "punct-fr",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 8220,
+          "char": "“",
+          "name": "quotedblleft",
+          "cat": "punct-fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 8221,
+          "char": "”",
+          "name": "quotedblright",
+          "cat": "punct-fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 8226,
+          "char": "•",
+          "name": "bullet",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 8230,
+          "char": "…",
+          "name": "ellipsis",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 8239,
+          "char": " ",
+          "name": "uni202F",
+          "cat": "punct-fr",
+          "advance": 2,
+          "width": 0,
+          "label": "Espace fine insécable"
+        },
+        {
+          "cp": 8249,
+          "char": "‹",
+          "name": "guilsinglleft",
+          "cat": "punct-fr",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 8250,
+          "char": "›",
+          "name": "guilsinglright",
+          "cat": "punct-fr",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 8364,
+          "char": "€",
+          "name": "Euro",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 8482,
+          "char": "™",
+          "name": "trademark",
+          "cat": "punct-fr",
+          "advance": 10,
+          "width": 9,
+          "label": null
+        },
+        {
+          "cp": 8592,
+          "char": "←",
+          "name": "arrowleft",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Flèche gauche"
+        },
+        {
+          "cp": 8593,
+          "char": "↑",
+          "name": "arrowup",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Flèche haut"
+        },
+        {
+          "cp": 8594,
+          "char": "→",
+          "name": "arrowright",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Flèche droite"
+        },
+        {
+          "cp": 8595,
+          "char": "↓",
+          "name": "arrowdown",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Flèche bas"
+        },
+        {
+          "cp": 9398,
+          "char": "Ⓐ",
+          "name": "uni24B6",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Bouton A"
+        },
+        {
+          "cp": 9399,
+          "char": "Ⓑ",
+          "name": "uni24B7",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Bouton B"
+        },
+        {
+          "cp": 9632,
+          "char": "■",
+          "name": "filledbox",
+          "cat": "game",
+          "advance": 7,
+          "width": 6,
+          "label": "Carré plein"
+        },
+        {
+          "cp": 9650,
+          "char": "▲",
+          "name": "triagup",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Triangle haut"
+        },
+        {
+          "cp": 9654,
+          "char": "▶",
+          "name": "uni25B6",
+          "cat": "game",
+          "advance": 5,
+          "width": 4,
+          "label": "Triangle droite (curseur)"
+        },
+        {
+          "cp": 9660,
+          "char": "▼",
+          "name": "triagdn",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Triangle bas"
+        },
+        {
+          "cp": 9664,
+          "char": "◀",
+          "name": "uni25C0",
+          "cat": "game",
+          "advance": 5,
+          "width": 4,
+          "label": "Triangle gauche (curseur)"
+        },
+        {
+          "cp": 9675,
+          "char": "○",
+          "name": "circle",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Cercle vide"
+        },
+        {
+          "cp": 9679,
+          "char": "●",
+          "name": "H18533",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Disque plein"
+        },
+        {
+          "cp": 9733,
+          "char": "★",
+          "name": "uni2605",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Étoile pleine"
+        },
+        {
+          "cp": 9734,
+          "char": "☆",
+          "name": "uni2606",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Étoile vide"
+        },
+        {
+          "cp": 9829,
+          "char": "♥",
+          "name": "heart",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Cœur (vie)"
+        },
+        {
+          "cp": 9834,
+          "char": "♪",
+          "name": "musicalnote",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Note de musique"
+        },
+        {
+          "cp": 10003,
+          "char": "✓",
+          "name": "uni2713",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Coche (validé)"
+        },
+        {
+          "cp": 10007,
+          "char": "✗",
+          "name": "uni2717",
+          "cat": "game",
+          "advance": 7,
+          "width": 6,
+          "label": "Croix (refusé)"
+        },
+        {
+          "cp": 57344,
+          "char": "",
+          "name": "uniE000",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Pièce"
+        },
+        {
+          "cp": 57345,
+          "char": "",
+          "name": "uniE001",
+          "cat": "game",
+          "advance": 10,
+          "width": 9,
+          "label": "Bouton Start"
+        },
+        {
+          "cp": 57346,
+          "char": "",
+          "name": "uniE002",
+          "cat": "game",
+          "advance": 10,
+          "width": 9,
+          "label": "Bouton Select"
+        },
+        {
+          "cp": 57347,
+          "char": "",
+          "name": "uniE003",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Croix directionnelle"
+        },
+        {
+          "cp": 57348,
+          "char": "",
+          "name": "uniE004",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Bouton X"
+        },
+        {
+          "cp": 57349,
+          "char": "",
+          "name": "uniE005",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Bouton Y"
+        },
+        {
+          "cp": 57350,
+          "char": "",
+          "name": "uniE006",
+          "cat": "game",
+          "advance": 10,
+          "width": 9,
+          "label": "Gâchette L"
+        },
+        {
+          "cp": 57351,
+          "char": "",
+          "name": "uniE007",
+          "cat": "game",
+          "advance": 10,
+          "width": 9,
+          "label": "Gâchette R"
+        },
+        {
+          "cp": 57600,
+          "char": "",
+          "name": "uniE100",
+          "cat": "cardor",
+          "advance": 10,
+          "width": 9,
+          "label": "Beffroi de Mons"
+        },
+        {
+          "cp": 57601,
+          "char": "",
+          "name": "uniE101",
+          "cat": "cardor",
+          "advance": 23,
+          "width": 22,
+          "label": "Dragon du Lumeçon"
+        },
+        {
+          "cp": 57602,
+          "char": "",
+          "name": "uniE102",
+          "cat": "cardor",
+          "advance": 13,
+          "width": 12,
+          "label": "Singe du Grand-Garde"
+        },
+        {
+          "cp": 57603,
+          "char": "",
+          "name": "uniE103",
+          "cat": "cardor",
+          "advance": 21,
+          "width": 20,
+          "label": "Logo CARDOR (Car d'Or)"
+        }
+      ]
+    },
+    {
+      "id": "beffroi-8-bold",
+      "family": "Beffroi 8",
+      "style": "Bold",
+      "cssFamily": "Beffroi 8",
+      "cssWeight": 700,
+      "grid": 8,
+      "upm": 1024,
+      "pxUnits": 128,
+      "metrics": {
+        "cap": 6,
+        "xHeight": 5,
+        "ascent": 7,
+        "descent": 2,
+        "top": 8,
+        "lineHeight": 10
+      },
+      "crispSizes": [
+        8,
+        16,
+        24,
+        32,
+        48
+      ],
+      "files": {
+        "ttf": "fonts/ttf/Beffroi8-Bold.ttf",
+        "otf": "fonts/otf/Beffroi8-Bold.otf",
+        "woff2": "fonts/woff2/Beffroi8-Bold.woff2",
+        "fnt": "bitmap/beffroi-8-bold.fnt",
+        "xml": "bitmap/beffroi-8-bold.xml",
+        "png": "bitmap/beffroi-8-bold.png",
+        "json": "bitmap/beffroi-8-bold.json"
+      },
+      "glyphs": [
+        {
+          "cp": 32,
+          "char": " ",
+          "name": "space",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 0,
+          "label": "Espace"
+        },
+        {
+          "cp": 33,
+          "char": "!",
+          "name": "exclam",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 34,
+          "char": "\"",
+          "name": "quotedbl",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 35,
+          "char": "#",
+          "name": "numbersign",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 36,
+          "char": "$",
+          "name": "dollar",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 37,
+          "char": "%",
+          "name": "percent",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 38,
+          "char": "&",
+          "name": "ampersand",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 39,
+          "char": "'",
+          "name": "quotesingle",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 40,
+          "char": "(",
+          "name": "parenleft",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 41,
+          "char": ")",
+          "name": "parenright",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 42,
+          "char": "*",
+          "name": "asterisk",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 43,
+          "char": "+",
+          "name": "plus",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 44,
+          "char": ",",
+          "name": "comma",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 45,
+          "char": "-",
+          "name": "hyphen",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 46,
+          "char": ".",
+          "name": "period",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 47,
+          "char": "/",
+          "name": "slash",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 48,
+          "char": "0",
+          "name": "zero",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 49,
+          "char": "1",
+          "name": "one",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 50,
+          "char": "2",
+          "name": "two",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 51,
+          "char": "3",
+          "name": "three",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 52,
+          "char": "4",
+          "name": "four",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 53,
+          "char": "5",
+          "name": "five",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 54,
+          "char": "6",
+          "name": "six",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 55,
+          "char": "7",
+          "name": "seven",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 56,
+          "char": "8",
+          "name": "eight",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 57,
+          "char": "9",
+          "name": "nine",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 58,
+          "char": ":",
+          "name": "colon",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 59,
+          "char": ";",
+          "name": "semicolon",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 60,
+          "char": "<",
+          "name": "less",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 61,
+          "char": "=",
+          "name": "equal",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 62,
+          "char": ">",
+          "name": "greater",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 63,
+          "char": "?",
+          "name": "question",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 64,
+          "char": "@",
+          "name": "at",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 65,
+          "char": "A",
+          "name": "A",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 66,
+          "char": "B",
+          "name": "B",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 67,
+          "char": "C",
+          "name": "C",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 68,
+          "char": "D",
+          "name": "D",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 69,
+          "char": "E",
+          "name": "E",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 70,
+          "char": "F",
+          "name": "F",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 71,
+          "char": "G",
+          "name": "G",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 72,
+          "char": "H",
+          "name": "H",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 73,
+          "char": "I",
+          "name": "I",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 74,
+          "char": "J",
+          "name": "J",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 75,
+          "char": "K",
+          "name": "K",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 76,
+          "char": "L",
+          "name": "L",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 77,
+          "char": "M",
+          "name": "M",
+          "cat": "ascii",
+          "advance": 9,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 78,
+          "char": "N",
+          "name": "N",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 79,
+          "char": "O",
+          "name": "O",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 80,
+          "char": "P",
+          "name": "P",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 81,
+          "char": "Q",
+          "name": "Q",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 82,
+          "char": "R",
+          "name": "R",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 83,
+          "char": "S",
+          "name": "S",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 84,
+          "char": "T",
+          "name": "T",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 85,
+          "char": "U",
+          "name": "U",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 86,
+          "char": "V",
+          "name": "V",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 87,
+          "char": "W",
+          "name": "W",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 88,
+          "char": "X",
+          "name": "X",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 89,
+          "char": "Y",
+          "name": "Y",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 90,
+          "char": "Z",
+          "name": "Z",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 91,
+          "char": "[",
+          "name": "bracketleft",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 92,
+          "char": "\\",
+          "name": "backslash",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 93,
+          "char": "]",
+          "name": "bracketright",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 94,
+          "char": "^",
+          "name": "asciicircum",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 95,
+          "char": "_",
+          "name": "underscore",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 96,
+          "char": "`",
+          "name": "grave",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 97,
+          "char": "a",
+          "name": "a",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 98,
+          "char": "b",
+          "name": "b",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 99,
+          "char": "c",
+          "name": "c",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 100,
+          "char": "d",
+          "name": "d",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 101,
+          "char": "e",
+          "name": "e",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 102,
+          "char": "f",
+          "name": "f",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 103,
+          "char": "g",
+          "name": "g",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 104,
+          "char": "h",
+          "name": "h",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 105,
+          "char": "i",
+          "name": "i",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 106,
+          "char": "j",
+          "name": "j",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 107,
+          "char": "k",
+          "name": "k",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 108,
+          "char": "l",
+          "name": "l",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 109,
+          "char": "m",
+          "name": "m",
+          "cat": "ascii",
+          "advance": 9,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 110,
+          "char": "n",
+          "name": "n",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 111,
+          "char": "o",
+          "name": "o",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 112,
+          "char": "p",
+          "name": "p",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 113,
+          "char": "q",
+          "name": "q",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 114,
+          "char": "r",
+          "name": "r",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 115,
+          "char": "s",
+          "name": "s",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 116,
+          "char": "t",
+          "name": "t",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 117,
+          "char": "u",
+          "name": "u",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 118,
+          "char": "v",
+          "name": "v",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 119,
+          "char": "w",
+          "name": "w",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 120,
+          "char": "x",
+          "name": "x",
+          "cat": "ascii",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 121,
+          "char": "y",
+          "name": "y",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 122,
+          "char": "z",
+          "name": "z",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 123,
+          "char": "{",
+          "name": "braceleft",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 124,
+          "char": "|",
+          "name": "bar",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 125,
+          "char": "}",
+          "name": "braceright",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 126,
+          "char": "~",
+          "name": "asciitilde",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 160,
+          "char": " ",
+          "name": "uni00A0",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 0,
+          "label": "Espace insécable"
+        },
+        {
+          "cp": 161,
+          "char": "¡",
+          "name": "exclamdown",
+          "cat": "punct-fr",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 163,
+          "char": "£",
+          "name": "sterling",
+          "cat": "punct-fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 167,
+          "char": "§",
+          "name": "section",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 169,
+          "char": "©",
+          "name": "copyright",
+          "cat": "punct-fr",
+          "advance": 9,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 171,
+          "char": "«",
+          "name": "guillemotleft",
+          "cat": "punct-fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 174,
+          "char": "®",
+          "name": "registered",
+          "cat": "punct-fr",
+          "advance": 9,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 176,
+          "char": "°",
+          "name": "degree",
+          "cat": "punct-fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 177,
+          "char": "±",
+          "name": "plusminus",
+          "cat": "punct-fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 183,
+          "char": "·",
+          "name": "periodcentered",
+          "cat": "punct-fr",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 187,
+          "char": "»",
+          "name": "guillemotright",
+          "cat": "punct-fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 191,
+          "char": "¿",
+          "name": "questiondown",
+          "cat": "punct-fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 192,
+          "char": "À",
+          "name": "Agrave",
+          "cat": "fr",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 194,
+          "char": "Â",
+          "name": "Acircumflex",
+          "cat": "fr",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 196,
+          "char": "Ä",
+          "name": "Adieresis",
+          "cat": "fr",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 198,
+          "char": "Æ",
+          "name": "AE",
+          "cat": "fr",
+          "advance": 9,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 199,
+          "char": "Ç",
+          "name": "Ccedilla",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 200,
+          "char": "È",
+          "name": "Egrave",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 201,
+          "char": "É",
+          "name": "Eacute",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 202,
+          "char": "Ê",
+          "name": "Ecircumflex",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 203,
+          "char": "Ë",
+          "name": "Edieresis",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 206,
+          "char": "Î",
+          "name": "Icircumflex",
+          "cat": "fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 207,
+          "char": "Ï",
+          "name": "Idieresis",
+          "cat": "fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 212,
+          "char": "Ô",
+          "name": "Ocircumflex",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 214,
+          "char": "Ö",
+          "name": "Odieresis",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 215,
+          "char": "×",
+          "name": "multiply",
+          "cat": "punct-fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 217,
+          "char": "Ù",
+          "name": "Ugrave",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 219,
+          "char": "Û",
+          "name": "Ucircumflex",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 220,
+          "char": "Ü",
+          "name": "Udieresis",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 224,
+          "char": "à",
+          "name": "agrave",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 226,
+          "char": "â",
+          "name": "acircumflex",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 228,
+          "char": "ä",
+          "name": "adieresis",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 230,
+          "char": "æ",
+          "name": "ae",
+          "cat": "fr",
+          "advance": 9,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 231,
+          "char": "ç",
+          "name": "ccedilla",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 232,
+          "char": "è",
+          "name": "egrave",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 233,
+          "char": "é",
+          "name": "eacute",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 234,
+          "char": "ê",
+          "name": "ecircumflex",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 235,
+          "char": "ë",
+          "name": "edieresis",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 238,
+          "char": "î",
+          "name": "icircumflex",
+          "cat": "fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 239,
+          "char": "ï",
+          "name": "idieresis",
+          "cat": "fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 244,
+          "char": "ô",
+          "name": "ocircumflex",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 246,
+          "char": "ö",
+          "name": "odieresis",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 247,
+          "char": "÷",
+          "name": "divide",
+          "cat": "punct-fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 249,
+          "char": "ù",
+          "name": "ugrave",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 251,
+          "char": "û",
+          "name": "ucircumflex",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 252,
+          "char": "ü",
+          "name": "udieresis",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 255,
+          "char": "ÿ",
+          "name": "ydieresis",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 338,
+          "char": "Œ",
+          "name": "OE",
+          "cat": "fr",
+          "advance": 8,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 339,
+          "char": "œ",
+          "name": "oe",
+          "cat": "fr",
+          "advance": 9,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 376,
+          "char": "Ÿ",
+          "name": "Ydieresis",
+          "cat": "fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 8201,
+          "char": " ",
+          "name": "uni2009",
+          "cat": "punct-fr",
+          "advance": 3,
+          "width": 0,
+          "label": "Espace fine"
+        },
+        {
+          "cp": 8211,
+          "char": "–",
+          "name": "endash",
+          "cat": "punct-fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 8212,
+          "char": "—",
+          "name": "emdash",
+          "cat": "punct-fr",
+          "advance": 9,
+          "width": 9,
+          "label": null
+        },
+        {
+          "cp": 8216,
+          "char": "‘",
+          "name": "quoteleft",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 8217,
+          "char": "’",
+          "name": "quoteright",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 8220,
+          "char": "“",
+          "name": "quotedblleft",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 8221,
+          "char": "”",
+          "name": "quotedblright",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 8226,
+          "char": "•",
+          "name": "bullet",
+          "cat": "punct-fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 8230,
+          "char": "…",
+          "name": "ellipsis",
+          "cat": "punct-fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 8239,
+          "char": " ",
+          "name": "uni202F",
+          "cat": "punct-fr",
+          "advance": 3,
+          "width": 0,
+          "label": "Espace fine insécable"
+        },
+        {
+          "cp": 8249,
+          "char": "‹",
+          "name": "guilsinglleft",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 8250,
+          "char": "›",
+          "name": "guilsinglright",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 8364,
+          "char": "€",
+          "name": "Euro",
+          "cat": "punct-fr",
+          "advance": 7,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 8482,
+          "char": "™",
+          "name": "trademark",
+          "cat": "punct-fr",
+          "advance": 10,
+          "width": 9,
+          "label": null
+        },
+        {
+          "cp": 8592,
+          "char": "←",
+          "name": "arrowleft",
+          "cat": "game",
+          "advance": 9,
+          "width": 8,
+          "label": "Flèche gauche"
+        },
+        {
+          "cp": 8593,
+          "char": "↑",
+          "name": "arrowup",
+          "cat": "game",
+          "advance": 7,
+          "width": 6,
+          "label": "Flèche haut"
+        },
+        {
+          "cp": 8594,
+          "char": "→",
+          "name": "arrowright",
+          "cat": "game",
+          "advance": 9,
+          "width": 8,
+          "label": "Flèche droite"
+        },
+        {
+          "cp": 8595,
+          "char": "↓",
+          "name": "arrowdown",
+          "cat": "game",
+          "advance": 7,
+          "width": 6,
+          "label": "Flèche bas"
+        },
+        {
+          "cp": 9398,
+          "char": "Ⓐ",
+          "name": "uni24B6",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Bouton A"
+        },
+        {
+          "cp": 9399,
+          "char": "Ⓑ",
+          "name": "uni24B7",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Bouton B"
+        },
+        {
+          "cp": 9632,
+          "char": "■",
+          "name": "filledbox",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Carré plein"
+        },
+        {
+          "cp": 9650,
+          "char": "▲",
+          "name": "triagup",
+          "cat": "game",
+          "advance": 9,
+          "width": 8,
+          "label": "Triangle haut"
+        },
+        {
+          "cp": 9654,
+          "char": "▶",
+          "name": "uni25B6",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Triangle droite (curseur)"
+        },
+        {
+          "cp": 9660,
+          "char": "▼",
+          "name": "triagdn",
+          "cat": "game",
+          "advance": 9,
+          "width": 8,
+          "label": "Triangle bas"
+        },
+        {
+          "cp": 9664,
+          "char": "◀",
+          "name": "uni25C0",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Triangle gauche (curseur)"
+        },
+        {
+          "cp": 9675,
+          "char": "○",
+          "name": "circle",
+          "cat": "game",
+          "advance": 9,
+          "width": 8,
+          "label": "Cercle vide"
+        },
+        {
+          "cp": 9679,
+          "char": "●",
+          "name": "H18533",
+          "cat": "game",
+          "advance": 9,
+          "width": 8,
+          "label": "Disque plein"
+        },
+        {
+          "cp": 9733,
+          "char": "★",
+          "name": "uni2605",
+          "cat": "game",
+          "advance": 9,
+          "width": 8,
+          "label": "Étoile pleine"
+        },
+        {
+          "cp": 9734,
+          "char": "☆",
+          "name": "uni2606",
+          "cat": "game",
+          "advance": 9,
+          "width": 8,
+          "label": "Étoile vide"
+        },
+        {
+          "cp": 9829,
+          "char": "♥",
+          "name": "heart",
+          "cat": "game",
+          "advance": 9,
+          "width": 8,
+          "label": "Cœur (vie)"
+        },
+        {
+          "cp": 9834,
+          "char": "♪",
+          "name": "musicalnote",
+          "cat": "game",
+          "advance": 7,
+          "width": 6,
+          "label": "Note de musique"
+        },
+        {
+          "cp": 10003,
+          "char": "✓",
+          "name": "uni2713",
+          "cat": "game",
+          "advance": 9,
+          "width": 8,
+          "label": "Coche (validé)"
+        },
+        {
+          "cp": 10007,
+          "char": "✗",
+          "name": "uni2717",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Croix (refusé)"
+        },
+        {
+          "cp": 57344,
+          "char": "",
+          "name": "uniE000",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Pièce"
+        },
+        {
+          "cp": 57345,
+          "char": "",
+          "name": "uniE001",
+          "cat": "game",
+          "advance": 10,
+          "width": 9,
+          "label": "Bouton Start"
+        },
+        {
+          "cp": 57346,
+          "char": "",
+          "name": "uniE002",
+          "cat": "game",
+          "advance": 10,
+          "width": 9,
+          "label": "Bouton Select"
+        },
+        {
+          "cp": 57347,
+          "char": "",
+          "name": "uniE003",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Croix directionnelle"
+        },
+        {
+          "cp": 57348,
+          "char": "",
+          "name": "uniE004",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Bouton X"
+        },
+        {
+          "cp": 57349,
+          "char": "",
+          "name": "uniE005",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Bouton Y"
+        },
+        {
+          "cp": 57350,
+          "char": "",
+          "name": "uniE006",
+          "cat": "game",
+          "advance": 10,
+          "width": 9,
+          "label": "Gâchette L"
+        },
+        {
+          "cp": 57351,
+          "char": "",
+          "name": "uniE007",
+          "cat": "game",
+          "advance": 10,
+          "width": 9,
+          "label": "Gâchette R"
+        },
+        {
+          "cp": 57600,
+          "char": "",
+          "name": "uniE100",
+          "cat": "cardor",
+          "advance": 10,
+          "width": 9,
+          "label": "Beffroi de Mons"
+        },
+        {
+          "cp": 57601,
+          "char": "",
+          "name": "uniE101",
+          "cat": "cardor",
+          "advance": 23,
+          "width": 22,
+          "label": "Dragon du Lumeçon"
+        },
+        {
+          "cp": 57602,
+          "char": "",
+          "name": "uniE102",
+          "cat": "cardor",
+          "advance": 13,
+          "width": 12,
+          "label": "Singe du Grand-Garde"
+        },
+        {
+          "cp": 57603,
+          "char": "",
+          "name": "uniE103",
+          "cat": "cardor",
+          "advance": 21,
+          "width": 20,
+          "label": "Logo CARDOR (Car d'Or)"
+        }
+      ]
+    },
+    {
+      "id": "beffroi-16-display",
+      "family": "Beffroi 16",
+      "style": "Display",
+      "cssFamily": "Beffroi 16 Display",
+      "cssWeight": 400,
+      "grid": 16,
+      "upm": 2048,
+      "pxUnits": 128,
+      "metrics": {
+        "cap": 12,
+        "xHeight": 10,
+        "ascent": 14,
+        "descent": 4,
+        "top": 16,
+        "lineHeight": 20
+      },
+      "crispSizes": [
+        16,
+        32,
+        48,
+        64,
+        96
+      ],
+      "files": {
+        "ttf": "fonts/ttf/Beffroi16-Display.ttf",
+        "otf": "fonts/otf/Beffroi16-Display.otf",
+        "woff2": "fonts/woff2/Beffroi16-Display.woff2",
+        "fnt": "bitmap/beffroi-16-display.fnt",
+        "xml": "bitmap/beffroi-16-display.xml",
+        "png": "bitmap/beffroi-16-display.png",
+        "json": "bitmap/beffroi-16-display.json"
+      },
+      "glyphs": [
+        {
+          "cp": 32,
+          "char": " ",
+          "name": "space",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 0,
+          "label": "Espace"
+        },
+        {
+          "cp": 33,
+          "char": "!",
+          "name": "exclam",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 34,
+          "char": "\"",
+          "name": "quotedbl",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 35,
+          "char": "#",
+          "name": "numbersign",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 36,
+          "char": "$",
+          "name": "dollar",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 37,
+          "char": "%",
+          "name": "percent",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 38,
+          "char": "&",
+          "name": "ampersand",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 39,
+          "char": "'",
+          "name": "quotesingle",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 40,
+          "char": "(",
+          "name": "parenleft",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 41,
+          "char": ")",
+          "name": "parenright",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 42,
+          "char": "*",
+          "name": "asterisk",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 43,
+          "char": "+",
+          "name": "plus",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 44,
+          "char": ",",
+          "name": "comma",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 45,
+          "char": "-",
+          "name": "hyphen",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 46,
+          "char": ".",
+          "name": "period",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 47,
+          "char": "/",
+          "name": "slash",
+          "cat": "ascii",
+          "advance": 11,
+          "width": 9,
+          "label": null
+        },
+        {
+          "cp": 48,
+          "char": "0",
+          "name": "zero",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 49,
+          "char": "1",
+          "name": "one",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 50,
+          "char": "2",
+          "name": "two",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 51,
+          "char": "3",
+          "name": "three",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 52,
+          "char": "4",
+          "name": "four",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 53,
+          "char": "5",
+          "name": "five",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 54,
+          "char": "6",
+          "name": "six",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 55,
+          "char": "7",
+          "name": "seven",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 56,
+          "char": "8",
+          "name": "eight",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 57,
+          "char": "9",
+          "name": "nine",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 58,
+          "char": ":",
+          "name": "colon",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 59,
+          "char": ";",
+          "name": "semicolon",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 60,
+          "char": "<",
+          "name": "less",
+          "cat": "ascii",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 61,
+          "char": "=",
+          "name": "equal",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 62,
+          "char": ">",
+          "name": "greater",
+          "cat": "ascii",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 63,
+          "char": "?",
+          "name": "question",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 64,
+          "char": "@",
+          "name": "at",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 65,
+          "char": "A",
+          "name": "A",
+          "cat": "ascii",
+          "advance": 14,
+          "width": 12,
+          "label": null
+        },
+        {
+          "cp": 66,
+          "char": "B",
+          "name": "B",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 67,
+          "char": "C",
+          "name": "C",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 68,
+          "char": "D",
+          "name": "D",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 69,
+          "char": "E",
+          "name": "E",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 70,
+          "char": "F",
+          "name": "F",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 71,
+          "char": "G",
+          "name": "G",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 72,
+          "char": "H",
+          "name": "H",
+          "cat": "ascii",
+          "advance": 14,
+          "width": 12,
+          "label": null
+        },
+        {
+          "cp": 73,
+          "char": "I",
+          "name": "I",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 74,
+          "char": "J",
+          "name": "J",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 75,
+          "char": "K",
+          "name": "K",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 76,
+          "char": "L",
+          "name": "L",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 77,
+          "char": "M",
+          "name": "M",
+          "cat": "ascii",
+          "advance": 14,
+          "width": 12,
+          "label": null
+        },
+        {
+          "cp": 78,
+          "char": "N",
+          "name": "N",
+          "cat": "ascii",
+          "advance": 14,
+          "width": 12,
+          "label": null
+        },
+        {
+          "cp": 79,
+          "char": "O",
+          "name": "O",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 80,
+          "char": "P",
+          "name": "P",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 81,
+          "char": "Q",
+          "name": "Q",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 82,
+          "char": "R",
+          "name": "R",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 83,
+          "char": "S",
+          "name": "S",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 84,
+          "char": "T",
+          "name": "T",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 85,
+          "char": "U",
+          "name": "U",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 86,
+          "char": "V",
+          "name": "V",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 87,
+          "char": "W",
+          "name": "W",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 88,
+          "char": "X",
+          "name": "X",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 89,
+          "char": "Y",
+          "name": "Y",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 90,
+          "char": "Z",
+          "name": "Z",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 91,
+          "char": "[",
+          "name": "bracketleft",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 92,
+          "char": "\\",
+          "name": "backslash",
+          "cat": "ascii",
+          "advance": 11,
+          "width": 9,
+          "label": null
+        },
+        {
+          "cp": 93,
+          "char": "]",
+          "name": "bracketright",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 94,
+          "char": "^",
+          "name": "asciicircum",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 95,
+          "char": "_",
+          "name": "underscore",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 96,
+          "char": "`",
+          "name": "grave",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 97,
+          "char": "a",
+          "name": "a",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 98,
+          "char": "b",
+          "name": "b",
+          "cat": "ascii",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 99,
+          "char": "c",
+          "name": "c",
+          "cat": "ascii",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 100,
+          "char": "d",
+          "name": "d",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 101,
+          "char": "e",
+          "name": "e",
+          "cat": "ascii",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 102,
+          "char": "f",
+          "name": "f",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 103,
+          "char": "g",
+          "name": "g",
+          "cat": "ascii",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 104,
+          "char": "h",
+          "name": "h",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 105,
+          "char": "i",
+          "name": "i",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 106,
+          "char": "j",
+          "name": "j",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 107,
+          "char": "k",
+          "name": "k",
+          "cat": "ascii",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 108,
+          "char": "l",
+          "name": "l",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 109,
+          "char": "m",
+          "name": "m",
+          "cat": "ascii",
+          "advance": 14,
+          "width": 12,
+          "label": null
+        },
+        {
+          "cp": 110,
+          "char": "n",
+          "name": "n",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 111,
+          "char": "o",
+          "name": "o",
+          "cat": "ascii",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 112,
+          "char": "p",
+          "name": "p",
+          "cat": "ascii",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 113,
+          "char": "q",
+          "name": "q",
+          "cat": "ascii",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 114,
+          "char": "r",
+          "name": "r",
+          "cat": "ascii",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 115,
+          "char": "s",
+          "name": "s",
+          "cat": "ascii",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 116,
+          "char": "t",
+          "name": "t",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 117,
+          "char": "u",
+          "name": "u",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 118,
+          "char": "v",
+          "name": "v",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 119,
+          "char": "w",
+          "name": "w",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 120,
+          "char": "x",
+          "name": "x",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 121,
+          "char": "y",
+          "name": "y",
+          "cat": "ascii",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 122,
+          "char": "z",
+          "name": "z",
+          "cat": "ascii",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 123,
+          "char": "{",
+          "name": "braceleft",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 124,
+          "char": "|",
+          "name": "bar",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 125,
+          "char": "}",
+          "name": "braceright",
+          "cat": "ascii",
+          "advance": 8,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 126,
+          "char": "~",
+          "name": "asciitilde",
+          "cat": "ascii",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 160,
+          "char": " ",
+          "name": "uni00A0",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 0,
+          "label": "Espace insécable"
+        },
+        {
+          "cp": 161,
+          "char": "¡",
+          "name": "exclamdown",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 163,
+          "char": "£",
+          "name": "sterling",
+          "cat": "punct-fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 167,
+          "char": "§",
+          "name": "section",
+          "cat": "punct-fr",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 169,
+          "char": "©",
+          "name": "copyright",
+          "cat": "punct-fr",
+          "advance": 16,
+          "width": 14,
+          "label": null
+        },
+        {
+          "cp": 171,
+          "char": "«",
+          "name": "guillemotleft",
+          "cat": "punct-fr",
+          "advance": 11,
+          "width": 9,
+          "label": null
+        },
+        {
+          "cp": 174,
+          "char": "®",
+          "name": "registered",
+          "cat": "punct-fr",
+          "advance": 16,
+          "width": 14,
+          "label": null
+        },
+        {
+          "cp": 176,
+          "char": "°",
+          "name": "degree",
+          "cat": "punct-fr",
+          "advance": 8,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 177,
+          "char": "±",
+          "name": "plusminus",
+          "cat": "punct-fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 183,
+          "char": "·",
+          "name": "periodcentered",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 187,
+          "char": "»",
+          "name": "guillemotright",
+          "cat": "punct-fr",
+          "advance": 11,
+          "width": 9,
+          "label": null
+        },
+        {
+          "cp": 191,
+          "char": "¿",
+          "name": "questiondown",
+          "cat": "punct-fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 192,
+          "char": "À",
+          "name": "Agrave",
+          "cat": "fr",
+          "advance": 14,
+          "width": 12,
+          "label": null
+        },
+        {
+          "cp": 194,
+          "char": "Â",
+          "name": "Acircumflex",
+          "cat": "fr",
+          "advance": 14,
+          "width": 12,
+          "label": null
+        },
+        {
+          "cp": 196,
+          "char": "Ä",
+          "name": "Adieresis",
+          "cat": "fr",
+          "advance": 14,
+          "width": 12,
+          "label": null
+        },
+        {
+          "cp": 198,
+          "char": "Æ",
+          "name": "AE",
+          "cat": "fr",
+          "advance": 16,
+          "width": 14,
+          "label": null
+        },
+        {
+          "cp": 199,
+          "char": "Ç",
+          "name": "Ccedilla",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 200,
+          "char": "È",
+          "name": "Egrave",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 201,
+          "char": "É",
+          "name": "Eacute",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 202,
+          "char": "Ê",
+          "name": "Ecircumflex",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 203,
+          "char": "Ë",
+          "name": "Edieresis",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 206,
+          "char": "Î",
+          "name": "Icircumflex",
+          "cat": "fr",
+          "advance": 8,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 207,
+          "char": "Ï",
+          "name": "Idieresis",
+          "cat": "fr",
+          "advance": 8,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 212,
+          "char": "Ô",
+          "name": "Ocircumflex",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 214,
+          "char": "Ö",
+          "name": "Odieresis",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 215,
+          "char": "×",
+          "name": "multiply",
+          "cat": "punct-fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 217,
+          "char": "Ù",
+          "name": "Ugrave",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 219,
+          "char": "Û",
+          "name": "Ucircumflex",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 220,
+          "char": "Ü",
+          "name": "Udieresis",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 224,
+          "char": "à",
+          "name": "agrave",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 226,
+          "char": "â",
+          "name": "acircumflex",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 228,
+          "char": "ä",
+          "name": "adieresis",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 230,
+          "char": "æ",
+          "name": "ae",
+          "cat": "fr",
+          "advance": 16,
+          "width": 14,
+          "label": null
+        },
+        {
+          "cp": 231,
+          "char": "ç",
+          "name": "ccedilla",
+          "cat": "fr",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 232,
+          "char": "è",
+          "name": "egrave",
+          "cat": "fr",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 233,
+          "char": "é",
+          "name": "eacute",
+          "cat": "fr",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 234,
+          "char": "ê",
+          "name": "ecircumflex",
+          "cat": "fr",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 235,
+          "char": "ë",
+          "name": "edieresis",
+          "cat": "fr",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 238,
+          "char": "î",
+          "name": "icircumflex",
+          "cat": "fr",
+          "advance": 8,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 239,
+          "char": "ï",
+          "name": "idieresis",
+          "cat": "fr",
+          "advance": 8,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 244,
+          "char": "ô",
+          "name": "ocircumflex",
+          "cat": "fr",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 246,
+          "char": "ö",
+          "name": "odieresis",
+          "cat": "fr",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 247,
+          "char": "÷",
+          "name": "divide",
+          "cat": "punct-fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 249,
+          "char": "ù",
+          "name": "ugrave",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 251,
+          "char": "û",
+          "name": "ucircumflex",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 252,
+          "char": "ü",
+          "name": "udieresis",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 255,
+          "char": "ÿ",
+          "name": "ydieresis",
+          "cat": "fr",
+          "advance": 10,
+          "width": 8,
+          "label": null
+        },
+        {
+          "cp": 338,
+          "char": "Œ",
+          "name": "OE",
+          "cat": "fr",
+          "advance": 16,
+          "width": 14,
+          "label": null
+        },
+        {
+          "cp": 339,
+          "char": "œ",
+          "name": "oe",
+          "cat": "fr",
+          "advance": 16,
+          "width": 14,
+          "label": null
+        },
+        {
+          "cp": 376,
+          "char": "Ÿ",
+          "name": "Ydieresis",
+          "cat": "fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 8201,
+          "char": " ",
+          "name": "uni2009",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 0,
+          "label": "Espace fine"
+        },
+        {
+          "cp": 8211,
+          "char": "–",
+          "name": "endash",
+          "cat": "punct-fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 8212,
+          "char": "—",
+          "name": "emdash",
+          "cat": "punct-fr",
+          "advance": 16,
+          "width": 16,
+          "label": null
+        },
+        {
+          "cp": 8216,
+          "char": "‘",
+          "name": "quoteleft",
+          "cat": "punct-fr",
+          "advance": 5,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 8217,
+          "char": "’",
+          "name": "quoteright",
+          "cat": "punct-fr",
+          "advance": 5,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 8220,
+          "char": "“",
+          "name": "quotedblleft",
+          "cat": "punct-fr",
+          "advance": 9,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 8221,
+          "char": "”",
+          "name": "quotedblright",
+          "cat": "punct-fr",
+          "advance": 9,
+          "width": 7,
+          "label": null
+        },
+        {
+          "cp": 8226,
+          "char": "•",
+          "name": "bullet",
+          "cat": "punct-fr",
+          "advance": 8,
+          "width": 6,
+          "label": null
+        },
+        {
+          "cp": 8230,
+          "char": "…",
+          "name": "ellipsis",
+          "cat": "punct-fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 8239,
+          "char": " ",
+          "name": "uni202F",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 0,
+          "label": "Espace fine insécable"
+        },
+        {
+          "cp": 8249,
+          "char": "‹",
+          "name": "guilsinglleft",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 8250,
+          "char": "›",
+          "name": "guilsinglright",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 8364,
+          "char": "€",
+          "name": "Euro",
+          "cat": "punct-fr",
+          "advance": 12,
+          "width": 10,
+          "label": null
+        },
+        {
+          "cp": 8482,
+          "char": "™",
+          "name": "trademark",
+          "cat": "punct-fr",
+          "advance": 18,
+          "width": 16,
+          "label": null
+        },
+        {
+          "cp": 8592,
+          "char": "←",
+          "name": "arrowleft",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Flèche gauche"
+        },
+        {
+          "cp": 8593,
+          "char": "↑",
+          "name": "arrowup",
+          "cat": "game",
+          "advance": 12,
+          "width": 10,
+          "label": "Flèche haut"
+        },
+        {
+          "cp": 8594,
+          "char": "→",
+          "name": "arrowright",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Flèche droite"
+        },
+        {
+          "cp": 8595,
+          "char": "↓",
+          "name": "arrowdown",
+          "cat": "game",
+          "advance": 12,
+          "width": 10,
+          "label": "Flèche bas"
+        },
+        {
+          "cp": 9398,
+          "char": "Ⓐ",
+          "name": "uni24B6",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Bouton A"
+        },
+        {
+          "cp": 9399,
+          "char": "Ⓑ",
+          "name": "uni24B7",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Bouton B"
+        },
+        {
+          "cp": 9632,
+          "char": "■",
+          "name": "filledbox",
+          "cat": "game",
+          "advance": 14,
+          "width": 12,
+          "label": "Carré plein"
+        },
+        {
+          "cp": 9650,
+          "char": "▲",
+          "name": "triagup",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Triangle haut"
+        },
+        {
+          "cp": 9654,
+          "char": "▶",
+          "name": "uni25B6",
+          "cat": "game",
+          "advance": 10,
+          "width": 8,
+          "label": "Triangle droite (curseur)"
+        },
+        {
+          "cp": 9660,
+          "char": "▼",
+          "name": "triagdn",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Triangle bas"
+        },
+        {
+          "cp": 9664,
+          "char": "◀",
+          "name": "uni25C0",
+          "cat": "game",
+          "advance": 10,
+          "width": 8,
+          "label": "Triangle gauche (curseur)"
+        },
+        {
+          "cp": 9675,
+          "char": "○",
+          "name": "circle",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Cercle vide"
+        },
+        {
+          "cp": 9679,
+          "char": "●",
+          "name": "H18533",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Disque plein"
+        },
+        {
+          "cp": 9733,
+          "char": "★",
+          "name": "uni2605",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Étoile pleine"
+        },
+        {
+          "cp": 9734,
+          "char": "☆",
+          "name": "uni2606",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Étoile vide"
+        },
+        {
+          "cp": 9829,
+          "char": "♥",
+          "name": "heart",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Cœur (vie)"
+        },
+        {
+          "cp": 9834,
+          "char": "♪",
+          "name": "musicalnote",
+          "cat": "game",
+          "advance": 12,
+          "width": 10,
+          "label": "Note de musique"
+        },
+        {
+          "cp": 10003,
+          "char": "✓",
+          "name": "uni2713",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Coche (validé)"
+        },
+        {
+          "cp": 10007,
+          "char": "✗",
+          "name": "uni2717",
+          "cat": "game",
+          "advance": 14,
+          "width": 12,
+          "label": "Croix (refusé)"
+        },
+        {
+          "cp": 57344,
+          "char": "",
+          "name": "uniE000",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Pièce"
+        },
+        {
+          "cp": 57345,
+          "char": "",
+          "name": "uniE001",
+          "cat": "game",
+          "advance": 20,
+          "width": 18,
+          "label": "Bouton Start"
+        },
+        {
+          "cp": 57346,
+          "char": "",
+          "name": "uniE002",
+          "cat": "game",
+          "advance": 20,
+          "width": 18,
+          "label": "Bouton Select"
+        },
+        {
+          "cp": 57347,
+          "char": "",
+          "name": "uniE003",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Croix directionnelle"
+        },
+        {
+          "cp": 57348,
+          "char": "",
+          "name": "uniE004",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Bouton X"
+        },
+        {
+          "cp": 57349,
+          "char": "",
+          "name": "uniE005",
+          "cat": "game",
+          "advance": 16,
+          "width": 14,
+          "label": "Bouton Y"
+        },
+        {
+          "cp": 57350,
+          "char": "",
+          "name": "uniE006",
+          "cat": "game",
+          "advance": 20,
+          "width": 18,
+          "label": "Gâchette L"
+        },
+        {
+          "cp": 57351,
+          "char": "",
+          "name": "uniE007",
+          "cat": "game",
+          "advance": 20,
+          "width": 18,
+          "label": "Gâchette R"
+        },
+        {
+          "cp": 57600,
+          "char": "",
+          "name": "uniE100",
+          "cat": "cardor",
+          "advance": 22,
+          "width": 20,
+          "label": "Beffroi de Mons"
+        },
+        {
+          "cp": 57601,
+          "char": "",
+          "name": "uniE101",
+          "cat": "cardor",
+          "advance": 46,
+          "width": 44,
+          "label": "Dragon du Lumeçon"
+        },
+        {
+          "cp": 57602,
+          "char": "",
+          "name": "uniE102",
+          "cat": "cardor",
+          "advance": 26,
+          "width": 24,
+          "label": "Singe du Grand-Garde"
+        },
+        {
+          "cp": 57603,
+          "char": "",
+          "name": "uniE103",
+          "cat": "cardor",
+          "advance": 42,
+          "width": 40,
+          "label": "Logo CARDOR (Car d'Or)"
+        }
+      ]
+    },
+    {
+      "id": "beffroi-5-mini",
+      "family": "Beffroi 5",
+      "style": "Mini",
+      "cssFamily": "Beffroi 5 Mini",
+      "cssWeight": 400,
+      "grid": 5,
+      "upm": 640,
+      "pxUnits": 128,
+      "metrics": {
+        "cap": 4,
+        "xHeight": 3,
+        "ascent": 5,
+        "descent": 1,
+        "top": 6,
+        "lineHeight": 7
+      },
+      "crispSizes": [
+        5,
+        10,
+        15,
+        20,
+        30
+      ],
+      "files": {
+        "ttf": "fonts/ttf/Beffroi5-Mini.ttf",
+        "otf": "fonts/otf/Beffroi5-Mini.otf",
+        "woff2": "fonts/woff2/Beffroi5-Mini.woff2",
+        "fnt": "bitmap/beffroi-5-mini.fnt",
+        "xml": "bitmap/beffroi-5-mini.xml",
+        "png": "bitmap/beffroi-5-mini.png",
+        "json": "bitmap/beffroi-5-mini.json"
+      },
+      "glyphs": [
+        {
+          "cp": 32,
+          "char": " ",
+          "name": "space",
+          "cat": "ascii",
+          "advance": 2,
+          "width": 0,
+          "label": "Espace"
+        },
+        {
+          "cp": 33,
+          "char": "!",
+          "name": "exclam",
+          "cat": "ascii",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 34,
+          "char": "\"",
+          "name": "quotedbl",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 35,
+          "char": "#",
+          "name": "numbersign",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 36,
+          "char": "$",
+          "name": "dollar",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 37,
+          "char": "%",
+          "name": "percent",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 38,
+          "char": "&",
+          "name": "ampersand",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 39,
+          "char": "'",
+          "name": "quotesingle",
+          "cat": "ascii",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 40,
+          "char": "(",
+          "name": "parenleft",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 41,
+          "char": ")",
+          "name": "parenright",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 42,
+          "char": "*",
+          "name": "asterisk",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 43,
+          "char": "+",
+          "name": "plus",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 44,
+          "char": ",",
+          "name": "comma",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 45,
+          "char": "-",
+          "name": "hyphen",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 46,
+          "char": ".",
+          "name": "period",
+          "cat": "ascii",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 47,
+          "char": "/",
+          "name": "slash",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 48,
+          "char": "0",
+          "name": "zero",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 49,
+          "char": "1",
+          "name": "one",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 50,
+          "char": "2",
+          "name": "two",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 51,
+          "char": "3",
+          "name": "three",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 52,
+          "char": "4",
+          "name": "four",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 53,
+          "char": "5",
+          "name": "five",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 54,
+          "char": "6",
+          "name": "six",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 55,
+          "char": "7",
+          "name": "seven",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 56,
+          "char": "8",
+          "name": "eight",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 57,
+          "char": "9",
+          "name": "nine",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 58,
+          "char": ":",
+          "name": "colon",
+          "cat": "ascii",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 59,
+          "char": ";",
+          "name": "semicolon",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 60,
+          "char": "<",
+          "name": "less",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 61,
+          "char": "=",
+          "name": "equal",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 62,
+          "char": ">",
+          "name": "greater",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 63,
+          "char": "?",
+          "name": "question",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 64,
+          "char": "@",
+          "name": "at",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 65,
+          "char": "A",
+          "name": "A",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 66,
+          "char": "B",
+          "name": "B",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 67,
+          "char": "C",
+          "name": "C",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 68,
+          "char": "D",
+          "name": "D",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 69,
+          "char": "E",
+          "name": "E",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 70,
+          "char": "F",
+          "name": "F",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 71,
+          "char": "G",
+          "name": "G",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 72,
+          "char": "H",
+          "name": "H",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 73,
+          "char": "I",
+          "name": "I",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 74,
+          "char": "J",
+          "name": "J",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 75,
+          "char": "K",
+          "name": "K",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 76,
+          "char": "L",
+          "name": "L",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 77,
+          "char": "M",
+          "name": "M",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 78,
+          "char": "N",
+          "name": "N",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 79,
+          "char": "O",
+          "name": "O",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 80,
+          "char": "P",
+          "name": "P",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 81,
+          "char": "Q",
+          "name": "Q",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 82,
+          "char": "R",
+          "name": "R",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 83,
+          "char": "S",
+          "name": "S",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 84,
+          "char": "T",
+          "name": "T",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 85,
+          "char": "U",
+          "name": "U",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 86,
+          "char": "V",
+          "name": "V",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 87,
+          "char": "W",
+          "name": "W",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 88,
+          "char": "X",
+          "name": "X",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 89,
+          "char": "Y",
+          "name": "Y",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 90,
+          "char": "Z",
+          "name": "Z",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 91,
+          "char": "[",
+          "name": "bracketleft",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 92,
+          "char": "\\",
+          "name": "backslash",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 93,
+          "char": "]",
+          "name": "bracketright",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 94,
+          "char": "^",
+          "name": "asciicircum",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 95,
+          "char": "_",
+          "name": "underscore",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 96,
+          "char": "`",
+          "name": "grave",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 97,
+          "char": "a",
+          "name": "a",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 98,
+          "char": "b",
+          "name": "b",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 99,
+          "char": "c",
+          "name": "c",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 100,
+          "char": "d",
+          "name": "d",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 101,
+          "char": "e",
+          "name": "e",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 102,
+          "char": "f",
+          "name": "f",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 103,
+          "char": "g",
+          "name": "g",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 104,
+          "char": "h",
+          "name": "h",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 105,
+          "char": "i",
+          "name": "i",
+          "cat": "ascii",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 106,
+          "char": "j",
+          "name": "j",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 107,
+          "char": "k",
+          "name": "k",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 108,
+          "char": "l",
+          "name": "l",
+          "cat": "ascii",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 109,
+          "char": "m",
+          "name": "m",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 110,
+          "char": "n",
+          "name": "n",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 111,
+          "char": "o",
+          "name": "o",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 112,
+          "char": "p",
+          "name": "p",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 113,
+          "char": "q",
+          "name": "q",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 114,
+          "char": "r",
+          "name": "r",
+          "cat": "ascii",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 115,
+          "char": "s",
+          "name": "s",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 116,
+          "char": "t",
+          "name": "t",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 117,
+          "char": "u",
+          "name": "u",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 118,
+          "char": "v",
+          "name": "v",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 119,
+          "char": "w",
+          "name": "w",
+          "cat": "ascii",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 120,
+          "char": "x",
+          "name": "x",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 121,
+          "char": "y",
+          "name": "y",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 122,
+          "char": "z",
+          "name": "z",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 123,
+          "char": "{",
+          "name": "braceleft",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 124,
+          "char": "|",
+          "name": "bar",
+          "cat": "ascii",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 125,
+          "char": "}",
+          "name": "braceright",
+          "cat": "ascii",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 126,
+          "char": "~",
+          "name": "asciitilde",
+          "cat": "ascii",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 160,
+          "char": " ",
+          "name": "uni00A0",
+          "cat": "punct-fr",
+          "advance": 2,
+          "width": 0,
+          "label": "Espace insécable"
+        },
+        {
+          "cp": 161,
+          "char": "¡",
+          "name": "exclamdown",
+          "cat": "punct-fr",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 163,
+          "char": "£",
+          "name": "sterling",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 167,
+          "char": "§",
+          "name": "section",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 169,
+          "char": "©",
+          "name": "copyright",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 171,
+          "char": "«",
+          "name": "guillemotleft",
+          "cat": "punct-fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 174,
+          "char": "®",
+          "name": "registered",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 176,
+          "char": "°",
+          "name": "degree",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 177,
+          "char": "±",
+          "name": "plusminus",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 183,
+          "char": "·",
+          "name": "periodcentered",
+          "cat": "punct-fr",
+          "advance": 2,
+          "width": 1,
+          "label": null
+        },
+        {
+          "cp": 187,
+          "char": "»",
+          "name": "guillemotright",
+          "cat": "punct-fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 191,
+          "char": "¿",
+          "name": "questiondown",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 192,
+          "char": "À",
+          "name": "Agrave",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 194,
+          "char": "Â",
+          "name": "Acircumflex",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 196,
+          "char": "Ä",
+          "name": "Adieresis",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 198,
+          "char": "Æ",
+          "name": "AE",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 199,
+          "char": "Ç",
+          "name": "Ccedilla",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 200,
+          "char": "È",
+          "name": "Egrave",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 201,
+          "char": "É",
+          "name": "Eacute",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 202,
+          "char": "Ê",
+          "name": "Ecircumflex",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 203,
+          "char": "Ë",
+          "name": "Edieresis",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 206,
+          "char": "Î",
+          "name": "Icircumflex",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 207,
+          "char": "Ï",
+          "name": "Idieresis",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 212,
+          "char": "Ô",
+          "name": "Ocircumflex",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 214,
+          "char": "Ö",
+          "name": "Odieresis",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 215,
+          "char": "×",
+          "name": "multiply",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 217,
+          "char": "Ù",
+          "name": "Ugrave",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 219,
+          "char": "Û",
+          "name": "Ucircumflex",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 220,
+          "char": "Ü",
+          "name": "Udieresis",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 224,
+          "char": "à",
+          "name": "agrave",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 226,
+          "char": "â",
+          "name": "acircumflex",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 228,
+          "char": "ä",
+          "name": "adieresis",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 230,
+          "char": "æ",
+          "name": "ae",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 231,
+          "char": "ç",
+          "name": "ccedilla",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 232,
+          "char": "è",
+          "name": "egrave",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 233,
+          "char": "é",
+          "name": "eacute",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 234,
+          "char": "ê",
+          "name": "ecircumflex",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 235,
+          "char": "ë",
+          "name": "edieresis",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 238,
+          "char": "î",
+          "name": "icircumflex",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 239,
+          "char": "ï",
+          "name": "idieresis",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 244,
+          "char": "ô",
+          "name": "ocircumflex",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 246,
+          "char": "ö",
+          "name": "odieresis",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 247,
+          "char": "÷",
+          "name": "divide",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 249,
+          "char": "ù",
+          "name": "ugrave",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 251,
+          "char": "û",
+          "name": "ucircumflex",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 252,
+          "char": "ü",
+          "name": "udieresis",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 255,
+          "char": "ÿ",
+          "name": "ydieresis",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 338,
+          "char": "Œ",
+          "name": "OE",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 339,
+          "char": "œ",
+          "name": "oe",
+          "cat": "fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 376,
+          "char": "Ÿ",
+          "name": "Ydieresis",
+          "cat": "fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 8201,
+          "char": " ",
+          "name": "uni2009",
+          "cat": "punct-fr",
+          "advance": 1,
+          "width": 0,
+          "label": "Espace fine"
+        },
+        {
+          "cp": 8211,
+          "char": "–",
+          "name": "endash",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 8212,
+          "char": "—",
+          "name": "emdash",
+          "cat": "punct-fr",
+          "advance": 5,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 8216,
+          "char": "‘",
+          "name": "quoteleft",
+          "cat": "punct-fr",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 8217,
+          "char": "’",
+          "name": "quoteright",
+          "cat": "punct-fr",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 8220,
+          "char": "“",
+          "name": "quotedblleft",
+          "cat": "punct-fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 8221,
+          "char": "”",
+          "name": "quotedblright",
+          "cat": "punct-fr",
+          "advance": 5,
+          "width": 4,
+          "label": null
+        },
+        {
+          "cp": 8226,
+          "char": "•",
+          "name": "bullet",
+          "cat": "punct-fr",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 8230,
+          "char": "…",
+          "name": "ellipsis",
+          "cat": "punct-fr",
+          "advance": 6,
+          "width": 5,
+          "label": null
+        },
+        {
+          "cp": 8239,
+          "char": " ",
+          "name": "uni202F",
+          "cat": "punct-fr",
+          "advance": 1,
+          "width": 0,
+          "label": "Espace fine insécable"
+        },
+        {
+          "cp": 8249,
+          "char": "‹",
+          "name": "guilsinglleft",
+          "cat": "punct-fr",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 8250,
+          "char": "›",
+          "name": "guilsinglright",
+          "cat": "punct-fr",
+          "advance": 3,
+          "width": 2,
+          "label": null
+        },
+        {
+          "cp": 8364,
+          "char": "€",
+          "name": "Euro",
+          "cat": "punct-fr",
+          "advance": 4,
+          "width": 3,
+          "label": null
+        },
+        {
+          "cp": 8482,
+          "char": "™",
+          "name": "trademark",
+          "cat": "punct-fr",
+          "advance": 10,
+          "width": 9,
+          "label": null
+        },
+        {
+          "cp": 8592,
+          "char": "←",
+          "name": "arrowleft",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Flèche gauche"
+        },
+        {
+          "cp": 8593,
+          "char": "↑",
+          "name": "arrowup",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Flèche haut"
+        },
+        {
+          "cp": 8594,
+          "char": "→",
+          "name": "arrowright",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Flèche droite"
+        },
+        {
+          "cp": 8595,
+          "char": "↓",
+          "name": "arrowdown",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Flèche bas"
+        },
+        {
+          "cp": 9398,
+          "char": "Ⓐ",
+          "name": "uni24B6",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Bouton A"
+        },
+        {
+          "cp": 9399,
+          "char": "Ⓑ",
+          "name": "uni24B7",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Bouton B"
+        },
+        {
+          "cp": 9632,
+          "char": "■",
+          "name": "filledbox",
+          "cat": "game",
+          "advance": 5,
+          "width": 4,
+          "label": "Carré plein"
+        },
+        {
+          "cp": 9650,
+          "char": "▲",
+          "name": "triagup",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Triangle haut"
+        },
+        {
+          "cp": 9654,
+          "char": "▶",
+          "name": "uni25B6",
+          "cat": "game",
+          "advance": 4,
+          "width": 3,
+          "label": "Triangle droite (curseur)"
+        },
+        {
+          "cp": 9660,
+          "char": "▼",
+          "name": "triagdn",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Triangle bas"
+        },
+        {
+          "cp": 9664,
+          "char": "◀",
+          "name": "uni25C0",
+          "cat": "game",
+          "advance": 4,
+          "width": 3,
+          "label": "Triangle gauche (curseur)"
+        },
+        {
+          "cp": 9675,
+          "char": "○",
+          "name": "circle",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Cercle vide"
+        },
+        {
+          "cp": 9679,
+          "char": "●",
+          "name": "H18533",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Disque plein"
+        },
+        {
+          "cp": 9733,
+          "char": "★",
+          "name": "uni2605",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Étoile pleine"
+        },
+        {
+          "cp": 9734,
+          "char": "☆",
+          "name": "uni2606",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Étoile vide"
+        },
+        {
+          "cp": 9829,
+          "char": "♥",
+          "name": "heart",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Cœur (vie)"
+        },
+        {
+          "cp": 9834,
+          "char": "♪",
+          "name": "musicalnote",
+          "cat": "game",
+          "advance": 4,
+          "width": 3,
+          "label": "Note de musique"
+        },
+        {
+          "cp": 10003,
+          "char": "✓",
+          "name": "uni2713",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Coche (validé)"
+        },
+        {
+          "cp": 10007,
+          "char": "✗",
+          "name": "uni2717",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Croix (refusé)"
+        },
+        {
+          "cp": 57344,
+          "char": "",
+          "name": "uniE000",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Pièce"
+        },
+        {
+          "cp": 57345,
+          "char": "",
+          "name": "uniE001",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Bouton Start"
+        },
+        {
+          "cp": 57346,
+          "char": "",
+          "name": "uniE002",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Bouton Select"
+        },
+        {
+          "cp": 57347,
+          "char": "",
+          "name": "uniE003",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Croix directionnelle"
+        },
+        {
+          "cp": 57348,
+          "char": "",
+          "name": "uniE004",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Bouton X"
+        },
+        {
+          "cp": 57349,
+          "char": "",
+          "name": "uniE005",
+          "cat": "game",
+          "advance": 6,
+          "width": 5,
+          "label": "Bouton Y"
+        },
+        {
+          "cp": 57350,
+          "char": "",
+          "name": "uniE006",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Gâchette L"
+        },
+        {
+          "cp": 57351,
+          "char": "",
+          "name": "uniE007",
+          "cat": "game",
+          "advance": 8,
+          "width": 7,
+          "label": "Gâchette R"
+        }
+      ]
+    }
+  ]
+}

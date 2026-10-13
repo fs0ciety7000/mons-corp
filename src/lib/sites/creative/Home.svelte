@@ -12,6 +12,9 @@
 	import { catalog } from '#lib/sites/apps/catalog.ts';
 	import { jsonLd } from '#lib/seo/seo.ts';
 	import { siteUrl } from '#lib/sites/config.ts';
+	import type { PixelFace } from './beffroi8/pixel.ts';
+
+	let { beffroi = null }: { beffroi?: { face: PixelFace; css: string } | null } = $props();
 
 	// Rich results: the atelier's published works, as CreativeWork items.
 	const works = jsonLd({
@@ -52,5 +55,5 @@
 <Offer index="02" offer={content.offer} />
 <Method index="03" method={content.method} />
 <EmblemStory index="04" emblem={content.emblem} />
-{#if content.soon}<Works index="05" soon={content.soon} />{/if}
+{#if content.soon}<Works index="05" soon={content.soon} {beffroi} />{/if}
 <Sisters />

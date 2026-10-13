@@ -7,3 +7,6 @@ bun.lockb
 
 # Miscellaneous
 /static/
+
+# Synced from fs0ciety7000/beffroi-8 (scripts/sync-mons-corp.sh): generated, never edited here
+/src/lib/sites/creative/beffroi8/manifest.json

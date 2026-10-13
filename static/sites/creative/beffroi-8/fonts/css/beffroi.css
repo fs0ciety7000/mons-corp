@@ -1,0 +1,37 @@
+/* Beffroi — généré par `beffroi build`, ne pas modifier. */
+
+@font-face {
+  font-family: "Beffroi 8";
+  src: url("../woff2/Beffroi8-Regular.woff2") format("woff2"),
+       url("../ttf/Beffroi8-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Beffroi 8";
+  src: url("../woff2/Beffroi8-Bold.woff2") format("woff2"),
+       url("../ttf/Beffroi8-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Beffroi 16 Display";
+  src: url("../woff2/Beffroi16-Display.woff2") format("woff2"),
+       url("../ttf/Beffroi16-Display.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Beffroi 5 Mini";
+  src: url("../woff2/Beffroi5-Mini.woff2") format("woff2"),
+       url("../ttf/Beffroi5-Mini.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

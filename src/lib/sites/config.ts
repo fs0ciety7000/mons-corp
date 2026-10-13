@@ -106,6 +106,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 		nav: [
 			{ href: '/#ateliers', label: 'Ateliers' },
 			{ href: '/#methode', label: 'Méthode' },
+			{ href: '/beffroi-8', label: 'Beffroi 8' },
 			{ href: '/contact', label: 'Contact' }
 		],
 		urls: {
