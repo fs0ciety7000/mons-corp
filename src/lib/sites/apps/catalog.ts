@@ -94,6 +94,13 @@ export const catalog: AppEntry[] = [
 		],
 		keywords: 'hack slash roguelite 3d rail sncb mons cheminot'
 	}),
+	fromSheet('arcade-cardor', {
+		kind: 'jeu',
+		access: 'public',
+		platforms: ['Navigateur', 'PWA'],
+		keywords:
+			'arcade portail profil pseudo succès classement général taupe space invador rétro pixel'
+	}),
 	fromSheet('tape-taupe', {
 		kind: 'jeu',
 		access: 'public',
