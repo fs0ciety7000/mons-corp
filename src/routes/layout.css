@@ -229,11 +229,15 @@
 		}
 	}
 
-	/* Line masks used by SplitText reveals */
-	.split-mask {
+	/* Line masks used by SplitText reveals. SplitText names the wrapper after the line class
+	   (`split-line` → `split-line-mask`). Display lines sit at line-height 0.88: the mask is
+	   padded so descenders (p, g, ç), accents and italic overhangs are not clipped, and the padding is cancelled
+	   by a negative margin so the layout does not move. */
+	.split-mask,
+	.split-line-mask {
 		overflow: clip;
-		padding-bottom: 0.08em;
-		margin-bottom: -0.08em;
+		padding: 0.1em 0.08em 0.24em;
+		margin: -0.1em -0.08em -0.24em;
 	}
 
 	@media (prefers-reduced-motion: reduce) {
