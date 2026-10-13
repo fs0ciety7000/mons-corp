@@ -1,5 +1,5 @@
 /**
- * Open Graph images (1200×630 JPEG) and PNG icons for the four sites.
+ * Open Graph images (1200×630 JPEG) and PNG icons for every site.
  * Source of truth for copy: src/lib/seo/pages.json (shared with the <Seo> component).
  *
  * Tooling script, not a runtime dependency: needs Playwright and the pre-installed Chromium.
@@ -47,6 +47,12 @@ const SITES = {
 		signal: '#FFB547',
 		host: 'creative.cardormedia.com',
 		icon: 'creative'
+	},
+	publishing: {
+		name: 'CM Publishing',
+		signal: '#D08A5C',
+		host: 'publishing.cardormedia.com',
+		icon: 'publishing'
 	},
 	apps: {
 		name: 'CARDOR Apps',

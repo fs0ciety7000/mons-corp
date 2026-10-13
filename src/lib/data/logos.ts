@@ -48,5 +48,12 @@ export const emblems: Record<
 		meaning:
 			'On lui caresse la tête pour la chance ; sa queue devient une plume : le récit qui porte bonheur.',
 		source: 'creative-singe-2-color'
+	},
+	publishing: {
+		motif: 'La Châsse de Sainte-Waudru',
+		entity: 'CM Publishing',
+		meaning:
+			'Le reliquaire que porte le Car d’Or, l’écrin de ce que la ville a de plus cher : le livre qui renferme un monde.',
+		source: 'tracé géométrique (static/brand/publishing.svg, scripts/build-publishing-emblem.py)'
 	}
 };

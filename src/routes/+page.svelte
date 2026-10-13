@@ -5,6 +5,7 @@
 	import InteractiveHome from '#lib/sites/interactive/Home.svelte';
 	import SoundHome from '#lib/sites/sound/Home.svelte';
 	import CreativeHome from '#lib/sites/creative/Home.svelte';
+	import PublishingHome from '#lib/sites/publishing/Home.svelte';
 	import AppsHome from '#lib/sites/apps/Home.svelte';
 
 	let { data } = $props();
@@ -19,6 +20,8 @@
 	<SoundHome releases={data.releases} />
 {:else if SITE === 'creative'}
 	<CreativeHome beffroi={data.beffroi} />
+{:else if SITE === 'publishing'}
+	<PublishingHome />
 {:else if SITE === 'apps'}
 	<AppsHome />
 {:else}

@@ -18,7 +18,7 @@
 		</h2>
 	</div>
 	<ul class="grid-cardor mt-12 gap-y-4">
-		<li class="col-span-4 md:col-span-8 lg:col-span-4" use:reveal={{ type: 'block' }}>
+		<li class="col-span-4 md:col-span-4 lg:col-span-6" use:reveal={{ type: 'block' }}>
 			<a href={siteUrl('holding')} class="sister group" style:--c="var(--color-or)">
 				<span class="size-14 shrink-0 text-or"
 					><Logo name="cardor-monogram" animate="hover" host=".sister" class="size-full" /></span
@@ -32,7 +32,7 @@
 		</li>
 		{#each others as s, i (s.id)}
 			<li
-				class="col-span-4 md:col-span-4 lg:col-span-4"
+				class="col-span-4 md:col-span-4 lg:col-span-6"
 				use:reveal={{ type: 'block', delay: (i + 1) * 0.08 }}
 			>
 				<a

@@ -2,7 +2,7 @@
 // for information about these interfaces
 declare global {
 	/** Target site, fixed at build time (ADR-008). */
-	const __SITE__: 'holding' | 'interactive' | 'sound' | 'creative' | 'apps';
+	const __SITE__: 'holding' | 'interactive' | 'sound' | 'creative' | 'publishing' | 'apps';
 	const __DEPLOY_ENV__: 'production' | 'staging';
 
 	namespace App {

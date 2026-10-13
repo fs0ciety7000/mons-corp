@@ -27,7 +27,7 @@ upsert() { # type name content [extra-json]
 	fi
 }
 
-for n in @ www interactive sound creative apps; do
+for n in @ www interactive sound creative publishing apps; do
 	upsert A "$n" "$SERVER_IP" ",\"proxied\":$PROXIED"
 done
 # Only Let's Encrypt may issue certificates for the zone.

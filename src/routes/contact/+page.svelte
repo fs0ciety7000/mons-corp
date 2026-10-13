@@ -6,7 +6,7 @@
 	import { reveal } from '#lib/motion/actions.ts';
 	import { SITE, type SiteId } from '#lib/sites/config.ts';
 
-	// One heading and lead per site: five contact pages, five distinct answers to « why write? ».
+	// One heading and lead per site: six contact pages, six distinct answers to « why write? ».
 	const copy: Record<SiteId, { before: string; em: string; after: string; lead: string }> = {
 		holding: {
 			before: 'Parlons de votre',
@@ -31,6 +31,12 @@
 			em: 'à faire naître',
 			after: '?',
 			lead: 'Illustration, direction artistique, écriture ou identité : écrivez à CM Creative Lab, l’atelier vous répond sous 48 heures.'
+		},
+		publishing: {
+			before: 'Un livre',
+			em: 'à faire paraître',
+			after: '?',
+			lead: 'Manuscrit, roman graphique, jeu de rôle ou question sur la liseuse : écrivez à CM Publishing, la maison vous répond sous 48 heures.'
 		},
 		apps: {
 			before: 'Une question sur',

@@ -63,6 +63,9 @@
 					{
 						yPercent: 112,
 						rotate: site.id === 'creative' ? -6 : 0,
+						// Publishing: letters rise like pages lifting off the press.
+						rotationX: site.id === 'publishing' ? -70 : 0,
+						transformOrigin: '50% 100%',
 						duration: site.id === 'sound' ? duration.lg * 1.2 : duration.lg,
 						stagger: 0.045
 					},

@@ -13,7 +13,7 @@
 
 Le site corporate `cardormedia.com` n'est pas une plaquette. C'est **la première œuvre de la maison** : une expérience qui prouve, dès la première seconde, le niveau d'exigence technique et artistique des studios. Il doit jouer dans la même cour que MediaMonks, Unit9, A24, Epic Games, Active Theory ou Locomotive.
 
-**Promesse en une phrase :** _« Trois studios, un seul noyau créatif. »_
+**Promesse en une phrase :** _« Quatre studios, un seul noyau créatif. »_
 
 ## 2. Architecture de marque
 
@@ -22,6 +22,7 @@ CARDOR Media (holding)                      cardormedia.com
 ├── CM Interactive   — Web & jeu vidéo 3D   interactive.cardormedia.com
 ├── CM Soundworks    — Sound design, doublage, musique   sound.cardormedia.com
 ├── CM Creative Lab  — Illustration, graphisme, rédaction, lore   creative.cardormedia.com
+├── CM Publishing    — Édition numérique, liseuse, jeu de rôle   publishing.cardormedia.com
 ├── CARDOR Apps      — lanceur de tous les projets   apps.cardormedia.com
 └── Infrastructure    — back-office, Coolify   *.fs0ciety.org
 ```
@@ -50,14 +51,14 @@ CARDOR Media (holding)                      cardormedia.com
 
 ## 5. Stack validée
 
-| Domaine     | Choix                                                                                                                                                                                                                                              | Statut           |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| Framework   | **SvelteKit 3 + Svelte 5 (runes)** + TypeScript                                                                                                                                                                                                    | ✅ validé        |
-| Styling     | **Tailwind CSS 4** (tokens via `@theme`)                                                                                                                                                                                                           | ✅ validé        |
-| Motion      | **GSAP 3.15** (ScrollTrigger, SplitText, CustomEase, DrawSVG, MorphSVG) + **Lenis**                                                                                                                                                                | ✅ validé        |
-| 3D          | **Three.js** natif + shaders GLSL maison (Threlte écarté pour le hero, cf. ADR-003)                                                                                                                                                                | ✅ validé        |
-| Runtime     | `@sveltejs/adapter-node` → image Docker Node 22 alpine                                                                                                                                                                                             | ✅ validé        |
-| Déploiement | **Coolify** — production : cardormedia.com · interactive. · sound. · creative. · apps.cardormedia.com (alias `*.fs0ciety.org`) ; 5 applications branchées sur la GitHub App de Coolify : **un push sur la branche déployée redéploie les 5 sites** | ✅ en production |
+| Domaine     | Choix                                                                                                                                                                                                                                                            | Statut           |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| Framework   | **SvelteKit 3 + Svelte 5 (runes)** + TypeScript                                                                                                                                                                                                                  | ✅ validé        |
+| Styling     | **Tailwind CSS 4** (tokens via `@theme`)                                                                                                                                                                                                                         | ✅ validé        |
+| Motion      | **GSAP 3.15** (ScrollTrigger, SplitText, CustomEase, DrawSVG, MorphSVG) + **Lenis**                                                                                                                                                                              | ✅ validé        |
+| 3D          | **Three.js** natif + shaders GLSL maison (Threlte écarté pour le hero, cf. ADR-003)                                                                                                                                                                              | ✅ validé        |
+| Runtime     | `@sveltejs/adapter-node` → image Docker Node 22 alpine                                                                                                                                                                                                           | ✅ validé        |
+| Déploiement | **Coolify** — production : cardormedia.com · interactive. · sound. · creative. · publishing. · apps.cardormedia.com (alias `*.fs0ciety.org`) ; 6 applications branchées sur la GitHub App de Coolify : **un push sur la branche déployée redéploie les 6 sites** | ✅ en production |
 
 ## 6. Règles non négociables
 
@@ -106,6 +107,6 @@ npm run dev        # serveur de dev (http://localhost:5173)
 npm run check      # svelte-check + TS
 npm run lint       # prettier + eslint
 npm run build      # build production (adapter-node → ./build)
-PUBLIC_SITE=interactive npm run build   # un site de division (holding|interactive|sound|creative)
+PUBLIC_SITE=interactive npm run build   # un site (holding|interactive|sound|creative|publishing|apps)
 docker build -t cardor-web . && docker run -p 3000:3000 cardor-web
 ```

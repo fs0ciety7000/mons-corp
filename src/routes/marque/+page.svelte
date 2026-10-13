@@ -10,7 +10,8 @@
 		{ name: 'cardor-emblem', label: 'CARDOR Media — emblème « Le Car d’Or »', accent: '#D4A84B' },
 		{ name: 'interactive', label: 'CM Interactive — « Le Dragon »', accent: '#C6FF3D' },
 		{ name: 'sound', label: 'CM Soundworks — « Le Beffroi »', accent: '#7B5CFF' },
-		{ name: 'creative', label: 'CM Creative Lab — « Le Singe »', accent: '#FFB547' }
+		{ name: 'creative', label: 'CM Creative Lab — « Le Singe »', accent: '#FFB547' },
+		{ name: 'publishing', label: 'CM Publishing — « La Châsse »', accent: '#D08A5C' }
 	];
 
 	const swatches = [
@@ -24,7 +25,9 @@
 		{ group: 'Soundworks', name: 'Ultraviolet', hex: '#7B5CFF', use: 'Beffroi' },
 		{ group: 'Soundworks', name: 'Indigo', hex: '#3A2A9E', use: 'Profondeur' },
 		{ group: 'Creative Lab', name: 'Amber', hex: '#FFB547', use: 'Singe — trait' },
-		{ group: 'Creative Lab', name: 'Ochre', hex: '#A66A0B', use: 'Singe — ombre, plume' }
+		{ group: 'Creative Lab', name: 'Ochre', hex: '#A66A0B', use: 'Singe — ombre, plume' },
+		{ group: 'Publishing', name: 'Cuivre', hex: '#D08A5C', use: 'Châsse — orfèvrerie' },
+		{ group: 'Publishing', name: 'Brou', hex: '#7A4527', use: 'Châsse — niches, fenêtre' }
 	];
 
 	function rgb(hex: string) {
@@ -48,7 +51,8 @@
 		'cardor-emblem': '32 px · 12 mm',
 		interactive: '24 px · 8 mm',
 		sound: '32 px · 10 mm (hauteur)',
-		creative: '24 px · 8 mm'
+		creative: '24 px · 8 mm',
+		publishing: '32 px · 10 mm'
 	};
 
 	const donts = [
@@ -71,7 +75,8 @@
 		{ file: 'cardor-emblem.svg', label: 'Emblème CARDOR (Car d’Or)' },
 		{ file: 'interactive.svg', label: 'CM Interactive (Dragon)' },
 		{ file: 'sound.svg', label: 'CM Soundworks (Beffroi)' },
-		{ file: 'creative.svg', label: 'CM Creative Lab (Singe)' }
+		{ file: 'creative.svg', label: 'CM Creative Lab (Singe)' },
+		{ file: 'publishing.svg', label: 'CM Publishing (Châsse)' }
 	];
 </script>
 
@@ -99,8 +104,8 @@
 				use:reveal={{ start: false, delay: 0.45 }}
 			>
 				Un emblème du patrimoine de Mons par entité. Le Car d’Or pour la holding, le Dragon pour
-				Interactive, le Beffroi pour Soundworks, le Singe du Grand-Garde pour Creative Lab.
-				Ensemble, ils forment le cortège du Doudou.
+				Interactive, le Beffroi pour Soundworks, le Singe du Grand-Garde pour Creative Lab, la
+				Châsse de Sainte-Waudru pour Publishing. Ensemble, ils forment le cortège du Doudou.
 			</p>
 			<dl
 				class="cartouche col-span-4 grid grid-cols-2 border border-smoke md:col-span-8 md:grid-cols-4 lg:col-span-6 lg:col-start-7"
@@ -289,8 +294,8 @@
 				</div>
 				<p class="lockup-label">Holding · vertical (héritage)</p>
 			</div>
-			{#each [{ id: 'interactive', n: 'Interactive', it: false, c: '#C6FF3D' }, { id: 'sound', n: 'Soundworks', it: true, c: '#7B5CFF' }, { id: 'creative', n: 'Creative Lab', it: true, c: '#FFB547' }] as l (l.id)}
-				<div class="lockup col-span-4 md:col-span-8 lg:col-span-4">
+			{#each [{ id: 'interactive', n: 'Interactive', it: false, c: '#C6FF3D' }, { id: 'sound', n: 'Soundworks', it: true, c: '#7B5CFF' }, { id: 'creative', n: 'Creative Lab', it: true, c: '#FFB547' }, { id: 'publishing', n: 'Publishing', it: true, c: '#D08A5C' }] as l (l.id)}
+				<div class="lockup col-span-4 md:col-span-4 lg:col-span-6">
 					<div class="flex items-center gap-[0.4em] text-[clamp(2rem,3.4vw,3.2rem)]">
 						<Logo name={l.id as LogoName} animate="hover" host=".lockup" class="h-[1.5em] w-auto" />
 						<span class="flex flex-col">
@@ -358,8 +363,8 @@
 		</ul>
 		<p class="mt-10 max-w-[70ch] gutter-x text-sm text-ash">
 			Emblèmes issus d’explorations génératives (Nano Banana), sélectionnés puis vectorisés ; le
-			monogramme est redessiné géométriquement. Un redessin manuel du Dragon, du Beffroi et du Singe
-			est prévu avant toute production imprimée.
+			monogramme et la Châsse sont redessinés géométriquement. Un redessin manuel du Dragon, du
+			Beffroi et du Singe est prévu avant toute production imprimée.
 		</p>
 	</section>
 </div>

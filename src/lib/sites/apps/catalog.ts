@@ -1,5 +1,5 @@
 /**
- * Catalogue of the app launcher (ADR-012): every public piece of work of the three studios.
+ * Catalogue of the app launcher (ADR-012): every public piece of work of the four studios.
  * CM Interactive entries reuse the project sheets of interactive.cardormedia.com (single source).
  */
 import { projects } from '#lib/sites/interactive/projects.ts';
@@ -330,11 +330,28 @@ export const catalog: AppEntry[] = [
 		icon: '/icons/holding-192.png',
 		cover: '/sites/apps/covers/cardor-marque.webp',
 		keywords: 'logo charte emblèmes car d or dragon beffroi singe mons'
+	},
+	{
+		id: 'cardormedia-publishing',
+		name: 'Cardormedia Publishing',
+		studio: 'publishing',
+		kind: 'app',
+		category: 'Liseuse · Édition numérique',
+		pitch:
+			'La liseuse qui prend l’apparence de chaque livre, et la Forge, l’atelier d’auto-édition des auteurs.',
+		url: 'https://publishing.fs0ciety.org/',
+		status: 'En test',
+		access: 'public',
+		platforms: ['Web', 'PWA'],
+		icon: '/sites/apps/icons/publishing.png',
+		cover: '/sites/apps/covers/publishing.webp',
+		links: [{ label: 'Théâtre des thèmes', url: 'https://publishing.fs0ciety.org/labo/themes' }],
+		keywords: 'livre ebook liseuse lecture roman bande dessinée auto-édition epub forge thèmes'
 	}
 ];
 
 /** Studios in brand order, with their share of the catalogue. */
-export const studios: Studio[] = ['interactive', 'sound', 'creative'];
+export const studios: Studio[] = ['interactive', 'sound', 'creative', 'publishing'];
 
 /** Lower-cased, accent-free text used by the search box. */
 export const searchText = (a: AppEntry) =>

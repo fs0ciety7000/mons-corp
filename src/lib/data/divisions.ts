@@ -1,6 +1,6 @@
 import { siteUrl } from '#lib/sites/config.ts';
 
-export type DivisionId = 'interactive' | 'sound' | 'creative';
+export type DivisionId = 'interactive' | 'sound' | 'creative' | 'publishing';
 export type CoreStateId = 'holding' | DivisionId;
 
 export interface Division {
@@ -64,5 +64,19 @@ export const divisions: Division[] = [
 		host: new URL(siteUrl('creative')).host,
 		color: '#FFB547',
 		cursorLabel: 'Voir'
+	},
+	{
+		id: 'publishing',
+		index: '04',
+		name: 'CM Publishing',
+		short: 'Publishing',
+		tagline: 'Des mondes que l’on lit.',
+		description:
+			'Édition numérique : romans, romans graphiques, jeux de rôle. Une liseuse qui prend l’apparence de chaque livre, et un atelier d’auto-édition.',
+		disciplines: ['Édition numérique', 'Liseuse interactive', 'Auto-édition', 'Jeu de rôle'],
+		url: siteUrl('publishing'),
+		host: new URL(siteUrl('publishing')).host,
+		color: '#D08A5C',
+		cursorLabel: 'Lire'
 	}
 ];

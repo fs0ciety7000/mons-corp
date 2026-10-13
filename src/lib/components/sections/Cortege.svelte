@@ -6,12 +6,13 @@
 	import { ease, onFirstView, prefersReducedMotion } from '#lib/motion/tokens.ts';
 	import { reveal } from '#lib/motion/actions.ts';
 
-	const order: LogoName[] = ['cardor-emblem', 'interactive', 'sound', 'creative'];
+	const order: LogoName[] = ['cardor-emblem', 'interactive', 'sound', 'creative', 'publishing'];
 	const accents: Record<string, string> = {
 		'cardor-emblem': 'var(--color-or)',
 		interactive: 'var(--color-interactive)',
 		sound: 'var(--color-sound)',
-		creative: 'var(--color-creative)'
+		creative: 'var(--color-creative)',
+		publishing: 'var(--color-publishing)'
 	};
 
 	let root: HTMLElement;
@@ -72,15 +73,19 @@
 			</h2>
 			<p class="mt-8 max-w-[56ch] text-lead text-ash" use:reveal={{ delay: 0.2 }}>
 				CARDOR, c’est le Car d’Or : le carrosse doré qui porte chaque année la châsse de sainte
-				Waudru. Nos quatre emblèmes viennent du même cortège : le carrosse, le dragon, le beffroi et
-				le singe du Grand-Garde.
+				Waudru. Nos cinq emblèmes viennent du même cortège : le carrosse, le dragon, le beffroi, le
+				singe du Grand-Garde et la châsse elle-même.
 			</p>
 		</div>
 	</div>
 
-	<ul bind:this={track} class="grid-cardor mt-20 gap-y-16 md:mt-28">
+	<!-- Five emblems: a 1 / 2 / 3 / 5-column procession instead of the 12-column grid. -->
+	<ul
+		bind:this={track}
+		class="mx-auto mt-20 grid max-w-[2400px] grid-cols-1 gap-x-4 gap-y-16 gutter-x sm:grid-cols-2 md:mt-28 md:grid-cols-3 md:gap-x-5 lg:grid-cols-5 lg:gap-x-6 xl:gap-x-8"
+	>
 		{#each order as name, i (name)}
-			<li class="col-span-4 lg:col-span-3" style:--accent={accents[name]}>
+			<li style:--accent={accents[name]}>
 				<div data-cortege-emblem class="relative aspect-square border border-smoke bg-ink">
 					<div class="absolute inset-[12%]">
 						<Logo {name} animate="hover" drawIn host="li" class="size-full" />

@@ -3,11 +3,11 @@
 		"home": {
 			"path": "/",
 			"title": "CARDOR Media — Holding de divertissement à Mons, Belgique",
-			"description": "Holding de divertissement née à Mons : jeux vidéo et web 3D, sound design et doublage, illustration et lore. Trois studios, un seul noyau créatif.",
+			"description": "Holding de divertissement née à Mons : jeux vidéo et web 3D, sound design et doublage, illustration et lore, édition numérique. Quatre studios, un seul noyau créatif.",
 			"og": {
 				"kicker": "Holding de divertissement · Mons, Belgique",
 				"heading": "CARDOR <i>Media</i>",
-				"sub": "Trois studios, un seul noyau créatif.",
+				"sub": "Quatre studios, un seul noyau créatif.",
 				"emblems": ["cardor-emblem", "interactive", "sound", "creative"],
 				"alt": "CARDOR Media : le Car d’Or, le Dragon, le Beffroi et le Singe, emblèmes des studios de la maison"
 			}
@@ -27,7 +27,7 @@
 		"marque": {
 			"path": "/marque",
 			"title": "Charte de marque « Le cortège montois » — CARDOR Media",
-			"description": "Emblèmes, construction, zone de protection, couleurs, tailles minimales et lockups de CARDOR Media et de ses trois studios : le cortège montois.",
+			"description": "Emblèmes, construction, zone de protection, couleurs, tailles minimales et lockups de CARDOR Media et de ses quatre studios : le cortège montois.",
 			"og": {
 				"kicker": "Charte de marque · Sketchboard technique",
 				"heading": "Le cortège <i>montois</i>.",
@@ -139,6 +139,32 @@
 			}
 		}
 	},
+	"publishing": {
+		"home": {
+			"path": "/",
+			"title": "CM Publishing — Édition numérique, liseuse interactive & jeux de rôle",
+			"description": "La maison d’édition numérique de CARDOR Media, à Mons : romans, romans graphiques et jeux de rôle, une liseuse qui prend l’apparence de chaque livre, un atelier d’auto-édition.",
+			"og": {
+				"kicker": "Édition numérique · Liseuse · Jeu de rôle · Mons",
+				"heading": "<i>Publishing</i>",
+				"sub": "Des mondes que l’on lit.",
+				"emblems": ["publishing"],
+				"alt": "CM Publishing — la Châsse de Sainte-Waudru"
+			}
+		},
+		"contact": {
+			"path": "/contact",
+			"title": "Contact — CM Publishing, édition numérique à Mons",
+			"description": "Un manuscrit, un roman graphique ou un jeu de rôle à publier ? Écrivez à CM Publishing, la maison d’édition numérique de CARDOR Media à Mons.",
+			"og": {
+				"kicker": "Contact · CM Publishing",
+				"heading": "Un livre <i>à faire paraître</i> ?",
+				"sub": "hello@cardormedia.com",
+				"emblems": ["publishing"],
+				"alt": "Contact CM Publishing — la Châsse de Sainte-Waudru"
+			}
+		}
+	},
 	"apps": {
 		"home": {
 			"path": "/",
@@ -147,9 +173,9 @@
 			"og": {
 				"kicker": "Lanceur · CARDOR Media",
 				"heading": "Tous nos <i>mondes</i>, à portée de clic.",
-				"sub": "Jeux, applications, outils et créations des trois studios.",
+				"sub": "Jeux, applications, outils et créations des quatre studios.",
 				"emblems": ["cardor-monogram", "interactive", "sound", "creative"],
-				"alt": "CARDOR Apps — emblèmes de la maison et de ses trois studios"
+				"alt": "CARDOR Apps — emblèmes de la maison et de ses quatre studios"
 			}
 		},
 		"contact": {

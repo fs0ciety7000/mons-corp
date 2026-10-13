@@ -37,6 +37,8 @@
 	--color-sound-deep: #3a2a9e;
 	--color-creative: #ffb547;
 	--color-creative-deep: #a66a0b;
+	--color-publishing: #d08a5c;
+	--color-publishing-deep: #7a4527;
 
 	/* Type */
 	--font-display: 'Instrument Serif', 'Times New Roman', serif;
@@ -169,6 +171,10 @@
 	:root[data-site='creative'] {
 		--color-signal: var(--color-creative);
 		--color-signal-deep: var(--color-creative-deep);
+	}
+	:root[data-site='publishing'] {
+		--color-signal: var(--color-publishing);
+		--color-signal-deep: var(--color-publishing-deep);
 	}
 
 	html {

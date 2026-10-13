@@ -28,5 +28,11 @@
 		"ratio": 0.997,
 		"tones": 2,
 		"colours": ["#FFB547", "#A66A0B"]
+	},
+	"publishing": {
+		"viewBox": "20 8 560 576",
+		"ratio": 0.9722,
+		"tones": 2,
+		"colours": ["#D08A5C", "#7A4527"]
 	}
 }

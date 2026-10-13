@@ -13,14 +13,14 @@
 			class="col-span-4 font-display text-display md:col-span-8 lg:col-span-9"
 			use:reveal={{ type: 'chars' }}
 		>
-			Trois studios, <em class="text-ember">un seul</em> noyau.
+			Quatre studios, <em class="text-ember">un seul</em> noyau.
 		</h2>
 	</div>
 
 	<ul class="grid-cardor mt-16 gap-y-6 md:mt-24">
 		{#each divisions as d, i (d.id)}
 			<li
-				class="col-span-4 md:col-span-8 lg:col-span-4"
+				class="col-span-4 md:col-span-4 lg:col-span-6"
 				use:reveal={{ type: 'block', delay: i * 0.12 }}
 			>
 				<a

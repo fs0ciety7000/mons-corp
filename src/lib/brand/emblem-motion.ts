@@ -320,6 +320,75 @@ export function emblemMotion(name: LogoName, root: SVGGElement, vb: number[]) {
 					.to(ink, { opacity: 0, duration: 0.6, ease: 'cardor.out' }, 1.0);
 			break;
 		}
+		case 'publishing': {
+			// The reliquary opens: the book in the window spreads its pages from the spine, the
+			// light rises above it, the rose window turns one petal and the crockets ripple.
+			const cx = vx + vw / 2;
+			// Rose window: small shapes around its centre (the roof and its panel share the centre).
+			const rose = all.filter(
+				(b) =>
+					b.w < vw * 0.14 &&
+					Math.hypot(centre(b).cx - cx, centre(b).cy - (vy + vh * 0.343)) < vw * 0.07
+			);
+			const pages = all.filter(
+				(b) => b.h > vh * 0.1 && b.w > vw * 0.07 && b.w < vw * 0.12 && centre(b).cy > vy + vh * 0.62
+			);
+			const rays = all.filter((b) => b.w < vw * 0.012 && b.h > vh * 0.03);
+			const crockets = all.filter(
+				(b) =>
+					!rose.includes(b) && b.w < vw * 0.05 && b.h < vh * 0.05 && centre(b).cy < vy + vh * 0.45
+			);
+			const spineOrigin = (b: Box) => originAt(b, cx, b.y + b.h / 2);
+			build = () =>
+				gsap
+					.timeline()
+					.fromTo(
+						pages.map((b) => b.el),
+						{ scaleX: 0.15 },
+						{
+							scaleX: 1,
+							duration: 0.9,
+							ease: 'cardor.out',
+							transformOrigin: (i: number) => spineOrigin(pages[i])
+						},
+						0
+					)
+					.fromTo(
+						rays.map((b) => b.el),
+						{ scaleY: 0, autoAlpha: 0 },
+						{
+							scaleY: 1,
+							autoAlpha: 1,
+							duration: 0.6,
+							ease: 'cardor.out',
+							transformOrigin: '50% 100%',
+							stagger: 0.08
+						},
+						0.3
+					)
+					.to(
+						rose.map((b) => b.el),
+						{
+							rotation: '+=60',
+							duration: 1.1,
+							ease: 'cardor.inOut',
+							transformOrigin: (i: number) => originAt(rose[i], cx, vy + vh * 0.343)
+						},
+						0
+					)
+					.to(
+						crockets.map((b) => b.el),
+						{
+							keyframes: { scale: [1, 1.35, 1] },
+							duration: 0.5,
+							ease: 'none',
+							transformOrigin: '50% 100%',
+							stagger: { each: 0.04, from: 'end' }
+						},
+						0.05
+					);
+			break;
+		}
 		default:
 			build = () => gsap.timeline();
 	}
@@ -349,6 +418,20 @@ export function revealTimeline(name: LogoName, root: SVGGElement) {
 			duration: 0.9,
 			ease: 'cardor.out',
 			stagger: { amount: 0.8 }
+		});
+	}
+	if (name === 'publishing') {
+		// The châsse is assembled from the plinth up to the cross, like goldsmith's work.
+		const parts = boxes(root)
+			.sort((a, b) => b.y + b.h - (a.y + a.h))
+			.map((b) => b.el);
+		gsap.set(parts, { autoAlpha: 0, y: 14 });
+		return tl.to(parts, {
+			autoAlpha: 1,
+			y: 0,
+			duration: 0.7,
+			ease: 'cardor.out',
+			stagger: { amount: 1.1 }
 		});
 	}
 	if (name === 'interactive') {

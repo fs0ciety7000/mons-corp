@@ -106,6 +106,15 @@ _Contexte_ : publier la bande originale de Privatix (et les sorties suivantes) d
 - **Admin** : `/admin` sur le site sound seulement (404 ailleurs, non prérendu, `noindex`, sans l'habillage du site). Mot de passe unique `SOUNDWORKS_ADMIN_PASSWORD` (≥ 12 car.), cookie de session HMAC `SOUNDWORKS_SESSION_SECRET` (≥ 32 car., 12 h, `SameSite=Strict`), 5 essais / 15 min par adresse, contrôle d'origine sur les API. Les fichiers partent **directement du navigateur vers R2** par URL présignée (type, taille et en-têtes signés) ; pochette recadrée en carré 1600 px JPEG + 800 px WebP dans le navigateur ; durée lue à l'envoi ; archive ZIP de l'album reconstruite côté serveur, sans recompression.
 - **Sans dépendance** : signature SigV4 (`src/lib/server/r2.ts`) et ZIP (`src/lib/server/zip.ts`) sur `node:crypto` / `node:zlib`. Variables d'exécution du site sound : `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY` (jeton limité au bucket), `R2_BUCKET`, `MEDIA_BASE_URL`, plus les deux secrets d'admin. Les fichiers retirés du catalogue restent dans R2 (aucune suppression automatique).
 
+### ADR-014 : CM Publishing, quatrième division et sixième site
+
+_Contexte_ : CARDOR Media ouvre une maison d'édition numérique (romans, romans graphiques, jeux de rôle) dont la plateforme de lecture et d'auto-édition vit dans `fs0ciety7000/cardor-publishing`.
+
+- `PUBLIC_SITE=publishing` → **publishing.cardormedia.com** (alias `cm-publishing.fs0ciety.org`), même image Docker (ADR-008). Division à part entière : `DivisionId`, signal Cuivre `#D08A5C`, état du Noyau `publishing`, emblème la Châsse de Sainte-Waudru (`static/brand/publishing.svg`, symbole du sprite et silhouette du préchargeur générés par `scripts/build-publishing-emblem.py`).
+- **Le site présente la maison, la plateforme est un produit à part** : design indépendant, liens vers sa préprod (`publishing.fs0ciety.org`). La plateforme proposait `publishing.cardormedia.com` pour elle-même : ce nom revient au site de la division, sur le modèle des trois autres ; la plateforme prendra un nom dédié à sa mise en production.
+- Les listes de divisions passent à quatre : cartes en 2 × 2 sur la holding, cortège sur cinq colonnes, studios frères en 2 × 2, filtres et section « studios » du lanceur. Promesse : « Quatre studios, un seul noyau créatif. »
+- Aucune dépendance ajoutée.
+
 ## 3. Arborescence
 
 ```

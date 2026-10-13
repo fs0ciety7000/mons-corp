@@ -258,7 +258,7 @@
 				Tous nos <em class="text-signal">mondes</em>, à portée de clic.
 			</h1>
 			<p data-ahero-up class="mt-6 max-w-[52ch] text-lead text-bone/80 max-sm:hidden">
-				Les jeux, applications, outils et créations des trois studios de CARDOR Media. Cherchez,
+				Les jeux, applications, outils et créations des quatre studios de CARDOR Media. Cherchez,
 				filtrez, ouvrez.
 			</p>
 		</div>
@@ -480,12 +480,12 @@
 			class="col-span-4 font-display text-display md:col-span-6 lg:col-span-9"
 			use:reveal={{ type: 'words' }}
 		>
-			Trois studios, <em class="text-signal">un seul noyau</em>.
+			Quatre studios, <em class="text-signal">un seul noyau</em>.
 		</h2>
 	</div>
 	<ul class="grid-cardor mt-14 gap-y-4">
 		{#each divisions as d (d.id)}
-			<li class="col-span-4 md:col-span-8 lg:col-span-4" style:--division={d.color}>
+			<li class="col-span-4 md:col-span-4 lg:col-span-3" style:--division={d.color}>
 				<a href={d.url} class="house group" data-cursor="Visiter">
 					<span class="block h-20 w-24 md:h-24 md:w-28">
 						<Logo name={d.id} animate="hover" host=".house" class="size-full" />

@@ -131,7 +131,7 @@
 					<span class="label">Défiler</span>
 				</div>
 				<p data-hero-lead class="max-w-[34ch] text-lead text-bone/90">
-					Nous fabriquons des mondes. Jeux, voix, images, récits — trois studios, un seul noyau
+					Nous fabriquons des mondes. Jeux, voix, images, livres — quatre studios, un seul noyau
 					créatif.
 				</p>
 			</div>

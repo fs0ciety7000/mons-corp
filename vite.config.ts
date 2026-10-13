@@ -4,7 +4,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 
 // ADR-008: one codebase, five sites (ADR-012 adds the app launcher). The target site is fixed at build time.
-const SITES = ['holding', 'interactive', 'sound', 'creative', 'apps'];
+const SITES = ['holding', 'interactive', 'sound', 'creative', 'publishing', 'apps'];
 const site = process.env.PUBLIC_SITE ?? 'holding';
 if (!SITES.includes(site)) throw new Error(`PUBLIC_SITE must be one of ${SITES.join(', ')}`);
 const deployEnv = process.env.PUBLIC_DEPLOY_ENV === 'staging' ? 'staging' : 'production';

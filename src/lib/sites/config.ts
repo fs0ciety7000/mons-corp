@@ -1,7 +1,7 @@
 import type { LogoName } from '#lib/data/logos.ts';
 import type { CoreStateId } from '#lib/data/divisions.ts';
 
-export type SiteId = 'holding' | 'interactive' | 'sound' | 'creative' | 'apps';
+export type SiteId = 'holding' | 'interactive' | 'sound' | 'creative' | 'publishing' | 'apps';
 
 export interface SiteConfig {
 	id: SiteId;
@@ -33,7 +33,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 		email: 'hello@cardormedia.com',
 		tagline: 'Nous fabriquons des mondes',
 		description:
-			'CARDOR Media est une holding de divertissement : jeux vidéo et web 3D, son et doublage, illustration et récit. Trois studios, un seul noyau créatif.',
+			'CARDOR Media est une holding de divertissement : jeux vidéo et web 3D, son et doublage, illustration et récit, édition numérique. Quatre studios, un seul noyau créatif.',
 		nav: [
 			{ href: '/#divisions', label: 'Divisions' },
 			{ href: '/#sorties', label: 'Sorties' },
@@ -119,6 +119,32 @@ export const sites: Record<SiteId, SiteConfig> = {
 		cursorLabel: 'Voir',
 		preloader: 'Encrage de la plume'
 	},
+	// ADR-014: the publishing house (books, graphic novels, tabletop RPG) and its reading platform.
+	publishing: {
+		id: 'publishing',
+		name: 'CM Publishing',
+		short: 'Publishing',
+		emblem: 'publishing',
+		signal: '#D08A5C',
+		signalDeep: '#7A4527',
+		coreState: 'publishing',
+		email: 'hello@cardormedia.com',
+		tagline: 'Des mondes que l’on lit',
+		description:
+			'CM Publishing, la maison d’édition numérique de CARDOR Media : romans, romans graphiques et jeux de rôle, une liseuse qui prend l’apparence de chaque livre et un atelier d’auto-édition.',
+		nav: [
+			{ href: '/#catalogue', label: 'Catalogue' },
+			{ href: '/#plateforme', label: 'Plateforme' },
+			{ href: '/#auteurs', label: 'Auteurs' },
+			{ href: '/contact', label: 'Contact' }
+		],
+		urls: {
+			production: 'https://publishing.cardormedia.com',
+			staging: 'https://cm-publishing.fs0ciety.org'
+		},
+		cursorLabel: 'Lire',
+		preloader: 'Ouverture de la châsse'
+	},
 	// ADR-012: the app launcher wears the house identity (ember, wheel) and lists every studio's work.
 	apps: {
 		id: 'apps',
@@ -131,7 +157,7 @@ export const sites: Record<SiteId, SiteConfig> = {
 		email: 'hello@cardormedia.com',
 		tagline: 'Tous nos mondes, à portée de clic',
 		description:
-			'Le lanceur de CARDOR Media : tous les jeux, applications et créations de CM Interactive, CM Soundworks et CM Creative Lab, à ouvrir en un clic.',
+			'Le lanceur de CARDOR Media : tous les jeux, applications et créations de CM Interactive, CM Soundworks, CM Creative Lab et CM Publishing, à ouvrir en un clic.',
 		nav: [
 			{ href: '/#projets', label: 'Projets' },
 			{ href: '/#studios', label: 'Studios' },
@@ -157,4 +183,6 @@ export const isMaison = SITE === 'holding' || SITE === 'apps';
 export const siteUrl = (id: SiteId) => sites[id].urls[__DEPLOY_ENV__];
 
 /** Division sites, in brand order. */
-export const divisionSites = (['interactive', 'sound', 'creative'] as const).map((id) => sites[id]);
+export const divisionSites = (['interactive', 'sound', 'creative', 'publishing'] as const).map(
+	(id) => sites[id]
+);
