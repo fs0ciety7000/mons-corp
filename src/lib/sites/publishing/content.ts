@@ -26,8 +26,8 @@ export const platform = {
 		{
 			name: 'La Forge',
 			role: 'L’atelier des auteurs',
-			text: 'Manuscrit importé depuis Word, PDF ou EPUB, écriture à plusieurs en temps réel, Studio sensoriel pour régler le monde du livre, planches en 2.5D, narration, export EPUB 3.',
-			state: 'Bientôt'
+			text: 'Manuscrit importé depuis Word, PDF ou EPUB, écriture à plusieurs en temps réel, Studio sensoriel pour régler le monde du livre, planches en 2.5D, narration, export EPUB 3. Ouverte aux comptes auteurs.',
+			state: 'En ligne'
 		},
 		{
 			name: 'Le Lore-Master',
