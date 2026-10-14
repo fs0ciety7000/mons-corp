@@ -7,6 +7,8 @@
 	import Sisters from '#lib/sites/division/Sisters.svelte';
 	import Marquee from '#lib/components/sections/Marquee.svelte';
 	import Platform from './Platform.svelte';
+	import Works from '#lib/sites/division/Works.svelte';
+	import { projectsOf } from '#lib/data/projects.ts';
 	import { content, platform } from './content.ts';
 	import { jsonLd } from '#lib/seo/seo.ts';
 	import { siteUrl } from '#lib/sites/config.ts';
@@ -43,4 +45,11 @@
 <Platform index="03" />
 <Method index="04" method={content.method} />
 <EmblemStory index="05" emblem={content.emblem} />
+<!-- The house's other works from src/lib/data/projects.ts (the platform has its own section). -->
+<Works
+	index="06"
+	title={{ before: 'D’autres mondes', em: 'à lire.' }}
+	works={projectsOf('publishing').filter((p) => p.id !== platform.id)}
+	cursor="Lire"
+/>
 <Sisters />

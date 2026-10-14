@@ -1,22 +1,33 @@
 <script lang="ts">
-	import SectionHead from '#lib/sites/division/SectionHead.svelte';
-	import { catalog } from '#lib/sites/apps/catalog.ts';
+	import SectionHead from './SectionHead.svelte';
 	import { reveal } from '#lib/motion/actions.ts';
+	import type { Project } from '#lib/data/projects.ts';
+	import type { Title } from './types.ts';
 
-	let { index }: { index: string } = $props();
-
-	/** The studio's playable works (e.g. Le Carillon): single source with the app launcher (ADR-012). */
-	const works = catalog.filter((a) => a.studio === 'sound');
+	/**
+	 * A division's projects, from the single source (src/lib/data/projects.ts). Renders nothing
+	 * while the list is empty, so a new project appears without touching the page.
+	 */
+	let {
+		index,
+		id = 'projets',
+		label = 'Projets',
+		title,
+		works,
+		cursor
+	}: {
+		index: string;
+		id?: string;
+		label?: string;
+		title: Title;
+		works: Project[];
+		cursor: string;
+	} = $props();
 </script>
 
 {#if works.length}
-	<section id="experiences" class="relative section-y" aria-labelledby="experiences-title">
-		<SectionHead
-			{index}
-			label="Expériences"
-			title={{ before: 'À jouer', em: 'ensemble.' }}
-			id="experiences-title"
-		/>
+	<section {id} class="relative section-y" aria-labelledby="{id}-title">
+		<SectionHead {index} {label} {title} id="{id}-title" />
 		<ul class="grid-cardor mt-12 gap-y-6">
 			{#each works as w (w.id)}
 				<li class="col-span-4 md:col-span-8 lg:col-span-6">
@@ -25,7 +36,7 @@
 						target="_blank"
 						rel="noopener"
 						class="work group"
-						data-cursor="Écouter"
+						data-cursor={cursor}
 						use:reveal={{ type: 'block' }}
 					>
 						<div class="relative aspect-[16/10] overflow-clip border-b border-smoke bg-graphite">

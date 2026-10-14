@@ -20,10 +20,31 @@ Un seul code source, six builds. `PUBLIC_SITE` (`holding` · `interactive` · `s
 
 ## Contenu : règles PM
 
-- **Interactive** reprend le contenu réel du studio (`studios.fs0ciety.org`) : 15 projets (dont un en test), méthode Esquisse → Lancement, deux disciplines.
+- **Interactive** reprend le contenu réel du studio (`studios.fs0ciety.org`) : ses projets (cf. « Ajouter un projet »), méthode Esquisse → Lancement, deux disciplines.
 - **Soundworks** et **Creative Lab** n'ont pas encore de références publiques : **on n'invente aucun client ni chiffre**. On présente les savoir-faire, la méthode et une démonstration interactive (son génératif, encre), plus un bloc « Premières productions : bientôt ».
 - **Publishing** présente la maison d'édition ; sa plateforme (liseuse et auto-édition, dépôt `fs0ciety7000/cardor-publishing`) est un produit à part, au design indépendant, en production sur **`lire.cardormedia.com`** depuis le 14 octobre 2026 (préprod `publishing.fs0ciety.org`, jamais en lien public). Catalogue de démonstration : aucun auteur ni titre présenté comme réel.
 - Chaque site renvoie vers la maison mère et vers les studios frères.
+
+## Ajouter un projet
+
+Tous les projets de la maison vivent dans **un seul fichier** : `src/lib/data/projects.ts` (ADR-012). On l'ajoute une fois, il apparaît automatiquement :
+
+| Où                                | Quoi                                                                                                                                                                                           |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| apps.cardormedia.com              | Tous les projets, rangés par studio dans l'ordre du fichier ; recherche, filtres et état en direct.                                                                                            |
+| Site du studio (`studio`)         | Sa section projets : Interactive « Projets » [03], Soundworks « Expériences » [05], Creative Lab « Productions », Publishing « Projets » [06] (la plateforme garde sa section « Plateforme »). |
+| Sites des studios `partners`      | La même section, après les projets propres, avec la mention « avec … » sur Creative Lab.                                                                                                       |
+| cardormedia.com, « Sorties » [03] | Six cartes : les `featured`, puis le plus récent de chaque studio, puis les plus récents (`added`) ; **tous les autres** sont listés dessous (« Et aussi »), et le lien mène au lanceur.       |
+
+Étapes :
+
+1. **Images** : icône carrée PNG 256 px dans `static/sites/apps/icons/<id>.png` ; couverture WebP 1200 × 750 (`static/sites/apps/covers/<id>.webp`, ou `static/sites/interactive/projects/` pour Interactive).
+2. **Entrée** : ajouter un objet au tableau `projects`, à la place voulue (l'ordre du fichier est celui du lanceur et des sites). Champs requis : `id` (kebab-case, unique), `name`, `studio`, `kind` (`jeu` · `app` · `outil` · `creation` · `site`), `category` (« Type · Genre »), `status` (`En ligne` · `En test`), `access` (`public` · `invitation` · `reserve`), `added` (date de sortie, `AAAA-MM-JJ` ou `AAAA-MM-JJTHH:mm` UTC), `url` (https), `pitch` (une phrase), `platforms`, `icon`, `cover`, `keywords` (mots pour la recherche).
+3. **Facultatif** : `partners` (studios coproducteurs), `featured: true` (épingler sur cardormedia.com, six au plus), `links` (accès secondaires : jouer, devblog…), `companion: '<id>'` (projet d'accompagnement, ex. un devblog : lanceur seulement), et la fiche détaillée des cartes Interactive : `text`, `features`, `stack`, `stat`, `schema` (JSON-LD).
+4. **Vérifier** : `npm run check`, `npm run lint`, puis `npm run build`. Le build échoue avec la liste des erreurs si un champ manque ou si une image est absente de `static/` (`projectErrors`, plugin `cardor:check-projects`).
+5. **Publier** : un push sur la branche déployée redéploie les six sites : le projet est en ligne partout.
+
+On n'invente rien : texte, chiffres et captures viennent du projet lui-même.
 
 ## Definition of Done (en plus de `CLAUDE.md` § 7)
 

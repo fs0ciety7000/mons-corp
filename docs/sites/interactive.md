@@ -17,7 +17,7 @@
 
 ## 🛠️ Tech Lead Agent
 
-- Données projets : `src/lib/sites/interactive/projects.ts` (contenu repris de studios.fs0ciety.org, couvertures dans `static/sites/interactive/projects/`, redimensionnées ≤ 1200 px).
+- Données projets : source unique `src/lib/data/projects.ts` (entrées `studio: 'interactive'` ; contenu repris de studios.fs0ciety.org, couvertures dans `static/sites/interactive/projects/`, redimensionnées ≤ 1200 px). Cf. `docs/sites/README.md`, « Ajouter un projet ».
 - Action `use:scramble` dans `src/lib/motion/actions.ts`.
 - Filtre côté client (pas de route dédiée en v0.1), ancres `#projets`, `#methode`.
 - Build : `PUBLIC_SITE=interactive`.

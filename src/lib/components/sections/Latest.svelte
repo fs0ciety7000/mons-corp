@@ -1,11 +1,14 @@
 <script lang="ts">
-	import { catalog, latest } from '#lib/sites/apps/catalog.ts';
+	import { moreReleases, projects, releases } from '#lib/data/projects.ts';
 	import { divisions } from '#lib/data/divisions.ts';
 	import { siteUrl } from '#lib/sites/config.ts';
 	import { reveal } from '#lib/motion/actions.ts';
 
 	const division = (id: string) => divisions.find((d) => d.id === id)!;
-	const works = latest.map((id) => catalog.find((a) => a.id === id)).filter((a) => a !== undefined);
+	// Automatic, from the single source (src/lib/data/projects.ts): the newest releases as cards
+	// (featured ones pinned, at least one per studio), every other project listed below them.
+	const works = releases(6);
+	const more = moreReleases(6);
 </script>
 
 <section id="sorties" class="relative section-y" aria-labelledby="sorties-title">
@@ -61,11 +64,49 @@
 		{/each}
 	</ul>
 
+	{#if more.length}
+		<div class="grid-cardor mt-16 gap-y-6 md:mt-20">
+			<h3
+				id="sorties-more"
+				class="col-span-4 label text-ash md:col-span-8 lg:col-span-12"
+				use:reveal
+			>
+				Et aussi · {more.length} projet{more.length > 1 ? 's' : ''}
+			</h3>
+		</div>
+		<ul class="grid-cardor mt-6 gap-x-6" aria-labelledby="sorties-more">
+			{#each more as w (w.id)}
+				{@const d = division(w.studio)}
+				<li class="col-span-4 md:col-span-4 lg:col-span-6">
+					<a
+						href={w.url}
+						target="_blank"
+						rel="noopener"
+						class="row group"
+						style:--division={d.color}
+						data-cursor={d.cursorLabel}
+					>
+						<span class="min-w-0 flex-1">
+							<span class="block font-display text-lead">{w.name}</span>
+							<span class="mt-1 block label text-ash"
+								><span class="text-(--division)">{d.name}</span> · {w.category}</span
+							>
+						</span>
+						<span
+							class="label text-ash transition-colors group-hover:text-(--division)"
+							aria-hidden="true">↗</span
+						>
+					</a>
+				</li>
+			{/each}
+		</ul>
+	{/if}
+
 	<p class="mt-10 gutter-x">
 		<a
 			href={siteUrl('apps')}
 			class="label text-bone underline decoration-1 underline-offset-4 hover:text-ember"
-			data-cursor="Ouvrir">Tous les projets de la maison ↗</a
+			data-cursor="Ouvrir">Tous les projets de la maison ({projects.length}) ↗</a
 		>
 	</p>
 </section>
@@ -82,5 +123,18 @@
 	.work:hover,
 	.work:focus-visible {
 		border-color: color-mix(in oklab, var(--division) 45%, var(--color-smoke));
+	}
+	.row {
+		display: flex;
+		align-items: baseline;
+		gap: 1rem;
+		min-height: 2.75rem;
+		border-top: 1px solid var(--color-smoke);
+		padding-block: 1rem;
+		transition: border-color 0.5s var(--ease-cardor-out);
+	}
+	.row:hover,
+	.row:focus-visible {
+		border-color: var(--division);
 	}
 </style>

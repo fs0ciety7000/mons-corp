@@ -9,7 +9,8 @@
 	import InkTrail from './InkTrail.svelte';
 	import Works from './Works.svelte';
 	import { content } from './content.ts';
-	import { catalog } from '#lib/sites/apps/catalog.ts';
+	import { projectsOf } from '#lib/data/projects.ts';
+	import { divisions } from '#lib/data/divisions.ts';
 	import { jsonLd } from '#lib/seo/seo.ts';
 	import { siteUrl } from '#lib/sites/config.ts';
 	import type { PixelFace } from './beffroi8/pixel.ts';
@@ -21,9 +22,9 @@
 		'@context': 'https://schema.org',
 		'@type': 'ItemList',
 		name: 'Productions CM Creative Lab',
-		itemListElement: catalog
-			.filter((a) => a.studio === 'creative')
-			.map((a, i) => ({
+		itemListElement: projectsOf('creative').map((a, i) => {
+			const d = divisions.find((x) => x.id === a.studio)!;
+			return {
 				'@type': 'ListItem',
 				position: i + 1,
 				item: {
@@ -33,9 +34,16 @@
 					url: a.url,
 					image: `${siteUrl('creative')}${a.cover}`,
 					genre: a.category,
-					creator: { '@id': `${siteUrl('creative')}/#organization` }
+					creator:
+						a.studio === 'creative'
+							? { '@id': `${siteUrl('creative')}/#organization` }
+							: { '@type': 'Organization', name: d.name, url: siteUrl(a.studio) },
+					...(a.studio === 'creative'
+						? {}
+						: { contributor: { '@id': `${siteUrl('creative')}/#organization` } })
 				}
-			}))
+			};
+		})
 	});
 </script>
 

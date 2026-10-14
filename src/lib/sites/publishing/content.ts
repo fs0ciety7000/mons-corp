@@ -1,12 +1,17 @@
 import type { DivisionContent } from '#lib/sites/division/types.ts';
+import { project } from '#lib/data/projects.ts';
+
+/** Its entry in the single project source (src/lib/data/projects.ts), shared with the launcher. */
+const entry = project('cardormedia-publishing');
 
 /**
  * The reading platform built by CM Publishing (fs0ciety7000/cardor-publishing), in production on
  * lire.cardormedia.com since 2026-10-14 (ADR-014). Its catalogue is still a demo one.
  */
 export const platform = {
-	url: 'https://lire.cardormedia.com/',
-	host: 'lire.cardormedia.com',
+	id: entry.id,
+	url: entry.url,
+	host: new URL(entry.url).host,
 	catalogue: 'https://lire.cardormedia.com/catalogue',
 	themes: 'https://lire.cardormedia.com/labo/themes',
 	status: 'En ligne · catalogue de démonstration',

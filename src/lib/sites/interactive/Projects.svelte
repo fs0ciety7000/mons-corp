@@ -2,21 +2,28 @@
 	import { flip } from 'svelte/animate';
 	import { fade } from 'svelte/transition';
 	import SectionHead from '#lib/sites/division/SectionHead.svelte';
-	import { projects, type ProjectKind } from './projects.ts';
+	import { projectsOf } from '#lib/data/projects.ts';
 	import { reveal, scramble } from '#lib/motion/actions.ts';
 	import { prefersReducedMotion } from '#lib/motion/tokens.ts';
 
 	let { index }: { index: string } = $props();
 
-	const filters: { id: 'tous' | ProjectKind; label: string }[] = [
+	/** The studio's projects, from the single source (src/lib/data/projects.ts). */
+	type Filter = 'jeu' | 'web';
+	const projects = projectsOf('interactive').map((p) => ({
+		...p,
+		filter: (p.kind === 'jeu' ? 'jeu' : 'web') as Filter
+	}));
+
+	const filters: { id: 'tous' | Filter; label: string }[] = [
 		{ id: 'tous', label: 'Tous' },
 		{ id: 'jeu', label: 'Jeux' },
 		{ id: 'web', label: 'Web & apps' }
 	];
-	let active = $state<'tous' | ProjectKind>('tous');
-	const shown = $derived(projects.filter((p) => active === 'tous' || p.kind === active));
-	const count = (id: 'tous' | ProjectKind) =>
-		id === 'tous' ? projects.length : projects.filter((p) => p.kind === id).length;
+	let active = $state<'tous' | Filter>('tous');
+	const shown = $derived(projects.filter((p) => active === 'tous' || p.filter === active));
+	const count = (id: 'tous' | Filter) =>
+		id === 'tous' ? projects.length : projects.filter((p) => p.filter === id).length;
 	const ms = (v: number) => (prefersReducedMotion() ? 0 : v);
 	const roman = (n: number) =>
 		(
@@ -101,14 +108,16 @@
 						</div>
 						<p class="label text-ash">{p.category}</p>
 						<p class="font-display text-lead italic">{p.pitch}</p>
-						<p class="text-sm text-ash">{p.text}</p>
-						<ul class="space-y-1 text-sm">
-							{#each p.features as feat (feat)}
-								<li class="flex gap-2"><span class="text-signal">▸</span>{feat}</li>
-							{/each}
-						</ul>
+						{#if p.text}<p class="text-sm text-ash">{p.text}</p>{/if}
+						{#if p.features?.length}
+							<ul class="space-y-1 text-sm">
+								{#each p.features as feat (feat)}
+									<li class="flex gap-2"><span class="text-signal">▸</span>{feat}</li>
+								{/each}
+							</ul>
+						{/if}
 						<div class="mt-auto flex items-end justify-between gap-6 border-t border-smoke pt-4">
-							<p class="font-mono text-xs text-ash">{p.stack}</p>
+							<p class="font-mono text-xs text-ash">{p.stack ?? p.platforms.join(' · ')}</p>
 							{#if p.stat}
 								<p class="shrink-0 text-right">
 									<span class="block font-display text-h2 leading-none text-signal"

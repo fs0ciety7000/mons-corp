@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SectionHead from '#lib/sites/division/SectionHead.svelte';
-	import { catalog } from '#lib/sites/apps/catalog.ts';
+	import { projectsOf } from '#lib/data/projects.ts';
+	import { divisions } from '#lib/data/divisions.ts';
 	import { reveal } from '#lib/motion/actions.ts';
 	import { site, sites } from '#lib/sites/config.ts';
 	import type { DivisionContent } from '#lib/sites/division/types.ts';
@@ -19,11 +20,12 @@
 		beffroi?: { face: PixelFace; css: string } | null;
 	} = $props();
 
-	/** The atelier's published works: single source with the app launcher (ADR-012). */
+	/** The atelier's works, from the single source (src/lib/data/projects.ts), co-productions last. */
 	// Beffroi 8 gets its live specimen card above when the manifest is available.
-	const works = $derived(
-		catalog.filter((a) => a.studio === 'creative' && !(beffroi && a.id === 'beffroi-8'))
-	);
+	const works = $derived(projectsOf('creative').filter((a) => !(beffroi && a.id === 'beffroi-8')));
+	/** Co-productions: credit the studio that publishes them. */
+	const partner = (studio: string) =>
+		studio === 'creative' ? null : (divisions.find((d) => d.id === studio)?.name ?? null);
 	const sample = `Ça déménage${NNBSP}! ♥ ★ ${pua(0xe000)}`;
 	/** Works published on this very site (e.g. /privatix-jdr) open in place, by path. */
 	const own = sites.creative.urls.production;
@@ -99,7 +101,11 @@
 								aria-hidden="true">{local(w.url) ? '→' : '↗'}</span
 							>
 						</div>
-						<p class="label text-ash">{w.category}</p>
+						<p class="label text-ash">
+							{w.category}{#if partner(w.studio)}<span class="text-signal">
+									· avec {partner(w.studio)}</span
+								>{/if}
+						</p>
 						<p class="font-display text-lead italic">{w.pitch}</p>
 					</div>
 				</a>

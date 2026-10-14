@@ -10,7 +10,8 @@
 	import Listen from './Listen.svelte';
 	import Wave from './Wave.svelte';
 	import Productions from './Productions.svelte';
-	import Experiences from './Experiences.svelte';
+	import Works from '#lib/sites/division/Works.svelte';
+	import { projectsOf } from '#lib/data/projects.ts';
 	import { content } from './content.ts';
 	import type { Release } from '#lib/sound/catalog.ts';
 
@@ -28,7 +29,15 @@
 <Offer index="02" offer={content.offer} />
 <Method index="03" method={content.method} />
 <EmblemStory index="04" emblem={content.emblem} />
-<Experiences index="05" />
+<!-- The studio's playable works (e.g. Le Carillon), from src/lib/data/projects.ts. -->
+<Works
+	index="05"
+	id="experiences"
+	label="Expériences"
+	title={{ before: 'À jouer', em: 'ensemble.' }}
+	works={projectsOf('sound')}
+	cursor="Écouter"
+/>
 {#if releases?.length}
 	<Productions index="06" {releases} />
 {:else if content.soon}

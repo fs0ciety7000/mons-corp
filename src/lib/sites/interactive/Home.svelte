@@ -8,11 +8,12 @@
 	import Marquee from '#lib/components/sections/Marquee.svelte';
 	import Projects from './Projects.svelte';
 	import { content } from './content.ts';
-	import { projects } from './projects.ts';
+	import { projectsOf } from '#lib/data/projects.ts';
 	import { jsonLd } from '#lib/seo/seo.ts';
 	import { siteUrl } from '#lib/sites/config.ts';
 
 	// Rich results: the studio's published works, as VideoGame / WebApplication items.
+	const projects = projectsOf('interactive');
 	const works = jsonLd({
 		'@context': 'https://schema.org',
 		'@type': 'ItemList',
