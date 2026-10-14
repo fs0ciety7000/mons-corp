@@ -32,8 +32,8 @@ export const platform = {
 		{
 			name: 'Le Lore-Master',
 			role: 'La mémoire de l’univers',
-			text: 'Chronologie, savoirs des personnages, voix : il signale les incohérences, cite ses sources, et l’auteur décide.',
-			state: 'Bientôt'
+			text: 'Chronologie, savoirs des personnages, voix : il signale les incohérences, cite ses sources, et l’auteur décide. Dans la Forge, pour chaque livre.',
+			state: 'En ligne'
 		}
 	]
 };
