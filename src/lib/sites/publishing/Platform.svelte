@@ -1,11 +1,12 @@
 <script lang="ts">
 	import SectionHead from '#lib/sites/division/SectionHead.svelte';
 	import { reveal } from '#lib/motion/actions.ts';
-	import { platform, worlds } from './content.ts';
+	import { hubShots, platform, worlds } from './content.ts';
 
 	let { index }: { index: string } = $props();
 
-	// The chameleon reader: the same page wears each book's world (cardor-publishing's promise).
+	// The chameleon reader: the same Sanctuaire wears each book's world (cardor-publishing's
+	// promise), shown as screenshots of the platform in production.
 	let current = $state(0);
 	const w = $derived(worlds[current]);
 
@@ -17,6 +18,8 @@
 		current = (current + d + worlds.length) % worlds.length;
 		document.getElementById(`world-${worlds[current].id}`)?.focus();
 	}
+
+	const srcset = (base: string) => `${base}-600.webp 600w, ${base}-1200.webp 1200w`;
 </script>
 
 <section id="plateforme" class="relative section-y" aria-labelledby="plateforme-title">
@@ -28,7 +31,13 @@
 	/>
 	<p class="mt-8 max-w-[58ch] gutter-x text-lead text-ash lg:ml-[25%]" use:reveal={{ delay: 0.15 }}>
 		Notre liseuse prend l’apparence du livre qu’elle ouvre : couleurs, typographie, matières,
-		mouvement. Le thème est une donnée, et la lecture reste toujours la priorité.
+		mouvement, son. Elle est en ligne sur
+		<a
+			href={platform.url}
+			target="_blank"
+			rel="noopener"
+			class="text-bone underline decoration-1 underline-offset-4">{platform.host}</a
+		>, avec un catalogue de démonstration.
 	</p>
 
 	<div class="grid-cardor mt-16 gap-y-10 md:mt-24">
@@ -57,28 +66,47 @@
 				{/each}
 			</div>
 
-			<div
-				id="world-page"
-				role="tabpanel"
-				aria-labelledby="world-{w.id}"
-				aria-live="polite"
-				class="page mt-6"
-				style:--w-bg={w.bg}
-				style:--w-ink={w.ink}
-				style:--w-accent={w.accent}
-				data-font={w.font}
-				data-style={w.style}
-				data-cursor="Lire"
-			>
-				<p class="page-genre">{w.genre} · Atelier CM Publishing · démo</p>
-				<p class="page-title">{w.title}</p>
-				<p class="page-hook">« {w.hook} »</p>
-				<span class="page-rule" aria-hidden="true"></span>
-				<p class="page-meta">Thème {w.name}</p>
+			<div id="world-page" role="tabpanel" aria-labelledby="world-{w.id}" class="mt-6">
+				<figure>
+					<a
+						href="{platform.url}lire/{w.slug}"
+						target="_blank"
+						rel="noopener"
+						class="shot stack"
+						data-cursor="Lire"
+					>
+						{#each worlds as world, i (world.id)}
+							<img
+								src="{world.shot}-1200.webp"
+								srcset={srcset(world.shot)}
+								sizes="(min-width: 1024px) 56vw, 100vw"
+								alt={i === current ? world.alt : ''}
+								aria-hidden={i === current ? undefined : 'true'}
+								width="1200"
+								height="750"
+								loading="lazy"
+								decoding="async"
+								class={['stack-img', i === current && 'is-on']}
+							/>
+						{/each}
+					</a>
+					<figcaption class="mt-4 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
+						<span class="text-sm text-ash">
+							<em class="text-bone">{w.title}</em> · thème {w.name} · Atelier CM Publishing · démo
+						</span>
+						<a
+							href="{platform.url}lire/{w.slug}"
+							target="_blank"
+							rel="noopener"
+							class="label text-bone underline decoration-1 underline-offset-4 hover:text-signal"
+							>Lire ce chapitre ↗</a
+						>
+					</figcaption>
+				</figure>
 			</div>
 			<p class="mt-4 text-sm text-ash">
-				Les quatre mondes de référence de la liseuse, sur des livres de démonstration. Dans le
-				Sanctuaire, ils changent aussi la matière du papier, le rythme et le son.
+				Le Sanctuaire en production, sur les quatre mondes de référence et des livres de
+				démonstration. Le texte et les composants restent les mêmes : seul le thème du livre change.
 			</p>
 		</div>
 
@@ -116,9 +144,35 @@
 					>Le théâtre des thèmes ↗</a
 				>
 			</div>
-			<p class="mt-3 label text-ash">{platform.status}</p>
+			<p class="mt-3 label text-ash">{platform.host} · {platform.status}</p>
 		</div>
 	</div>
+
+	<ul class="grid-cardor mt-16 gap-y-8 md:mt-24" aria-label="La plateforme en images">
+		{#each hubShots as shot, i (shot.src)}
+			<li class="col-span-4 lg:col-span-3" use:reveal={{ type: 'block', delay: i * 0.06 }}>
+				<figure>
+					<a href={shot.href} target="_blank" rel="noopener" class="shot" data-cursor="Ouvrir">
+						<img
+							src="{shot.src}-600.webp"
+							srcset={srcset(shot.src)}
+							sizes="(min-width: 1024px) 24vw, (min-width: 768px) 48vw, 100vw"
+							alt={shot.alt}
+							width="1200"
+							height="750"
+							loading="lazy"
+							decoding="async"
+						/>
+					</a>
+					<figcaption class="mt-3 label text-ash">{shot.title} ↗</figcaption>
+				</figure>
+			</li>
+		{/each}
+	</ul>
+	<p class="mt-6 gutter-x text-sm text-ash">
+		Captures de {platform.host}. Les livres du catalogue sont des démonstrations, signées « Atelier
+		CM Publishing · démo ».
+	</p>
 </section>
 
 <style>
@@ -144,73 +198,43 @@
 	}
 	.chip:focus-visible,
 	.cta:focus-visible,
-	.ghost:focus-visible {
+	.ghost:focus-visible,
+	.shot:focus-visible {
 		outline: 2px solid var(--color-signal);
 		outline-offset: 3px;
 	}
 
-	/* The book page: its colours come from the selected world, the rhythm from the house tokens. */
-	.page {
-		position: relative;
-		min-height: clamp(18rem, 34vw, 26rem);
-		padding: clamp(1.5rem, 4vw, 3.5rem);
-		background: var(--w-bg);
-		color: var(--w-ink);
-		box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--w-ink) 14%, transparent);
-		transition:
-			background-color 0.8s var(--ease-cardor-out),
-			color 0.8s var(--ease-cardor-out);
-	}
-	.page-genre,
-	.page-meta {
-		font-family: var(--font-mono);
-		font-size: var(--text-micro);
-		letter-spacing: var(--text-micro--letter-spacing);
-		text-transform: uppercase;
-		opacity: 0.75;
-	}
-	.page-title {
-		margin-top: 2.5rem;
-		font-size: var(--text-h1);
-		line-height: var(--text-h1--line-height);
-		letter-spacing: var(--text-h1--letter-spacing);
-		color: var(--w-accent);
-		transition: color 0.8s var(--ease-cardor-out);
-	}
-	.page-hook {
-		margin-top: 1.5rem;
-		max-width: 34ch;
-		font-size: var(--text-lead);
-		line-height: var(--text-lead--line-height);
-	}
-	.page-rule {
+	/* A screenshot of the platform: framed like the house's cards, 16:10, no layout shift. */
+	.shot {
 		display: block;
-		width: 4rem;
-		height: 2px;
-		margin-top: 2rem;
-		background: var(--w-accent);
-		transition: width 0.8s var(--ease-cardor-out);
+		aspect-ratio: 16 / 10;
+		overflow: clip;
+		border: 1px solid var(--color-smoke);
+		background: var(--color-graphite);
+		transition: border-color 0.5s var(--ease-cardor-out);
 	}
-	.page-meta {
-		margin-top: 1rem;
+	.shot:hover {
+		border-color: var(--color-signal);
 	}
-	.page[data-font='display'] .page-title,
-	.page[data-font='display'] .page-hook {
-		font-family: var(--font-display);
+	.shot img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
-	.page[data-font='mono'] .page-title,
-	.page[data-font='mono'] .page-hook {
-		font-family: var(--font-mono);
-		letter-spacing: 0;
+
+	/* The four worlds share one frame; the selected one fades in over the others. */
+	.stack {
+		display: grid;
 	}
-	.page[data-style='italic'] .page-title,
-	.page[data-style='italic'] .page-hook {
-		font-style: italic;
+	.stack-img {
+		grid-area: 1 / 1;
+		opacity: 0;
+		transition: opacity 0.8s var(--ease-cardor-out);
 	}
-	.page[data-style='smallcaps'] .page-title {
-		font-variant: small-caps;
-		letter-spacing: 0.02em;
+	.stack-img.is-on {
+		opacity: 1;
 	}
+
 	.cta {
 		transition: background-color 0.3s;
 	}
@@ -224,9 +248,8 @@
 		border-color: var(--color-signal);
 	}
 	@media (prefers-reduced-motion: reduce) {
-		.page,
-		.page-title,
-		.page-rule {
+		.stack-img,
+		.shot {
 			transition: none;
 		}
 	}

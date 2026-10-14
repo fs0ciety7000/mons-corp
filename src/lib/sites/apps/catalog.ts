@@ -338,15 +338,19 @@ export const catalog: AppEntry[] = [
 		kind: 'app',
 		category: 'Liseuse · Édition numérique',
 		pitch:
-			'La liseuse qui prend l’apparence de chaque livre, et la Forge, l’atelier d’auto-édition des auteurs.',
-		url: 'https://publishing.fs0ciety.org/',
-		status: 'En test',
+			'La plateforme de lecture où chaque livre a son propre monde : couleurs, typographie, matières et son suivent le thème du livre. Catalogue de démonstration.',
+		url: 'https://lire.cardormedia.com/',
+		status: 'En ligne',
 		access: 'public',
 		platforms: ['Web', 'PWA'],
 		icon: '/sites/apps/icons/publishing.png',
 		cover: '/sites/apps/covers/publishing.webp',
-		links: [{ label: 'Théâtre des thèmes', url: 'https://publishing.fs0ciety.org/labo/themes' }],
-		keywords: 'livre ebook liseuse lecture roman bande dessinée auto-édition epub forge thèmes'
+		links: [
+			{ label: 'Catalogue', url: 'https://lire.cardormedia.com/catalogue' },
+			{ label: 'Théâtre des thèmes', url: 'https://lire.cardormedia.com/labo/themes' }
+		],
+		keywords:
+			'livre ebook liseuse lecture roman bande dessinée feuilleton auto-édition epub forge thèmes sanctuaire dyslexie'
 	}
 ];
 
@@ -365,10 +369,10 @@ export const host = (url: string) => new URL(url).host;
 
 /** Latest releases shown on cardormedia.com, newest first: at least one per studio. */
 export const latest: string[] = [
+	'cardormedia-publishing',
 	'arbre-aux-absents',
 	'carillon-collectif',
 	'lumecon',
 	'privatix-jdr',
-	'meurtre-au-beffroi',
-	'arcade-cardor'
+	'meurtre-au-beffroi'
 ];

@@ -1,46 +1,75 @@
 import type { DivisionContent } from '#lib/sites/division/types.ts';
 
 /**
- * The reading platform built by CM Publishing (fs0ciety7000/cardor-publishing). Pre-production
- * for now; it moves to lire.cardormedia.com when it goes live (ADR-014).
+ * The reading platform built by CM Publishing (fs0ciety7000/cardor-publishing), in production on
+ * lire.cardormedia.com since 2026-10-14 (ADR-014). Its catalogue is still a demo one.
  */
 export const platform = {
-	url: 'https://publishing.fs0ciety.org/',
-	themes: 'https://publishing.fs0ciety.org/labo/themes',
-	status: 'Préproduction · catalogue de démonstration',
+	url: 'https://lire.cardormedia.com/',
+	host: 'lire.cardormedia.com',
+	catalogue: 'https://lire.cardormedia.com/catalogue',
+	themes: 'https://lire.cardormedia.com/labo/themes',
+	status: 'En ligne · catalogue de démonstration',
 	spaces: [
 		{
 			name: 'Le Hub',
 			role: 'Vitrine, catalogue, bibliothèque',
-			text: 'L’Étagère où chaque couverture est dessinée par le thème de son livre. Survolez-la : elle passe dans son humeur.',
+			text: 'L’Étagère où chaque couverture est dessinée par le thème de son livre, les feuilletons à suivre chapitre après chapitre, la bibliothèque du lecteur.',
 			state: 'En ligne'
 		},
 		{
 			name: 'Le Sanctuaire',
 			role: 'La liseuse',
-			text: 'Couleurs, typographie, matières et mouvement suivent le livre. Mode sobre, mode calme et intensité réglable : la lecture passe toujours en premier.',
+			text: 'Couleurs, typographie, matières, mouvement et son suivent le livre. Mode sobre, mode calme, intensité réglable, polices pour la dyslexie, règle de lecture et filtres pour les daltonismes : la lecture passe toujours en premier.',
 			state: 'En ligne'
 		},
 		{
 			name: 'La Forge',
 			role: 'L’atelier des auteurs',
-			text: 'Manuscrit importé depuis Word, PDF ou EPUB, écriture à plusieurs en temps réel, Studio sensoriel pour régler le monde du livre, export EPUB 3.',
-			state: 'En test'
+			text: 'Manuscrit importé depuis Word, PDF ou EPUB, écriture à plusieurs en temps réel, Studio sensoriel pour régler le monde du livre, planches en 2.5D, narration, export EPUB 3.',
+			state: 'Bientôt'
 		},
 		{
 			name: 'Le Lore-Master',
 			role: 'La mémoire de l’univers',
 			text: 'Chronologie, savoirs des personnages, voix : il signale les incohérences, cite ses sources, et l’auteur décide.',
-			state: 'À venir'
+			state: 'Bientôt'
 		}
 	]
 };
 
+/** Screenshots of the Hub in production (lire.cardormedia.com, 2026-10-14), demo catalogue. */
+export const hubShots = [
+	{
+		src: '/sites/publishing/platform/hub',
+		href: 'https://lire.cardormedia.com/',
+		title: 'Le Hub',
+		alt: 'Accueil de lire.cardormedia.com : « Chaque livre a son propre monde », trois couvertures de démonstration en éventail, chacune dans le thème de son livre.'
+	},
+	{
+		src: '/sites/publishing/platform/catalogue',
+		href: 'https://lire.cardormedia.com/catalogue',
+		title: 'Le catalogue',
+		alt: 'Catalogue de la plateforme : six livres de démonstration, filtres par genre, couvertures dessinées par leur thème.'
+	},
+	{
+		src: '/sites/publishing/platform/fiche-livre',
+		href: 'https://lire.cardormedia.com/livres/les-cendres-de-varn',
+		title: 'La fiche du livre',
+		alt: 'Fiche du livre de démonstration « Les Cendres de Varn » : couverture Grimoire, résumé, thème, humeurs et boutons pour ouvrir le livre ou l’extrait.'
+	},
+	{
+		src: '/sites/publishing/platform/theatre-des-themes',
+		href: 'https://lire.cardormedia.com/labo/themes',
+		title: 'Le théâtre des thèmes',
+		alt: 'Théâtre des thèmes : le même chapitre mis en page dans le thème Grimoire, avec la liste des archétypes et des thèmes de livres, l’humeur de scène et l’intensité.'
+	}
+] as const;
+
 /**
- * Four book worlds of the platform's demo catalogue, shown by the chameleon reader on this page.
- * Colours are the archetypes' own palettes (cardor-publishing, packages/theme-presets, OKLCH
- * converted to hex) and the hooks are the demo books' own (packages/db/src/demo/books.ts): book
- * data, not site tokens. Typefaces fall back on the house families (no extra font is loaded).
+ * Four book worlds of the platform's demo catalogue, shown by the chameleon reader on this page
+ * as screenshots of the Sanctuaire in production (`shot`, 1200 and 600 px wide WebP). The hooks
+ * are the demo books' own (packages/db/src/demo/books.ts).
  */
 export const worlds = [
 	{
@@ -49,11 +78,10 @@ export const worlds = [
 		genre: 'Fantasy',
 		title: 'Les Cendres de Varn',
 		hook: 'Ce soir-là, les cartes mentent.',
-		bg: '#f3e6d2',
-		ink: '#382315',
-		accent: '#754700',
-		font: 'display',
-		style: 'smallcaps'
+		slug: 'les-cendres-de-varn',
+		chapter: 'La Lune Rousse',
+		shot: '/sites/publishing/platform/sanctuaire-grimoire',
+		alt: 'Le Sanctuaire dans le thème Grimoire : chapitre « La Lune Rousse », papier vergé, lettrine ornée, petites capitales et filets d’encre brune.'
 	},
 	{
 		id: 'neon',
@@ -61,11 +89,10 @@ export const worlds = [
 		genre: 'Science-fiction',
 		title: 'Protocole Hélix',
 		hook: 'La station répond. Personne ne l’a appelée.',
-		bg: '#080d18',
-		ink: '#d1e1e9',
-		accent: '#00ebec',
-		font: 'mono',
-		style: 'upright'
+		slug: 'protocole-helix',
+		chapter: 'Journal de bord, cycle 212',
+		shot: '/sites/publishing/platform/sanctuaire-neon',
+		alt: 'Le Sanctuaire dans le thème Néon : chapitre « Journal de bord, cycle 212 », fond nuit, lignes de balayage, titres à chasse fixe, lignes numérotées et accents cyan.'
 	},
 	{
 		id: 'abysse',
@@ -73,11 +100,10 @@ export const worlds = [
 		genre: 'Horreur',
 		title: 'Ce qui dort sous la ville',
 		hook: 'Sous les pavés, quelque chose compte les pas.',
-		bg: '#010101',
-		ink: '#e1ded5',
-		accent: '#d74745',
-		font: 'display',
-		style: 'upright'
+		slug: 'ce-qui-dort-sous-la-ville',
+		chapter: 'La galerie neuf',
+		shot: '/sites/publishing/platform/sanctuaire-abysse',
+		alt: 'Le Sanctuaire dans le thème Abysse : chapitre « La galerie neuf », noir profond, titre en gothique, passage sensible voilé jusqu’au choix du lecteur.'
 	},
 	{
 		id: 'aquarelle',
@@ -85,11 +111,10 @@ export const worlds = [
 		genre: 'Romance & poésie',
 		title: 'Lettres au jardin d’hiver',
 		hook: 'Je t’écris depuis la serre, où il fait toujours avril.',
-		bg: '#fdf2f3',
-		ink: '#4f2e44',
-		accent: '#8c395e',
-		font: 'display',
-		style: 'italic'
+		slug: 'lettres-au-jardin-d-hiver',
+		chapter: 'Première lettre',
+		shot: '/sites/publishing/platform/sanctuaire-aquarelle',
+		alt: 'Le Sanctuaire dans le thème Aquarelle : chapitre « Première lettre », papier lavé de bleu, grande lettrine, pétales qui dérivent et bouton arrondi.'
 	}
 ] as const;
 
@@ -153,7 +178,7 @@ export const content: DivisionContent = {
 			},
 			{
 				name: 'Parution',
-				text: 'Publier dans la liseuse et exporter en EPUB 3 mis en page. Le thème est figé à la parution.'
+				text: 'Publier sur lire.cardormedia.com, exporter en EPUB 3 mis en page et diffuser chez les libraires en ligne. Le thème est figé à la parution.'
 			}
 		]
 	},

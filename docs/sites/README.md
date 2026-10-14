@@ -22,7 +22,7 @@ Un seul code source, six builds. `PUBLIC_SITE` (`holding` · `interactive` · `s
 
 - **Interactive** reprend le contenu réel du studio (`studios.fs0ciety.org`) : 15 projets (dont un en test), méthode Esquisse → Lancement, deux disciplines.
 - **Soundworks** et **Creative Lab** n'ont pas encore de références publiques : **on n'invente aucun client ni chiffre**. On présente les savoir-faire, la méthode et une démonstration interactive (son génératif, encre), plus un bloc « Premières productions : bientôt ».
-- **Publishing** présente la maison d'édition ; sa plateforme (liseuse et auto-édition, dépôt `fs0ciety7000/cardor-publishing`) est un produit à part, au design indépendant, en préprod sur `publishing.fs0ciety.org` puis sur **`lire.cardormedia.com`** à sa mise en production. Catalogue de démonstration : aucun auteur ni titre présenté comme réel.
+- **Publishing** présente la maison d'édition ; sa plateforme (liseuse et auto-édition, dépôt `fs0ciety7000/cardor-publishing`) est un produit à part, au design indépendant, en production sur **`lire.cardormedia.com`** depuis le 14 octobre 2026 (préprod `publishing.fs0ciety.org`, jamais en lien public). Catalogue de démonstration : aucun auteur ni titre présenté comme réel.
 - Chaque site renvoie vers la maison mère et vers les studios frères.
 
 ## Definition of Done (en plus de `CLAUDE.md` § 7)
