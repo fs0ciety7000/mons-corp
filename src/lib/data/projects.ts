@@ -468,6 +468,39 @@ export const projects: Project[] = [
 		keywords: 'quiz culture générale soirée équipes qr code télé projecteur kahoot café'
 	},
 	{
+		id: 'reseau-en-direct',
+		name: 'Le Réseau en direct',
+		studio: 'interactive',
+		partners: ['creative'],
+		kind: 'app',
+		category: 'Carte · Temps réel',
+		status: 'En test',
+		access: 'public',
+		added: '2026-10-16',
+		url: 'https://reseau.fs0ciety.org',
+		pitch: 'Tous les trains de voyageurs SNCB, en temps réel, sur une carte illustrée.',
+		text: 'Chaque train roule sur la carte de la Belgique ; sa couleur et sa forme disent son retard. Ouvrez la fiche d’un train, le tableau d’une gare, ou rejouez les dernières 24 heures. Données Belgian Mobility Company / SNCB, tracé © OpenStreetMap.',
+		features: [
+			'Retards en couleur et en forme',
+			'Fiche train et tableau de gare',
+			'Replay des dernières 24 heures'
+		],
+		stack: 'Rust · WebAssembly · WebGPU · Go · Svelte 5',
+		stat: {
+			value: '24 h',
+			label: 'de replay'
+		},
+		schema: {
+			category: 'TravelApplication',
+			os: 'Web'
+		},
+		platforms: ['Navigateur'],
+		icon: '/sites/apps/icons/reseau-en-direct.png',
+		cover: '/sites/interactive/projects/reseau-en-direct.webp',
+		keywords:
+			'train trains sncb nmbs belgique rail gare horaires retard temps réel carte direct replay webgpu'
+	},
+	{
 		id: 'railcards',
 		name: 'RailCards',
 		studio: 'interactive',
